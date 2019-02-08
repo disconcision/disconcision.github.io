@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: white;
+    font-size: 30pt;
+}
+
+h2 {
+    color: white;
+}
+
+a {
+    color: #005766;
+    text-decoration: none
+}
+  
+p {
+    
+    font-size: 20px;
+}
