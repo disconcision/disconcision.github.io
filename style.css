@@ -1,18 +1,17 @@
 body {
-    margin-top: 1vw;
-    margin-left: 1vw;
+    margin-top: 20pt;
+    margin-left: 20pt;
     background-color: lightblue;
     font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
     color: white;
-    font-size: 1.5vw;
+    font-size: 30pt;
 }
 
 h2 {
     color: white;
-    font-size: 1vw;
 }
 
 a {
@@ -22,5 +21,5 @@ a {
   
 p {
     
-    font-size: 1vw;
+    font-size: 20pt;
 }
