@@ -1,12 +1,25 @@
 body {
   margin: 0;
-  background-color: lightblue;
-  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("images/stripesbkg100.png");
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14pt;
+  margin-bottom: 0pt;
+  max-width: 766pt;
+  font-family: 'Courier New'; /*, Courier, monospace;*/
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
+
 
 #header {
   color: white;
@@ -43,19 +56,22 @@ a {
 }
 
 #emailglyph {
-  color: #005766;
+  color: #aadbe7;
   padding-right: 12pt;
 }
 
 #intro {
   padding: 20pt;
-  font-size: 14pt;
+  font-size: 12;
+  background-color: lightblue;
   color: black;
 }
 
 #outro {
+  display: flex;
+  justify-content: flex-end;
   padding: 20pt;
-  font-size: 14pt;
+  font-size: 12pt;
   color: #005766;
   background-color: rgb(129, 194, 216);
 }
@@ -63,8 +79,9 @@ a {
 #links {
   padding: 20pt;
   display: flex;
+  /*justify-content: space-evenly;*/
   flex-wrap: wrap;
-  font-size: 20pt;
+  font-size: 28pt;
   background-color: rgb(192, 228, 233);
 }
 
@@ -75,7 +92,6 @@ a {
 #linkbox {
   display: flex;
   align-items: baseline;
-  font-size: 20pt;
 }
 
 #link {
@@ -85,6 +101,14 @@ a {
 #linkglyph {
   color: #75b7c7;
   padding-right: 12pt;
+}
+
+#projectsintro {
+  padding: 20pt;
+  font-size: 28pt;
+  background-color: rgb(210, 239, 243);
+  font-size: 12pt;
+  color: black;
 }
 
 #project {
@@ -105,7 +129,6 @@ a {
   flex-direction: row;
   /*flex-wrap: wrap;*/
   justify-content: space-between;
-
   background-color: rgb(73, 202, 137);
 }
 
@@ -118,7 +141,7 @@ a {
 }
 
 #scrot {
-  background-color: #003338; /* slightly wrong? */
+  background-color: #073035;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -141,26 +164,26 @@ a {
 
 #glyph {
   color: #ffffff;
-  font-size: 26pt;
+  font-size: 28pt;
   padding-right: 20pt;
 }
 
 #glyph1 {
   color: #7be8e0;
-  font-size: 26pt;
+  font-size: 28pt;
   padding-right: 20pt;
 }
 
 #glyph2 {
   color: #76eccc;
-  font-size: 26pt;
+  font-size: 28pt;
   padding-right: 20pt;
 }
 
 #glyph3 {
   flex-grow: 1;
   color: rgb(133, 248, 133);
-  font-size: 26pt;
+  font-size: 28pt;
   padding-right: 16pt;
 }
 
@@ -171,7 +194,7 @@ a {
 
 #title {
   color: white;
-  font-size: 26pt;
+  font-size: 28pt;
   padding-bottom: 2pt;
 }
 
@@ -187,5 +210,6 @@ a {
 }
 
 #description {
+  font-size: 12pt;
   color: #000000;
 }
