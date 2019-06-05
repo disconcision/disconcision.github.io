@@ -12,7 +12,7 @@ body {
   margin-top: 14pt;
   margin-bottom: 0pt;
   max-width: 766pt;
-  font-family: 'Cutive Mono',  monospace, 'Lucida Console', 'Times New Roman'; /*'Courier New', Courier, monospace;*/
+  font-family: 'Cutive Mono',  monospace, Consolas, 'Times New Roman'; /*'Courier New', Courier, monospace;*/
 }
 
 a {
