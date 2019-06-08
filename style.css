@@ -1,3 +1,5 @@
+/* ROOT CSS */
+
 body {
   margin: 0;
   display: flex;
@@ -6,13 +8,15 @@ body {
   background-image: url("images/stripesbkg100.png");
 }
 
-#container {
+main {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 14pt;
-  margin-bottom: 0pt;
-  max-width: 766pt;
-  font-family: 'Cutive Mono',  Iosevka, wingdings, 'Courier New', monospace; /*'Courier New', Courier, monospace;*/
+  margin-top: 20pt;
+  margin-bottom: 0;
+  max-width: 740pt;
+  color: black;
+  font-size: 100%;
+  font-family: 'Courier New', monospace; /* 'Istok Web', 'Cutive Mono',  Iosevka */
 }
 
 a {
@@ -20,82 +24,105 @@ a {
   color: white;
 }
 
-
-#header {
+a:hover {
   color: white;
-  font-size: 36pt;
-  padding-top: 14pt;
-  padding-left: 20pt;
-  padding-right: 20pt;
-  padding-bottom: 20pt;
+  background-color: orange;
+}
+
+::selection {
+  background-color: orange;
+  color: white;
+}
+
+
+/* MAIN SECTIONS CSS */
+
+header {
+  padding: 20pt;
+  padding-top: 6pt; /* hack, nameglyph is too tall */
+  font-family: 'Cutive Mono';
   background-color: rgb(129, 194, 216);
-}
-
-#namebox {
-  display: flex;
-  align-items: baseline;
-}
-
-#name {
-  padding-right: 20pt;
-}
-
-#nameglyph {
-  color: #aadbe7;
-  padding-right: 20pt;
-}
-
-#emailbox {
-  display: flex;
-  align-items: baseline;
-  font-size: 20pt;
-}
-
-#email {
-  color: #005766;
-}
-
-#emailglyph {
-  color: #aadbe7;
-  padding-right: 12pt;
 }
 
 #intro {
   padding: 20pt;
-  font-size: 12;
-  background-color: lightblue;
-  color: black;
+  background-color: rgb(154, 211, 230);
 }
 
-#outro {
+nav {
+  padding: 20pt;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 180%;
+  font-family: 'Cutive Mono';
+  background-color: rgb(173, 221, 236);
+}
+
+#projectsintro {
+  padding: 20pt;
+  background-color: rgb(193, 229, 240);
+}
+
+footer {
+  padding: 20pt;
   display: flex;
   justify-content: flex-end;
-  padding: 20pt;
-  font-size: 12pt;
-  color: #005766;
   background-color: rgb(129, 194, 216);
 }
 
-#links {
-  padding: 20pt;
-  display: flex;
-  /*justify-content: space-evenly;*/
-  flex-wrap: wrap;
-  font-size: 28pt;
-  background-color: rgb(192, 228, 233);
-}
 
-#linkgroup {
-  padding-right: 60pt;
-}
+/* HEADER CSS */
 
-#linkbox {
+#name {
+  font-size: 300%;
   display: flex;
   align-items: baseline;
 }
 
-#link {
-  color: #005766;
+#nameglyph {
+  color: #aadbe7;
+  padding-left: 20pt;
+  padding-right: 20pt;
+}
+
+#email {
+  display: flex;
+  align-items: baseline;
+  font-size: 180%;
+}
+
+#email {  
+}
+
+#emailglyph {
+  font-family: symbola;
+  color: #aadbe7;
+  padding-right: 12pt;
+}
+
+#navglyph {
+  color :White;
+  display: inline;
+  font-family: symbola;
+  font-size: 100%;
+}
+
+
+/* NAV CSS */
+
+nav ul {
+  /* remove defaults */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* actual style */
+  padding-right: 60pt;
+  align-content: flex-start;
+}
+
+nav li {
+  display: flex;
+  align-items: baseline;
 }
 
 #linkglyph {
@@ -103,13 +130,8 @@ a {
   padding-right: 12pt;
 }
 
-#projectsintro {
-  padding: 20pt;
-  font-size: 28pt;
-  background-color: rgb(210, 239, 243);
-  font-size: 12pt;
-  color: black;
-}
+
+/* PROJECTS CSS */
 
 #project {
   display: flex;
@@ -140,7 +162,10 @@ a {
   background-color: rgb(73, 202, 94);
 }
 
-#scrot {
+figure {
+  /* remove defaults */
+  margin: 0;
+  /* actual style */
   background-color: #073035;
   display: flex;
   justify-content: center;
@@ -153,7 +178,6 @@ a {
   padding: 20pt;
   display: flex;
   align-items: baseline;
-  flex-grow: 1;
 }
 
 #head {
@@ -164,52 +188,50 @@ a {
 
 #glyph {
   color: #ffffff;
-  font-size: 28pt;
+  font-family: symbola;
+  font-size: 240%;
   padding-right: 20pt;
 }
-
 #glyph1 {
   color: #7be8e0;
-  font-size: 28pt;
+  font-family: symbola;
+  font-size: 240%;
   padding-right: 20pt;
 }
-
 #glyph2 {
   color: #76eccc;
-  font-size: 28pt;
+  font-family: symbola;
+  font-size: 240%;
   padding-right: 20pt;
 }
-
 #glyph3 {
-  flex-grow: 1;
   color: rgb(133, 248, 133);
-  font-size: 28pt;
+  font-family: symbola;
+  font-size: 240%;
   padding-right: 16pt;
 }
 
-#linkicons {
-  padding-left: 16pt;
-  /* check if this is consistent.. */
-}
-
-#title {
-  color: white;
-  font-size: 28pt;
-  padding-bottom: 2pt;
+h1 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Cutive Mono';
+  font-size: 240%;
 }
 
 #rest {
   flex-grow: 10;
 }
 
-#subtitle {
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Cutive Mono';
+  padding-bottom: 3pt;
   padding-bottom: 10pt;
-  font-size: 17pt;
-  
-  color: #005766;
+  font-size: 140%;
+  color: #a8faf4;
 }
 
 #description {
-  font-size: 12pt;
-  color: #000000;
+  color: black;
 }

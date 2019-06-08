@@ -11,9 +11,10 @@
       gtag('config', 'UA-134133585-1');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Space+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/symbola" type="text/css"/>
-  
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Space+Mono&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet"/> 
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/symbola" type="text/css"/> 
+
   <title>andrew blinn</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
@@ -22,87 +23,54 @@
 </head>
 
 <body>
-<div id=container>
-  <div id=header>
-    <div id=namebox>
-      <div id=name>andrew blinn</div>
-      <div id=nameglyph>⥭</div>
-      <div id=year>2019</div>
+<main>
+  
+  <header>
+    <div id=name> andrew blinn <div id=nameglyph>⥭</div> 2019 </div>
+    <div id=email>
+      <div id=emailglyph>🡮</div>
+      <a href="mailto:me@andrewblinn.com">me@andrewblinn.com</a>
     </div>
-    <a href="mailto:me@andrewblinn.com">
-      <div id=emailbox>
-        <div id=emailglyph>⇲</div> 
-        <div id=email>me@andrewblinn.com</div>
-      </div>
-    </a>
-  </div>
+  </header>
 
   <div id=intro>
     i like programming languages & user interfaces. recovering math-head
     now trying to pull abstractions into the grass and muss them up a bit.
-    i just got a bsc in math & cs and now i write software and do other stuff 🡫
+    i just got a bsc in math & cs and now i write software and do other stuff
+    <div id=navglyph><a href="#project1">🡫</a></div>
   </div>
   
-  <div id=links>
-    <div id=linkgroup>
-      <a href="resumeandrewblinn.pdf">
-        <div id=linkbox>
-          <div id=linkglyph>↸</div>
-          <div id=link>resume</div>
-        </div>
-      </a>
-      <a href="https://github.com/disconcision">
-        <div id=linkbox>
-          <div id=linkglyph>↪</div>
-          <div id=link>github</div>
-        </div>
-      </a>
-      <a href="https://linkedin.com/in/andrewblinn">
-        <div id=linkbox>
-          <div id=linkglyph>⇀</div>
-          <div id=link>linkedin</div>
-        </div>
-      </a>
-    </div>
-    <div id=linkgroup>
-      <a href="https://twitter.com/disconcision">
-        <div id=linkbox>
-          <div id=linkglyph>⇄</div>
-          <div id=link>twitter</div>
-        </div>
-      </a>
-      <a href="http://instagram.com/disconcision">
-        <div id=linkbox>
-          <div id=linkglyph>⇒</div>
-          <div id=link>instagram</div>
-        </div>
-      </a>
-      <a href="http://disconcision.com/">
-        <div id=linkbox>
-          <div id=linkglyph>↻</div>
-          <div id=link>tumblr</div>
-        </div>
-      </a>      
-    </div>    
-  </div>
+  <nav>
+    <ul>
+      <li><div id=linkglyph>↸</div><a href="resumeandrewblinn.pdf">resume</a></li>
+      <li><div id=linkglyph>↪</div><a href="https://github.com/disconcision">github</a></li>
+      <li><div id=linkglyph>⇄</div><a href="https://twitter.com/disconcision">twitter</a></li>
+    </ul>
+    <ul>
+      <li><div id=linkglyph>↻</div><a href="http://disconcision.com/">tumblr</a></li>        
+      <li><div id=linkglyph>⇐</div><a href="https://linkedin.com/in/andrewblinn">linkedin</a></li>
+      <li><div id=linkglyph>⥁</div><a href="http://instagram.com/disconcision">instagram</a></li>    
+    </ul>    
+  </nav>
 
   <div id=projectsintro>
-      here are some things i'm working on lately 🡫
+    here are some things i'm working on lately
+    <div id=navglyph><a href="#project1">🡫</a></div>
   </div>
 
-  <a href="https://github.com/disconcision/fructure">
-    <div id=project1>
+  <div id=project1>
+    <a href="https://github.com/disconcision/fructure">
       <div id=copy>
         <div id=glyph1>🡮</div>
         <div id=rest>
           <div id=head>
-            <div id=title>fructure</div>
-            <div id=linkicons>
-              <img src="images/github-32.png" height=26 width=26>
-              <img src="images/tumblr-32.png" height=26 width=26>
+            <h1>fructure</h1>
+            <div>
+              <img src="images/github-32.png" height=26 width=26 />
+              <img src="images/tumblr-32.png" height=26 width=26 />
             </div>
           </div>
-          <div id=subtitle>a structured interaction engine for racket</div>
+          <h2>a structured interaction engine for racket</h2>
           <div id=description>
             fructure is a prototype for an extensible structured editing engine, 
             built around a ui for composing term-rewriting edit actions.
@@ -111,24 +79,22 @@
           </div>          
         </div>
       </div>
-      <div id=scrot>
-        <img src="images/fructure-screenshot.png" alt="bad dog combinator">
-      </div>
-    </div>
-  </a>
-
-  <a href="https://github.com/disconcision/containment-patterns">
-    <div id=project2>
+    </a>
+    <figure><img src="images/fructure-screenshot.png" alt="bad dog combinator"></figure>
+  </div>
+ 
+  <div id=project2>
+    <a href="https://github.com/disconcision/containment-patterns">
       <div id=copy>
         <div id=glyph2>🡮</div>
         <div id=rest>
           <div id=head>
-            <div id=title>containment patterns</div>
-            <div id=linkicons>
+            <h1>containment patterns</h1>
+            <div>
               <img src="images/github-32.png" height=26 width=26>
             </div>
           </div>
-          <div id=subtitle>capture contexts with racket/match</div>
+          <h2>capture contexts with racket/match</h2>
           <div id=description>
             a library of custom pattern combinators for racket/match which generalize
             macro-by-example ellipses patterns to capture matches buried in arbirary nested
@@ -136,24 +102,22 @@
           </div>          
         </div>
       </div>
-      <div id=scrot>
-        <img src="images/containment-patterns.png" alt="tangerine nightmare">
-      </div>
-    </div>
-  </a>
-
-  <a href="https://github.com/disconcision/depthop">
-    <div id=project3>
+    </a>
+    <figure><img src="images/containment-patterns.png" alt="tangerine nightmare"/></figure>
+  </div>
+  
+  <div id=project3>
+    <a href="https://github.com/disconcision/depthop">
       <div id=copy>
         <div id=glyph3>🡮</div>
         <div id=rest>
           <div id=head>
-            <div id=title>depthop</div>
-            <div id=linkicons>
-              <img src="images/github-32.png" height=26 width=26>
+            <h1>depthop</h1>
+            <div>
+              <img src="images/github-32.png" height=26 width=26/>
             </div>
           </div>
-          <div id=subtitle>a signed distance field raymarcher in C++</div>
+          <h2>a signed distance field raymarcher in C++</h2>
           <div id=description>
             a simple cpu raymarcher parallelized with open mp.
             implementing constructive solid geometry, soft shadows,
@@ -161,15 +125,19 @@
           </div>          
         </div>
       </div>
-      <div id=scrot>
-        <img src="images/depthmarch.png" alt="caged sphere">
-      </div>
+    </a>
+    <figure>
+      <img src="images/depthmarch.png" alt="caged sphere"/>
+    </figure>
+  </div>
+  
+  <footer>
+    <div>
+      this page made with ♥ and <a href="https://www.gnu.org/software/emacs/">emacs</a> in june 2019
+      <div id=navglyph><a href="#top">🡡</a></div>
     </div>
-  </a>
+  </footer>
 
-  <div id=outro><div>this page made with ♥ and <a href="https://www.gnu.org/software/emacs/">emacs</a> in june 2019</div></div>
-
-</div>
+</main>
 </body>
-
 </html>
