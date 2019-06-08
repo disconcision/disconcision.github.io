@@ -16,7 +16,7 @@ main {
   max-width: 740pt;
   color: black;
   font-size: 100%;
-  font-family: 'Courier New', monospace; /* 'Istok Web', 'Cutive Mono',  Iosevka */
+  font-family: 'Courier New', monospace;
 }
 
 a {
@@ -41,6 +41,7 @@ header {
   padding: 20pt;
   padding-top: 6pt; /* hack, nameglyph is too tall */
   font-family: 'Cutive Mono';
+  font-display: swap;
   background-color: rgb(129, 194, 216);
 }
 
@@ -96,6 +97,7 @@ footer {
 
 #emailglyph {
   font-family: symbola;
+  font-display: block;
   color: #aadbe7;
   padding-right: 12pt;
 }
@@ -104,6 +106,7 @@ footer {
   color :White;
   display: inline;
   font-family: symbola;
+  font-display: block;
   font-size: 100%;
 }
 
@@ -189,24 +192,28 @@ figure {
 #glyph {
   color: #ffffff;
   font-family: symbola;
+  font-display: block;
   font-size: 240%;
   padding-right: 20pt;
 }
 #glyph1 {
   color: #7be8e0;
   font-family: symbola;
+  font-display: block;
   font-size: 240%;
   padding-right: 20pt;
 }
 #glyph2 {
   color: #76eccc;
   font-family: symbola;
+  font-display: block;
   font-size: 240%;
   padding-right: 20pt;
 }
 #glyph3 {
   color: rgb(133, 248, 133);
   font-family: symbola;
+  font-display: block;
   font-size: 240%;
   padding-right: 16pt;
 }
@@ -215,6 +222,7 @@ h1 {
   margin: 0;
   font-weight: normal;
   font-family: 'Cutive Mono';
+  font-display: swap;
   font-size: 240%;
 }
 
@@ -226,6 +234,7 @@ h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Cutive Mono';
+  font-display: swap;
   padding-bottom: 3pt;
   padding-bottom: 10pt;
   font-size: 140%;
