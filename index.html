@@ -5,26 +5,26 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134133585-1"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-134133585-1');
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   gtag('config', 'UA-134133585-1');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Space+Mono&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet"/> 
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/symbola" type="text/css"/> 
+  <!--<link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet"/>  -->
+  <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/symbola" type="text/css"/> -->
 
   <title>andrew blinn</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <!--<script src="script.js"></script>-->
-  
+
 </head>
 
 <body>
 <main>
-  
+
   <header>
     <div id=name> andrew blinn <div id=nameglyph>⥭</div> 2019 </div>
     <div id=email>
@@ -39,7 +39,7 @@
     i just got a bsc in math & cs and now i write software and do other stuff
     <div id=navglyph><a href="#project1">🡫</a></div>
   </div>
-  
+
   <nav>
     <ul>
       <li><div id=linkglyph>↸</div><a href="resumeandrewblinn.pdf">resume</a></li>
@@ -47,10 +47,10 @@
       <li><div id=linkglyph>⇄</div><a href="https://twitter.com/disconcision">twitter</a></li>
     </ul>
     <ul>
-      <li><div id=linkglyph>↻</div><a href="http://disconcision.com/">tumblr</a></li>        
+      <li><div id=linkglyph>↻</div><a href="http://disconcision.com/">tumblr</a></li>
       <li><div id=linkglyph>⇐</div><a href="https://linkedin.com/in/andrewblinn">linkedin</a></li>
-      <li><div id=linkglyph>⥁</div><a href="http://instagram.com/disconcision">instagram</a></li>    
-    </ul>    
+      <li><div id=linkglyph>⥁</div><a href="http://instagram.com/disconcision">instagram</a></li>
+    </ul>
   </nav>
 
   <div id=projectsintro>
@@ -72,17 +72,17 @@
           </div>
           <h2>a structured interaction engine for racket</h2>
           <div id=description>
-            fructure is a prototype for an extensible structured editing engine, 
+            fructure is a prototype for an extensible structured editing engine,
             built around a ui for composing term-rewriting edit actions.
             editing abstractions like cursors and code-folding are reinterpreted as
             syntactic scaffolding in a meta-grammar of syntactic affordances
-          </div>          
+          </div>
         </div>
       </div>
     </a>
     <figure><img src="images/fructure-screenshot.png" alt="bad dog combinator"></figure>
   </div>
- 
+
   <div id=project2>
     <a href="https://github.com/disconcision/containment-patterns">
       <div id=copy>
@@ -97,15 +97,16 @@
           <h2>capture contexts with racket/match</h2>
           <div id=description>
             a library of custom pattern combinators for racket/match which generalize
-            macro-by-example ellipses patterns to capture matches buried in arbirary nested
-            data structures, as well as surrounding contexts
-          </div>          
+            macro-by-example ellipses patterns. these use composable continuations to
+            descend into arbitrary nested structures and capture both matches and their
+            surrounding contexts
+          </div>
         </div>
       </div>
     </a>
     <figure><img src="images/containment-patterns.png" alt="tangerine nightmare"/></figure>
   </div>
-  
+
   <div id=project3>
     <a href="https://github.com/disconcision/depthop">
       <div id=copy>
@@ -122,7 +123,7 @@
             a simple cpu raymarcher parallelized with open mp.
             implementing constructive solid geometry, soft shadows,
             ambient occlusion, blinn-phong shading, and perlin noise
-          </div>          
+          </div>
         </div>
       </div>
     </a>
@@ -130,7 +131,7 @@
       <img src="images/depthmarch.png" alt="caged sphere"/>
     </figure>
   </div>
-  
+
   <footer>
     <div>
       this page made with ♥ and <a href="https://www.gnu.org/software/emacs/">emacs</a> in june 2019
