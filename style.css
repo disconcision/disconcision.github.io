@@ -5,6 +5,13 @@
   font-display: swap;
   src: url('cutivemono.ttf');
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: url('OpenSans-Light.ttf');
+}
+
 body {
   margin: 0;
   display: flex;
@@ -21,7 +28,7 @@ main {
   margin-bottom: 0;
   color: black;
   font-size: 1em;
-  font-family: 'Courier New', monospace;
+  font-family: 'Open Sans', 'Courier New', monospace;  
 }
 
 a {
@@ -41,6 +48,8 @@ a:hover {
 
 p {
   margin: 0;
+  color: black;
+  font-size: 1.15em;
 }
 
 h1 {
@@ -48,7 +57,7 @@ h1 {
   font-weight: normal;
   font-family: 'Cutive Mono', 'Courier New', monospace;
   font-display: swap;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 h2 {
@@ -58,7 +67,7 @@ h2 {
   font-display: swap;
   padding-bottom: 3pt;
   padding-bottom: 10pt;
-  font-size: 1.43em;
+  font-size: 1.5em;
   color: #a8faf4;
 }
 
@@ -109,13 +118,14 @@ footer {
 }
 
 #emailglyph {
+  content:url("images/arrowLR.svg");
   width:38px;
   height:38px;
   padding-right: 24pt;
   padding-left: 8pt;
   font-display: block;
   color: #aadbe7;
-  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(6);
+  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(4);
 }
 
 /* NAV CSS */
@@ -137,7 +147,8 @@ nav li {
 
 #linkglyph {
   padding-right: 16pt;
-  color: rgb(0, 143, 199);
+  width:24px;
+  color: rgb(0, 167, 209);
 }
 
 /* PROJECTS CSS */
@@ -148,12 +159,12 @@ nav li {
 }
 
 #projectglyph {
-  width: 24px;
-  height: 24px;
+  content:url("images/arrowLR.svg");
+  width: 28px;
+  height: 28px;
   padding-right: 20pt;
-  color: #7be8e0;
   font-display: block;
-  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20);
+  filter: invert(0.8) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20) opacity(90%);
   font-size: 2.5em;
 }
 
@@ -209,15 +220,20 @@ figure {
   flex-grow: 10;
 }
 
-#description {
-  color: black;
+#navglyph { 
+  display: inline;
+  font-display: block;
+  padding-left: 1em;
 }
 
-#navglyph {
-  color :White;
-  display: inline;
-  font-family: symbola;
-  font-display: block;
-  font-size: 100%;
-  padding-left: 1em;
+#githubicon {
+  content:url("images/github-32.png");
+  height: 26px;
+  width: 26px;
+}
+
+#tumblricon {
+  content:url("images/tumblr-32.png");
+  height: 26px;
+  width: 26px;
 }
