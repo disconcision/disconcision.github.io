@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Cutive Mono';
-  font-display: optional;
+  font-display: swap;
   src: url('cutivemono.ttf');
 }
 body {
@@ -14,11 +14,11 @@ body {
 }
 
 main {
+  max-width: 740pt;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20pt;
   margin-bottom: 0;
-  max-width: 740pt;
   color: black;
   font-size: 1em;
   font-family: 'Courier New', monospace;
@@ -30,8 +30,8 @@ a {
 }
 
 a:hover {
-  color: white;
   background-color: orange;
+  color: white;
 }
 
 ::selection {
@@ -68,7 +68,6 @@ header {
   padding: 20pt;
   padding-top: 12pt;
   font-family: 'Cutive Mono', 'Courier New', monospace;
-  font-display: swap;
   background-color: rgb(129, 194, 216);
 }
 
@@ -76,10 +75,10 @@ nav {
   padding: 20pt;
   display: flex;
   flex-wrap: wrap;
-  font-size: 2.0em;
   justify-content: space-between;
-  font-family: 'Cutive Mono', 'Courier New', monospace;
   background-color: rgb(154, 211, 230);
+  font-size: 2.0em;
+  font-family: 'Cutive Mono', 'Courier New', monospace;
 }
 
 #intro {
@@ -112,11 +111,11 @@ footer {
 #emailglyph {
   width:38px;
   height:38px;
+  padding-right: 24pt;
+  padding-left: 8pt;
   font-display: block;
   color: #aadbe7;
   filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(6);
-  padding-right: 24pt;
-  padding-left: 8pt;
 }
 
 /* NAV CSS */
@@ -137,8 +136,8 @@ nav li {
 }
 
 #linkglyph {
-  color: rgb(0, 132, 194);
   padding-right: 16pt;
+  color: rgb(0, 143, 199);
 }
 
 /* PROJECTS CSS */
@@ -151,12 +150,11 @@ nav li {
 #projectglyph {
   width: 24px;
   height: 24px;
+  padding-right: 20pt;
   color: #7be8e0;
-  font-family: symbola;
   font-display: block;
   filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20);
   font-size: 2.5em;
-  padding-right: 20pt;
 }
 
 #project1 {
@@ -187,11 +185,11 @@ figure {
   /* remove defaults */
   margin: 0;
   /* actual style */
-  background-color: #073035;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-shrink: 10;
+  background-color: #073035;
 }
 
 #copy {
