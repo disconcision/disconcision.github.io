@@ -1,5 +1,10 @@
 /* ROOT CSS */
 
+@font-face {
+  font-family: 'Cutive Mono';
+  font-display: optional;
+  src: url('cutivemono.ttf');
+}
 body {
   margin: 0;
   display: flex;
@@ -132,8 +137,7 @@ nav li {
 }
 
 #linkglyph {
-  filter: invert(0.7) sepia(1) hue-rotate(356deg) saturate(20) brightness(2.2);
-  color: #75b7c7;
+  color: rgb(0, 132, 194);
   padding-right: 16pt;
 }
 
