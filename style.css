@@ -15,7 +15,7 @@ main {
   margin-bottom: 0;
   max-width: 740pt;
   color: black;
-  font-size: 100%;
+  font-size: 1em;
   font-family: 'Courier New', monospace;
 }
 
@@ -34,82 +34,85 @@ a:hover {
   color: white;
 }
 
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+  font-display: swap;
+  font-size: 2.5em;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+  font-display: swap;
+  padding-bottom: 3pt;
+  padding-bottom: 10pt;
+  font-size: 1.43em;
+  color: #a8faf4;
+}
 
 /* MAIN SECTIONS CSS */
 
 header {
   padding: 20pt;
-  padding-top: 6pt; /* hack, nameglyph is too tall */
-  font-family: 'Cutive Mono';
+  padding-top: 12pt;
+  font-family: 'Cutive Mono', 'Courier New', monospace;
   font-display: swap;
   background-color: rgb(129, 194, 216);
-}
-
-#intro {
-  padding: 20pt;
-  background-color: rgb(154, 211, 230);
 }
 
 nav {
   padding: 20pt;
   display: flex;
   flex-wrap: wrap;
-  font-size: 180%;
-  font-family: 'Cutive Mono';
-  background-color: rgb(173, 221, 236);
+  font-size: 2.0em;
+  justify-content: space-between;
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+  background-color: rgb(154, 211, 230);
 }
 
-#projectsintro {
+#intro {
   padding: 20pt;
-  background-color: rgb(193, 229, 240);
+  background-color: rgb(173, 221, 236);
 }
 
 footer {
   padding: 20pt;
   display: flex;
+  align-items: baseline;
   justify-content: flex-end;
   background-color: rgb(129, 194, 216);
 }
 
-
 /* HEADER CSS */
 
 #name {
-  font-size: 300%;
+  font-size: 6em;
   display: flex;
   align-items: baseline;
-}
-
-#nameglyph {
-  color: #aadbe7;
-  padding-left: 20pt;
-  padding-right: 20pt;
 }
 
 #email {
   display: flex;
   align-items: baseline;
-  font-size: 180%;
-}
-
-#email {  
+  font-size: 3.5em;
 }
 
 #emailglyph {
-  font-family: symbola;
+  width:38px;
+  height:38px;
   font-display: block;
   color: #aadbe7;
-  padding-right: 12pt;
+  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(6);
+  padding-right: 24pt;
+  padding-left: 8pt;
 }
-
-#navglyph {
-  color :White;
-  display: inline;
-  font-family: symbola;
-  font-display: block;
-  font-size: 100%;
-}
-
 
 /* NAV CSS */
 
@@ -119,7 +122,7 @@ nav ul {
   margin: 0;
   padding: 0;
   /* actual style */
-  padding-right: 60pt;
+  padding-right: 1.5em;
   align-content: flex-start;
 }
 
@@ -129,16 +132,27 @@ nav li {
 }
 
 #linkglyph {
+  filter: invert(0.7) sepia(1) hue-rotate(356deg) saturate(20) brightness(2.2);
   color: #75b7c7;
-  padding-right: 12pt;
+  padding-right: 16pt;
 }
-
 
 /* PROJECTS CSS */
 
 #project {
   display: flex;
   background-color: rgb(73, 202, 181);
+}
+
+#projectglyph {
+  width: 24px;
+  height: 24px;
+  color: #7be8e0;
+  font-family: symbola;
+  font-display: block;
+  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20);
+  font-size: 2.5em;
+  padding-right: 20pt;
 }
 
 #project1 {
@@ -189,58 +203,19 @@ figure {
   align-items: baseline;
 }
 
-#glyph {
-  color: #ffffff;
-  font-family: symbola;
-  font-display: block;
-  font-size: 240%;
-  padding-right: 20pt;
-}
-#glyph1 {
-  color: #7be8e0;
-  font-family: symbola;
-  font-display: block;
-  font-size: 240%;
-  padding-right: 20pt;
-}
-#glyph2 {
-  color: #76eccc;
-  font-family: symbola;
-  font-display: block;
-  font-size: 240%;
-  padding-right: 20pt;
-}
-#glyph3 {
-  color: rgb(133, 248, 133);
-  font-family: symbola;
-  font-display: block;
-  font-size: 240%;
-  padding-right: 16pt;
-}
-
-h1 {
-  margin: 0;
-  font-weight: normal;
-  font-family: 'Cutive Mono';
-  font-display: swap;
-  font-size: 240%;
-}
-
 #rest {
   flex-grow: 10;
 }
 
-h2 {
-  margin: 0;
-  font-weight: normal;
-  font-family: 'Cutive Mono';
-  font-display: swap;
-  padding-bottom: 3pt;
-  padding-bottom: 10pt;
-  font-size: 140%;
-  color: #a8faf4;
-}
-
 #description {
   color: black;
+}
+
+#navglyph {
+  color :White;
+  display: inline;
+  font-family: symbola;
+  font-display: block;
+  font-size: 100%;
+  padding-left: 1em;
 }

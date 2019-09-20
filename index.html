@@ -2,143 +2,126 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134133585-1"></script>
   <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
-   gtag('config', 'UA-134133585-1');
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'UA-134133585-1');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Space+Mono&display=swap" rel="stylesheet"/>
-  <!--<link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet"/>  -->
-  <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/symbola" type="text/css"/> -->
-
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Space+Mono&display=swap" rel="stylesheet" />
   <title>andrew blinn</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <!--<script src="script.js"></script>-->
 
 </head>
 
 <body>
-<main>
+  <main>
+    <header>
+      <div id=name>andrew blinn</div>
+      <div id=email>
+        <img id=emailglyph src="images/arrowLR.svg" />
+        <a href="mailto:me@andrewblinn.com">me@andrewblinn.com</a>
+      </div>
+    </header>
 
-  <header>
-    <div id=name> andrew blinn <div id=nameglyph>⥭</div> 2019 </div>
-    <div id=email>
-      <div id=emailglyph>🡮</div>
-      <a href="mailto:me@andrewblinn.com">me@andrewblinn.com</a>
+    <nav>
+      <ul>
+        <li><div id=linkglyph>↸</div><a href="resumeandrewblinn.pdf">resume</a></li>
+        <li><div id=linkglyph>↪</div><a href="https://github.com/disconcision">github</a></li>
+      </ul>
+      <ul>
+        <li><div id=linkglyph>⇄</div><a href="https://twitter.com/disconcision">twitter</a></li>
+        <li><div id=linkglyph>↻</div><a href="http://disconcision.com/">tumblr</a></li>
+      </ul>
+      <ul>
+        <li><div id=linkglyph>⥁</div><a href="http://instagram.com/disconcision">instagram</a></li>
+        <li><div id=linkglyph>⇐</div><a href="https://linkedin.com/in/andrewblinn">linkedin</a></li>
+      </ul>
+    </nav>
+
+    <div id=intro>
+      i like programming languages & user interfaces; recovering math-head,
+      now trying to pull abstractions into the grass and muss them up a bit.
+      here are some things i'm working on:
     </div>
-  </header>
-
-  <div id=intro>
-    i like programming languages & user interfaces. recovering math-head
-    now trying to pull abstractions into the grass and muss them up a bit.
-    i just got a bsc in math & cs and now i write software and do other stuff
-    <div id=navglyph><a href="#project1">🡫</a></div>
-  </div>
-
-  <nav>
-    <ul>
-      <li><div id=linkglyph>↸</div><a href="resumeandrewblinn.pdf">resume</a></li>
-      <li><div id=linkglyph>↪</div><a href="https://github.com/disconcision">github</a></li>
-      <li><div id=linkglyph>⇄</div><a href="https://twitter.com/disconcision">twitter</a></li>
-    </ul>
-    <ul>
-      <li><div id=linkglyph>↻</div><a href="http://disconcision.com/">tumblr</a></li>
-      <li><div id=linkglyph>⇐</div><a href="https://linkedin.com/in/andrewblinn">linkedin</a></li>
-      <li><div id=linkglyph>⥁</div><a href="http://instagram.com/disconcision">instagram</a></li>
-    </ul>
-  </nav>
-
-  <div id=projectsintro>
-    here are some things i'm working on lately
-    <div id=navglyph><a href="#project1">🡫</a></div>
-  </div>
-
-  <div id=project1>
-    <a href="https://github.com/disconcision/fructure">
-      <div id=copy>
-        <div id=glyph1>🡮</div>
-        <div id=rest>
-          <div id=head>
-            <h1>fructure</h1>
-            <div>
-              <img src="images/github-32.png" height=26 width=26 />
-              <img src="images/tumblr-32.png" height=26 width=26 />
+    
+    <div id=project1>
+      <a href="https://github.com/disconcision/fructure">
+        <div id=copy>
+          <img id=projectglyph src="images/arrowLR.svg" />
+          <div id=rest>
+            <div id=head>
+              <h1>fructure</h1>
+              <div>
+                <img src="images/github-32.png" height=26 width=26 />
+                <img src="images/tumblr-32.png" height=26 width=26 />
+              </div>
+            </div>
+            <h2>a structured interaction engine for racket</h2>
+            <div id=description>
+              fructure is a prototype for an extensible structured editing engine,
+              built around a ui for composing term-rewriting edit actions.
+              editing abstractions like cursors and code-folding are reinterpreted as
+              syntactic scaffolding in a meta-grammar of syntactic affordances
             </div>
           </div>
-          <h2>a structured interaction engine for racket</h2>
-          <div id=description>
-            fructure is a prototype for an extensible structured editing engine,
-            built around a ui for composing term-rewriting edit actions.
-            editing abstractions like cursors and code-folding are reinterpreted as
-            syntactic scaffolding in a meta-grammar of syntactic affordances
-          </div>
         </div>
-      </div>
-    </a>
-    <figure><img src="images/fructure-screenshot.png" alt="bad dog combinator"></figure>
-  </div>
-
-  <div id=project2>
-    <a href="https://github.com/disconcision/containment-patterns">
-      <div id=copy>
-        <div id=glyph2>🡮</div>
-        <div id=rest>
-          <div id=head>
-            <h1>containment patterns</h1>
-            <div>
-              <img src="images/github-32.png" height=26 width=26>
-            </div>
-          </div>
-          <h2>capture contexts with racket/match</h2>
-          <div id=description>
-            a library of custom pattern combinators for racket/match which generalize
-            macro-by-example ellipses patterns. these use composable continuations to
-            descend into arbitrary nested structures and capture both matches and their
-            surrounding contexts
-          </div>
-        </div>
-      </div>
-    </a>
-    <figure><img src="images/containment-patterns.png" alt="tangerine nightmare"/></figure>
-  </div>
-
-  <div id=project3>
-    <a href="https://github.com/disconcision/depthop">
-      <div id=copy>
-        <div id=glyph3>🡮</div>
-        <div id=rest>
-          <div id=head>
-            <h1>depthop</h1>
-            <div>
-              <img src="images/github-32.png" height=26 width=26/>
-            </div>
-          </div>
-          <h2>a signed distance field raymarcher in C++</h2>
-          <div id=description>
-            a simple cpu raymarcher parallelized with open mp.
-            implementing constructive solid geometry, soft shadows,
-            ambient occlusion, blinn-phong shading, and perlin noise
-          </div>
-        </div>
-      </div>
-    </a>
-    <figure>
-      <img src="images/depthmarch.png" alt="caged sphere"/>
-    </figure>
-  </div>
-
-  <footer>
-    <div>
-      this page made with ♥ and <a href="https://www.gnu.org/software/emacs/">emacs</a> in june 2019
-      <div id=navglyph><a href="#top">🡡</a></div>
+      </a>
+      <figure><img src="images/fructure-screenshot.png" alt="bad dog combinator"></figure>
     </div>
-  </footer>
 
-</main>
+    <div id=project2>
+      <a href="https://github.com/disconcision/containment-patterns">
+        <div id=copy>
+          <img id=projectglyph src="images/arrowLR.svg" />
+          <div id=rest>
+            <div id=head>
+              <h1>containment patterns</h1>
+              <div><img src="images/github-32.png" height=26 width=26></div>
+            </div>
+            <h2>capture contexts with racket/match</h2>
+            <div id=description>
+              a library of custom pattern combinators for racket/match which generalize
+              macro-by-example ellipses patterns. these use composable continuations to
+              descend into arbitrary nested structures and capture both matches and their
+              surrounding contexts
+            </div>
+          </div>
+        </div>
+      </a>
+      <figure><img src="images/containment-patterns.png" alt="tangerine nightmare" /></figure>
+    </div>
+
+    <div id=project3>
+      <a href="https://github.com/disconcision/depthop">
+        <div id=copy>
+          <img id=projectglyph src="images/arrowLR.svg" />
+          <div id=rest>
+            <div id=head>
+              <h1>depthop</h1>
+              <div><img src="images/github-32.png" height=26 width=26 /></div>
+            </div>
+            <h2>a signed distance field raymarcher in C++</h2>
+            <div id=description>
+              a simple cpu raymarcher parallelized with open MP,
+              implementing constructive solid geometry, soft shadows,
+              ambient occlusion, blinn-phong shading, and perlin noise
+            </div>
+          </div>
+        </div>
+      </a>
+      <figure><img src="images/depthmarch.png" alt="caged sphere" /></figure>
+    </div>
+
+    <footer>
+
+        <p>this page made with ♥ and <a href="https://www.gnu.org/software/emacs/">emacs</a> in june 2019</p>
+        <div id=navglyph><a href="#top">🡡</a></div>
+
+    </footer>
+
+  </main>
 </body>
+
 </html>
