@@ -123,30 +123,6 @@ footer {
 
 /* PROJECTS CSS */
 
-#project1 {
-  display: flex;
-  flex-direction: row-reverse;
-  /*flex-wrap: wrap-reverse;*/
-  /*justify-content: flex-start;*/
-  background-color: rgb(73, 202, 181);
-}
-
-#project2 {
-  display: flex;
-  flex-direction: row;
-  /*flex-wrap: wrap;*/
-  /*justify-content: space-between;*/
-  background-color: rgb(73, 202, 137);
-}
-
-#project3 {
-  display: flex;
-  flex-direction: row-reverse;
-  /*flex-wrap: wrap-reverse;*/
-  /*justify-content: flex-end;*/
-  background-color: rgb(73, 202, 94);
-}
-
 figure {
   margin: 0;
   display: flex;
@@ -211,11 +187,46 @@ figure {
   width: 26px;
 }
 
-/* VIDEOBAR CSS */
+/* PROJECTS : OTHERS CSS */
 
-.extraproj {}
+#context-patterns {
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  /*justify-content: space-between;*/
+  background-color: rgb(73, 202, 137);
+}
+
+#depthop {
+  display: flex;
+  flex-direction: row-reverse;
+  /*flex-wrap: wrap-reverse;*/
+  /*justify-content: flex-end;*/
+  background-color: rgb(73, 202, 94);
+}
+
+/* PROJECT : FRUCTURE CSS */
+
+#fructure {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, auto);
+  grid-template-rows: minmax(0, auto) 1fr;
+  background-color: rgb(73, 202, 181);
+}
+
+#proj1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#fig1 {
+  grid-column: 1;
+  grid-row: 1/3;
+}
 
 #video {
+  grid-column: 2;
+  grid-row: 1;
   height: 60px;
   display: flex;
   justify-content: flex-end;
@@ -243,13 +254,6 @@ figure {
 
 #talkscrot {
   content:url("images/talk-tiny-60.png");
-
-}
-
-#talkscrot2 {
-  padding-left: 26px;
-  content:url("images/ae.png");
-  height: 70px;
 }
 
 /* FOOTER CSS */
