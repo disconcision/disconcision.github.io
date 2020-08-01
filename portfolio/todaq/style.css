@@ -1,0 +1,147 @@
+/* ROOT CSS */
+
+@font-face {
+  font-family: 'Cutive Mono';
+  font-display: swap;
+  src: url('cutivemono.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: url('OpenSans-Light.ttf');
+}
+
+body {
+  margin: 0;
+  margin-left: 60px; /*hack*/
+  margin-top: 40pt;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  background-image: url("images/stripesbkg100.png");
+  color: #fff;
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+}
+
+header {
+    max-width: 81em;
+    padding: 2em;
+    padding-top: 12pt;
+    background-color: #222;
+    filter: opacity(0.5);
+    border-radius: 0 30px 0 30px;
+}
+
+  
+footer {
+    max-width: 81em;
+    padding: 2em;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    background-color: #222;
+    filter: opacity(0.5);
+    border-radius: 0 30px 0 30px;
+}
+
+main {
+    max-width: 81em;
+    display: grid;
+    grid-gap: 2em;
+}
+
+main section {
+    padding: 2em;
+    background-color: #1b1d21;
+    border-radius: 0 30px 0 30px;
+    box-shadow: 0.3em 0.3em #444;
+}
+
+main section#s1 {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+main section#s1 img {
+    /*border: solid 2px #888 ;*/
+    box-shadow: 0.14em 0.14em #444;
+    border-radius: 1.2em;
+    width: 24em;
+}
+
+
+#s33 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+#s33 > span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#s33 img {
+  /*border: solid 2px #888 ;*/
+  box-shadow: 0.14em 0.14em #444;
+  border-radius: 1.2em;
+}
+
+#s5 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.2em;
+}
+ #s5 div img {
+  box-shadow: 0.14em 0.14em #444;
+  border-radius: 0 1.2em 0 1.2em;
+}
+
+img.wide {
+    width: 77em;
+}
+img.half {
+    width: 37em;
+}
+img.third {
+    width: 24em;
+}
+
+p {
+  margin: 0;
+  color: black;
+  font-size: 1.15em;
+  font-family: 'Open Sans', 'Courier New', monospace;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: orange;
+  color: white;
+}
+
+::selection {
+  background-color: orange;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 6em;
+  font-weight: normal; 
+}
+
+h2 {
+  margin: 0;
+  font-size: 3.5em;
+  font-weight: normal;
+}
