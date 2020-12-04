@@ -20,14 +20,61 @@ body {
   background-image: url("images/stripesbkg100.png");
 }
 
+/* HEADER */
+
+header {
+  box-sizing: border-box;
+  width: 740pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20pt;
+  padding: 20pt;
+  padding-top: 12pt;
+  border-radius: 0 150px 0 0;
+  background-color: rgb(129, 194, 216);
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+  filter: drop-shadow(30px 20px 16px #0002);
+}
+
+#emailglyph {
+  content:url("images/arrowLR.svg");
+  width:38px;
+  height:38px;
+  padding-right: 24pt;
+  padding-left: 8pt;
+  font-display: block;
+  color: #aadbe7;
+  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(4);
+}
+
+/* FOOTER */
+
+footer {
+  box-sizing: border-box;
+  width: 740pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20pt;
+  padding: 20pt;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  border-radius: 0 0 0 30pt;
+  background-color: rgb(129, 194, 216);
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+  filter: drop-shadow(30px 20px 16px #0002);
+}
+
+/* MAIN */
+
 main {
   max-width: 740pt;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20pt;
   margin-bottom: 0;
   color: black;
   font-family: 'Cutive Mono', 'Courier New', monospace;
+  filter: drop-shadow(30px 20px 16px #0002);
 }
 
 p {
@@ -43,8 +90,9 @@ a {
 }
 
 a:hover {
+  border-radius: 4pt;
   background-color: orange;
-  color: white;
+  /*color: black;*/
 }
 
 ::selection {
@@ -64,13 +112,7 @@ h2 {
   font-weight: normal;
 }
 
-/* MAIN SECTIONS CSS */
-
-header {
-  padding: 20pt;
-  padding-top: 12pt;
-  background-color: rgb(129, 194, 216);
-}
+/* NAV */
 
 nav {
   padding: 20pt 20pt 20pt 83pt;
@@ -80,6 +122,29 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+
+a.toplink {
+  display: flex;
+  align-items: baseline;
+}
+
+a.toplink:hover {
+  background-color: #fff0;
+}
+
+a.toplink:hover span {
+  border-radius: 6pt;
+  background-color: orange;
+}
+
+#linkglyph {
+  padding-right: 16pt;
+  font-size: 0.77em;
+  width:24px;
+  color: rgb(0, 167, 209);
+}
+
+/* MAIN SECTIONS */
 
 #introduction {
   padding: 20pt 50pt 20pt 54pt;
@@ -94,19 +159,22 @@ nav {
 
 #news section {
   flex: 1 1 0px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 0 24px 3px 24px;
   background-color: rgb(154, 211, 230);
-  background: linear-gradient(180deg,  rgb(154, 211, 230) 0%, rgb(129, 194, 216) 25%, rgb(110, 177, 199) 53%, rgb(73, 202, 181) 100%);
+  background: linear-gradient(180deg,  rgb(154, 211, 230) 0%, rgb(129, 194, 216) 25%, rgb(110, 177, 199) 49%, rgb(73, 202, 181) 100%);
   margin: 3pt;
-  padding-top: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
+  padding: 24px;
+  /*box-shadow: 
+    1px 1px 2px 0 rgba(172, 243, 255, 0.3) inset,
+    -1px -1px 2px 0 rgba(0, 133, 100, 0.25) inset;*/
 }
 
 #news section b{
-  padding: 5px;
+  margin-top: 24pt;
+  margin-bottom: 8pt;
   font-family: 'Cutive Mono', 'Courier New', monospace;
   color: white;
   font-size: 1.7em;
@@ -114,8 +182,7 @@ nav {
 }
 
 #news section p{
-  padding: 5px;
-  padding-top: 12px;
+  padding: 5pt;
 }
 
 #news img, video {
@@ -123,8 +190,7 @@ nav {
   width: 210px;
   border-radius: 120px;
   border: 1px solid rgb(110, 255, 199);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 12pt;
   filter: sepia(100%) hue-rotate(150deg);
   opacity: 40%;
 }
@@ -138,42 +204,11 @@ nav {
   width: 300px;
 }
 
-footer {
-  padding: 20pt;
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  background-color: rgb(129, 194, 216);
-}
-
-/* HEADER CSS */
-
-#emailglyph {
-  content:url("images/arrowLR.svg");
-  width:38px;
-  height:38px;
-  padding-right: 24pt;
-  padding-left: 8pt;
-  font-display: block;
-  color: #aadbe7;
-  filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(4);
-}
-
-/* NAV CSS */
-
-.toplink {
-  display: flex;
-  align-items: baseline;
-}
-
-#linkglyph {
-  padding-right: 16pt;
-  font-size: 0.77em;
-  width:24px;
-  color: rgb(0, 167, 209);
-}
-
 /* PROJECTS CSS */
+
+article a:hover {
+  border-radius: 0;
+}
 
 figure {
   margin: 0;
