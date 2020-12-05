@@ -96,6 +96,7 @@ a {
 a:hover {
   border-radius: 0.3em;
   background-color: orange;
+  cursor: url("images/horns.png"), default;
   /*color: black;*/
 }
 
@@ -133,6 +134,7 @@ a.toplink {
 }
 
 a.toplink:hover {
+  cursor: url("images/chefskiss.png"), default;
   background-color: #fff0;
 }
 
