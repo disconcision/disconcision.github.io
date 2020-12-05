@@ -26,7 +26,6 @@ body {
 }
 
 header {
- 
     color: #999;
     max-width: 41em;
     padding: 2em;
@@ -40,7 +39,6 @@ header h1{
   font-weight: bold;
   font-size: 3em;
 }
-
   
 footer {
   color: #999;
@@ -64,9 +62,9 @@ main p {
   font-size: 1.15em;
   font-family: 'Open Sans', 'Courier New', monospace;
 }
+
 main p::first-letter {
   color: white;
- 
 }
 
 main section {
@@ -87,7 +85,6 @@ main section#s1 img {
     border-radius: 1.2em;
     width: 24em;
 }
-
 
 #s33 {
   display: flex;

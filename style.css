@@ -1,4 +1,8 @@
-/* ROOT CSS */
+/* ROOT */
+
+:root {
+  --container-width: 61.7em;
+}
 
 @font-face {
   font-family: 'Cutive Mono';
@@ -13,6 +17,7 @@
 }
 
 body {
+  font-size: 16px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -24,24 +29,23 @@ body {
 
 header {
   box-sizing: border-box;
-  width: 740pt;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20pt;
-  padding: 20pt;
-  padding-top: 12pt;
-  border-radius: 4px 150px 0 0;
+  width: var(--container-width);
+  margin: auto;
+  margin-top: 1.7em;
+  padding: 1.7em;
+  padding-top: 1em;
+  border-radius: 0.2em 9.5em 0 0;
   background-color: rgb(129, 194, 216);
   font-family: 'Cutive Mono', 'Courier New', monospace;
-  filter: drop-shadow(30px 20px 16px #0002);
+  filter: drop-shadow(2.5em 1.7em 1.3em #0002);
 }
 
 #emailglyph {
   content:url("images/arrowLR.svg");
-  width:38px;
-  height:38px;
-  padding-right: 24pt;
-  padding-left: 8pt;
+  width: 0.67em;
+  height: 0.67em;
+  padding-right: 0.6em;
+  padding-left: 0.2em;
   font-display: block;
   color: #aadbe7;
   filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(4);
@@ -51,30 +55,30 @@ header {
 
 footer {
   box-sizing: border-box;
-  width: 740pt;
+  width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20pt;
-  padding: 20pt;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  border-radius: 0 0 0 30pt;
+  border-radius: 0 0 0 2.5em;
   background-color: rgb(129, 194, 216);
   font-family: 'Cutive Mono', 'Courier New', monospace;
-  filter: drop-shadow(30px 20px 16px #0002);
+  filter: drop-shadow(2.5em 1.7em 1.3em #0002);
 }
 
 /* MAIN */
 
 main {
-  max-width: 740pt;
+  max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
   color: black;
   font-family: 'Cutive Mono', 'Courier New', monospace;
-  filter: drop-shadow(30px 20px 16px #0002);
+  filter: drop-shadow(2.5em 1.7em 1.3em #0002);
 }
 
 p {
@@ -90,7 +94,7 @@ a {
 }
 
 a:hover {
-  border-radius: 4pt;
+  border-radius: 0.3em;
   background-color: orange;
   /*color: black;*/
 }
@@ -115,9 +119,9 @@ h2 {
 /* NAV */
 
 nav {
-  padding: 20pt 20pt 20pt 83pt;
+  padding: 0.8em 1.6em 0.8em 3.2em;
   background-color: rgb(154, 211, 230);
-  font-size: 2.0em;
+  font-size: 2em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -133,48 +137,47 @@ a.toplink:hover {
 }
 
 a.toplink:hover span {
-  border-radius: 6pt;
+  border-radius: 0.3em;
   background-color: orange;
 }
 
 #linkglyph {
-  padding-right: 16pt;
-  font-size: 0.77em;
-  width:24px;
+  padding-right: 1em;
+  font-size: 0.75em;
+  width: 1em;
   color: rgb(0, 167, 209);
 }
 
 /* MAIN SECTIONS */
 
 #introduction {
-  padding: 20pt 50pt 20pt 54pt;
+  padding: 1.5em 4em 1.5em 4em;
   background-color: rgb(173, 221, 236);
 }
 
 #news {
   display: flex;
-  padding: 0pt 30pt 0pt 30pt;
+  padding: 0 2.5em 0 2.5em;
   background-color: rgb(173, 221, 236);
 }
 
 #news section {
-  flex: 1 1 0px;
+  flex: 1 1 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 3px 24px 3px 24px;
+  border-radius: 0.2em 1.5em 0.2em 1.5em;
   background-color: rgb(154, 211, 230);
   background: linear-gradient(180deg,  rgb(154, 211, 230) 0%, rgb(129, 194, 216) 25%, rgb(110, 177, 199) 49%, rgb(73, 202, 181) 100%);
-  margin: 3pt;
-  padding: 24px;
+  margin: 0.25em;
+  padding: 1.5em;
   /*box-shadow: 
     1px 1px 2px 0 rgba(172, 243, 255, 0.3) inset,
     -1px -1px 2px 0 rgba(0, 133, 100, 0.25) inset;*/
 }
 
 #news section b{
-  margin-top: 24pt;
-  margin-bottom: 8pt;
+  margin-bottom: 0.4em;
   font-family: 'Cutive Mono', 'Courier New', monospace;
   color: white;
   font-size: 1.7em;
@@ -182,15 +185,16 @@ a.toplink:hover span {
 }
 
 #news section p{
-  padding: 5pt;
+  padding: 0.4em;
 }
 
 #news img, video {
   transition: all 0.2s ease-out;
-  width: 210px;
-  border-radius: 120px;
-  border: 1px solid rgb(110, 255, 199);
-  margin-top: 12pt;
+  width: 13em;
+  border-radius: 7.5em;
+  border: 0.0625em solid rgb(110, 255, 199);
+  margin-top: 1em;
+  margin-bottom: 2em;
   filter: sepia(100%) hue-rotate(150deg);
   opacity: 40%;
 }
@@ -198,13 +202,13 @@ a.toplink:hover span {
 #news section:hover img, #news section:hover video {
   filter: none;
   /*filter: drop-shadow(4px 4px 3px rgb(81, 143, 163));*/
-  border-radius: 0 24px 0 24px;
+  border-radius: 0 1.5em 0 1.5em;
   border: none;
   opacity: 100%;
-  width: 300px;
+  width: 20em;
 }
 
-/* PROJECTS CSS */
+/* PROJECTS */
 
 article a:hover {
   border-radius: 0;
@@ -221,8 +225,8 @@ figure {
 
 .proj {
   display: grid;
-  grid-template-columns: 81px 1fr 58px;
-  grid-template-rows: minmax(0, auto) minmax(24px,auto) minmax(52px,auto) minmax(42px,auto) 1fr minmax(50px, auto); 
+  grid-template-columns: 5.0625em 1fr 3.625em;
+  grid-template-rows: minmax(0, auto) minmax(1.5em,auto) minmax(3.25em,auto) minmax(2.6em,auto) 1fr minmax(3.1em, auto); 
 }
 
 .proj h1{
@@ -251,8 +255,8 @@ figure {
   align-self: baseline;
   justify-self: center;
   content:url("images/arrowLR.svg");
-  width: 28px;
-  height: 28px;
+  width: 1.75em;
+  height: 1.75em;
   filter: invert(0.8) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20) opacity(90%);
 }
 
@@ -261,8 +265,8 @@ figure {
   grid-row: 3;
   align-self: baseline;
   content:url("images/github-32.png");
-  height: 26px;
-  width: 26px;
+  height: 1.6em;
+  width: 1.6em;
 }
 
 #tumblricon {
@@ -270,8 +274,8 @@ figure {
   grid-row: 4;
   align-self: baseline;
   content:url("images/tumblr-32.png");
-  height: 26px;
-  width: 26px;
+  height: 1.6em; 
+  width: 1.6em;
 }
 
 /* PROJECTS : OTHERS CSS */
@@ -279,24 +283,20 @@ figure {
 #context-patterns {
   display: flex;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
-  /*justify-content: space-between;*/
   background-color: rgb(73, 202, 137);
 }
 
 #depthop {
   display: flex;
   flex-direction: row-reverse;
-  /*flex-wrap: wrap-reverse;*/
-  /*justify-content: flex-end;*/
   background-color: rgb(73, 202, 94);
 }
 
-/* PROJECT : FRUCTURE CSS */
+/* PROJECT : FRUCTURE */
 
 #fructure {
   display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, auto);
+  grid-template-columns: minmax(0, 18.75em) minmax(0, auto);
   grid-template-rows: minmax(0, auto) 1fr;
   background-color: rgb(73, 202, 181);
 }
@@ -314,7 +314,7 @@ figure {
 #video {
   grid-column: 2;
   grid-row: 1;
-  height: 60px;
+  height: 3.75em;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -327,23 +327,23 @@ figure {
   display: flex;
   align-items: center;
   overflow:hidden;
-  padding-right: 20px;
+  padding-right: 1.25em;
   font-size: 1.5em;
 }
 
 #youtubeicon {
   content:url("images/youtube-48-white.png");
-  padding-left: 22px;
-  padding-right: 24px;
-  height: 40px;
-  width: 40px; 
+  padding-left: 0.9em;
+  padding-right: 1em;
+  height: 1.65em;
+  width: 1.65em;
 }
 
 #talkscrot {
   content:url("images/talk-tiny-60.png");
 }
 
-/* FOOTER CSS */
+/* FOOTER */
 
 #navglyph { 
   display: inline;
