@@ -30,7 +30,7 @@ header {
   margin-top: 20pt;
   padding: 20pt;
   padding-top: 12pt;
-  border-radius: 0 150px 0 0;
+  border-radius: 4px 150px 0 0;
   background-color: rgb(129, 194, 216);
   font-family: 'Cutive Mono', 'Courier New', monospace;
   filter: drop-shadow(30px 20px 16px #0002);
@@ -162,7 +162,7 @@ a.toplink:hover span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 0 24px 3px 24px;
+  border-radius: 3px 24px 3px 24px;
   background-color: rgb(154, 211, 230);
   background: linear-gradient(180deg,  rgb(154, 211, 230) 0%, rgb(129, 194, 216) 25%, rgb(110, 177, 199) 49%, rgb(73, 202, 181) 100%);
   margin: 3pt;
