@@ -134,7 +134,7 @@ a.toplink {
 }
 
 a.toplink:hover {
-  cursor: url("images/chefskiss.png"), default;
+  /*cursor: url("images/chefskiss.png"), default;*/
   background-color: #fff0;
 }
 
