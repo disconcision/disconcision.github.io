@@ -114,7 +114,7 @@ body > .container {
   margin-bottom: 1.6em;
   padding: 0;
   font-family: 'Cutive Mono', 'Courier New', monospace;
-  width: var(--container-width);
+  max-width: var(--container-width);
   border-radius: 0.2em 9.5em 0 2.5em;
   box-shadow: -20px   5px 55px rgb(50, 60, 63),
                20px -20px 70px rgb(50, 60, 63);
@@ -191,7 +191,7 @@ main > section#news > article {
   border-radius: 0.2em 1.5em 0.2em 1.5em;
   background-color: rgb(154, 211, 230);
   background: linear-gradient(180deg,  rgb(154, 211, 230) 0%, rgb(129, 194, 216) 25%, rgb(110, 177, 199) 49%, rgb(73, 202, 181) 100%);
-  margin: 0.25em;
+  margin: 0.07em;
   padding: 1.5em;
 }
 
@@ -267,7 +267,7 @@ main > section#projects .container p{
 main > section#projects .glyph {
   grid-column: 1;
   grid-row: 3;
-  align-self: baseline;
+  align-self: center;
   justify-self: center;
   content:url("images/arrowLR.svg");
   width: 1.75em;
@@ -356,12 +356,12 @@ main > section#projects .youtubeicon {
 /* HEADER HELPERS */
 
 header .glyph {
+  display: inline-block;
   content:url("images/arrowLR.svg");
   width: 0.67em;
   height: 0.67em;
-  padding-right: 0.6em;
-  padding-left: 0.2em;
-  font-display: block;
+  margin-right: 0.6em;
+  margin-left: 0.2em;
   color: var(--highlight-color);
   filter: invert(0.7) sepia(1) hue-rotate(78deg) saturate(0) brightness(4);
 }
@@ -369,19 +369,22 @@ header .glyph {
 /* FOOTER HELPERS */
 
 .heartmoji {
-  content:url("images/heartmoji.svg");
+  display: inline-block;
+  content: url("images/heartmoji.svg");
   height: 0.75em;
   width: 0.75em;
 }
 
 .arrowup {
-  content:url("images/arrow-up-white.svg");
+  display: inline-block;
+  content: url("images/arrow-up-white.svg");
   height: 0.8em;
   width: 0.8em;
 }
 
 .arrowdown {
-  content:url("images/arrow-up-white.svg");
+  display: inline-block;
+  content: url("images/arrow-up-white.svg");
   transform: rotate(180deg);
   height: 0.8em;
   width: 0.8em;
