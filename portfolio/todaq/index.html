@@ -28,20 +28,20 @@
         </section>
         <section id="s1">
             
-            <video width="400" autoplay muted loop>
+            <video width="300" autoplay muted loop>
                 <source src="images/todaq-hash-icon-animation-cropped.mp4" type="video/mp4" />
             </video>
             <p>
                 All files in ADOT/TODA are represented by their sha256 hash. This represents the path to the file through the merkle trie defining the TODA protocol's <a href="https://engineering.todaq.net/todapop.pdf">central data structure</a>.
             </p>
             <p>
-                Previous UI was lousy with with hexademical hashes and prefixes. I wanted to declutter without completely jettisoning the crypto connotations of the raw hashes. After a few iterations I decided on depicting hashes as squares, with the greyscale value of each pixel representing two bytes of the hash. I had a more ambitious plan to animate these in a way connoting (a caricature of) a hash calculation, but I settled for a quick CSS animation using opacity and inversion which suffices to bring them to a light simmer
+                Previous UI was lousy with with hexadecimal hashes and prefixes. I wanted to declutter without completely jettisoning the crypto connotations of the raw hashes. After a few iterations I decided on depicting hashes as squares, with the grayscale value of each pixel representing two bytes of the hash. I had a more ambitious plan to animate these in a way connoting (a caricature of) a hash calculation, but I settled for a quick CSS animation using opacity and inversion which suffices to bring them to a light simmer
             </p>
         </section>
         <section>
                 <img src='images/adot-inventory-header.png' width='400px'/>
                 <p>
-                    The core system is a hierchial, expanding file manager, supporting both manually curated selections of files and customizable smartfolders which aggregate files along certain dimensions.
+                    The core system is a hierarchial, expanding file manager, supporting both manually curated selections of files and customizable smartfolders which aggregate files along certain dimensions.
                 </p>
                 <div id="s33">
                         <span class="col">
@@ -69,23 +69,31 @@
         </section>
         <section id="s5">
                 <img src='images/adot-command-forms-header.png' width='480px'/>
-                <p>In TODA/ADOT, different actions/recipes which you can perform with files, like making transactions, requesting transactions, and creating new assets are themselves expressed as files. I wanted to tactilize these 'form' files through a structured-editing style interface, where tangible forms representing actions could be dragged out of an 'action' smartfolder, onto a command line where their fields could then be populated, also by drag-and-drop. I intended to push this further, permitting users to simply start typing in form text into the command line to autocomplete-style instantiate a form and begin populating it, somewhat in the vein of Angert and Elkammash's <a href="https://blog.repl.it/clui">CLUI</a>. This aspect didn't get done in time though.</p>
+                <p>In ADOT, different actions/recipes which you can perform with files, like making transactions, requesting transactions, and creating new assets are themselves expressed as files. I wanted to tactilize these 'form' files through a structured-editing style interface, where tangible forms representing actions could be dragged out of an 'action' smartfolder, onto a command line where their fields could then be populated, also by drag-and-drop. I intended to push this further, permitting users to simply start typing in form text into the command line to autocomplete-style instantiate a form and begin populating it, somewhat in the vein of Angert and Elkammash's <a href="https://blog.repl.it/clui">CLUI</a>. This aspect didn't get done in time though.</p>
                 <br><br>
                 <div>
                         <img class='half' src='images/ADOT-command-forms.clean.png'/>
                         <img class='half' src='images/ADOT-command-forms.marked-up.png'/>
                 </div>
-                
+                <br>
+                <p>Here's a walkthrough of a particular interaction, submitting a request for assets of a certain type:</p>
+                <br><br>
                 <img class='wide' src='images/ADOT.request-file-sequence.png'/>
         </section>
         <section id="s1">
-            <p> A previous style iteration. A big part of TODA is about making digital files behave like real things, so I wanted to connote a chunkyness and physicality to file cards/tiles</p>
-            <video width="600" autoplay muted loop>
+            <p> A previous style iteration. A big part of TODA is about making digital files behave like real things, so I wanted to connote a chunkiness and physicality to file cards/tiles</p>
+            <video width="600px" autoplay muted loop>
                 <source src="images/todaq-inventory-cyan-hover-drag.mp4" type="video/mp4" />
             </video>
         </section> 
         <section id="s4">
             <img class='wide' src='images/adot-old-detail-3.png'/>
+            <p>
+                I was keen on asserting the physicality of file tiles while retaining a clean-feeling presentation. One angle I explored was
+                subtle plastic-molding-style detailing, as can be seen between the fields on the above tiles. Below: On hover, tiles attempt to
+                jump into your hand.
+            </p>
+            <br>
             <img class='half' src='images/adot-old-detail-2.png'/>
             <img class='half' src='images/adot-old-detail-1.png'/>
         </section> 
