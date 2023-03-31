@@ -31,12 +31,6 @@
 %
 
 
-
-
-%%% LOAD AND SETUP PACKAGES
-
-
-
 % To finetune lists with a inline heading and indented content.
 % See the Experiences section in the example.
 \usepackage{mdwlist}
@@ -57,6 +51,7 @@
 \definecolor{spacergray}{gray}{0.6}
 \hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
 
+\usepackage{fontawesome}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
@@ -108,15 +103,11 @@
 
 \fi
 
-
-
 %%% DOCUMENT WIDE STYLING
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 \xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
-
-
 
 %%% CUSTOM COMMANDS
 
@@ -127,7 +118,7 @@
 \newcommand*\roottitle[1]{\subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}
 
 % acr command, to quickly mark acronyms for special formatting
-\newcommand*\acr[1]{\textscale{.85}{#1}}
+%\newcommand*\acr[1]{\textscale{.85}{#1}}
 
 % pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
 \newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
@@ -150,50 +141,10 @@
 }
 {\end{list}}
 
-% headerrow command, used for a new employer
-\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{indentsection}\nopagebreak[4]}
-
-% subheaderrow command, used for a new position
-% previous version with right-justification (hfill)
-%\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\hfill\emph{\textcolor{mygray}{#2}}#3\end{indentsection}\nopagebreak[4]}
-
 \newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\emph{\textcolor{mygray}{\sbull #2}}#3\end{indentsection}\nopagebreak[4]}
 
-% body text (indented)
 \newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]}
 
-% \vspace variaties
-\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
 \newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
 
-% \spacedhrule a horizontal line with some vertical space before and after it
 \newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
-
-% \inlineheadsection command, used for a new employer
-\newcommand{\inlineheadsection}[2]{
-    \begin{basedescript}{
-        \setlength{\leftmargin}
-                  {\doubleparindent}}
-        \item[\hspace{\newparindent}
-              \textbf{#1}]
-        #2
-    \end{basedescript}
-    \vspace{-1.7em}}
-
-% \inlineheadsection except no indent
-\newcommand{\inlineheadsectionnoindent}[1]{
-    \hspace{\newparindent} #1 }
-
-% apo command, for an apostrophe that looks good on old style nums
-\newcommand{\apo}{\raisebox{-.18ex}{'}{\hspace{-.1em}}}
-
-% non space that allows line breaks
-\newcommand*{\nsp}{\hskip0pt}
-
-
-
-%%% MORE SPECIFIC COMMANDS
-
-% CPP command (found it in some corner of the internet and decided to use it)
-\newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf++}}
-
