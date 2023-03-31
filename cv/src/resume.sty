@@ -52,6 +52,7 @@
 \hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
 
 \usepackage{fontawesome}
+\usepackage{amsmath}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
@@ -66,7 +67,6 @@
     [ ExternalLocation ,
       Mapping          = tex-text ,
       Numbers          = OldStyle ,
-      Ligatures        = {Common,Contextual} ,
       BoldFont         = texgyrepagella-bold.otf ,
       ItalicFont       = texgyrepagella-italic.otf ,
       BoldItalicFont   = texgyrepagella-bolditalic.otf ]
@@ -76,7 +76,6 @@
   \newfontfamily\newnums
     [ ExternalLocation ,
       Mapping          = tex-text ,
-      Ligatures        = {Common,Contextual} ,
       BoldFont         = texgyrepagella-bold.otf ,
       ItalicFont       = texgyrepagella-italic.otf ,
       BoldItalicFont   = texgyrepagella-bolditalic.otf ]
@@ -121,8 +120,9 @@
 %\newcommand*\acr[1]{\textscale{.85}{#1}}
 
 % pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
-\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
-\newcommand*\sbull{\ \ \bull \ \ }
+%\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
+%\newcommand*\sbull{\ \ \bull \ \ }
+\newcommand*\sbull{\ \ $\boldsymbol{\cdot}$ \ \ }
 
 % it seems not to work when simply using \parindent...
 \newlength{\newparindent}
@@ -141,9 +141,9 @@
 }
 {\end{list}}
 
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\emph{\textcolor{mygray}{\sbull #2}}#3\end{indentsection}\nopagebreak[4]}
-
 \newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]}
+
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\emph{\textcolor{mygray}{\sbull #2}}\bodytext{#3}\end{indentsection}\nopagebreak[4]}
 
 \newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
 
