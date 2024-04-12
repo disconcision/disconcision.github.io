@@ -122,9 +122,8 @@ body > .container {
   font-family: 'Cutive Mono', 'Courier New', monospace;
   max-width: var(--container-width);
   border-radius: 0.2em 9.5em 0 2.5em;
-  box-shadow: -20px   5px 55px rgb(50, 60, 63),
-               20px -20px 70px rgb(50, 60, 63);
-  background-color: #0005;
+  box-shadow: -20px 5px 55px rgb(50, 60, 63), 20px -20px 70px rgb(50, 60, 63);
+  background-color: #001a237a;
   filter: saturate(1.2);
 }
 
@@ -159,7 +158,8 @@ footer {
 /* NAV */
 
 nav {
-  padding: 0.8em 1.6em 0.8em 3.2em;
+  padding-left: 2em;
+  /* padding: 0.8em 1.6em 0.8em 3.2em; */
   border-radius: 0.1em 0.7em 0.2em 1.9em;
   background-color: rgb(154, 211, 230);
   font-size: 2em;
@@ -279,12 +279,13 @@ main > section#newsfeed {
   border-bottom: 0.3px solid #5dffb0;
 }
 section#newsfeed label {
+  width: 90%;
+  text-align: right;
   font-family: 'Open Sans', 'Courier New', monospace;
   position: absolute;
-  color: #00ffdf;
+  color: #00FFDF;
   padding: 1.4em;
   bottom: 0;
-  left: 45%;
   font-size: 0.6em;
   cursor: pointer;
 }
