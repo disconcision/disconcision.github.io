@@ -132,6 +132,7 @@ nav a:hover span {
 main section#projects a.container:hover {
   background-size: 2000% 2000%;
   animation: gradient 40s linear infinite alternate;
+  border-radius: 3em;
 }
 
 /* BODY */
@@ -234,6 +235,13 @@ nav > a:hover > .glyph {
 }
 
 /* MAIN SECTIONS */
+
+main > p {
+  padding: 2em 4em;
+  font-family: "Open Sans", "Courier New", monospace;
+  font-size: 1.3em;
+  color: white;
+}
 
 body > .container::before {
   border-radius: 19em;
@@ -423,7 +431,7 @@ p.d3 {
 main > section#news {
   display: flex;
   padding: 1.5em 2.5em 1.5em 2.5em;
-  background-color: rgb(16 82 104);
+  /* background-color: rgb(16 82 104); */
   border-radius: 0.4em 1.5em 0.2em 2.7em;
   transition: all;
   transition-duration: 0.5s;
@@ -432,9 +440,9 @@ main > section#news:hover {
   border-radius: 0.8em 2.5em 0.6em 3.7em;
 }
 
-main section#news a {
+/* main section#news a {
   border-radius: 0.2em 0.5em 0.2em 0.5em;
-}
+} */
 
 main > section#news > article {
   flex: 1 1 0em;
@@ -442,16 +450,26 @@ main > section#news > article {
   flex-direction: column;
   align-items: center;
   border-radius: 0.2em 1.5em 0.2em 1.5em;
-  background-color: rgb(154, 211, 230);
+  /* background-color: rgb(154, 211, 230);
   background: linear-gradient(
     180deg,
     rgb(154, 211, 230) 0%,
     rgb(129, 194, 216) 25%,
     rgb(110, 177, 199) 49%,
     rgb(73, 202, 181) 100%
-  );
+  ); */
   margin: 0.07em;
   padding: 1.5em;
+}
+
+main > section#news > article span {
+  line-height: 1.5em;
+  color: rgb(170 210 255);
+  background-color: rgb(9 55 69);
+}
+main > section#news > article span a {
+  color: white;
+  background-color: #32758a;
 }
 
 main > section#news > article b {
@@ -482,9 +500,10 @@ main > section#news article:hover img,
 main > section#news article:hover video {
   filter: none;
   border-radius: 0 1.5em 0 1.5em;
-  border: none;
+  border-color: #0000;
   opacity: 100%;
-  width: 20em;
+  scale: 1.4;
+  translate: 0 -2em;
 }
 
 /* NEWSFEED */
@@ -564,9 +583,14 @@ main > section#projects figure {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 10;
   background-color: #073036;
+  border-radius: 2em;
+}
+
+main > section#projects a.container {
+  background: none;
 }
 
 main > section#projects .container {
@@ -608,12 +632,32 @@ main > section#projects .glyph {
   height: 1.75em;
   filter: invert(0.8) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20)
     opacity(90%);
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  rotate: 0;
 }
+main > section#projects > article:hover .glyph {
+  rotate: -45deg;
+}
+
+main > section#projects > article {
+  border-radius: 3.5em;
+}
+
+main > section#projects > article:hover {
+  background: var(--link-gradient);
+  background-size: 2000% 2000%;
+  animation: gradient 40s linear infinite alternate;
+}
+
+
 
 main > section#projects > article#context-patterns {
   display: flex;
   flex-direction: row;
   background-color: rgb(73, 202, 137);
+  /* border-radius: 3em 3em 3em 2em; */
 }
 
 main > section#projects > article#depthop {
@@ -634,8 +678,11 @@ main > section#projects > article#fructure {
 main > section#projects > article#fructure figure {
   grid-column: 1;
   grid-row: 1/3;
+  border-radius: 3em 0 3em 3em;
 }
-
+main > section#projects > article figure img {
+  border-radius: 2em;
+}
 main > section#projects > article#fructure .videolink {
   grid-column: 2;
   grid-row: 1;
@@ -644,6 +691,7 @@ main > section#projects > article#fructure .videolink {
   justify-content: flex-end;
   align-items: center;
   background-color: #dc3400;
+  border-radius: 0 1em 0 0;
 }
 
 main > section#projects > article#fructure .videolink a {
@@ -658,6 +706,7 @@ main > section#projects > article#fructure .videolink a {
 
 main > section#projects > article#fructure .videolink .scrot {
   content: url("images/talk-tiny-60.png");
+  border-radius: 0 1em 0 0;
 }
 
 /* PROJECT ICONS */
