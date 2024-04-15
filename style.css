@@ -156,7 +156,7 @@ body > .container {
   padding: 0;
   font-family: "Cutive Mono", "Courier New", monospace;
   max-width: var(--container-width);
-  border-radius: 0.2em 9.5em 0 2.5em;
+  border-radius: 0.2em 9.5em 3em 3em;
   box-shadow: -20px 5px 55px rgb(50, 60, 63), 20px -20px 70px rgb(50, 60, 63);
   background-color: #001a237a;
   filter: saturate(1.2);
@@ -187,8 +187,15 @@ footer {
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  border-radius: 0 0 0 2.5em;
-  background-color: rgb(129, 194, 216);
+  border-radius: 0.6em 0.6em 1.2em 3em;
+  background-color: rgb(110 103 211);
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out
+}
+footer:hover {
+  border-radius: 1.5em 3em 0.5em 0.5em;
+  /* opacity: 0.8; */
 }
 
 /* NAV */
@@ -236,7 +243,14 @@ nav > a:hover > .glyph {
 
 /* MAIN SECTIONS */
 
+main > p:hover {
+  border-radius: 1.4em 4em 0.5em 2em;
+}
 main > p {
+  transition: all;
+  transition-duration: 0.3s;
+  border-radius: 0.7em 2em 1em 4em;
+  background-color: #015160;
   padding: 2em 4em;
   font-family: "Open Sans", "Courier New", monospace;
   font-size: 1.3em;
@@ -586,7 +600,11 @@ main > section#projects figure {
   align-items: center;
   flex-shrink: 10;
   background-color: #073036;
-  border-radius: 2em;
+  border-radius: 3em;
+  transition: all 0.3s ease-in-out;
+}
+main > section#projects article:hover figure {
+  scale: 0.93;
 }
 
 main > section#projects a.container {
@@ -681,7 +699,7 @@ main > section#projects > article#fructure figure {
   border-radius: 3em 0 3em 3em;
 }
 main > section#projects > article figure img {
-  border-radius: 2em;
+  border-radius: 3em;
 }
 main > section#projects > article#fructure .videolink {
   grid-column: 2;
