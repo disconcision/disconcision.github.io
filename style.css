@@ -314,6 +314,7 @@ body > .container:has(#intro:hover)::before {
   font-size: 1.3em;
   padding: 0 4em 0 4em;
   color: white;
+  line-height: 1.5em;
   /* background-color: rgb(173, 221, 236); */
   /* text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; */
 }
@@ -362,8 +363,7 @@ body > .container:has(#intro:hover)::before {
   font-size: 1.7em;
   font-weight: normal;
   position: relative;
-  transition: all;
-  transition-duration: 0.2s;
+  transition: all 0.2s ease-in-out;
   bottom: 0em;
 }
 #intro:hover > section#forge > article b {
@@ -487,6 +487,7 @@ main > section#news > article span a {
 }
 
 main > section#news > article b {
+  transition: 0.3s all ease-in-out;
   margin-bottom: 0.4em;
   font-family: "Cutive Mono", "Courier New", monospace;
   color: white;
@@ -495,6 +496,7 @@ main > section#news > article b {
 }
 
 main > section#news > article p {
+  transition: 0.3s all ease-in-out;
   padding: 0.4em;
 }
 
@@ -518,6 +520,19 @@ main > section#news article:hover video {
   opacity: 100%;
   scale: 1.4;
   translate: 0 -2em;
+  box-shadow: 0 3px 60px #00203088, 0 3px 20px #002030bb;
+}
+main > section#news article:hover > b {
+  scale: 1.2;
+}
+main > section#news article:hover > p {
+  scale: 1.03;
+} 
+main > section#news article > p > span {
+  transition: 0.25s all ease-in;
+}
+main > section#news article:hover > p > span {
+  box-shadow: 0 -3px 20px #00203066, 0 -3px 15px #00203066;
 }
 
 /* NEWSFEED */
