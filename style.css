@@ -1,9 +1,9 @@
 @keyframes fire-diag {
   0% {
-    background-position: -1.3em;
+    background-position-x: 0em;
   }
-  50% {
-    background-position-x: 0;
+  100% {
+    background-position-x: -4.4em;
   }
 }
 
@@ -148,6 +148,7 @@ body {
 }
 
 body > .container {
+  position: relative;
   transition: all;
   transition-duration: 0.5s;
   margin: auto;
@@ -257,49 +258,36 @@ main > p {
   color: white;
 }
 
+/* @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+  body > .container::before {
+    opacity:0 !important;
+  }
+} */
+
 body > .container::before {
-  border-radius: 19em;
-  transition: all;
-  transition-duration: 0.5s;
-  position: fixed;
-  z-index: -1;
-  content: ".";
-  width: 100%;
-  height: 100%;
-  /* animation: fire-diag 5s linear infinite; */
-  background-blend-mode: hard-light;
-  filter: saturate(1.2);
-  opacity: 0;
-  background: linear-gradient(
-      0deg,
-      rgb(255, 255, 255, 0.8) 0%,
-      rgb(250, 255, 208, 1) 71.5%,
-      rgb(255, 207, 0, 0.8) 76.6%,
-      rgb(239 0 150 / 90%) 82.1%,
-      rgb(85 215 255 / 90%) 92%
-    ),
-    url(images/stripesbkg100.png);
-  /* background-position-x: -1.3em; */
+    opacity: 0;
+    border-radius: 5em;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    z-index: -1;
+    content: ".";
+    width: 100%;
+    height: 100%;
+    filter: saturate(1.2);
+    background: linear-gradient( 0deg, rgba(255, 255, 255, 0.8) 0%, rgb(250, 255, 208) 23%, rgba(255, 207, 0, 0.8) 38%, rgba(239, 0, 150, 0.90) 54%, rgba(85, 215, 255, 0.9) 90% ), url(images/stripesbkg100.png);
+    background-blend-mode: hard-light;
+    top: 13em;
+    bottom: 6em;
+    width: 100%;
+    height: 45em;
 }
 
 body > .container:has(#intro:hover)::before {
   opacity: 1;
-  animation: fire-diag 50s linear infinite;
-  background-blend-mode: hard-light;
-  filter: saturate(1.2);
-  /* background-image: url(images/stripesbkg100.png); */
-  background: linear-gradient(
-      0deg,
-      rgb(255, 255, 255, 0.8) 0%,
-      rgb(250, 255, 208, 1) 71.5%,
-      rgb(255, 207, 0, 0.8) 76.6%,
-      rgb(239 0 150 / 90%) 82.1%,
-      rgb(85 215 255 / 90%) 92%
-    ),
-    url(images/stripesbkg100.png);
-  box-shadow: 0 6em 14em #a800ff, 0 6em 3em #00e5ff;
-  /* background-position-x: -1.3em; */
-  filter: blur(3px);
+  animation: fire-diag 4s linear infinite;
+  box-shadow: 0 0em 14em #a800ff, 0 0em 3em #00e5ff;
+  background-position-x: -1.3em;
+  filter: saturate(1) blur(3px);
 }
 
 #intro {
@@ -434,6 +422,7 @@ p.d3 {
 #intro > p h3 {
   background-color: rgba(40, 0, 119, 0.4);
   color: rgb(255, 255, 255);
+  font-weight: normal;
 }
 
 /* p:has(+ section#forge article:hover):before {
@@ -566,13 +555,13 @@ section#newsfeed input {
   display: none;
 }
 section#newsfeed label:after {
-  content: "SHOW MORE";
+  content: "SHOW MORE!";
 }
 section#newsfeed input:checked + label:after {
-  content: "SHOW LESS";
+  content: "SHOW LESS!";
 }
 section#newsfeed input:checked ~ dl {
-  height: 100%;
+  height: 35em;
 }
 
 main > section#newsfeed:hover {
@@ -582,8 +571,9 @@ main > section#newsfeed:hover {
 section#newsfeed dl {
   line-height: 1.4em;
   margin: 0;
-  height: 16em;
+  height: 15.9em;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 section#newsfeed dl dt {
   width: 10%;
