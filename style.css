@@ -1,34 +1,67 @@
+@keyframes fire-diag {
+  0% {
+    background-position: -1.3em;
+  }
+  50% {
+    background-position-x: 0;
+  }
+}
+
+@keyframes bubblebubble1 {
+	0% {
+		border-radius: 7em 7em 7em 7em;
+	}
+  /* 25% {
+		border-radius: 6.5em 5.5em 6.5em 7.5em;
+	} */
+  50% {
+		border-radius: 6.0em 6.0em 6.0em 6.0em;
+	}
+  /* 50% {
+		border-radius: 5.5em 7.5em 6.5em 5.5em;
+	} */
+}
+
 /* ROOT */
 
 :root {
   --highlight-color: #dc3400;
   --container-width: 61.7em;
-  --link-gradient: linear-gradient(-90deg, #ee7752 0%, #e73c7e 10%, #23a6d5 30%, #23d5ab 50%, #23a6d5 70%, #e73c7e 90%, #ee7752 100%);
+  --link-gradient: linear-gradient(
+    -90deg,
+    #ee7752 0%,
+    #e73c7e 10%,
+    #23a6d5 30%,
+    #23d5ab 50%,
+    #23a6d5 70%,
+    #e73c7e 90%,
+    #ee7752 100%
+  );
 }
 
 @font-face {
-  font-family: 'Cutive Mono';
+  font-family: "Cutive Mono";
   font-display: swap;
-  src: url('cutivemono.ttf');
+  src: url("cutivemono.ttf");
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-display: swap;
-  src: url('OpenSans-Light.ttf');
+  src: url("OpenSans-Light.ttf");
 }
 
 /* BASE */
 
 dl {
   font-size: 1.15em;
-  font-family: 'Open Sans', 'Courier New', monospace;
+  font-family: "Open Sans", "Courier New", monospace;
 }
 
 p {
   margin: 0;
   font-size: 1.15em;
-  font-family: 'Open Sans', 'Courier New', monospace;
+  font-family: "Open Sans", "Courier New", monospace;
 }
 
 a {
@@ -47,7 +80,6 @@ h1 {
   font-weight: normal;
 }
 
-
 h2 {
   margin: 0;
   font-size: 3.5em;
@@ -57,18 +89,18 @@ h2 {
 /* HOVER SHIT */
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 0%;
-	}
-	100% {
-		background-position: 400% 0%;
-	}
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 400% 0%;
+  }
 }
 
 a:hover {
   background: var(--link-gradient);
   background-size: 800% 800%;
-  animation: gradient 12s linear infinite alternate ;
+  animation: gradient 12s linear infinite alternate;
   color: rgb(255, 255, 255);
   cursor: url("images/horns.png"), pointer;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
@@ -99,7 +131,8 @@ nav a:hover span {
 
 main section#projects a.container:hover {
   background-size: 2000% 2000%;
-  animation: gradient 40s linear infinite alternate; 
+  animation: gradient 40s linear infinite alternate;
+  border-radius: 3em;
 }
 
 /* BODY */
@@ -115,13 +148,15 @@ body {
 }
 
 body > .container {
+  transition: all;
+  transition-duration: 0.5s;
   margin: auto;
   margin-top: 1.7em;
   margin-bottom: 1.6em;
   padding: 0;
-  font-family: 'Cutive Mono', 'Courier New', monospace;
+  font-family: "Cutive Mono", "Courier New", monospace;
   max-width: var(--container-width);
-  border-radius: 0.2em 9.5em 0 2.5em;
+  border-radius: 0.2em 9.5em 3em 3em;
   box-shadow: -20px 5px 55px rgb(50, 60, 63), 20px -20px 70px rgb(50, 60, 63);
   background-color: #001a237a;
   filter: saturate(1.2);
@@ -144,15 +179,23 @@ header:hover {
   /* border-top: 1px solid white;*/
 }
 
-main {}
+main {
+}
 
 footer {
   padding: 1.7em;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  border-radius: 0 0 0 2.5em;
-  background-color: rgb(129, 194, 216);
+  border-radius: 0.6em 0.6em 1.2em 3em;
+  background-color: rgb(110 103 211);
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out
+}
+footer:hover {
+  border-radius: 1.5em 3em 0.5em 0.5em;
+  /* opacity: 0.8; */
 }
 
 /* NAV */
@@ -192,34 +235,228 @@ nav > a > .glyph {
   transition: all;
   transition-duration: 0.5s;
   width: 0.8em;
-  filter: invert(1) brightness(0.4) sepia(1.0) hue-rotate(136deg) saturate(5.5);
+  filter: invert(1) brightness(0.4) sepia(1) hue-rotate(136deg) saturate(5.5);
 }
 nav > a:hover > .glyph {
-  filter: invert(1) brightness(0.4) sepia(1.0) hue-rotate(306deg) saturate(9.5);
+  filter: invert(1) brightness(0.4) sepia(1) hue-rotate(306deg) saturate(9.5);
 }
+
 /* MAIN SECTIONS */
 
-main > p {
-  padding: 1.5em 4em 1.5em 4em;
-  color: white;
-  /* background-color: rgb(173, 221, 236); */
+main > p:hover {
+  border-radius: 1.4em 4em 0.5em 2em;
 }
+main > p {
+  transition: all;
+  transition-duration: 0.3s;
+  border-radius: 0.7em 2em 1em 4em;
+  background-color: #015160;
+  padding: 2em 4em;
+  font-family: "Open Sans", "Courier New", monospace;
+  font-size: 1.3em;
+  color: white;
+}
+
+body > .container::before {
+  border-radius: 19em;
+  transition: all;
+  transition-duration: 0.5s;
+  position: fixed;
+  z-index: -1;
+  content: ".";
+  width: 100%;
+  height: 100%;
+  /* animation: fire-diag 5s linear infinite; */
+  background-blend-mode: hard-light;
+  filter: saturate(1.2);
+  opacity: 0;
+  background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255, 0.8) 0%,
+      rgb(250, 255, 208, 1) 71.5%,
+      rgb(255, 207, 0, 0.8) 76.6%,
+      rgb(239 0 150 / 90%) 82.1%,
+      rgb(85 215 255 / 90%) 92%
+    ),
+    url(images/stripesbkg100.png);
+  /* background-position-x: -1.3em; */
+}
+
+body > .container:has(#intro:hover)::before {
+  opacity: 1;
+  animation: fire-diag 50s linear infinite;
+  background-blend-mode: hard-light;
+  filter: saturate(1.2);
+  /* background-image: url(images/stripesbkg100.png); */
+  background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255, 0.8) 0%,
+      rgb(250, 255, 208, 1) 71.5%,
+      rgb(255, 207, 0, 0.8) 76.6%,
+      rgb(239 0 150 / 90%) 82.1%,
+      rgb(85 215 255 / 90%) 92%
+    ),
+    url(images/stripesbkg100.png);
+  box-shadow: 0 6em 14em #a800ff, 0 6em 3em #00e5ff;
+  /* background-position-x: -1.3em; */
+  filter: blur(3px);
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#intro > p {
+  font-size: 1.3em;
+  padding: 0 4em 0 4em;
+  color: white;
+  line-height: 1.5em;
+  /* background-color: rgb(173, 221, 236); */
+  /* text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; */
+}
+
+#intro > section#forge {
+  display: flex;
+  padding: 0.5em 2.5em 0em 2.5em;
+  border-radius: 0.4em 1.5em 0.2em 2.7em;
+  transition: all;
+  transition-duration: 0.35s;
+}
+#intro:hover > section#forge {
+  padding: 5.8em 0em 1.8em 0em;
+}
+#intro > section#forge:hover {
+  border-radius: 0.8em 2.5em 0.6em 3.7em;
+}
+#intro:hover > section#forge > article > img {
+  opacity: 100%;
+  /* filter: sepia(100%) invert(0) hue-rotate(311deg) saturate(5.0) brightness(1.0) contrast(1); */
+  filter: sepia(100%) invert(0) hue-rotate(311deg) saturate(6) brightness(1)
+    contrast(1);
+  box-shadow: 0 6em 7em #ffe8ad, 0 1.6em 1em #ff7a00, 0 1.6em 4em #ff5700,
+    0 -1.5em 3em #ff0098, 0 -0.5em 0.2em #e300ff;
+  /* animation: bubblebubble1 3s linear infinite alternate; */
+}
+
+
+#intro section#forge a {
+  border-radius: 0.2em 0.5em 0.2em 0.5em;
+}
+
+#intro > section#forge > article {
+  flex: 1 1 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+  border-radius: 0.2em 1.5em 0.2em 1.5em;
+}
+
+#intro > section#forge > article b {
+  /* font-family: "Cutive Mono", "Courier New", monospace; */
+  font-family: "Open Sans";
+  color: #888888;
+  font-size: 1.7em;
+  font-weight: normal;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  bottom: 0em;
+}
+#intro:hover > section#forge > article b {
+  color: black;
+  z-index: 1;
+}
+
+#intro > section#forge > article p {
+  padding: 0.4em;
+}
+#intro:hover > section#forge > article b {
+    color: black;
+    z-index: 1;
+}
+
+#intro > section#forge img,
+video {
+  transition: all 0.3s ease-in-out;
+  width: 13em;
+  border-radius: 7.5em;
+  border: 0.0625em solid rgb(110, 255, 199);
+  filter: sepia(100%) hue-rotate(150deg);
+  opacity: 50%;
+}
+
+#intro > section#forge article:hover img,
+#intro > section#forge article:hover video {
+  filter: none;
+  border-radius: 0 1.5em 0 1.5em;
+  border: none;
+  opacity: 100%;
+  scale: 1.9;
+  box-shadow: 0 3.5em 4em #ffe100, 0 1.6em 1em #ff7a00, 0 1.6em 4em #ff5700, 0 -0.1em 1em #ff006d;
+  z-index: 2;
+}
+#intro > section#forge > article:hover:last-child img{
+  border-radius: 1.5em 1.5em 3em 0.2em ;
+  /* translate: 2em; */
+}
+#intro > section#forge > article:hover:first-child img{
+  border-radius: 3em 1.5em 0.2em 1.5em;
+  /* translate: -2em; */
+}
+#intro > section#forge > article:hover:nth-child(2) img {
+  border-radius: 1.1em 1.5em 1.2em 0.8em;
+  /* translate: -2em; */
+}
+#intro > section#forge article:hover b {
+  z-index: 2;
+  position: relative;
+  bottom: -3em;
+}
+
+p.d1,
+p.d2,
+p.d3 {
+  display: none;
+}
+#intro p.general:has(~ section > article:hover) {
+  display: none;
+}
+#intro p.d1:has(~ section > article.a1:hover),
+#intro p.d2:has(~ section > article.a2:hover),
+#intro p.d3:has(~ section > article.a3:hover) {
+  display: inline-block;
+}
+#intro > p b,
+#intro > p h3 {
+  background-color: rgba(40, 0, 119, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+/* p:has(+ section#forge article:hover):before {
+  content: "BAJA BLAST"
+} */
+
+/* TRAD NEWS */
 
 main > section#news {
   display: flex;
   padding: 1.5em 2.5em 1.5em 2.5em;
-  background-color: rgb(16 82 104);
+  /* background-color: rgb(16 82 104); */
   border-radius: 0.4em 1.5em 0.2em 2.7em;
   transition: all;
   transition-duration: 0.5s;
 }
 main > section#news:hover {
-  border-radius: 0.8em 2.5em 0.6em 3.7em; 
+  border-radius: 0.8em 2.5em 0.6em 3.7em;
 }
 
-main section#news a {
+/* main section#news a {
   border-radius: 0.2em 0.5em 0.2em 0.5em;
-}
+} */
 
 main > section#news > article {
   flex: 1 1 0em;
@@ -227,25 +464,44 @@ main > section#news > article {
   flex-direction: column;
   align-items: center;
   border-radius: 0.2em 1.5em 0.2em 1.5em;
-  background-color: rgb(154, 211, 230);
-  background: linear-gradient(180deg,  rgb(154, 211, 230) 0%, rgb(129, 194, 216) 25%, rgb(110, 177, 199) 49%, rgb(73, 202, 181) 100%);
+  /* background-color: rgb(154, 211, 230);
+  background: linear-gradient(
+    180deg,
+    rgb(154, 211, 230) 0%,
+    rgb(129, 194, 216) 25%,
+    rgb(110, 177, 199) 49%,
+    rgb(73, 202, 181) 100%
+  ); */
   margin: 0.07em;
   padding: 1.5em;
 }
 
-main > section#news > article b{
+main > section#news > article span {
+  line-height: 1.5em;
+  color: rgb(170 210 255);
+  background-color: rgb(9 55 69);
+}
+main > section#news > article span a {
+  color: white;
+  background-color: #32758a;
+}
+
+main > section#news > article b {
+  transition: 0.3s all ease-in-out;
   margin-bottom: 0.4em;
-  font-family: 'Cutive Mono', 'Courier New', monospace;
+  font-family: "Cutive Mono", "Courier New", monospace;
   color: white;
   font-size: 1.7em;
   font-weight: normal;
 }
 
-main > section#news > article p{
+main > section#news > article p {
+  transition: 0.3s all ease-in-out;
   padding: 0.4em;
 }
 
-main > section#news img, video {
+main > section#news img,
+video {
   transition: all 0.2s ease-out;
   width: 13em;
   border-radius: 7.5em;
@@ -260,9 +516,23 @@ main > section#news article:hover img,
 main > section#news article:hover video {
   filter: none;
   border-radius: 0 1.5em 0 1.5em;
-  border: none;
+  border-color: #0000;
   opacity: 100%;
-  width: 20em;
+  scale: 1.4;
+  translate: 0 -2em;
+  box-shadow: 0 3px 60px #00203088, 0 3px 20px #002030bb;
+}
+main > section#news article:hover > b {
+  scale: 1.2;
+}
+main > section#news article:hover > p {
+  scale: 1.03;
+} 
+main > section#news article > p > span {
+  transition: 0.25s all ease-in;
+}
+main > section#news article:hover > p > span {
+  box-shadow: 0 -3px 20px #00203066, 0 -3px 15px #00203066;
 }
 
 /* NEWSFEED */
@@ -271,7 +541,7 @@ main > section#newsfeed {
   display: flex;
   padding: 1.5em 2.5em 2.5em 2.5em;
   background-color: rgb(9 55 69);
-  border-radius: 0.3em 3.5em 1.0em 0.3em;
+  border-radius: 0.3em 3.5em 1em 0.3em;
   transition: all;
   transition-duration: 0.5s;
   position: relative;
@@ -281,9 +551,9 @@ main > section#newsfeed {
 section#newsfeed label {
   width: 90%;
   text-align: right;
-  font-family: 'Open Sans', 'Courier New', monospace;
+  font-family: "Open Sans", "Courier New", monospace;
   position: absolute;
-  color: #00FFDF;
+  color: #00ffdf;
   padding: 1.4em;
   bottom: 0;
   font-size: 0.6em;
@@ -342,18 +612,30 @@ main > section#projects figure {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 10;
   background-color: #073036;
+  border-radius: 3em;
+  transition: all 0.3s ease-in-out;
+}
+main > section#projects article:hover figure {
+  scale: 0.93;
+}
+
+main > section#projects a.container {
+  background: none;
 }
 
 main > section#projects .container {
   display: grid;
   grid-template-columns: 5.0625em 1fr 3.625em;
-  grid-template-rows: minmax(0, auto) minmax(1.5em,auto) minmax(3.25em,auto) minmax(3em,auto) 1fr minmax(3.1em, auto); 
+  grid-template-rows: minmax(0, auto) minmax(1.5em, auto) minmax(3.25em, auto) minmax(
+      3em,
+      auto
+    ) 1fr minmax(3.1em, auto);
 }
 
-main > section#projects .container h1{
+main > section#projects .container h1 {
   grid-column: 2/3;
   grid-row: 3;
   align-self: baseline;
@@ -361,14 +643,14 @@ main > section#projects .container h1{
   color: white;
 }
 
-main > section#projects .container h2{
+main > section#projects .container h2 {
   grid-column: 2/3;
   grid-row: 4;
   font-size: 1.5em;
   color: #a8faf4;
 }
 
-main > section#projects .container p{
+main > section#projects .container p {
   grid-column: 2/3;
   grid-row: 5;
 }
@@ -378,16 +660,37 @@ main > section#projects .glyph {
   grid-row: 3;
   align-self: center;
   justify-self: center;
-  content:url("images/arrowLR.svg");
+  content: url("images/arrowLR.svg");
   width: 1.75em;
   height: 1.75em;
-  filter: invert(0.8) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20) opacity(90%);
+  filter: invert(0.8) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20)
+    opacity(90%);
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  rotate: 0;
 }
+main > section#projects > article:hover .glyph {
+  rotate: -45deg;
+}
+
+main > section#projects > article {
+  border-radius: 3.5em;
+}
+
+main > section#projects > article:hover {
+  background: var(--link-gradient);
+  background-size: 2000% 2000%;
+  animation: gradient 40s linear infinite alternate;
+}
+
+
 
 main > section#projects > article#context-patterns {
   display: flex;
   flex-direction: row;
   background-color: rgb(73, 202, 137);
+  /* border-radius: 3em 3em 3em 2em; */
 }
 
 main > section#projects > article#depthop {
@@ -408,8 +711,11 @@ main > section#projects > article#fructure {
 main > section#projects > article#fructure figure {
   grid-column: 1;
   grid-row: 1/3;
+  border-radius: 3em 0 3em 3em;
 }
-
+main > section#projects > article figure img {
+  border-radius: 3em;
+}
 main > section#projects > article#fructure .videolink {
   grid-column: 2;
   grid-row: 1;
@@ -418,6 +724,7 @@ main > section#projects > article#fructure .videolink {
   justify-content: flex-end;
   align-items: center;
   background-color: #dc3400;
+  border-radius: 0 1em 0 0;
 }
 
 main > section#projects > article#fructure .videolink a {
@@ -425,13 +732,14 @@ main > section#projects > article#fructure .videolink a {
   height: 100%;
   display: flex;
   align-items: center;
-  overflow:hidden;
+  overflow: hidden;
   padding-right: 1.25em;
   font-size: 1.5em;
 }
 
 main > section#projects > article#fructure .videolink .scrot {
-  content:url("images/talk-tiny-60.png");
+  content: url("images/talk-tiny-60.png");
+  border-radius: 0 1em 0 0;
 }
 
 /* PROJECT ICONS */
@@ -440,7 +748,7 @@ main > section#projects .container .githubicon {
   grid-column: 3;
   grid-row: 3;
   align-self: baseline;
-  content:url("images/github-32.png");
+  content: url("images/github-32.png");
   height: 1.6em;
   width: 1.6em;
 }
@@ -449,13 +757,13 @@ main > section#projects .container .tumblricon {
   grid-column: 3;
   grid-row: 4;
   align-self: baseline;
-  content:url("images/tumblr-32.png");
-  height: 1.6em; 
+  content: url("images/tumblr-32.png");
+  height: 1.6em;
   width: 1.6em;
 }
 
 main > section#projects .youtubeicon {
-  content:url("images/youtube-48-white.png");
+  content: url("images/youtube-48-white.png");
   padding-left: 0.9em;
   padding-right: 1em;
   height: 1.65em;
@@ -466,7 +774,7 @@ main > section#projects .youtubeicon {
 
 header .glyph {
   display: inline-block;
-  content:url("images/arrowLR.svg");
+  content: url("images/arrowLR.svg");
   width: 0.67em;
   height: 0.67em;
   margin-right: 0.6em;
