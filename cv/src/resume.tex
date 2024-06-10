@@ -10,147 +10,170 @@
 \usepackage{resume}
 
 \begin{document}
+
+\newcommand{\sectiontitle}[2]{\roottitle{#1 \hspace{0.1cm} {#2}}}
+
 \sloppy  % this to relax whitespacing in favour of straight margins
-
-%.: ░▒▓
-\maintitle{░ Andrew Blinn}{ }{\today}
-  %\hspace{0.1cm}\faCode
-  %\faHeart
-  %\faClone
-  %\faGamepad \hspace{0.1cm}
-  %\faAreaChart \hspace{0.1cm}
-  %\faBomb
-  %\faFilter
-  %\faCloud 
-  %\faObjectGroup
-  %\faPaperclip
-
-\nobreakvspace{0.5em} 
-
 \noindent
-    %\textsmaller+1 (734) 492-2543\sbull
-    \href{http://andrewblinn.com}{andrewblinn.com}
-    \hspace{0.1cm} \faEnvelopeSquare \hspace{0.1cm} 
-    \href{mailto:me@andrewblinn.com}{me\mbox{}@\mbox{}andrewblinn.com}
-    \hspace{0.1cm} \faGithub \hspace{0.1cm}
-    \href{http://github.com/disconcision}{github.com/disconcision}
-    \hspace{0.1cm} \faTwitter \hspace{0.1cm} 
-    \href{http://twitter.com/disconcision}{twitter.com/disconcision}
 
-% \faStar
-\roottitle{Goals \hspace{0.1cm}  \faMap} 
+\maintitle{Andrew Blinn}{ }{\today}
 
-\bodytext{I want to make deeply interacting with algebraic abstractions more continuous, tangible, \& joyous\\
- I study programming language theory to explain, explore, \& engineer fluidly compositional interfaces}
+\nobreakvspace{0.3em}
+
+
+\href{mailto:me@andrewblinn.com}{me}
+\hspace{0.0cm} \faAt \hspace{0.08cm} 
+\href{http://andrewblinn.com}{andrewblinn.com}
+\hspace{0.1cm} \faGithub \hspace{0.1cm}
+\href{http://github.com/disconcision}{github.com/disconcision}
+\hspace{0.1cm} \faTwitter \hspace{0.1cm} 
+\href{http://twitter.com/disconcision}{twitter.com/disconcision}
+
+\sectiontitle{Vision}{\faMap[regular]} % \faStar
+
+\bodytext{
+ I use programming language theory to explore, explain, and engineer compositional interfaces, \\
+ trying to make engagement with algebraic abstractions more fluid, tangible, and fun}
     
-% \faCoffee
-\roottitle{Interests \hspace{0.1cm} \faPuzzlePiece} 
+\sectiontitle{Focuses}{\faSlidersH}
+\bodytext{Programming Languages + Liveness + Learning \sbull Human-Computer Interaction}
 
-\bodytext{Programming Languages + Environments + Education \sbull Creative Software \sbull HCI}
-
-
-\roottitle{Papers \hspace{0.1cm} \faSend}
+% peer reviewed? "in proceedings of"?
+\sectiontitle{Papers}{\faPaperPlane} 
 
   \headedsubsection
     {\href
       {https://ieeexplore.ieee.org/abstract/document/9833110}
       {An Integrative Human-Centered Architecture for Interactive Programming Assistants} \sbull VLHCC}
     {2022}
-    {\textbf{Andrew Blinn, David Moon, Eric Griffis, Cyrus Omar} \\
-     A conceptual architecture for programming assistants addressing integrative design challenges, \\ instantiated through OCaml prototypes for type-and-example-based interactive program synthesis\\
-     See slso the \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{\faPaperclip\: Paperclip Calculus} extended version on formalizing suggestion sensibility}
+    {\textbf{\underline{Andrew Blinn}, David Moon, Eric Griffis, Cyrus Omar} \\
+     An architecture for programming assistants addressing integrative design challenges,\\
+     including a formal framework for assistant suggestion sensibility: \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{\faPaperclip\;Paperclip  Calculus}}
 
      \headedsubsection
     {\href
-      {http://andrewblinn.com/papers/PREPRINT-popl24-Total-Type-Error-Localization-and-Recovery-with-Holes.pdf}
+      {https://dl.acm.org/doi/10.1145/3632910}
       {Total Type Error Localization and Recovery with Holes} \sbull POPL}
     {2024}
-    {\textbf{Eric Zhao, Raef Maroof, Anand Dukkipati, Andrew Blinn, Zoe Pan, Cyrus Omar} \\
-    Type systems typically treat ill-typed expressions as meaningless, but effective editors must provide semantic services even downstream of errors. Our \emph{marked lambda calculus} addresses this via a comprehensive formal account of total error localization and recovery}
-     
-     \headedsubsection
-    {\href
-      {https://tylr.fun/vlhcc23.pdf}
-      {Gradual Structure Editing with Obligations} \sbull VLHCC}
-    {2023}
-    {\textbf{David Moon, Andrew Blinn, Cyrus Omar} \\
-     Structured editors struggle to preserve syntax while permitting linear text-like editing. Our approach guides temporary disassembly via \emph{syntactic obligations} that, once discharged, guarantee proper reassembly}
+    {\textbf{Eric Zhao, Raef Maroof, Anand Dukkipati, \underline{Andrew Blinn}, Zoe Pan, Cyrus Omar} \\
+    The \emph{marked lambda calculus} is a formal account of total error localization and recovery,\\ keeping editor semantic services fed even downstream of errors}
 
   \headedsubsection
     {\href
-      {https://dl.acm.org/doi/abs/10.1145/3546196.3550164}
-      {Tylr - A Tiny Tile-based Structure Editor} \sbull TyDe}
-    {2022}
-    {\textbf{David Moon, Andrew Blinn, Cyrus Omar} \\
-    Tylr marries hierarchically structured and linear editing paradigms via a novel destructuring mechanism}
+      {https://www.computer.org/csdl/proceedings-article/vl-hcc/2023/294600a071/1RSFK8J0CiY}
+      {Gradual Structure Editing with Obligations} \sbull VLHCC}
+    {2023}
+    {\textbf{David Moon, \underline{Andrew Blinn}, Cyrus Omar} \\
+     By foregrounding terms, structured editors compromise casual text-like editing. \\
+     Finer-grained \emph{syntactic obligations} allows looser edits while
+     guaranteeing reassembly}
   
   \headedsubsection
     {\href
       {https://dl.acm.org/doi/10.1145/3453483.3454059}
       {Filling typed holes with live GUIs} \sbull PLDI}
     {2021}
-    {\textbf{Cyrus Omar, David Moon, Andrew Blinn, Ian Voysey, Nick  Collins, Ravi Chugh} \\
+    {\textbf{Cyrus Omar, David Moon, \underline{Andrew Blinn}, Ian Voysey, Nick  Collins, Ravi Chugh} \\
     Livelits allow users to fill program holes by directly manipulating user-defined GUIs \\
     embedded persistently into code, providing continuous graphical feedback}
 
-\roottitle{School \hspace{0.1cm} \faBook}
+
+\sectiontitle{Workshop Papers}{\faConnectdevelop}
+
+  \headedsubsection
+    {\href
+      {https://hazel.org/papers/propl24.pdf}
+      {Toward a Live, Rich, Composable, and Collaborative Planetary Compute Engine} \sbull PROPL}
+    {2024}
+    {\textbf{Alexander Bandukwala, \underline{Andrew Blinn}, Cyrus Omar} \\
+     We sketch a programming environment for planetary computing with climate science applications}
+
+  \headedsubsection
+    {\href
+      {https://dl.acm.org/doi/abs/10.1145/3546196.3550164}
+      {Tylr - A Tiny Tile-based Structure Editor} \sbull TyDe}
+    {2022}
+    {\textbf{David Moon, \underline{Andrew Blinn}, Cyrus Omar} \\
+    Tylr combines hierarchical and linear editing paradigms via a novel destructuring mechanism}
+     
+
+\sectiontitle{School}{\faBell[regular]}
 
   \headedsubsection
     {\href
       {https://rackham.umich.edu/}
       {University of Michigan} \sbull Ph.D Candidate, Computer Science}
-    {Current}
-    {Building intelligent multi-modal programming environments combining LLMs,\\responsive design, and type-directed formal methods at Cyrus Omar's \href{http://fplab.mplse.org/}{FPLab}}
+    {Now}
+    {Contextualizing coding with types, interfaces, \& language models with \href{https://web.eecs.umich.edu/~comar/}{Cyrus Omar} @  \href{http://fplab.mplse.org/}{FPLab}}
     
   \headedsubsection
     {\href
       {https://rackham.umich.edu/}
       {University of Michigan} \sbull Master’s of Science, Computer Science}
     {2023}
-    {Coursework in programming language theory, category theory, \\
-    program synthesis, human-computer interaction, \& on how people learn}
+    {Coursework in PL theory, program synthesis, category theory, HCI, \& the psychology of learning
+    %Coursework in programming language theory, category theory,
+    %program synthesis,\\ human-computer interaction, \& on how people learn
+    }
     
   \headedsubsection
     {\href
       {http://www.utoronto.ca}
-      {University of Toronto} \sbull H.B.Sc, Math \& Computer Science}
+      {University of Toronto} \sbull H.B.Sc, Mathematics \& Computer Science}
     {2019}
     {%Built a Racket-based x86/C compiler for a $\lambda$-calculus-based language with macro system.\\
-    Graduate coursework in abstract algebra, compilers, \& graphics
+    Graduate coursework in abstract algebra, compilers, \& graphics. Advised by \href{https://www.cs.utoronto.ca/~gfb/}{Gary Baumgartner}
     %Coursework in algorithms, concurrency, differential geometry, operating systems \& topology.
     }
 
-\roottitle{ Industry \hspace{0.1cm} \faCodeFork}
+\sectiontitle{Industry}{\faCodeBranch}
 
   \headedsubsection
     {\href{http://todaqfinance.net/}{TODAQ Toronto} \sbull Full-stack development in Clojure}
     {2019 - 2020}
     {Built novel front-end interfaces to  \href{https://andrewblinn.com/portfolio/todaq/}{sharpen the materiality of distributed digital assets}.\\Implemented core back-end features for a decentralized digital asset management protocol}
 
-\roottitle{Conferences \hspace{0.1cm} \faPlane}
+\sectiontitle{Conferences}{\faDoorOpen} %\faPlane
+
+   \headedsubsection
+    {Programming Committee Member}
+    {Pasadena}
+    {2024: 
+        \href{https://2024.splashcon.org/track/splash-2024-Onward-papers}{Onward!}\sbull
+        \href{https://2024.splashcon.org/home/hatra-2024}{HATRA}\sbull
+        \href{https://2024.splashcon.org/home/live-2024}{LIVE}}
 
   \headedsubsection
     {Invited speaker at RacketCon}
-    {2019 \sbull Salt Lake City}
-    {Introduced \href{https://github.com/disconcision/fructure}{Fructure}, a prototype structured interaction editor for on edit-time term-rewriting \\
-    \sbull \href{https://www.youtube.com/watch?v=CnbVCNIh1NA}{Recorded Talk}
-    \sbull \href{https://github.com/disconcision/fructure/blob/master/screenshots/REAL-RacketCon-Fructure-Talk.pdf}{Fructure Slides}}
+    {2019 \sbull
+     Salt Lake City \sbull
+     \href{https://www.youtube.com/watch?v=CnbVCNIh1NA}{Recorded Talk} \sbull \href{https://github.com/disconcision/fructure/blob/master/screenshots/REAL-RacketCon-Fructure-Talk.pdf}{Slides}}
+    {Introduced \href{https://github.com/disconcision/fructure}{Fructure}, a prototype structured interaction engine for edit-time term-rewriting}
 
   \headedsubsection
-    {Presenter at Midwest PL Summit}
-    {2023 \sbull Ann Arbor}
-    {Progress report on Type-directed Prompt Construction for LLM-powered Code Completion \\
-    \sbull \href{http://andrewblinn.com/papers/2023-MWPLS-Type-directed-Prompt-Construction-for-LLM-powered-Programming-Assistants.pdf}{MWPLS Slides}}
+    {Accepted speaker at Midwest PL Summit}
+    {2023 \sbull Ann Arbor \sbull \href{http://andrewblinn.com/papers/2023-MWPLS-Type-directed-Prompt-Construction-for-LLM-powered-Programming-Assistants.pdf}{Slides}}
+    {Progress report on type-directed prompt construction for LLM-powered code completion}
     
   \headedsubsection
-    {Presenter at VL/HCC}
-    {2022 \sbull Rome}
-    {Presented an Integrative Human-Centered Architecture for Interactive Programming Assistants \\
-    \sbull \href{https://www.youtube.com/watch?v=G_9Yyut3ckw}{Recorded Talk}
-    \sbull \href{https://docs.google.com/presentation/d/1lrclRzlx-ayd_iqOENyvCtnexBgTpkaSltPmgQQi_IE/edit?usp=sharing}{VLHCC Slides}}
+    {Accepted speaker at VL/HCC}
+    {2022 \sbull
+    Rome \sbull
+    \href{https://www.youtube.com/watch?v=G_9Yyut3ckw}{Recorded Talk} \sbull \href{https://docs.google.com/presentation/d/1lrclRzlx-ayd_iqOENyvCtnexBgTpkaSltPmgQQi_IE/edit?usp=sharing}{Slides}
+    }
+    {Presented an integrative human-centered architecture for interactive programming assistants}
+
+  \headedsubsection
+    {Guest Lecturer}
+    {2023 \& 2022 \sbull Ann Arbor}
+    {Introduction to metaprogramming featuring Racket for \href{https://eecs490.github.io/eecs490.org/}{EECS 490 - Programming Languages}}
+
+  \headedsubsection
+    {Student Volunteer}{Chicago}
+    {2021: \href{https://2021.splashcon.org/track/splash-2021-oopsla}{SPLASH/OOPSLA}}
     
   \headedsubsection {Seat Filler}
-    {Rome, Chicago, Salt Lake City, Galiano, Toronto, Eugene, St.Louis, Ann Arbor, Empire Builder}    
+    {Rome, Chicago, Salt Lake City, Galiano, Toronto, Eugene, St.Louis, Empire Builder}    
     {2023:
     \href{https://mwpls2023.engin.umich.edu/}{MWPLS}, 
     \href{https://lu.ma/localfirstswunconf-stlouis}{Local First Unconf},
@@ -158,7 +181,7 @@
     \href{https://www.thestrangeloop.com/}{Strange Loop},
     \href{https://www.gradientretreat.com/}{Gradient Retreat}, 
     \href{https://www.causalislands.com/}{Causal Islands} \\
-    2022, 2021, 2020:
+    2020 - 2022:
     \href{https://conf.researchr.org/home/vlhcc-2022}{VL/HCC},
     \href{https://www.gradientretreat.com/}{Gradient Retreat},
     \href{https://2021.splashcon.org/track/splash-2021-oopsla}{SPLASH/OOPSLA}, 
@@ -172,75 +195,80 @@
     \href{https://conf.researchr.org/home/icfp-2018}{ICFP},
     \href{https://www.thestrangeloop.com/2018/sessions.html}{Strange Loop},
     \href{https://con.racket-lang.org/2018/}{RacketCon}}
-    
-\roottitle{Projects \hspace{0.1cm} \faFlask}
 
-  \headedsubsection
-    {Experimental IDE Design, Implementation, and At-Scale Deployment with Cyrus Omar}
-    {2020 - Current}
-    {Led a ground-up \href{https://hazel.org/build/haz3l-tests/}{rewrite of the Hazel IDE}, extending David Moon's tylr restructuring engine into a \\ full-fledged editor, language server, and educational tool which was deployed to 100 undergraduates.\\ Designed \& implemented novel bidirectional type system features. \href{https://hazel.org/}{More about the Hazel project}}
 
-  \headedsubsection
-    {Techniques in Variability-aware Data Structures with Marsha Chechik}
-    {2018 - 2019}
-    {Built \& profiled Haskell data structures supporting variational analysis of software product lines. \\
-    Designed \& built \href{https://github.com/disconcision/spyshare}{SpyShare}, a Graphviz-based tool to visually inspect data sharing. \\
-    Created and modelled a system of GHC rewrite-rules using PLT Redex:    \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{Report} \sbull \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_variational_data_structures_slides.pdf}{Slides}}
-    
-  \headedsubsection
-    {Independent Study in Structured Editing in Racket with Gary Baumgartner}
-    {Summer 2017}
-    {Self-initiated study of existing refactoring, live programming \& direct manipulation tooling.\\
-    Began work on \href{https://github.com/disconcision/fructure}{Fructure}, a Racket-based polyglot structure editor, and \href{https://github.com/disconcision/containment-patterns}{Containment Patterns}, \\ which extend pattern matching to capture contexts as composable continuations.}
-
-\roottitle{Teaching \hspace{0.1cm} \faGraduationCap}
+\sectiontitle{Teaching}{\faChalkboardTeacher}
 
   \headedsubsection
     {Course Development}
-    {Summer 2022 \sbull University of Michigan}
-    {Designed software infrastructure and assignments for  Programming Language Theory (EECS490) \\
-    Led implementation on Hazel School Mode, an editor integration  providing progressive live feedback to students. Features an Instructor Mode facilitating construction of new exercises}
+    {2022 - Now \sbull University of Michigan}
+    {Wrote assignments and software infrastructure for \href{https://eecs490.github.io/eecs490.org/}{EECS 490 - Programming Languages} \\
+    Implemented Hazel Exercises, an educational editor integration providing progressive live feedback}
     
   \headedsubsection
     {Course Development}
     {Summer 2018 \sbull University of Toronto}
-    {Designed assignments and course materials for Principles of Programming Languages (CSC324) \\
-    Specified and built \href{https://github.com/disconcision/ductile}{Ductile}, a toy language demonstrating exhaustive pattern matching on ADTs. \\
-    Implemented an \href{https://github.com/disconcision/racketlab/blob/master/choice-stepper.rkt}{algebraic stepper} to illustrate continuations and non-determinism in Scheme.}
+    {Designed course materials for \href{https://www.cs.toronto.edu/~gfb/csc324/2017W/}{CSC 324 - Principles of Programming Languages} including an\\  \href{https://github.com/disconcision/racketlab/blob/master/choice-stepper.rkt}{algebraic stepper} illustrating non-determinism, and a \href{https://github.com/disconcision/ductile}{little language} demonstrating pattern matching}
 
   \headedsubsection
-    {Teaching Assistance}
-    {University of Michigan}
-    {\begin{tabular}{p{3.3cm} l}
-    2023, 2022, 2021 & EECS490 \sbull Programming Languages
+    {Teaching Assistantship}
+    {2018 - Now \sbull Universities of Michigan \& Toronto}
+    {\begin{tabular}{p{3.3cm} p{4.1cm}  l}
+    2023, 2022, 2021 & University of Michigan &  \href{https://eecs490.github.io/eecs490.org/}{EECS 490 - Programming Languages} \\
+      2019,  2018$^{2}$, 2017 & University of Toronto & 
+      \href{https://www.cs.toronto.edu/~gfb/csc324/2017W/}{CSC 324 - Principles of Programming Languages} \\
+    2018 & University of Toronto & \href{https://www.cs.toronto.edu/~gfb/csc104/2018F/}{CSC 104 - Introduction to Computational Thinking}
     \end{tabular}}
+
+
+\sectiontitle{Mentorship}{\faComments[regular]}
+
+  \headedsubsection
+    {\href{https://github.com/jpoly1219}{June (Jacob) Kim}: LLM type-directed Hole-filing in TypeScript}
+    {2024 - Now}
+    {Extracting semantic information from the TypeScript language server to inform prompt construction}
+
+  \headedsubsection
+    {\href{https://github.com/AlienKevin}{Xiang (Kevin) Li}: Type-constrained LLM Code Completion via token masking}
+    {2023 - Now}
+    {Researching modifying local language model decoding to ensure semantic as well as syntactic invariants}
+
+  \headedsubsection
+    {\href{https://github.com/ZachEichen}{Zachary Eichenberger} \& \href{https://github.com/yikai5518}{Eric Fan}: Deep reinforcement learning for code completion}
+    {2021 - 2023}
+    {Applications of typed structured editing for RL-based completion. Co-mentorship with \href{https://ethanabrooks.github.io/}{Ethan Brooks}}
+  
+  \headedsubsection
+    {\href{https://yashgaitonde.com/}{Yash Gaitonde}: Interfaces for live feedback in teaching IDEs}
+    {2021 - 2022}
+    {Implementing live test feedback in the Hazel IDE, deployed to a class of 100 undergraduates}
+
+
+\sectiontitle{Projects}{\faClone[regular]}
+
+  \headedsubsection
+    {IDE Design, Implementation, Deployment, and Analytics with \href{https://web.eecs.umich.edu/~comar/}{Cyrus Omar}}
+    {2020 - Now}
+    {Led a \href{https://hazel.org/build/dev/}{ground-up rewrite} of the \href{https://hazel.org/}{Hazel IDE}, deployed to 100 undergraduates}
+
+\headedsubsection
+    {Investigations in Dynamic, Interactive Algebraic User Interfaces}
+    {2022 - Now}
+    {Exploring tangibility and explorability in expository math and meta-math  with \href{https://andrewblinn.com/nool/}{nool} and \href{https://andrewblinn.com/furl/main/}{furl}}
+
+  \headedsubsection
+    {Variability-aware Data Structures with \href{https://www.cs.toronto.edu/~chechik/}{Marsha Chechik} \& \href{https://scholar.google.com/citations?user=zrYATWoAAAAJ&hl=en}{Ramy Shanin}}
+    {2018 - 2019 \sbull \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_variational_data_structures_slides.pdf}{Slides}}
+    {Research in \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{variational analysis of SPLs} including building
+    \href{https://github.com/disconcision/spyshare}{SpyShare}, a Haskell tool using Graphviz to visualize structure sharing, and designing + formally modelling rewrite-rule based optimizations}
     
   \headedsubsection
-    {Teaching Assistance}
-    {University of Toronto}
-    {\begin{tabular}{p{3.3cm} l}
-    2019,  2018$^{2}$, 2017 & CSC324 \sbull Principles of Programming Languages \\
-    2018 & CSC104 \sbull Introduction to Computational Thinking 
-    \end{tabular}}
-  
-\roottitle{Mentorship \hspace{0.1cm}  \faComments}
+    {Independent Study in Structured Editing in Racket with \href{https://www.cs.toronto.edu/~gfb/}{Gary Baumgartner}}
+    {Summer 2017}
+    {Self-directed studies in languages tooling resulting in \href{https://github.com/disconcision/fructure}{Fructure} and \href{https://github.com/disconcision/containment-patterns}{Containment Patterns}
+    }
 
-  \headedsubsection
-    {LLM Token-masking for Type-correct Code Completion}
-    {2023 Summer - Current}
-    {Mentoring an undergraduate by guiding experiments around modifying local language models to ensure per-token generation respects semantic as well as syntactic invariants}
-
-  \headedsubsection
-    {PL x Deep Reinforcement Learning for Code Completion}
-    {2021 Fall - Current}
-    {ML/PL collaboration: Mentoring two undergraduates, providing design and architecture guidance for a specialized version of the Hazel editor used for reinforcement-learning-based code completion research.}
-  
-  \headedsubsection
-    {Interfaces for Live testing in online IDEs}
-    {2021 - 2022}
-    {Mentored an undergraduate who helped implement live testing features of the Hazel language and IDE, successfully deployed to a class of 100 undergraduate students for a course in Fall 2022.}
-
-%\roottitle{Word Jumble \hspace{0.1cm}  \faPuzzlePiece}
+%\sectiontitle{Word Jumble}{\faPuzzlePiece}
 %  \headedsubsection
 %    {Languages} {Passing Familiarity}
 %    {OCaml, Clojure, ReasonML, Racket, Typescript, Javascript, C, C++, Rust, Java, Python, Bash, Visual Basic, TurboPascal, QuickBasic, Basic, Logo}
