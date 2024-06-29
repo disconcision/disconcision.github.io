@@ -213,7 +213,7 @@ nav {
   transition: all;
   transition-duration: 0.5s;
 }
-nav:hover {
+nav:hover, nav.bottom:hover {
   border-radius: 0.3em 1.4em 0.4em 1.5em;
   /* background-color: rgb(129, 194, 216, 0.6); */
   /* opacity: 0.7; */
@@ -240,6 +240,17 @@ nav > a > .glyph {
 }
 nav > a:hover > .glyph {
   filter: invert(1) brightness(0.4) sepia(1) hue-rotate(306deg) saturate(9.5);
+}
+
+nav.bottom {
+  border-radius: 1.6em 0.6em 1.6em 0.6em;
+  background-color: rgb(39 72 139 / 39%);
+  padding-left: 0.7em;
+  box-shadow: inset 0em -1.1em 2em #3e43d6aa;
+}
+
+nav.bottom a {
+  color: #b5f8fb;
 }
 
 /* MAIN SECTIONS */
@@ -521,7 +532,7 @@ main > section#news article > p > span {
   transition: 0.25s all ease-in;
 }
 main > section#news article:hover > p > span {
-  box-shadow: 0 -3px 20px #00203066, 0 -3px 15px #00203066;
+  /* box-shadow: 0 -3px 20px #00203066, 0 -3px 15px #00203066; */
 }
 
 /* NEWSFEED */
