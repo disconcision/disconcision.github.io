@@ -41,6 +41,10 @@
         border: none;
         cursor: pointer;
       }
+      p a {
+        color: #53593d;
+        text-decoration: underline;
+      }
       .hazel-logo {
         width: 0.7em;
         margin-right: 0.7em;
@@ -64,6 +68,45 @@
       .full {
         width: 100%;
       }
+      .tip {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+      }
+      .tip h3 {
+        background-color: #53593d;
+        border-radius: 1.2em 0.2em 1.2em 0;
+        padding: 0.3em 1em;
+        width: fit-content;
+        color: white;
+        margin: 0;
+      }
+      .tip img {
+        width: 1.1em;
+        padding-right: 0.6em;
+        height: 1.6em;
+        /* aspect-ratio: 2; */
+        filter: invert(1) contrast(0.2) brightness(0.8) hue-rotate(200deg);
+      }
+      .tip .boost {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* height: 2.5em; */
+        background-color: #53593d;
+      }
+      .tip .boost > div {
+        border-radius: 0 0 1em 0;
+        background-color: #fffbf2;
+        height: 100%;
+      }
+      .syntax-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .syntax-grid > img {
+        height: 6em;
+      }
     </style>
   </head>
   <body>
@@ -78,14 +121,27 @@
     </h1>
 
     <video
+      autoplay
+      muted
+      loop
+      playsinline
       onclick="this.paused ? this.play() : this.pause();"
       poster="illustrations/case-exp-1.png"
     >
-      <source src="illustrations/case-exp-1.mov" type="video/mp4" />
+      <source src="illustrations/selection-banner-full.mov" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
+    <div class="tip">
+      <div class="boost">
+        <div><img src="illustrations/boost.gif" /></div>
+      </div>
+      <h3>poke videos to stun or revive them</h3>
+    </div>
+
     <h2>Why</h2>
+
+    <p>It's important to me that syntax be fidgetable</p>
 
     <p>
       I am a very mouse-driven developer. I will opt to use mouse over keyboard
@@ -96,6 +152,122 @@
       double click on paretheses to select their contents. AFAICT this is
       neither possible in VSCode vanilla nor by extention.
     </p>
+
+    <h2>Hazel syntax crash course</h2>
+
+    <p>
+      Hazel <b>syntactic forms</b> consist of an alternating sequence of
+      delimiter tokens and children. The number of delmiters and children can
+      differ by at most one. Forms with one more delimiter than child are called
+      convex; these constitute an entire term. Examples include atomic forms
+      like variables, which have a single delmiter and no children, and
+      parentheses, which have 2 delimiters and a single child.
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; justify-items: center"
+    >
+      <img src="illustrations/forms/mono-convex-a.png" />
+      <img src="illustrations/forms/duo-convex-a.png" />
+    </div>
+
+    <div class="tip" style="margin-top: 1em; margin-bottom: 1em">
+      <div class="boost">
+        <div><img src="illustrations/boost.gif" /></div>
+      </div>
+      <h3>hover over these forms!</h3>
+    </div>
+
+    <p>
+      Such forms are whole terms. This is not the case for forms which have the
+      same number of delimiters and children, or have one more child than
+      delimiter. These must have at least one unidelimited child; a child which
+      is not enclosed by delmiters.
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; justify-items: center"
+    >
+      <img src="illustrations/forms/mono-prefix-a.png" />
+      <img src="illustrations/forms/mono-infix-a.png" />
+    </div>
+
+    <p>
+      In <a href="https://dmoon.info">david's</a>
+      <a href="https://tylr.fun">tylr</a> model we call these forms (proper)
+      tiles. The significance of this distinction is that for these tiles, we
+      need to consider operator precdence before we can figure out how far their
+      children extend. By contrast, for bidelimited children, like in the
+      parentheses above, the extent of the child is clear. This presents a kind
+      of syntactic cleavage point, slightly more granular than terms, which (as
+      we'll see) can sometimes prove useful in structuring how we think about
+      selection.
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; padding-left: 5em"
+    >
+      <img src="illustrations/forms/mono-convex-a.png" />
+      <img src="illustrations/forms/mono-infix-a.png" />
+      <img src="illustrations/forms/mono-prefix-a.png" />
+
+      <img src="illustrations/forms/mono-whitespace-a.png" />
+    </div>
+
+    <p>
+      Tiles can have four different shapes: convex, concave (aka infix), prefix,
+      and postfix. At the moment, Hazel has many mono (single-delimiter forms)
+      of the first three categories, but the only mono postfix form is
+      whitespace, which takes of prefix/postfix form fluidly depending on
+      context. This negative space aspect of whitespace also informs its
+      selection behavior.
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; padding-left: 5em"
+    >
+      <img src="illustrations/forms/trio-prefix-let-a.png" />
+      <img src="illustrations/forms/trio-prefix-a.png" />
+    </div>
+
+    <p>
+      The tile structure helps inform our take on the material nature of syntax,
+      but isn't totally sufficient in-itself to determine selection behavior.
+      For example, the two above forms are both prefix trio tiles, but it turns
+      out we generally want them to behave differently, both with respect to
+      indentation and selection. This means the tile model doesn't quite cleave 
+      syntactic reality at the joints.
+    </p>
+
+    <div class="syntax-grid">
+      <img src="illustrations/forms/mono-convex-a.png" />
+      <img src="illustrations/forms/duo-convex-a.png" />
+      <img src="illustrations/forms/trio-prefix-let-a.png" />
+
+      <img src="illustrations/forms/mono-prefix-a.png" />
+      <img src="illustrations/forms/duo-prefix-a.png" />
+      <img src="illustrations/forms/trio-prefix-a.png" />
+
+      <img src="illustrations/forms/mono-infix-a.png" />
+      <img src="illustrations/forms/duo-postfix-a.png" />
+      <img src="illustrations/forms/mono-whitespace-a.png" />
+    </div>
+
+    <p>
+      The above forms cover (nearly) the basic repoitoire of Hazel's syntax. The
+      base teen tylr model which underlies Hazel only has first class support
+      for forms which have a fixed number of delimiters. Note the interpretation
+      of function application as a postfix operation; application is often
+      something of a special case syntactically, and the way we choose to
+      interpret it has material consequences. We've built some ad hoc support
+      for certain 'n-ary' forms, which we'll look at in a sec.
+    </p>
+
+
 
     <p>
       Like a lot of things I've ended up implementing in Hazel, click-to-select
@@ -157,12 +329,22 @@
       one.
     </p>
 
-    <img class="full" src="illustrations/composite-2.png">
-    <img class="full" src="illustrations/composite.png">
-    <img class="full" src="illustrations/duo-convex.png">
-    <img class="full" src="illustrations/mono-concave.png">
-    <img class="full" src="illustrations/mono-convex.png">
-    <img class="full" src="illustrations/mono-prefix.png">
+    <img class="full" src="illustrations/composite-2.png" />
+    <img class="full" src="illustrations/composite.png" />
+    <img class="full" src="illustrations/duo-convex.png" />
+    <img class="full" src="illustrations/mono-concave.png" />
+    <img class="full" src="illustrations/mono-convex.png" />
+    <img class="full" src="illustrations/mono-prefix.png" />
+
+    <video
+      loop
+      playsinline
+      onclick="this.paused ? this.play() : this.pause();"
+      poster="illustrations/case-exp-1.png"
+    >
+      <source src="illustrations/case-exp-1.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
     <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
       <source
