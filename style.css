@@ -572,7 +572,7 @@ section#newsfeed input:checked + label:after {
   content: "SHOW LESS!";
 }
 section#newsfeed input:checked ~ dl {
-  height: 35em;
+  height: 43em;
 }
 
 main > section#newsfeed:hover {
@@ -582,7 +582,7 @@ main > section#newsfeed:hover {
 section#newsfeed dl {
   line-height: 1.4em;
   margin: 0;
-  height: 15.9em;
+  height: 15em;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }

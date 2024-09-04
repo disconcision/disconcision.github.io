@@ -161,7 +161,7 @@
       differ by at most one. Forms with one more delimiter than child are called
       convex; these constitute an entire term. Examples include atomic forms
       like variables, which have a single delmiter and no children, and
-      parentheses, which have 2 delimiters and a single child.
+      parentheses, which have 2 delimiters and a single child:
     </p>
 
     <div
@@ -172,7 +172,7 @@
       <img src="illustrations/forms/duo-convex-a.png" />
     </div>
 
-    <div class="tip" style="margin-top: 1em; margin-bottom: 1em">
+    <div class="tip" style="margin-top: 1em; margin-bottom: 2.5em">
       <div class="boost">
         <div><img src="illustrations/boost.gif" /></div>
       </div>
@@ -183,7 +183,7 @@
       Such forms are whole terms. This is not the case for forms which have the
       same number of delimiters and children, or have one more child than
       delimiter. These must have at least one unidelimited child; a child which
-      is not enclosed by delmiters.
+      is not enclosed by delmiters:
     </p>
 
     <div
@@ -198,8 +198,8 @@
       In <a href="https://dmoon.info">david's</a>
       <a href="https://tylr.fun">tylr</a> model we call these forms (proper)
       tiles. The significance of this distinction is that for these tiles, we
-      need to consider operator precdence before we can figure out how far their
-      children extend. By contrast, for bidelimited children, like in the
+      may need to consider operator precedence before we can figure out how far
+      their children extend. By contrast, for bidelimited children, like in the
       parentheses above, the extent of the child is clear. This presents a kind
       of syntactic cleavage point, slightly more granular than terms, which (as
       we'll see) can sometimes prove useful in structuring how we think about
@@ -216,14 +216,26 @@
 
       <img src="illustrations/forms/mono-whitespace-a.png" />
     </div>
-
     <p>
       Tiles can have four different shapes: convex, concave (aka infix), prefix,
-      and postfix. At the moment, Hazel has many mono (single-delimiter forms)
-      of the first three categories, but the only mono postfix form is
+      and postfix. At the moment, Hazel has many mono (single-delimiter) tiles
+      of the first three categories, but the only postfix monotile is
       whitespace, which takes of prefix/postfix form fluidly depending on
       context. This negative space aspect of whitespace also informs its
       selection behavior.
+    </p>
+
+    <div class="syntax-grid">
+      <img src="illustrations/forms/duo-convex-a.png" />
+      <img src="illustrations/forms/duo-prefix-a.png" />
+      <img src="illustrations/forms/duo-postfix-a.png" />
+    </div>
+
+    <p>
+      Hazel has convex, prefix, and postfix duotiles, but no concave one. Note
+      the interpretation of function application as a postfix operation;
+      application is often something of a special case syntactically, and the
+      way we choose to interpret it has material consequences.
     </p>
 
     <div
@@ -239,8 +251,10 @@
       but isn't totally sufficient in-itself to determine selection behavior.
       For example, the two above forms are both prefix trio tiles, but it turns
       out we generally want them to behave differently, both with respect to
-      indentation and selection. This means the tile model doesn't quite cleave 
-      syntactic reality at the joints.
+      indentation and selection. This probably means either that we're modelling
+      one of the above wrong (perhaps the let 'in' is really an infix operator),
+      or the tile model doesn't quite cleave syntactic reality at the joints.
+      This is a topic of investigation in David's upcoming research.
     </p>
 
     <div class="syntax-grid">
@@ -260,14 +274,9 @@
     <p>
       The above forms cover (nearly) the basic repoitoire of Hazel's syntax. The
       base teen tylr model which underlies Hazel only has first class support
-      for forms which have a fixed number of delimiters. Note the interpretation
-      of function application as a postfix operation; application is often
-      something of a special case syntactically, and the way we choose to
-      interpret it has material consequences. We've built some ad hoc support
-      for certain 'n-ary' forms, which we'll look at in a sec.
+      for forms which have a fixed number of delimiters. We've built some ad hoc
+      support for certain 'n-ary' forms, which we'll look at in a sec.
     </p>
-
-
 
     <p>
       Like a lot of things I've ended up implementing in Hazel, click-to-select
@@ -331,10 +340,6 @@
 
     <img class="full" src="illustrations/composite-2.png" />
     <img class="full" src="illustrations/composite.png" />
-    <img class="full" src="illustrations/duo-convex.png" />
-    <img class="full" src="illustrations/mono-concave.png" />
-    <img class="full" src="illustrations/mono-convex.png" />
-    <img class="full" src="illustrations/mono-prefix.png" />
 
     <video
       loop
