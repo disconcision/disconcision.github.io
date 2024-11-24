@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syntax-driven Selection in Hazel</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fffbf2;
+      }
+      h1,
+      h2 {
+        font-family: "Quicksand", serif;
+        font-weight: 700;
+      }
+      h1 {
+        color: #2c3e50;
+        font-size: 2.5em;
+      }
+      h2 {
+        color: #34495e;
+        font-size: 1.8em;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      video {
+        width: 100%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+      p a {
+        color: #53593d;
+        text-decoration: underline;
+      }
+      .hazel-logo {
+        width: 0.7em;
+        margin-right: 0.7em;
+        scale: 1.6;
+      }
+      .hazel-logo:hover {
+        filter: invert(1) brightness(1.2) hue-rotate(225deg);
+      }
+      .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        border-radius: 0.2em 1em;
+        width: fit-content;
+        padding: 0.3em 1em;
+        translate: -1.4em;
+      }
+      .nav:hover {
+        background-color: #afd3b8;
+      }
+      .full {
+        width: 100%;
+      }
+      .tip {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+      }
+      .tip h3 {
+        background-color: #53593d;
+        border-radius: 1.2em 0.2em 1.2em 0;
+        padding: 0.3em 1em;
+        width: fit-content;
+        color: white;
+        margin: 0;
+      }
+      .tip img {
+        width: 1.1em;
+        padding-right: 0.6em;
+        height: 1.6em;
+        /* aspect-ratio: 2; */
+        filter: invert(1) contrast(0.2) brightness(0.8) hue-rotate(200deg);
+      }
+      .tip .boost {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* height: 2.5em; */
+        background-color: #53593d;
+      }
+      .tip .boost > div {
+        border-radius: 0 0 1em 0;
+        background-color: #fffbf2;
+        height: 100%;
+      }
+      .syntax-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .syntax-grid > img {
+        height: 6em;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://andrewblinn.com"
+      ><div class="nav">
+        <img src="noun-back.svg" width="20" /> andrewblinn.com
+      </div></a
+    >
+    <h1>
+      <img src="hazel-logo.png" class="hazel-logo" />Syntax-driven selection in
+      Hazel
+    </h1>
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      onclick="this.paused ? this.play() : this.pause();"
+      poster="illustrations/case-exp-1.png"
+    >
+      <source src="illustrations/selection-banner-full.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="tip">
+      <div class="boost">
+        <div><img src="illustrations/boost.gif" /></div>
+      </div>
+      <h3>poke videos to stun or revive them</h3>
+    </div>
+
+    <h2>Why</h2>
+
+    <p>It's important to me that syntax be fidgetable</p>
+
+    <p>
+      I am a very mouse-driven developer. I will opt to use mouse over keyboard
+      even in situations where it is frankly stupid to do so. I am generally
+      unapologetic in this. I daily drive VSCode which has pretty terrible
+      click-to-select-code support. When I wrote Clojure professionally I used
+      Emacs, which I was more or less glad to drop, but I miss being able to
+      double click on paretheses to select their contents. AFAICT this is
+      neither possible in VSCode vanilla nor by extention.
+    </p>
+
+    <h2>Hazel syntax crash course</h2>
+
+    <p>
+      Hazel <b>syntactic forms</b> consist of an alternating sequence of
+      delimiter tokens and children. The number of delmiters and children can
+      differ by at most one. Forms with one more delimiter than child are called
+      convex; these constitute an entire term. Examples include atomic forms
+      like variables, which have a single delmiter and no children, and
+      parentheses, which have 2 delimiters and a single child:
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; justify-items: center"
+    >
+      <img src="illustrations/forms/mono-convex-a.png" />
+      <img src="illustrations/forms/duo-convex-a.png" />
+    </div>
+
+    <div class="tip" style="margin-top: 1em; margin-bottom: 2.5em">
+      <div class="boost">
+        <div><img src="illustrations/boost.gif" /></div>
+      </div>
+      <h3>hover over these forms!</h3>
+    </div>
+
+    <p>
+      Such forms are whole terms. This is not the case for forms which have the
+      same number of delimiters and children, or have one more child than
+      delimiter. These must have at least one unidelimited child; a child which
+      is not enclosed by delmiters:
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; justify-items: center"
+    >
+      <img src="illustrations/forms/mono-prefix-a.png" />
+      <img src="illustrations/forms/mono-infix-a.png" />
+    </div>
+
+    <p>
+      In <a href="https://dmoon.info">david's</a>
+      <a href="https://tylr.fun">tylr</a> model we call these forms (proper)
+      tiles. The significance of this distinction is that for these tiles, we
+      may need to consider operator precedence before we can figure out how far
+      their children extend. By contrast, for bidelimited children, like in the
+      parentheses above, the extent of the child is clear. This presents a kind
+      of syntactic cleavage point, slightly more granular than terms, which (as
+      we'll see) can sometimes prove useful in structuring how we think about
+      selection.
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; padding-left: 5em"
+    >
+      <img src="illustrations/forms/mono-convex-a.png" />
+      <img src="illustrations/forms/mono-infix-a.png" />
+      <img src="illustrations/forms/mono-prefix-a.png" />
+
+      <img src="illustrations/forms/mono-whitespace-a.png" />
+    </div>
+    <p>
+      Tiles can have four different shapes: convex, concave (aka infix), prefix,
+      and postfix. At the moment, Hazel has many mono (single-delimiter) tiles
+      of the first three categories, but the only postfix monotile is
+      whitespace, which takes of prefix/postfix form fluidly depending on
+      context. This negative space aspect of whitespace also informs its
+      selection behavior.
+    </p>
+
+    <div class="syntax-grid">
+      <img src="illustrations/forms/duo-convex-a.png" />
+      <img src="illustrations/forms/duo-prefix-a.png" />
+      <img src="illustrations/forms/duo-postfix-a.png" />
+    </div>
+
+    <p>
+      Hazel has convex, prefix, and postfix duotiles, but no concave one. Note
+      the interpretation of function application as a postfix operation;
+      application is often something of a special case syntactically, and the
+      way we choose to interpret it has material consequences.
+    </p>
+
+    <div
+      class="syntax-grid"
+      style="grid-template-columns: 1fr 1fr; padding-left: 5em"
+    >
+      <img src="illustrations/forms/trio-prefix-let-a.png" />
+      <img src="illustrations/forms/trio-prefix-a.png" />
+    </div>
+
+    <p>
+      The tile structure helps inform our take on the material nature of syntax,
+      but isn't totally sufficient in-itself to determine selection behavior.
+      For example, the two above forms are both prefix trio tiles, but it turns
+      out we generally want them to behave differently, both with respect to
+      indentation and selection. This probably means either that we're modelling
+      one of the above wrong (perhaps the let 'in' is really an infix operator),
+      or the tile model doesn't quite cleave syntactic reality at the joints.
+      This is a topic of investigation in David's upcoming research.
+    </p>
+
+    <div class="syntax-grid">
+      <img src="illustrations/forms/mono-convex-a.png" />
+      <img src="illustrations/forms/duo-convex-a.png" />
+      <img src="illustrations/forms/trio-prefix-let-a.png" />
+
+      <img src="illustrations/forms/mono-prefix-a.png" />
+      <img src="illustrations/forms/duo-prefix-a.png" />
+      <img src="illustrations/forms/trio-prefix-a.png" />
+
+      <img src="illustrations/forms/mono-infix-a.png" />
+      <img src="illustrations/forms/duo-postfix-a.png" />
+      <img src="illustrations/forms/mono-whitespace-a.png" />
+    </div>
+
+    <p>
+      The above forms cover (nearly) the basic repoitoire of Hazel's syntax. The
+      base teen tylr model which underlies Hazel only has first class support
+      for forms which have a fixed number of delimiters. We've built some ad hoc
+      support for certain 'n-ary' forms, which we'll look at in a sec.
+    </p>
+
+    <p>
+      Like a lot of things I've ended up implementing in Hazel, click-to-select
+      was not on my critical path, either acdemically or with respect to skill
+      development, but simply because it beckoned. And, as a more-or-less
+      structured editor, Hazel (surely) has a very clear internal model of
+      semantically meaningful segments of code, so implementing a nice,
+      syntax-guided selection mode should be straightforward.
+    </p>
+
+    <h2>What</h2>
+
+    <p>
+      And it was, to a first approximation. (Link to PR) But soon that first
+      approximation became palapably approximative, so I've revisted the
+      functionality as part of my upcoming Hazel Summer Refresh (link to PR).
+    </p>
+
+    <p>
+      The reasons it didn't work perfectly before are partly about the
+      implementation, and partly more conceptual. When it comes down to it, the
+      issue is: What does it mean to be a meaningful sub-part of code? In
+      particular, meaningful to the user with respect to ergonomic code
+      transformation, which is closely related but distinct from the meaning of
+      the code to the backend; the formal semantics.
+    </p>
+
+    <h2>How</h2>
+
+    <p>
+      After spending the last few years developping a language and editor in a
+      small but now rapidly growing team setting, I now have some amount of
+      clarity on what a 'term' is to different people. In particular, the notion
+      of 'a term' becomes clearer and more obvious the more you learn about
+      programming lanugage theory in the abstract sense, and less clear and less
+      obvious the more you learn about parsing and language in general. In
+      (natural) linguistics, there no general agreement on what a 'word' is.
+    </p>
+
+    <p>
+      In progamming language 'linguistics', you need to contend with the
+      often-blurry division between lexing and parsing, the distortions of
+      languages into lopsided grammars required to satisfy the formal
+      requirements of some parsing framework, and in structured editing, the
+      fact that what seems cleanly a term from an implementation perspective may
+      not line up with user expectations. Fundamentally, modern progamming
+      language syntax, and the traditional algebraic notation it derives from,
+      are both intricate and incidental, with many special cases cooperating in
+      non-obvious ways.
+    </p>
+
+    <h2>Terms in Hazel</h2>
+
+    <p>
+      The <a href="https://tylr.fun">Tylr engine</a> underlying Hazel defines a
+      paradigm called tile-based editing. (link to paper) In this framework,
+      every syntactic form is a tile, which is not necessarily a complete term,
+      although it does (in combination with its precdence), effectively define
+      one.
+    </p>
+
+    <img class="full" src="illustrations/composite-2.png" />
+    <img class="full" src="illustrations/composite.png" />
+
+    <video
+      loop
+      playsinline
+      onclick="this.paused ? this.play() : this.pause();"
+      poster="illustrations/case-exp-1.png"
+    >
+      <source src="illustrations/case-exp-1.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source
+        src="illustrations/composite-term-select-scan.mov"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source
+        src="illustrations/composite-token-select-scan.mov"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source src="illustrations/indication-scan-click.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source src="illustrations/indication-scan.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source src="illustrations/just-tokens.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source src="illustrations/misc1.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video onclick="this.paused ? this.play() : this.pause();" poster="TODO">
+      <source src="illustrations/whitespace-elim.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
