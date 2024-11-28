@@ -104,14 +104,18 @@ a {
 
 h1 {
   margin: 0;
-  font-size: 6em;
+  font-size: 5.5em;
   font-weight: normal;
 }
 
 h2 {
   margin: 0;
-  font-size: 3.5em;
+  font-size: 3.2em;
   font-weight: normal;
+}
+
+.glyph {
+  user-select: none;
 }
 
 /* HOVER SHIT */
@@ -185,28 +189,96 @@ body > .container {
   padding: 0;
   font-family: "Cutive Mono", "Courier New", monospace;
   max-width: var(--container-width);
-  border-radius: 0.2em 9.5em 3em 3em;
+  border-radius: 5em 9.5em 3em 3em;
   box-shadow: -20px 5px 55px rgb(50, 60, 63), 20px -20px 70px rgb(50, 60, 63);
   background-color: #001a237a;
   filter: saturate(1.2);
 }
 
 header {
-  padding: 1.7em;
-  padding-top: 1em;
-  border-radius: 0.2em 9.5em 0.7em 0.3em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 16em 1fr;
+  grid-template-rows: 8em 1fr;
+  /* padding: 1.7em;
+  padding-top: 1em; */
+  border-radius: 0.8em 9.5em 0.7em 0.3em;
   background-color: rgb(129, 194, 216);
   transition: all;
   transition-duration: 0.25s;
+  overflow: hidden;
+  background: url(images/mountains-utah.webp);
+  background-size:cover;
+}
+header::before {
+  display: inline-block;
+  /* position: absolute; */
+  width: 100%;
+  height:100%;
+  content: "";
+  background-color: rgb(129, 194, 216);
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 1;
+  opacity: 100%;
+}
+header:hover::before {
+  opacity: 0%;
 }
 header:hover {
-  border-radius: 0.4em 8.5em 1.2em 0.6em;
+  border-radius: 5em 8.5em 1.2em 2em;
   background-color: rgb(129, 194, 216, 0.6);
   /* opacity: 0.7; */
-  filter: brightness(1.1) saturate(1.4);
+  /* filter: brightness(1.1) saturate(1.4); */
   box-shadow: inset 0em -3em 7em #82e2ff;
   /* border-top: 1px solid white;*/
+  
 }
+header > .portrait {
+  z-index: 2;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  height: 13.4em;
+  width: 13.4em;
+  border-radius: 0.3em 0em 1em 0.3em;
+  grid-row: 1 / span 2;
+  transition: all;
+  transition-duration: 0.25s;
+  background: url("images/me/square-600.webp");
+  background-size: cover;
+}
+header:hover > .portrait {
+  border-radius: 5em 3em 5em 2em;
+  background: url("images/me/square-600-transparent.webp");
+  background-size: cover;
+  outline: 1px solid white;
+  rotate: 3deg;
+  /* box-shadow: 3em 0px 7em  #82e2ff; */
+  /* box-shadow: 20px 20px 60px #82e2ff; */
+}
+header > h1 {
+  z-index: 2;
+  grid-column: 2 / span 1;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-end;
+}
+header > h2 {
+  z-index: 2;
+  grid-column: 2 / span 1;
+  grid-row: 2;
+  display: flex;
+  align-items: baseline;
+}
+/* header > h2 > a {
+  transition: rotate 0.15s ease-out;
+  transform-origin: top left;
+}
+
+header > h2 > a:hover  {
+  rotate: 0.5deg;
+} */
 
 main {
 }
@@ -230,7 +302,9 @@ footer:hover {
 /* NAV */
 
 nav {
-  padding-left: 2em;
+  /* background: url(images/mountains-under.webp); */
+  /* background-size: cover; */
+  padding-left: 1em;
   /* padding: 0.8em 1.6em 0.8em 3.2em; */
   border-radius: 0.1em 0.7em 0.2em 1.9em;
   background-color: rgb(154, 211, 230);
@@ -259,6 +333,15 @@ nav > a {
 nav > a:hover {
   /*cursor: url("images/chefskiss.png"), default;*/
   background: none;
+}
+
+nav > a span{
+  transition: rotate 0.15s ease-out;
+  transform-origin: top left;
+}
+
+nav > a:hover span { 
+  rotate: 1.5deg;
 }
 
 nav > a > .glyph {
@@ -415,6 +498,7 @@ video {
   border: 0.0625em solid rgb(110, 255, 199);
   filter: sepia(100%) hue-rotate(150deg);
   opacity: 50%;
+  user-select: none;
 }
 
 #intro > section#forge article:hover img,
@@ -426,6 +510,7 @@ video {
   scale: 1.9;
   box-shadow: 0 3.5em 4em #ffe100, 0 1.6em 1em #ff7a00, 0 1.6em 4em #ff5700, 0 -0.1em 1em #ff006d;
   z-index: 2;
+  /* rotate: 3deg; */
 }
 #intro > section#forge > article:hover:last-child img{
   border-radius: 1.5em 1.5em 3em 0.2em ;
@@ -470,37 +555,39 @@ p.d3 {
 } */
 
 /* BOOKSHELF */
+::-webkit-scrollbar {
+  width: 15px;
+}
 
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.3);  */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.5);  */
+}
 section#books {
   display: flex;
-  padding: 1em 2em 1em 1em;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1em 1em 1em;
   transition: all;
   transition-duration: 0.5s;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* flex-wrap: wrap; */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  resize: vertical;
+  min-height: 6em;
+  height: 10.23em;
+  max-height: 32em;
+  scrollbar-color: #0b8567 #0000;
+  scrollbar-width: thin;
 }
-section#books:hover {
-  border-radius: 0.8em 2.5em 0.6em 3.7em;
-}
-section#books > article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+section#books img, video {
   margin: 0.2em;
-  cursor: pointer;
- 
-}
-section#books img,
-video {
-  transition: 0.125s all ease-in-out;
-  width: 11em;
-}
-section#books article:hover img,
-section#books article:hover video {
-  z-index: 10;
-  scale: 1.2;
-  /* animation: wobble 0.32s ease-in-out 1 alternate; */
-  /* translate: 0 -6.5em; */
+  height: 100%;
 }
 
 /* TRAD NEWS */
