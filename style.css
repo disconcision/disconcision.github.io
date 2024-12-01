@@ -207,7 +207,7 @@ header {
   transition: all;
   transition-duration: 0.25s;
   overflow: hidden;
-  background: url(images/mountains-utah.webp);
+  background: url(images/mountains-rockies.webp);
   background-size:cover;
 }
 header::before {
@@ -811,7 +811,7 @@ main > section#projects .glyph {
   grid-row: 3;
   align-self: center;
   justify-self: center;
-  content: url("images/arrowLR.svg");
+  content: url("images/icons/arrowLR.svg");
   width: 1.75em;
   height: 1.75em;
   filter: invert(0.8) sepia(1) hue-rotate(78deg) saturate(5.5) brightness(20)
@@ -889,7 +889,7 @@ main > section#projects > article#fructure .videolink a {
 }
 
 main > section#projects > article#fructure .videolink .scrot {
-  content: url("images/talk-tiny-60.png");
+  content: url("images/me/fructure-talk.webp");
   border-radius: 0 1em 0 0;
 }
 
@@ -899,7 +899,7 @@ main > section#projects .container .githubicon {
   grid-column: 3;
   grid-row: 3;
   align-self: baseline;
-  content: url("images/github-32.png");
+  content: url("images/icons/github-32.png");
   height: 1.6em;
   width: 1.6em;
 }
@@ -908,13 +908,13 @@ main > section#projects .container .tumblricon {
   grid-column: 3;
   grid-row: 4;
   align-self: baseline;
-  content: url("images/tumblr-32.png");
+  content: url("images/icons/tumblr-32.png");
   height: 1.6em;
   width: 1.6em;
 }
 
 main > section#projects .youtubeicon {
-  content: url("images/youtube-48-white.png");
+  content: url("images/icons/youtube-48-white.png");
   padding-left: 0.9em;
   padding-right: 1em;
   height: 1.65em;
@@ -925,7 +925,7 @@ main > section#projects .youtubeicon {
 
 header .glyph {
   display: inline-block;
-  content: url("images/arrowLR.svg");
+  content: url("images/icons/arrowLR.svg");
   width: 0.67em;
   height: 0.67em;
   margin-right: 0.6em;
@@ -942,23 +942,16 @@ header .glyph:has(+ a:hover) {
 }
 /* FOOTER HELPERS */
 
-.heartmoji {
-  display: inline-block;
-  content: url("images/heartmoji.svg");
-  height: 0.75em;
-  width: 0.75em;
-}
-
 .arrowup {
   display: inline-block;
-  content: url("images/arrow-up-white.svg");
+  content: url("images/icons/arrow-up-white.svg");
   height: 0.8em;
   width: 0.8em;
 }
 
 .arrowdown {
   display: inline-block;
-  content: url("images/arrow-up-white.svg");
+  content: url("images/icons/arrow-up-white.svg");
   transform: rotate(180deg);
   height: 0.8em;
   width: 0.8em;
