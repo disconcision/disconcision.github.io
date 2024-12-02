@@ -891,6 +891,7 @@ main > section#projects > article#fructure .videolink a {
 main > section#projects > article#fructure .videolink .scrot {
   content: url("images/me/fructure-talk.webp");
   border-radius: 0 1em 0 0;
+  height: 100%;
 }
 
 /* PROJECT ICONS */
