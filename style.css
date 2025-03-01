@@ -732,7 +732,7 @@ main > section#newsfeed:hover {
 section#newsfeed dl {
   line-height: 1.4em;
   margin: 0;
-  height: 17.9em;
+  height: 17em;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
