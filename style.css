@@ -8,15 +8,15 @@
 }
 
 @keyframes bubblebubble1 {
-	0% {
-		border-radius: 7em 7em 7em 7em;
-	}
+  0% {
+    border-radius: 7em 7em 7em 7em;
+  }
   /* 25% {
 		border-radius: 6.5em 5.5em 6.5em 7.5em;
 	} */
   50% {
-		border-radius: 6.0em 6.0em 6.0em 6.0em;
-	}
+    border-radius: 6em 6em 6em 6em;
+  }
   /* 50% {
 		border-radius: 5.5em 7.5em 6.5em 5.5em;
 	} */
@@ -208,13 +208,13 @@ header {
   transition-duration: 0.25s;
   overflow: hidden;
   background: url(images/mountains-rockies.webp);
-  background-size:cover;
+  background-size: cover;
 }
 header::before {
   display: inline-block;
   /* position: absolute; */
   width: 100%;
-  height:100%;
+  height: 100%;
   content: "";
   background-color: rgb(129, 194, 216);
   grid-row: 1 / span 2;
@@ -233,7 +233,6 @@ header:hover {
   /* filter: brightness(1.1) saturate(1.4); */
   box-shadow: inset 0em -3em 7em #82e2ff;
   /* border-top: 1px solid white;*/
-  
 }
 header > .portrait {
   z-index: 2;
@@ -292,7 +291,7 @@ footer {
   background-color: rgb(110 103 211);
   transition: all;
   transition-duration: 0.3s;
-  transition-timing-function: ease-in-out
+  transition-timing-function: ease-in-out;
 }
 footer:hover {
   border-radius: 1.5em 3em 0.5em 0.5em;
@@ -315,7 +314,8 @@ nav {
   transition: all;
   transition-duration: 0.5s;
 }
-nav:hover, nav.bottom:hover {
+nav:hover,
+nav.bottom:hover {
   border-radius: 0.3em 1.4em 0.4em 1.5em;
   /* background-color: rgb(129, 194, 216, 0.6); */
   /* opacity: 0.7; */
@@ -335,12 +335,12 @@ nav > a:hover {
   background: none;
 }
 
-nav > a span{
+nav > a span {
   transition: rotate 0.15s ease-out;
   transform-origin: top left;
 }
 
-nav > a:hover span { 
+nav > a:hover span {
   rotate: 1.5deg;
 }
 
@@ -388,21 +388,29 @@ main > p {
 } */
 
 body > .container::before {
-    opacity: 0;
-    border-radius: 5em;
-    transition: all 0.5s ease-in-out;
-    position: absolute;
-    z-index: -1;
-    content: ".";
-    width: 100%;
-    height: 100%;
-    filter: saturate(1.2);
-    background: linear-gradient( 0deg, rgba(255, 255, 255, 0.8) 0%, rgb(250, 255, 208) 23%, rgba(255, 207, 0, 0.8) 38%, rgba(239, 0, 150, 0.90) 54%, rgba(85, 215, 255, 0.9) 90% ), url(images/stripesbkg100.png);
-    background-blend-mode: hard-light;
-    top: 13em;
-    bottom: 6em;
-    width: 100%;
-    height: 45em;
+  opacity: 0;
+  border-radius: 5em;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: -1;
+  content: ".";
+  width: 100%;
+  height: 100%;
+  filter: saturate(1.2);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgb(250, 255, 208) 23%,
+      rgba(255, 207, 0, 0.8) 38%,
+      rgba(239, 0, 150, 0.9) 54%,
+      rgba(85, 215, 255, 0.9) 90%
+    ),
+    url(images/stripesbkg100.png);
+  background-blend-mode: hard-light;
+  top: 13em;
+  bottom: 6em;
+  width: 100%;
+  height: 45em;
 }
 
 body > .container:has(#intro:hover)::before {
@@ -453,7 +461,6 @@ body > .container:has(#intro:hover)::before {
   /* animation: bubblebubble1 3s linear infinite alternate; */
 }
 
-
 #intro section#forge a {
   border-radius: 0.2em 0.5em 0.2em 0.5em;
 }
@@ -486,8 +493,8 @@ body > .container:has(#intro:hover)::before {
   padding: 0.4em;
 }
 #intro:hover > section#forge > article b {
-    color: black;
-    z-index: 1;
+  color: black;
+  z-index: 1;
 }
 
 #intro > section#forge img,
@@ -508,15 +515,16 @@ video {
   border: none;
   opacity: 100%;
   scale: 1.9;
-  box-shadow: 0 3.5em 4em #ffe100, 0 1.6em 1em #ff7a00, 0 1.6em 4em #ff5700, 0 -0.1em 1em #ff006d;
+  box-shadow: 0 3.5em 4em #ffe100, 0 1.6em 1em #ff7a00, 0 1.6em 4em #ff5700,
+    0 -0.1em 1em #ff006d;
   z-index: 2;
   /* rotate: 3deg; */
 }
-#intro > section#forge > article:hover:last-child img{
-  border-radius: 1.5em 1.5em 3em 0.2em ;
+#intro > section#forge > article:hover:last-child img {
+  border-radius: 1.5em 1.5em 3em 0.2em;
   /* translate: 2em; */
 }
-#intro > section#forge > article:hover:first-child img{
+#intro > section#forge > article:hover:first-child img {
   border-radius: 3em 1.5em 0.2em 1.5em;
   /* translate: -2em; */
 }
@@ -534,6 +542,10 @@ p.d1,
 p.d2,
 p.d3 {
   display: none;
+}
+#intro p.general {
+  display: flex;
+  justify-content: center;
 }
 #intro p.general:has(~ section > article:hover) {
   display: none;
@@ -585,7 +597,8 @@ section#books {
   scrollbar-color: #0b8567 #0000;
   scrollbar-width: thin;
 }
-section#books img, video {
+section#books img,
+video {
   margin: 0.2em;
   height: 100%;
 }
@@ -677,7 +690,7 @@ main > section#news article:hover > b {
 }
 main > section#news article:hover > p {
   scale: 1.03;
-} 
+}
 main > section#news article > p > span {
   transition: 0.25s all ease-in;
 }
@@ -780,10 +793,9 @@ main > section#projects a.container {
 main > section#projects .container {
   display: grid;
   grid-template-columns: 5.0625em 1fr 3.625em;
-  grid-template-rows: minmax(0, auto) minmax(1.5em, auto) minmax(3.25em, auto) minmax(
-      3em,
-      auto
-    ) 1fr minmax(3.1em, auto);
+  grid-template-rows:
+    minmax(0, auto) minmax(1.5em, auto) minmax(3.25em, auto) minmax(3em, auto)
+    1fr minmax(3.1em, auto);
 }
 
 main > section#projects .container h1 {
@@ -834,8 +846,6 @@ main > section#projects > article:hover {
   background-size: 2000% 2000%;
   animation: gradient 40s linear infinite alternate;
 }
-
-
 
 main > section#projects > article#context-patterns {
   display: flex;
