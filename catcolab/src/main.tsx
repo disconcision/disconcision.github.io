@@ -1,0 +1,10 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/main.tsx");import { createComponent as _$createComponent } from "/node_modules/.vite/deps/solid-js_web.js?v=f7857f22";
+import { render } from "/node_modules/.vite/deps/solid-js_web.js?v=f7857f22";
+import CatColabHazelApp from "/src/CatColabHazelApp.tsx";
+const root = document.getElementById("root");
+if (root) {
+  const _cleanup = render(() => _$createComponent(CatColabHazelApp, {}), root);
+  if (import.meta.hot) import.meta.hot.dispose(_cleanup);
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQUFBLFNBQVNBLGNBQWM7QUFDdkIsT0FBT0Msc0JBQXNCO0FBRTdCLE1BQU1DLE9BQU9DLFNBQVNDLGVBQWUsTUFBTTtBQUMzQyxJQUFJRixNQUFNO0FBQUEsUUFBQUcsV0FDTkwsT0FBTyxNQUFBTSxrQkFBT0wsa0JBQWdCLEtBQUtDLElBQUk7QUFBQyxNQUFBSyxZQUFBQyxJQUFBRCxhQUFBQyxJQUFBQyxRQUFBSixRQUFBO0FBQzVDIiwibmFtZXMiOlsicmVuZGVyIiwiQ2F0Q29sYWJIYXplbEFwcCIsInJvb3QiLCJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIiwiX2NsZWFudXAiLCJfJGNyZWF0ZUNvbXBvbmVudCIsImltcG9ydCIsImhvdCIsImRpc3Bvc2UiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsibWFpbi50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcmVuZGVyIH0gZnJvbSBcInNvbGlkLWpzL3dlYlwiO1xuaW1wb3J0IENhdENvbGFiSGF6ZWxBcHAgZnJvbSBcIi4vQ2F0Q29sYWJIYXplbEFwcFwiO1xuXG5jb25zdCByb290ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJyb290XCIpO1xuaWYgKHJvb3QpIHtcbiAgICByZW5kZXIoKCkgPT4gPENhdENvbGFiSGF6ZWxBcHAgLz4sIHJvb3QpO1xufVxuIl0sImZpbGUiOiIvVXNlcnMvYW5kcmV3Ymxpbm4vRHJvcGJveC9wcm9qZWN0cy9DYXRDb2xhYi9wYWNrYWdlcy9oYXplbC9zcmMvbWFpbi50c3gifQ==
