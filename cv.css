@@ -77,10 +77,13 @@ a:hover {
 .section-title {
   font-variant: small-caps;
   font-size: 12pt;
-  font-weight: normal;
+  font-weight: bold;
   color: var(--title-gray);
   margin-bottom: 0.2em;
   margin-top: 0.5em;
+  gap: 0.7em;
+  display: flex;
+  align-items: center;
 }
 
 .section-title .fa, 
@@ -214,5 +217,11 @@ a:hover {
 @media print {
   .pdf-badge {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0.2in 0.2in;
   }
 }
