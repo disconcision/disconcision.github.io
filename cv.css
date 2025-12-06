@@ -1,0 +1,218 @@
+:root {
+  --accent: rgb(0, 184, 171);
+  --gray: rgb(153, 153, 153);
+  --darker-gray: rgb(102, 102, 102);
+  --title-gray: rgb(0, 0, 0);
+  --body-color: rgb(40, 40, 40);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Baskerville', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: 10pt;
+  line-height: 1.4;
+  color: var(--body-color);
+  max-width: 240mm;
+  margin: 0 auto;
+  padding: 0.75in;
+  background: white;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 0.3em;
+}
+
+.date {
+  position: absolute;
+  top: 0.3em;
+  right: 0;
+  /* font-size: 9pt; */
+  /* font-style: italic; */
+  color: var(--accent);
+}
+
+.name {
+  font-size: 26pt;
+  font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.contact {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: 10pt;
+}
+
+.contact a {
+  color: var(--accent);
+}
+
+.contact .fa-at,
+.contact .fa-github,
+.contact .fa-twitter {
+  color: var(--body-color);
+  margin: 0 0.15em;
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+.section-title {
+  font-variant: small-caps;
+  font-size: 12pt;
+  font-weight: normal;
+  color: var(--title-gray);
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
+}
+
+.section-title .fa, 
+.section-title .fas, 
+.section-title .far,
+.section-title .fab {
+  color: var(--accent);
+  margin-left: 0.2em;
+  font-size: 10pt;
+}
+
+.entry {
+  margin-left: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+.entry-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.entry-title {
+  font-weight: bold;
+}
+
+.entry-title a {
+  color: var(--accent);
+}
+
+.sbull {
+  margin: 0 0.5em;
+  color: var(--body-color);
+}
+
+.entry-meta {
+  color: var(--gray);
+  font-style: italic;
+}
+
+.entry-meta a {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.entry-body {
+  margin-left: 1.5em;
+  margin-top: 0.1em;
+}
+
+.entry-body a {
+  color: var(--accent);
+}
+
+.body-text {
+  margin-left: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+.authors .me {
+  text-decoration: underline;
+}
+
+.conference-list {
+  margin-left: 1.5em;
+}
+
+.conference-list .year-line {
+  margin-bottom: 0.1em;
+}
+
+.conference-list .year {
+  display: inline-block;
+  /* min-width: 5.5em; */
+}
+
+.teaching-table {
+  margin-left: 1.5em;
+  margin-top: 0.2em;
+}
+
+.teaching-table td {
+  padding-right: 1.5em;
+  vertical-align: top;
+  padding-bottom: 0.1em;
+}
+
+.teaching-table .years {
+  min-width: 7em;
+}
+
+.teaching-table .school {
+  min-width: 8em;
+}
+
+.uline {
+  text-decoration: underline;
+}
+
+@media print {
+  body {
+    padding: 0.5in;
+  }
+}
+
+/* Corner PDF Badge */
+.pdf-badge {
+  position: absolute;
+  top: 2.5em;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.8em;
+  background: var(--accent);
+  color: white;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.7rem;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  border-radius: 0 0 0 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  text-decoration: none;
+  z-index: 1000;
+}
+.pdf-badge:hover {
+  background: red;
+  text-decoration: none;
+}
+
+@media print {
+  .pdf-badge {
+    display: none;
+  }
+}
