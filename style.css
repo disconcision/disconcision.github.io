@@ -737,7 +737,7 @@ section#newsfeed input:checked + label:after {
   content: "LESS";
 }
 section#newsfeed input:checked ~ dl {
-  height: 60.5em;
+  height: 84.5em;
 }
 
 main > section#newsfeed:hover {
