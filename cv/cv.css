@@ -13,7 +13,8 @@
 }
 
 body {
-  font-family: 'Libre Baskerville', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-family: "Libre Baskerville", "Palatino Linotype", Palatino,
+    "Book Antiqua", Georgia, serif;
   font-size: 10pt;
   line-height: 1.4;
   color: var(--body-color);
@@ -86,8 +87,8 @@ a:hover {
   align-items: center;
 }
 
-.section-title .fa, 
-.section-title .fas, 
+.section-title .fa,
+.section-title .fas,
 .section-title .far,
 .section-title .fab {
   color: var(--accent);
@@ -200,12 +201,12 @@ a:hover {
   padding: 0.3em 0.8em;
   background: var(--accent);
   color: white;
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 0.7rem;
   font-variant: small-caps;
   letter-spacing: 0.05em;
   border-radius: 0 0 0 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   z-index: 1000;
 }
@@ -223,5 +224,26 @@ a:hover {
 @media screen and (max-width: 600px) {
   body {
     padding: 0.2in 0.2in;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .date {
+    position: static;
+    display: block;
+    text-align: left;
+    margin-top: 0.2em;
+    color: var(--gray);
+  }
+
+  .name {
+    font-size: 20pt;
+  }
+
+  .pdf-badge {
+    top: auto;
+    bottom: 1.8rem;
+    right: 1rem;
+    border-radius: 4px;
   }
 }
