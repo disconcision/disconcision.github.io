@@ -587,17 +587,15 @@ section#books {
   align-items: center;
   justify-content: space-between;
   padding: 1em 1em 1em 1em;
-  transition: all;
-  transition-duration: 0.5s;
   /* flex-wrap: wrap; */
   overflow-y: hidden;
   overflow-x: scroll;
-  resize: vertical;
   min-height: 6em;
   height: 10.23em;
-  max-height: 32em;
+  /* max-height: 32em; */
   scrollbar-color: #0b8567 #0000;
   scrollbar-width: thin;
+  cursor: move;
 }
 section#books img,
 video {

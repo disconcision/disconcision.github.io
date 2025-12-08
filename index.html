@@ -369,5 +369,84 @@
     <p>updated 💅 in september 2025 &nbsp;
        <a href="#top"> <span class="arrowup glyph"></span></a></p></footer>
     
-</div></body>
+</div>
+
+<script>
+(function() {
+  const books = document.getElementById('books');
+  if (!books) return;
+
+  // Configuration
+  const MIN_HEIGHT = 96;
+  const MAX_HEIGHT = 800;
+  const INITIAL_HEIGHT = 230; // pixels
+  const INITIAL_CENTER = 0.5; // 0 = left edge, 0.5 = center, 1 = right edge
+  const ANGLE_THRESHOLD = 1.2;
+
+  // Apply initial state
+  books.style.height = INITIAL_HEIGHT + 'px';
+  // Need to wait a frame for layout to settle before setting scroll
+  requestAnimationFrame(() => {
+    const scrollableWidth = books.scrollWidth - books.clientWidth;
+    books.scrollLeft = scrollableWidth * INITIAL_CENTER;
+  });
+
+  let startY, startX, startHeight, startScrollLeft, decided, mode;
+  let startContentX, startContentWidth, cursorOffsetX;
+
+  books.style.userSelect = 'none';
+  books.querySelectorAll('img').forEach(img => {
+    img.draggable = false;
+  });
+
+  books.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    startX = e.clientX;
+    startY = e.clientY;
+    startHeight = books.offsetHeight;
+    startScrollLeft = books.scrollLeft;
+    
+    const rect = books.getBoundingClientRect();
+    cursorOffsetX = e.clientX - rect.left;
+    startContentX = books.scrollLeft + cursorOffsetX;
+    startContentWidth = books.scrollWidth;
+    
+    decided = false;
+    mode = null;
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('mouseup', stopDrag);
+  });
+
+  function onDrag(e) {
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    if (!decided && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
+      decided = true;
+      mode = Math.abs(dy) > Math.abs(dx) * ANGLE_THRESHOLD ? 'resize' : 'scroll';
+      books.style.cursor = mode === 'resize' ? 'ns-resize' : 'grab';
+    }
+
+    if (mode === 'resize') {
+      const newHeight = Math.min(Math.max(startHeight + dy, MIN_HEIGHT), MAX_HEIGHT);
+      books.style.height = newHeight + 'px';
+      
+      const scale = books.scrollWidth / startContentWidth;
+      const newContentX = startContentX * scale;
+      books.scrollLeft = newContentX - cursorOffsetX;
+    } else if (mode === 'scroll') {
+      books.scrollLeft = startScrollLeft - dx;
+    }
+  }
+
+  function stopDrag() {
+    document.removeEventListener('mousemove', onDrag);
+    document.removeEventListener('mouseup', stopDrag);
+    books.style.cursor = '';
+    decided = false;
+    mode = null;
+  }
+})();
+</script>
+</body>
 </html>
