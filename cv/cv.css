@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+html {
+  background-image: url(../images/stripesbkg100.png), linear-gradient(#f5feff, #162b53);
+  background-blend-mode: difference;
+}
+
 body {
   font-family: "Libre Baskerville", "Palatino Linotype", Palatino,
     "Book Antiqua", Georgia, serif;
