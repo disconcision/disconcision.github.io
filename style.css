@@ -583,6 +583,7 @@ p.d3 {
   /* -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.5);  */
 }
 section#books {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -590,7 +591,7 @@ section#books {
   /* flex-wrap: wrap; */
   overflow-y: hidden;
   overflow-x: scroll;
-  min-height: 6em;
+  min-height: 6.64em;
   height: 10.23em;
   /* max-height: 32em; */
   scrollbar-color: #0b8567 #0000;
@@ -598,9 +599,131 @@ section#books {
   cursor: move;
 }
 section#books img,
-video {
+section#books video {
   margin: 0.2em;
   height: 100%;
+}
+
+/* BOOK CRATE INTERACTIONS */
+section#books .crates-container {
+  display: flex;
+  height: 100%;
+  gap: 0;
+}
+
+section#books .book-crate {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+section#books .book-crate img {
+  display: block;
+  height: 100%;
+  width: auto;
+  margin: 0;
+  border-radius: 0;
+}
+
+section#books .book-crate svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+/* Only enable book interactions when shelf is interactive */
+section#books.interactive .book-crate svg {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+section#books .book-crate svg polygon {
+  fill: transparent;
+  stroke: transparent;
+  cursor: pointer;
+  transition: fill 0.12s ease;
+}
+
+section#books .book-crate svg a:hover polygon {
+  fill: rgba(255, 255, 255, 0.45);
+}
+
+/* Tooltip styling */
+section#books .book-crate::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 8%;
+  left: clamp(10%, var(--tooltip-x, 50%), 90%);
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.92);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-family: "Open Sans", system-ui, sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 100;
+}
+
+section#books.interactive
+  .book-crate[data-tooltip]:not([data-tooltip=""])::after {
+  opacity: 1;
+}
+
+/* Hint tooltip for bookshelf discoverability */
+.books-hint {
+  position: fixed;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #b5f8fb;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: "Open Sans", system-ui, sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 200;
+}
+
+.books-hint.visible {
+  opacity: 1;
+}
+
+.books-hint .hint-arrow {
+  display: inline-block;
+  animation: hint-bounce 0.6s ease-in-out infinite;
+  margin-right: 2px;
+}
+
+.books-hint .hint-icon {
+  color: #5fefdb;
+  margin-right: 4px;
+}
+
+@keyframes hint-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
 }
 
 /* TRAD NEWS */
