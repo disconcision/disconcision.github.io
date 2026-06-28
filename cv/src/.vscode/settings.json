@@ -1,0 +1,5 @@
+{
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.formatting.tex-fmt.path": "/opt/homebrew/bin/tex-fmt",
+  "latex-workshop.latex.outDir": "%DIR%/build"
+}

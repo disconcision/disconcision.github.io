@@ -5,33 +5,22 @@
 
 % Setup the language.
 \usepackage[english]{babel}
-\hyphenation{Some-long-word}
 
 \usepackage{resume}
 
 \begin{document}
 
-% --- Icon toggle ------------------------------------------------------------
-\newif\ifshowicons
-% \showiconstrue % set to \showiconsfalse to hide all FontAwesome icons
-\newcommand{\icon}[1]{\ifshowicons #1\fi}
+% \me marks my name (underlined) in the author lists throughout
+\newcommand{\me}{\underline{Andrew Blinn}}
 
-\newcommand{\sectiontitle}[2]{\roottitle{#1\hspace{0.1cm}\icon{#2}}}
-
-\sloppy  % this to relax whitespacing in favour of straight margins
-\noindent
-
-\maintitle{andrew blinn}{ }{\today}
+\maintitle{Andrew Blinn}{\today}
 
 \nobreakvspace{0.3em}
 
-\href{mailto:me@andrewblinn.com}{me}
-\hspace{-0.0cm} \raisebox{-0.35ex}{\faAt} \hspace{0.0cm}
-\href{http://andrewblinn.com}{andrewblinn.com}
-\hspace{0.5cm} \raisebox{-0.35ex}{\faGithub} \hspace{0.0cm}
-\href{http://github.com/disconcision}{github/disconcision}
-\hspace{0.5cm} \raisebox{-0.35ex}{\faTwitter} \hspace{0.0cm}
-\href{http://twitter.com/disconcision}{twitter/disconcision}
+% the email reads as "me @ andrewblinn.com": two links joined by the @ icon
+\href{mailto:me@andrewblinn.com}{me}~\contacticon{\faAt}~\href{http://andrewblinn.com}{andrewblinn.com}%
+\contact{\faGithub}{http://github.com/disconcision}{github/disconcision}%
+\contact{\faTwitter}{http://twitter.com/disconcision}{twitter/disconcision}
 
 \sectiontitle{Vision}{\faMap[regular]}
 
@@ -49,7 +38,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://andrewblinn.com/papers/D2.pdf}
 {Declarative Dragging} \sbull UIST (Forthcoming)}
 {2026}
-{{Joshua Horowitz, \underline{Andrew Blinn}, Jeffery Heer}
+{{Joshua Horowitz, \me, Jeffrey Heer}
 }
 
 \headedsubsection
@@ -57,9 +46,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://arxiv.org/abs/2508.16848}
 {Syntactic Completions with Material Obligations} \sbull OOPSLA}
 {2025}
-{{David Moon, \underline{Andrew Blinn}, Thomas Porter, Cyrus Omar}
-  % \\
-  % Material obligations unify structure editing and error-correcting parsing
+{{David Moon, \me, Thomas Porter, Cyrus Omar}
 }
 
 \headedsubsection
@@ -67,8 +54,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://dl.acm.org/doi/abs/10.1145/3689728}
 {Statically Contextualizing Large Language Models with Typed Holes} \sbull OOPSLA}
 {2024}
-{{\underline{Andrew Blinn}, Kevin Li, June Hyung Kim, Cyrus Omar}
-  % \\ How to use holes \& language servers to build global context for LLM code completions
+{{\me, Kevin Li, June Hyung Kim, Cyrus Omar}
 }
 
 \headedsubsection
@@ -76,8 +62,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://dl.acm.org/doi/10.1145/3632910}
 {Total Type Error Localization and Recovery with Holes} \sbull POPL \sbull \href{https://cse.engin.umich.edu/stories/cse-researchers-win-distinguished-paper-award-at-popl-2024}{Distinguished Paper Award}}
 {2024}
-{{Eric Zhao, Raef Maroof, Anand Dukkipati, \underline{Andrew Blinn}, Zoe Pan, Cyrus Omar}
-  % \\ A formal account of static error localization \& recovery as applied to editor semantic services
+{{Eric Zhao, Raef Maroof, Anand Dukkipati, \me, Zoe Pan, Cyrus Omar}
 }
 
 \headedsubsection
@@ -85,8 +70,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://www.computer.org/csdl/proceedings-article/vl-hcc/2023/294600a071/1RSFK8J0CiY}
 {Gradual Structure Editing with Obligations} \sbull VL/HCC}
 {2023}
-{{David Moon, \underline{Andrew Blinn}, Cyrus Omar}
-  % \\ Generalizing program holes to \emph{syntactic obligations} allows more text-like structured editing
+{{David Moon, \me, Cyrus Omar}
 }
 
 \headedsubsection
@@ -94,9 +78,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://ieeexplore.ieee.org/abstract/document/9833110}
 {An Integrative Human-Centered Architecture for Interactive Programming Assistants} \sbull VL/HCC}
 {2022}
-{{\underline{Andrew Blinn}, David Moon, Eric Griffis, Cyrus Omar} \sbull Addendum on \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{suggestion \faPaperclip\;sensibility}
-  %    \\ A syncretic account of programming assistants including a formalization of
-  % \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{suggestion \faPaperclip\;sensibility}
+{{\me, David Moon, Eric Griffis, Cyrus Omar} \sbull Addendum on \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{suggestion \faPaperclip\;sensibility}
 }
 
 \headedsubsection
@@ -104,8 +86,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://dl.acm.org/doi/10.1145/3453483.3454059}
 {Filling Typed Holes with Live GUIs} \sbull PLDI}
 {2021}
-{{Cyrus Omar, David Moon, \underline{Andrew Blinn}, Ian Voysey, Nick  Collins, Ravi Chugh}
-  % \\ Livelits embed persistent user-defined GUIs in code, enabling live inline graphical feedback
+{{Cyrus Omar, David Moon, \me, Ian Voysey, Nick  Collins, Ravi Chugh}
 }
 
 \sectiontitle{Workshop Papers}{\faHammer}
@@ -115,8 +96,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://hazel.org/papers/propl24.pdf}
 {Toward a Live, Rich, Composable, and Collaborative Planetary Compute Engine} \sbull PROPL}
 {2024}
-{{Alexander Bandukwala, \underline{Andrew Blinn}, Cyrus Omar}
-  % \\ A concept sketch for a graphical programming environment for climate science applications
+{{Alexander Bandukwala, \me, Cyrus Omar}
 }
 
 \headedsubsection
@@ -124,10 +104,8 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   {https://dl.acm.org/doi/abs/10.1145/3546196.3550164}
 {Tylr - A Tiny Tile-based Structure Editor} \sbull TyDe}
 {2022}
-{{David Moon, \underline{Andrew Blinn}, Cyrus Omar}
-  % \\ Tylr combines traditional and structured editing approaches via a novel destructuring mechanism
+{{David Moon, \me, Cyrus Omar}
 }
-
 
 \sectiontitle{Funding}{\faMoneyBill*[regular]}
 
@@ -138,7 +116,6 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   Researching and prototyping an \href{https://aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/funded-projects?tabId=tooling-platforms&cardId=safeguarded-collaboration-with-ai-agents}{orchestration layer \& computational commons} to support
   \\collaboration with autonomous AI researchers on safety-critical cyberphysical applications
 }
-
 
 \sectiontitle{School}{\faBell[regular]}
 
@@ -183,7 +160,6 @@ making working with abstraction \& complexity more accessible, tangible, and fun
 {
   Designed new front-end interfaces to  \href{https://andrewblinn.com/portfolio/todaq/}{sharpen the materiality of distributed digital assets}.\\Implemented core back-end features for a decentralized digital asset management protocol
 }
-
 
 \sectiontitle{Speaking}{\faPlane}
 
@@ -231,7 +207,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
 
 \sectiontitle{Conferences}{\faConnectdevelop}
 
-\headedsubsectionb
+\headedsubsection*
 {Programming Committee Member}
 % {Pasadena, Singapore}
 {}
@@ -247,11 +223,11 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   \href{https://2024.splashcon.org/track/splash-2024-Onward-papers}{Onward!} +
 \href{https://2024.splashcon.org/home/live-2024}{LIVE} + \href{https://2024.splashcon.org/home/hatra-2024}{HATRA}}
 
-\headedsubsectiona
+\headedsubsection*
 {Student Volunteer}
 {2021  \, \href{https://2021.splashcon.org/track/splash-2021-oopsla}{SPLASH/OOPSLA}}
 
-\headedsubsectionb {Seat Filler}
+\headedsubsection* {Seat Filler}
 % {London, Rome, LA, Toronto, Chicago, Salt Lake City, Galiano, Eugene, St.Louis, Empire Builder}
 {2026 \,
 \href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA London AI Summit} + \href{https://www.cs.uoregon.edu/research/summerschool/summer26/}{OPLSS}}
@@ -351,7 +327,6 @@ making working with abstraction \& complexity more accessible, tangible, and fun
 {Investigations in adding juice and gamefeel to algebraic user interfaces}
 {2022 - Now}
 {Figuring out how tangibility impacts explorability in math and coding with \href{https://andrewblinn.com/nool/}{nool} and \href{https://andrewblinn.com/furl/main/}{furl}}
-
 
 %\sectiontitle{Word Jumble}{\faPuzzlePiece}
 %  \headedsubsection

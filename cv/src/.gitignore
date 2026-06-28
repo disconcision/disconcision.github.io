@@ -1,0 +1,18 @@
+# LaTeX build output directory (see .vscode/settings.json -> latex.outDir)
+/build/
+
+# LaTeX build artifacts, in case anything is compiled in place
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb

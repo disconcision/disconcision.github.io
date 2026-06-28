@@ -22,141 +22,98 @@
 % OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 % SOFTWARE.
 
-%
-% This style contains some commands for making a LaTeX resume
-%
-% Please refer to the README.md file for more info.
-%
-% This project is currently hosted at: https://github.com/cies/resume
-%
+% This is a heavily modified version of Cies' original template.
+% The original is available: https://github.com/cies/resume
 
-
-% To finetune lists with a inline heading and indented content.
-% See the Experiences section in the example.
-\usepackage{mdwlist}
-
-% For multiple column text.
-\usepackage{multicol}
-
-% For \textscale, which I prefer over \sc (small caps).
-% See the \acr command definition below.
-\usepackage{relsize}
-
-% Setup the hyperrefs witht he right color.
-\usepackage{hyperref}  
+\usepackage{hyperref}
 \usepackage{xcolor}
-\definecolor{dark-blue}{rgb}{0.0, 0.72, 0.67}
+\definecolor{accent}{rgb}{0.0, 0.72, 0.67}
 \definecolor{mygray}{gray}{0.6}
-\definecolor{darkergray}{gray}{0.4}
-\definecolor{lightergray}{gray}{0.8}
 \definecolor{titlegray}{gray}{0}
-\definecolor{spacergray}{gray}{0.6}
-\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+\hypersetup{colorlinks,linkcolor={accent},citecolor={accent},urlcolor={accent}}
 
 \usepackage{fontawesome5}
-\usepackage{academicons}
 \usepackage{amsmath}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
-% XeTeX specific stuff with fall-back.
-\usepackage{ifxetex}
-\ifxetex
+% palatino-style serif, with old-style figures (osf) so digits in dates
+% have ascenders/descenders instead of sitting uniformly on the baseline
+\usepackage[osf]{newpxtext}
 
-  \usepackage{fontspec}
- 
-  % the main font, with all features on
-  \setmainfont
-    [ ExternalLocation ,
-      Mapping          = tex-text ,
-      Numbers          = OldStyle ,
-      BoldFont         = texgyrepagella-bold.otf ,
-      ItalicFont       = texgyrepagella-italic.otf ,
-      BoldItalicFont   = texgyrepagella-bolditalic.otf ]
-    {texgyrepagella-regular.otf}
-    
-  % same like the main font, but without old-style nums
-  \newfontfamily\newnums
-    [ ExternalLocation ,
-      Mapping          = tex-text ,
-      BoldFont         = texgyrepagella-bold.otf ,
-      ItalicFont       = texgyrepagella-italic.otf ,
-      BoldItalicFont   = texgyrepagella-bolditalic.otf ]
-    {texgyrepagella-regular.otf}
+% Experimental:
+%   \usepackage{tgpagella}                 % TeX Gyre Pagella (lining figures)
+%   \usepackage[ScaleRM=1.08]{libertinus}  % Libertinus Serif at 1.08 scale
 
-%  \setmainfont[
-%   Numbers = OldStyle,
-%   Scale   = 1.08
-% ]{Libertinus Serif}
+% typographic refinements (font expansion + character protrusion).
+\usepackage[expansion,protrusion]{microtype}
 
-  % Comment out the previous statement and uncomment the following line to use the
-  % Linux Libertine font (it has nice lignatures).
-  % Make sure to have the `ttf-linux-libertine` package installed on Ubuntu.
-%  \setmainfont[Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Contextual}]{Linux Libertine O}
-
-  % needs an experimental and impossible to find package for xetex
-  \usepackage[protrusion]{microtype}
-
-\else
-
-  % this case we likely use the `pdftex` back-end
-  % therefor we lack:
-  %  * lower case numbers,
-  %  * ligatures and
-  %  * some typographic niceties
-  % We do make use of the possibility to use `microtype`
-  \usepackage{tgpagella}
-  \usepackage[expansion,protrusion]{microtype}
-
-\fi
-
-%%% DOCUMENT WIDE STYLING
+%%% DOCUMENT WIDE
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
-\xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
+\xspaceskip7pt  % more spacing between sentences
+\sloppy  % prefer wider word spacing over text poking past the right margin
 
-%%% CUSTOM COMMANDS
+%%% COMMANDS
 
-% main title (name) with subtitle (date)
-\newcommand\maintitle[3]{\vbox to 0pt{\hfill\emph{\textcolor{mygray}{#3}}}\vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}\ \ \ \emph{#2}}
+% main title: name + date in the top-right corner
+% The date is set in a deliberately zero-height \vbox so it floats in the
+% top-right corner without taking vertical space; the local \vfuzz silences
+% the (harmless, expected) "overfull \vbox" report this trick provokes.
+\newcommand\maintitle[2]{%
+  \begingroup\vfuzz\maxdimen
+  \vbox to 0pt{\hfill\emph{\textcolor{mygray}{#2}}}%
+  \endgroup
+  \vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}}
 
-% title for the root sections (experience, education, etc) of the resume
-\newcommand*\roottitle[1]{\subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}
+% titles for root sections
+\newcommand*\roottitle[1]{
+\subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}
 
-% acr command, to quickly mark acronyms for special formatting
-%\newcommand*\acr[1]{\textscale{.85}{#1}}
+% toggle fontawesome icons in section titles on/off
+\newif\ifshowicons
+\showiconsfalse  % \showiconstrue to show icons, \showiconsfalse to hide
+\newcommand{\icon}[1]{\ifshowicons #1\fi}
 
-% pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
-%\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
-%\newcommand*\sbull{\ \ \bull \ \ }
+% section title: title + optional (toggleable) icon
+\newcommand{\sectiontitle}[2]{\roottitle{#1\hspace{0.1cm}\icon{#2}}}
+
+% pretty bullet. includes surrounding spacing
 \newcommand*\sbull{\ \ $\boldsymbol{\cdot}$ \ \ }
+
+% fontawesome icon nudged down so it sits centered on the text baseline
+\newcommand{\contacticon}[1]{\raisebox{-0.35ex}{#1}}
+% contact item set off by a gap: icon followed by a label link
+\newcommand{\contact}[3]{\hspace{0.5cm}\contacticon{#1}~\href{#2}{#3}}
 
 % it seems not to work when simply using \parindent...
 \newlength{\newparindent}
 \addtolength{\newparindent}{\parindent}
 
-% a double \parindent...
-\newlength{\doubleparindent}
-\addtolength{\doubleparindent}{\parindent}
-\addtolength{\doubleparindent}{\parindent}
-
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}%
-{\begin{list}{}%
-  {\setlength{\leftmargin}{\newparindent}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}%
-}
-{\end{list}}
+{
+  \begin{list}{}%
+    {\setlength{\leftmargin}{\newparindent}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}%
+  }
+  {
+\end{list}}
 
-\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]}
+\newcommand{\bodytext}[1]{\nopagebreak[4]
+  \begin{indentsection}
+  \item[]#1
+\end{indentsection}\pagebreak[2]}
 
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\emph{\textcolor{mygray}{\sbull #2}}\bodytext{#3}\end{indentsection}\nopagebreak[4]}
-
-\newcommand{\headedsubsectiona}[2]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}{\sbull #2}\end{indentsection}\nopagebreak[4]}
-
-\newcommand{\headedsubsectionb}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}{{\sbull #2}}\bodytext{#3}\end{indentsection}\nopagebreak[4]}
+% cv entry: bold title, meta line, optional indented body
+\NewDocumentCommand{\headedsubsection}{s m m +g}{%
+  \nopagebreak[4]
+  \begin{indentsection}
+  \item[]%
+    \textbf{#2}%
+    \IfBooleanTF{#1}{{\sbull #3}}{\emph{\textcolor{mygray}{\sbull #3}}}%
+    \IfValueT{#4}{\bodytext{#4}}%
+\end{indentsection}\nopagebreak[4]}
 
 \newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
-
-\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
