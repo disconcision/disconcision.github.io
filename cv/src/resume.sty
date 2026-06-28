@@ -83,7 +83,12 @@
       ItalicFont       = texgyrepagella-italic.otf ,
       BoldItalicFont   = texgyrepagella-bolditalic.otf ]
     {texgyrepagella-regular.otf}
- 
+
+%  \setmainfont[
+%   Numbers = OldStyle,
+%   Scale   = 1.08
+% ]{Libertinus Serif}
+
   % Comment out the previous statement and uncomment the following line to use the
   % Linux Libertine font (it has nice lignatures).
   % Make sure to have the `ttf-linux-libertine` package installed on Ubuntu.
@@ -114,7 +119,7 @@
 %%% CUSTOM COMMANDS
 
 % main title (name) with subtitle (date)
-\newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\emph{\textcolor{mygray}{#3}}}\vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}\ \ \ \emph{#2}}
+\newcommand\maintitle[3]{\vbox to 0pt{\hfill\emph{\textcolor{mygray}{#3}}}\vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}\ \ \ \emph{#2}}
 
 % title for the root sections (experience, education, etc) of the resume
 \newcommand*\roottitle[1]{\subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}

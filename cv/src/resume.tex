@@ -11,36 +11,48 @@
 
 \begin{document}
 
-\newcommand{\sectiontitle}[2]{\roottitle{#1 \hspace{0.1cm} {#2}}}
+% --- Icon toggle ------------------------------------------------------------
+\newif\ifshowicons
+% \showiconstrue % set to \showiconsfalse to hide all FontAwesome icons
+\newcommand{\icon}[1]{\ifshowicons #1\fi}
+
+\newcommand{\sectiontitle}[2]{\roottitle{#1\hspace{0.1cm}\icon{#2}}}
 
 \sloppy  % this to relax whitespacing in favour of straight margins
 \noindent
 
-\maintitle{Andrew Blinn}{ }{\today}
+\maintitle{andrew blinn}{ }{\today}
 
 \nobreakvspace{0.3em}
 
 
 \href{mailto:me@andrewblinn.com}{me}
-\hspace{0.0cm} \faAt \hspace{0.08cm} 
+\hspace{-0.0cm} \raisebox{-0.35ex}{\faAt} \hspace{0.0cm} 
 \href{http://andrewblinn.com}{andrewblinn.com}
-\hspace{0.1cm} \faGithub \hspace{0.1cm}
-\href{http://github.com/disconcision}{github.com/disconcision}
-\hspace{0.1cm} \faTwitter \hspace{0.1cm} 
-\href{http://twitter.com/disconcision}{twitter.com/disconcision}
+\hspace{0.5cm} \raisebox{-0.35ex}{\faGithub} \hspace{0.0cm}
+\href{http://github.com/disconcision}{github/disconcision}
+\hspace{0.5cm} \raisebox{-0.35ex}{\faTwitter} \hspace{0.0cm} 
+\href{http://twitter.com/disconcision}{twitter/disconcision}
 
-\sectiontitle{Vision}{\faMap[regular]} % \faStar
+\sectiontitle{Vision}{\faMap[regular]}
 
 \bodytext{
  I use semantic theory to design contextual, conversational, and compositional interfaces, \\
- % I use programming language theory to explore and explain compositional interfaces, \\
- trying to make working with complexity \& abstraction more accessible, tangible, and fun.}
+ making working with abstraction \& complexity more accessible, tangible, and fun.}
     
 \sectiontitle{Focuses}{\faSlidersH}
-\bodytext{Programming Languages + Liveness + Learning \sbull Human-Computer Interaction}
+\bodytext{Programming Languages + Liveness \sbull Human-Computer Interaction}
 
-% peer reviewed? "in proceedings of"?
 \sectiontitle{Papers}{\faPaperPlane} 
+
+    \headedsubsection
+    {\href
+      {https://andrewblinn.com/papers/D2.pdf}
+      {Declarative Dragging} \sbull UIST (Forthcoming)}
+    {2026}
+    {{Joshua Horowitz, \underline{Andrew Blinn}, Jeffery Heer} 
+    }
+
 
   \headedsubsection
     {\href
@@ -64,7 +76,7 @@
   \headedsubsection
     {\href
       {https://dl.acm.org/doi/10.1145/3632910}
-      {Total Type Error Localization and Recovery with Holes} \sbull POPL}
+      {Total Type Error Localization and Recovery with Holes} \sbull POPL \sbull \href{https://cse.engin.umich.edu/stories/cse-researchers-win-distinguished-paper-award-at-popl-2024}{Distinguished Paper Award}}
     {2024}
     {{Eric Zhao, Raef Maroof, Anand Dukkipati, \underline{Andrew Blinn}, Zoe Pan, Cyrus Omar}
     % \\ A formal account of static error localization \& recovery as applied to editor semantic services
@@ -84,7 +96,7 @@
       {https://ieeexplore.ieee.org/abstract/document/9833110}
       {An Integrative Human-Centered Architecture for Interactive Programming Assistants} \sbull VL/HCC}
     {2022}
-    {{\underline{Andrew Blinn}, David Moon, Eric Griffis, Cyrus Omar} (see also: \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{suggestion \faPaperclip\;sensibility})
+    {{\underline{Andrew Blinn}, David Moon, Eric Griffis, Cyrus Omar} \sbull Addendum on \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{suggestion \faPaperclip\;sensibility}
  %    \\ A syncretic account of programming assistants including a formalization of 
  % \href{http://andrewblinn.com/papers/DRAFT-2022.10.andrew-blinn-prelim.pdf}{suggestion \faPaperclip\;sensibility}
  }
@@ -120,6 +132,17 @@
     }
      
 
+\sectiontitle{Funding}{\faMoneyBill*[regular]}
+
+  \headedsubsection
+    {\href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA Safeguarded AI} \sbull Lead Co-Investigator on Research Grant}
+    {2025 - Now}
+    {
+        Researching and prototyping an \href{https://aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/funded-projects?tabId=tooling-platforms&cardId=safeguarded-collaboration-with-ai-agents}{orchestration layer \& computational commons} to support
+        \\collaboration with autonomous AI researchers on safety-critical cyberphysical applications
+    }
+
+    
 \sectiontitle{School}{\faBell[regular]}
 
   \headedsubsection
@@ -127,8 +150,9 @@
       {http://fplab.mplse.org/}
       {University of Michigan / FPLab} \sbull Ph.D Candidate (ABD), Computer Science}
     {Now}
-    {Building and enriching code context for humans \& LLMs, advised by \href{https://web.eecs.umich.edu/~comar/}{Cyrus Omar}.
-    \\\textbf{Lead engineer} of the \href{https://github.com/hazelgrove/hazel/}{Hazel IDE}, now deployed to hundreds of students
+    {
+    Researching code context enrichment for humans \& LLMs, advised by \href{https://web.eecs.umich.edu/~comar/}{Cyrus Omar}.
+    \\\textbf{Lead engineer} on the \href{https://github.com/hazelgrove/hazel/}{\underline{{Hazel IDE}}}, deployed to hundreds of students + external researchers
     }
     
   \headedsubsection
@@ -136,9 +160,8 @@
       {https://rackham.umich.edu/}
       {University of Michigan} \sbull Master’s of Science, Computer Science}
     {2023}
-    {Coursework in PL theory, program synthesis, category theory, HCI, \& the psychology of learning
-    %Coursework in programming language theory, category theory,
-    %program synthesis,\\ human-computer interaction, \& on how people learn
+    {
+    Coursework in PL theory, program synthesis, category theory, HCI, \& the psychology of learning
     }
     
   \headedsubsection
@@ -146,70 +169,52 @@
       {http://www.utoronto.ca}
       {University of Toronto} \sbull H.B.Sc, Mathematics \& Computer Science}
     {2019}
-    {%Built a Racket-based x86/C compiler for a $\lambda$-calculus-based language with macro system.\\
-    Graduate coursework in abstract algebra, compilers, \& graphics; advised by \href{https://www.cs.utoronto.ca/~gfb/}{Gary Baumgartner}.
-    \\ Researched \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{variational analysis of SPLs} with \href{https://www.cs.toronto.edu/~chechik/}{Marsha Chechik} \& \href{https://scholar.google.com/citations?user=zrYATWoAAAAJ&hl=en}{Ramy Shanin}, including    \href{https://github.com/disconcision/spyshare}{SpyShare}.
+    {
+    Graduate coursework in abstract algebra, compilers, and computer graphics.
+    \\ Built \href{https://github.com/disconcision/fructure}{\underline{\text{Fructure}}} and \href{https://github.com/disconcision/containment-patterns}{Containment Patterns} as independent study advised by \href{https://www.cs.utoronto.ca/~gfb/}{Gary Baumgartner}.
+    \\ Researched \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{variational analysis of SPLs} with \href{https://www.cs.toronto.edu/~chechik/}{Marsha Chechik} \& \href{https://scholar.google.com/citations?user=zrYATWoAAAAJ&hl=en}{Ramy Shanin}, including \href{https://github.com/disconcision/spyshare}{SpyShare}.
     % \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_variational_data_structures_slides.pdf}{Slides}
-    \\ Independent study in language tools, resulting in \href{https://github.com/disconcision/fructure}{Fructure} and \href{https://github.com/disconcision/containment-patterns}{Containment Patterns}
+    
     %Coursework in algorithms, concurrency, differential geometry, operating systems \& topology.
     }
 
-\sectiontitle{Funding}{\faMoneyBill*[regular]}
-
-  \headedsubsection
-    {\href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA Safeguarded AI} \sbull Lead Investigator on Research Grant}
-    {2025 - Now}
-    {Laying the conceptual groundwork for the \href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/meet-the-creators?tabId=scaffolding-platforms}{orchestration layer and computational commons} \\ to safely support fleets of autonomous AI researchers developing cyberphysical applications }
 
 \sectiontitle{Industry}{\faCodeBranch}
 
   \headedsubsection
     {\href{http://todaqfinance.net/}{TODAQ Toronto} \sbull Full-stack development in Clojure}
     {2019 - 2020 (2 years)}
-    {Built novel front-end interfaces to  \href{https://andrewblinn.com/portfolio/todaq/}{sharpen the materiality of distributed digital assets}.\\Implemented core back-end features for a decentralized digital asset management protocol}
-
-
-\sectiontitle{Independent Research}{\faMicroscope}
-
-    \headedsubsection
-    {Investigations in Dynamic, Interactive Algebraic User Interfaces}
-    {2022 - Now}
-    {Exploring tangibility and explorability in expository math and meta-math  with \href{https://andrewblinn.com/nool/}{nool} and \href{https://andrewblinn.com/furl/main/}{furl}}
-
-    % \headedsubsection
-    % {IDE Design, Implementation, Deployment, and Analytics with \href{https://web.eecs.umich.edu/~comar/}{Cyrus Omar}}
-    % {2020 - Now}
-    % {Led a \href{https://hazel.org/build/dev/}{ground-up rewrite} of the \href{https://hazel.org/}{Hazel IDE}, deployed to 100 undergraduates}
-    
-    % \headedsubsection
-    %   {Independent Study in Structured Editing in Racket with \href{https://www.cs.toronto.edu/~gfb/}{Gary Baumgartner}}
-    %   {Summer 2017}
-    %   {Self-directed studies in languages tooling resulting in \href{https://github.com/disconcision/fructure}{Fructure} and \href{https://github.com/disconcision/containment-patterns}{Containment Patterns}
-    %   }
-
-    % \headedsubsection
-    % {Variability-aware Data Structures with \href{https://www.cs.toronto.edu/~chechik/}{Marsha Chechik} \& \href{https://scholar.google.com/citations?user=zrYATWoAAAAJ&hl=en}{Ramy Shanin}}
-    % {2018 - 2019 \sbull \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_variational_data_structures_slides.pdf}{Slides}}
-    % {Research in \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{variational analysis of SPLs}. Built
-    % \href{https://github.com/disconcision/spyshare}{SpyShare}, a tool to visualize structure sharing}
+    {
+        Designed new front-end interfaces to  \href{https://andrewblinn.com/portfolio/todaq/}{sharpen the materiality of distributed digital assets}.\\Implemented core back-end features for a decentralized digital asset management protocol
+    }
 
     
 \sectiontitle{Speaking}{\faPlane}
 
-  \headedsubsection
-    {Accepted speaker at OOPSLA}
-    {2024 \sbull Pasadena \sbull
-    \href{https://www.youtube.com/watch?v=-DYe8Fi78sg&t=12703s}{Recorded Talk} \sbull
-    \href{https://andrewblinn.com/papers/OOPSLA24.slides.Statically.Contextualizing.LLMs.pdf}{Slides}}
-    {Presented Statically Contextualizing Large Language Models with Typed Holes}
-    
-  \headedsubsection
+    \headedsubsection
     {Invited speaker at RacketCon}
     {2019 \sbull
      Salt Lake City \sbull
      \href{https://www.youtube.com/watch?v=CnbVCNIh1NA}{Recorded Talk} \sbull \href{https://github.com/disconcision/fructure/blob/master/screenshots/REAL-RacketCon-Fructure-Talk.pdf}{Slides}}
     {Introduced \href{https://github.com/disconcision/fructure}{Fructure}, a prototype structured interaction engine for edit-time term-rewriting}
 
+  \headedsubsection
+    {Invited speaker at ARIA SGAI London Workshop}
+    {2026 \sbull London \sbull \href{https://andrewblinn.com/aria-apr26}{Slides}}
+    {Safeguarded Collaboration with Agents in a Type Theoretical Computational Commons}
+
+  \headedsubsection
+    {Invited speaker at ARIA SGAI Edinburgh Workshop}
+    {2025 \sbull Edinburgh \sbull \href{https://andrewblinn.com/papers/aria-hazel-exolivelits-lightning-talk.pdf}{Slides}}
+    {Hazel Exolivelits as Computational Glue}
+    
+  \headedsubsection
+    {Accepted speaker at OOPSLA}
+    {2024 \sbull Los Angeles \sbull
+    \href{https://www.youtube.com/watch?v=-DYe8Fi78sg&t=12703s}{Recorded Talk} \sbull
+    \href{https://andrewblinn.com/papers/OOPSLA24.slides.Statically.Contextualizing.LLMs.pdf}{Slides}}
+    {Presented work on providing semantic context to language models using typed holes}
+    
   \headedsubsection
     {Accepted speaker at Midwest PL Summit}
     {2023 \sbull Ann Arbor \sbull \href{http://andrewblinn.com/papers/2023-MWPLS-Type-directed-Prompt-Construction-for-LLM-powered-Programming-Assistants.pdf}{Slides}}
@@ -231,47 +236,54 @@
 
 \sectiontitle{Conferences}{\faConnectdevelop}
 
-   \headedsubsectiona
+   \headedsubsectionb
     {Programming Committee Member}
     % {Pasadena, Singapore}
-    {2025: 
+    {}
+    {2026 \, 
+        \href{https://liveprog.org/}{LIVE} +
+        \href{https://conf.researchr.org/home/splash-issta-2026/hatra-2026}{HATRA}
+        \sbull 
+    2025 \, 
         \href{https://liveprog.org/}{LIVE} +
         \href{https://2025.splashcon.org/home/hatra-2025}{HATRA}
         \sbull
-    2024: 
-        \href{https://2024.splashcon.org/home/live-2024}{LIVE} +
-        \href{https://2024.splashcon.org/track/splash-2024-Onward-papers}{Onward!} + 
-        \href{https://2024.splashcon.org/home/hatra-2024}{HATRA}}
+    2024 \, 
+        \href{https://2024.splashcon.org/track/splash-2024-Onward-papers}{Onward!} +
+        \href{https://2024.splashcon.org/home/live-2024}{LIVE} + \href{https://2024.splashcon.org/home/hatra-2024}{HATRA}}
 
   \headedsubsectiona
     {Student Volunteer}
-    {2021: \href{https://2021.splashcon.org/track/splash-2021-oopsla}{SPLASH/OOPSLA}}
+    {2021  \, \href{https://2021.splashcon.org/track/splash-2021-oopsla}{SPLASH/OOPSLA}}
     
   \headedsubsectionb {Seat Filler}
     % {London, Rome, LA, Toronto, Chicago, Salt Lake City, Galiano, Eugene, St.Louis, Empire Builder}    
-    {2025:
-     \href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA Safeguarded AI Summit} x2 + 
-     \href{https://luma.com/lxfxu463}{Ink \& Switch London Social}}
-    {2024:
+    {2026 \,
+     \href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA London AI Summit} + \href{https://www.cs.uoregon.edu/research/summerschool/summer26/}{OPLSS (Upcoming)}} 
+    {2025 \,
+     \href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA Edinburgh AI Summit} +
+     \href{https://www.aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai/}{ARIA Bristol AI Summit} +
+     \href{https://luma.com/lxfxu463}{Ink \& Switch London Social} \\
+    2024 \,
     \href{https://lu.ma/2024-unconf-losangeles}{Ink \& Switch Unconf} +
     \href{https://2024.splashcon.org/track/splash-2024-OOPSLA}{OOPSLA} +
     \href{https://2024.splashcon.org/home/live-2024}{LIVE} +
     \href{https://2024.splashcon.org/home/hatra-2024}{HATRA} +
     \href{https://www.gradientretreat.com/}{Gradient Retreat} \\
-    2023:
+    2023 \,
     \href{https://mwpls2023.engin.umich.edu/}{MWPLS} + 
     \href{https://lu.ma/localfirstswunconf-stlouis}{Local First} +
-    \href{https://talk.fission.codes/t/trainjam-2023/4789}{Fission TrainJam} +
+    \href{https://www.youtube.com/watch?v=9qVT0URkkGE}{Fission TrainJam} +
     \href{https://www.thestrangeloop.com/}{Strange Loop} +
     \href{https://www.gradientretreat.com/}{Gradient Retreat} + 
-    \href{https://www.causalislands.com/}{Causal Islands} \\
-    2020 - 2022:
+    \href{https://toronto2023.causalislands.com/}{Causal Islands} \\
+    2020 - 2022 \,
     \href{https://conf.researchr.org/home/vlhcc-2022}{VL/HCC} +
     \href{https://www.gradientretreat.com/}{Gradient Retreat} +
     \href{https://2021.splashcon.org/track/splash-2021-oopsla}{SPLASH/OOPSLA} + 
     \href{https://2021.splashcon.org/home/hatra-2021}{HATRA} +
     \href{https://2021.splashcon.org/home/live-2021}{LIVE} \\
-    2018 - 2019:
+    2018 - 2019 \,
     \href{https://school.racket-lang.org/2019/plan/}{Racket Summer School} +
     \href{https://clojurenorth.com/}{Clojure North} +
     \href{https://www.cs.uoregon.edu/research/summerschool/summer18/}{OPLSS} +
@@ -285,61 +297,74 @@
   \headedsubsection
     {Course Development}
     {2022 - Now \sbull University of Michigan}
-    {Lead engineering on the \href{https://hazel.org}{Hazel software exercises platform}, developed  assignments for \href{https://eecs490.github.io/eecs490.org/}{EECS490}
-    %Implemented Hazel Exercises, an educational editor integration providing progressive live feedback
+    {
+        Led engineering on the \href{https://hazel.org/build/dev}{Hazel software exercises platform}; developed  assignments for \href{https://eecs490.github.io/eecs490.org/}{EECS490}
     }
     
   \headedsubsection
     {Course Development}
     {Summer 2018 \sbull University of Toronto}
-    {Designed course materials for \href{https://www.cs.toronto.edu/~gfb/csc324/2017W/}{CSC324} including mini \href{https://github.com/disconcision/racketlab/blob/master/choice-stepper.rkt}{algebraic stepper} + \href{https://github.com/disconcision/ductile}{pattern matching language}}
+    {
+        %course URL, defunct: https://www.cs.toronto.edu/~gfb/csc324/2017W/
+        Designed course materials for \href{https://artsci.calendar.utoronto.ca/course/csc324h1}{CSC324} including mini \href{https://github.com/disconcision/racketlab/blob/master/choice-stepper.rkt}{algebraic stepper} + \href{https://github.com/disconcision/ductile}{pattern matching language}
+    }
 
   \headedsubsection
     {Teaching Assistantship}
     {2018 - Now \sbull Universities of Michigan \& Toronto}
     {\begin{tabular}{p{3.3cm} p{4.1cm}  l}
     2023, 2022, 2021 & University of Michigan &  \href{https://eecs490.github.io/eecs490.org/}{EECS490: Programming Languages} \\
-      2019,  2x 2018, 2017 & University of Toronto & 
-      \href{https://www.cs.toronto.edu/~gfb/csc324/2017W/}{CSC324: Principles of Programming Languages} \\
-    2018 & University of Toronto & \href{https://www.cs.toronto.edu/~gfb/csc104/2018F/}{CSC104: Introduction to Computational Thinking}
-    \end{tabular}}
+      2019, \emph{2x} 2018, 2017 & University of Toronto & 
+      \href{https://artsci.calendar.utoronto.ca/course/csc324h1}{CSC324: Principles of Programming Languages} \\
+      % course URL, defunct: https://www.cs.toronto.edu/~gfb/csc324/2017W/
+    2018 & University of Toronto & \href{https://artsci.calendar.utoronto.ca/course/csc104h1}{CSC104: Introduction to Computational Thinking}
+    \end{tabular}
+    % course URL, defunct: https://www.cs.toronto.edu/~gfb/csc104/2018F/
+    }
 
 
 \sectiontitle{Mentorship}{\faComments[regular]}
 
   \headedsubsection
     {\href{https://russell-rozenbaum.github.io/PersonalWebsite/}{Russell Rozenbaum} \&
-    \href{https://www.linkedin.com/in/cyrus-desai-7a8b41200}{Cyrus Desai}: Structured Editing for LLMs}
+    \href{https://www.linkedin.com/in/cyrus-desai-7a8b41200}{Cyrus Desai} --- Structured editing for LLMs}
     {2024 - Now}
-    {Investigating supporting agentic coding with contextual semantic editing actions}
+    {Enriching agentic AI coding harnesses with contextual semantic editing actions}
     
   \headedsubsection
-    {\href{https://github.com/jpoly1219}{June (Jacob) Kim}: Typed hole filing with LLMs in TypeScript}
+    {\href{https://github.com/jpoly1219}{June (Jacob) Kim} --- Typed hole filling with LLMs in TypeScript}
     {2024 - 2025}
-    {Extracting semantic information for prompt construction from the TypeScript language server }
+    {Extracting semantic context for prompt construction using the TypeScript language server}
 
   \headedsubsection
-    {\href{https://github.com/AlienKevin}{Xiang (Kevin) Li}: Type-constrained LLM Code Completion via token masking}
+    {\href{https://kevinx.li/}{Xiang (Kevin) Li} --- Type-constrained LLM code completion via token masking}
     {2023 - 2024}
     {Modifying LLM decoding to enforce semantic as well as syntactic invariants}
 
   \headedsubsection
-    {\href{https://github.com/ZachEichen}{Zachary Eichenberger} \& \href{https://github.com/yikai5518}{Eric Fan}: Typed structured editing + Deep reinforcement learning}
+    {\href{https://openreview.net/profile?id=~Zachary_G_Eichenberger1}{Zachary Eichenberger} \& \href{https://github.com/yikai5518}{Eric Fan} --- Semantic editing + deep reinforcement learning}
     {2021 - 2023}
-    {Structured code completion via RL on graph neural networks; co-mentorship with \href{https://ethanabrooks.github.io/}{Ethan Brooks}}
+    {Typed structured editing for RL using graph neural networks; co-mentorship with \href{https://ethanabrooks.github.io/}{Ethan Brooks}}
   
   \headedsubsection
-    {\href{https://yashgaitonde.com/}{Yash Gaitonde}: Interfaces for live feedback in teaching IDEs}
+    {\href{https://yashgaitonde.com/}{Yash Gaitonde} --- Interfaces for live feedback in teaching IDEs}
     {2021 - 2022}
     {Implementing live test feedback in the Hazel IDE, deployed to a class of 100 undergraduates}
 
 
+\sectiontitle{Mousefeel Research}{\faMicroscope}
+
+    \headedsubsection
+    {Investigations in adding juice and gamefeel to algebraic user interfaces}
+    {2022 - Now}
+    {Figuring out how tangibility impacts explorability in math and coding with \href{https://andrewblinn.com/nool/}{nool} and \href{https://andrewblinn.com/furl/main/}{furl}}
+
 %\sectiontitle{Word Jumble}{\faPuzzlePiece}
 %  \headedsubsection
-%    {Languages} {Passing Familiarity}
+%    {Languages} {}
 %    {OCaml, Clojure, ReasonML, Racket, Typescript, Javascript, C, C++, Rust, Java, Python, Bash, Visual Basic, TurboPascal, QuickBasic, Basic, Logo}
     
 %\roottitle{Languages}
-  %\bodytext{English \sbull French}
+%\bodytext{English \sbull French}
 
 \end{document}
