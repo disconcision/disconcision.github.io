@@ -65,13 +65,14 @@
   \begingroup\vfuzz\maxdimen
   \vbox to 0pt{\hfill\emph{\textcolor{mygray}{#2}}}%
   \endgroup
-  \vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}}
+\vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}}
 
 % titles for root sections
 \newcommand*\roottitle[1]{
 \subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}
 
-% toggle fontawesome icons in section titles on/off
+% boolean switch toggling fontawesome icons on/off, in both the section
+% titles and the contact line (see \contact / \atsep below)
 \newif\ifshowicons
 \showiconsfalse  % \showiconstrue to show icons, \showiconsfalse to hide
 \newcommand{\icon}[1]{\ifshowicons #1\fi}
@@ -82,10 +83,9 @@
 % pretty bullet. includes surrounding spacing
 \newcommand*\sbull{\ \ $\boldsymbol{\cdot}$ \ \ }
 
-% fontawesome icon nudged down so it sits centered on the text baseline
 \newcommand{\contacticon}[1]{\raisebox{-0.35ex}{#1}}
-% contact item set off by a gap: icon followed by a label link
-\newcommand{\contact}[3]{\hspace{0.5cm}\contacticon{#1}~\href{#2}{#3}}
+\newcommand{\contact}[3]{\ifshowicons\hspace{0.5cm}\contacticon{#1}~\else\sbull\fi\href{#2}{#3}}
+\newcommand{\atsep}{\ifshowicons~\contacticon{\faAt}~\else{\,@\,}\fi}
 
 % it seems not to work when simply using \parindent...
 \newlength{\newparindent}

@@ -1,24 +1,17 @@
 \documentclass[10pt,a4paper]{article}
-
-% Set the page margins.
 \usepackage[a4paper,margin=0.75in]{geometry}
-
-% Setup the language.
 \usepackage[english]{babel}
-
 \usepackage{resume}
 
 \begin{document}
 
-% \me marks my name (underlined) in the author lists throughout
+% \me marks underlined name in paper author lists
 \newcommand{\me}{\underline{Andrew Blinn}}
 
 \maintitle{Andrew Blinn}{\today}
 
 \nobreakvspace{0.3em}
-
-% the email reads as "me @ andrewblinn.com": two links joined by the @ icon
-\href{mailto:me@andrewblinn.com}{me}~\contacticon{\faAt}~\href{http://andrewblinn.com}{andrewblinn.com}%
+\href{mailto:me@andrewblinn.com}{me}\atsep\href{http://andrewblinn.com}{andrewblinn.com}%
 \contact{\faGithub}{http://github.com/disconcision}{github/disconcision}%
 \contact{\faTwitter}{http://twitter.com/disconcision}{twitter/disconcision}
 
@@ -29,6 +22,7 @@
 making working with abstraction \& complexity more accessible, tangible, and fun.}
 
 \sectiontitle{Focuses}{\faSlidersH}
+
 \bodytext{Programming Languages + Liveness \sbull Human-Computer Interaction}
 
 \sectiontitle{Papers}{\faPaperPlane}
@@ -148,8 +142,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
   \\ Built \href{https://github.com/disconcision/fructure}{\underline{\text{Fructure}}} and \href{https://github.com/disconcision/containment-patterns}{Containment Patterns} as independent study advised by \href{https://www.cs.utoronto.ca/~gfb/}{Gary Baumgartner}.
   \\ Researched \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{variational analysis of SPLs} with \href{https://www.cs.toronto.edu/~chechik/}{Marsha Chechik} \& \href{https://scholar.google.com/citations?user=zrYATWoAAAAJ&hl=en}{Ramy Shanin}, including \href{https://github.com/disconcision/spyshare}{SpyShare}.
   % \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_variational_data_structures_slides.pdf}{Slides}
-
-  %Coursework in algorithms, concurrency, differential geometry, operating systems \& topology.
+  % Coursework in algorithms, concurrency, differential geometry, operating systems \& topology.
 }
 
 \sectiontitle{Industry}{\faCodeBranch}
@@ -302,7 +295,7 @@ making working with abstraction \& complexity more accessible, tangible, and fun
 {Enriching agentic AI coding harnesses with contextual semantic editing actions}
 
 \headedsubsection
-{\href{https://github.com/jpoly1219}{June (Jacob) Kim} --- Typed hole filling with LLMs in TypeScript}
+{\href{https://jpoly1219.github.io/}{June (Jacob) Kim} --- Typed hole filling with LLMs in TypeScript}
 {2024 - 2025}
 {Extracting semantic context for prompt construction using the TypeScript language server}
 
