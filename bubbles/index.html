@@ -1,0 +1,85 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bubbles</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0b0e; }
+  body { font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", cursive; user-select: none; -webkit-user-select: none; }
+  #c { display: block; position: fixed; inset: 0; }
+
+  #ui {
+    position: fixed; top: 14px; left: 16px; z-index: 10;
+    display: flex; align-items: center; gap: 10px; color: #9aa3c0;
+  }
+  #ui .title { color: #5865f2; font-size: 15px; letter-spacing: 1px; }
+  #ui button {
+    background: none; border: 1px solid #333748; color: #9aa3c0; border-radius: 8px;
+    font-family: inherit; font-size: 12px; padding: 3px 10px; cursor: pointer;
+  }
+  #ui button:hover { border-color: #5865f2; color: #cdd3ef; }
+
+  #help {
+    position: fixed; top: 52px; left: 16px; z-index: 10; max-width: 560px;
+    color: #4da3ff; font-size: 14.5px; line-height: 1.55;
+    background: rgba(11,11,14,0.82); border: 1px solid #22263a; border-radius: 12px;
+    padding: 14px 20px 14px 16px; display: none;
+  }
+  #help.show { display: block; }
+  #help ol { margin: 0; padding-left: 22px; }
+  #help .extras { color: #6c7590; font-size: 12.5px; margin-top: 10px; border-top: 1px solid #22263a; padding-top: 8px; }
+
+  #wordInput {
+    position: fixed; z-index: 20; display: none;
+    width: 150px; text-align: center;
+    background: #101018; color: #c95fde; caret-color: #c95fde;
+    border: 1.5px solid #4a5fd0; border-radius: 10px; outline: none;
+    font-family: inherit; font-size: 16px; padding: 6px 10px;
+  }
+  #wordInput.bad { border-color: #e04747; animation: shake 0.3s; }
+  #wordInput::placeholder { color: #4a4f66; font-size: 13px; }
+  @keyframes shake {
+    0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); } 75% { transform: translateX(-3px); }
+  }
+
+  #loading {
+    position: fixed; inset: 0; z-index: 30; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 12px;
+    background: #0b0b0e; color: #4da3ff; font-size: 15px;
+  }
+  #loading .bar { width: 220px; height: 4px; background: #1a1e2e; border-radius: 2px; overflow: hidden; }
+  #loading .bar div { height: 100%; width: 0%; background: #5865f2; border-radius: 2px; transition: width 0.15s; }
+</style>
+
+<canvas id="c"></canvas>
+
+<div id="ui">
+  <span class="title">bubbles</span>
+  <button id="helpBtn">?</button>
+  <button id="clearBtn">clear</button>
+</div>
+
+<div id="help">
+  <ol>
+    <li>click any point and type a word to spawn a circle</li>
+    <li>words near it in meaning appear around the periphery, loosely clustered — brighter = closer</li>
+    <li>drag the ring to grow the circle and fit more words; drag a periphery word away from its neighbors to reveal in-between words</li>
+    <li>drag two circles together — if words exist close to <i>both</i>, they intersect and the shared words appear in the overlap; otherwise they refuse</li>
+    <li>click any word to add it to the purple graph (bottom-left) — each word tiles a grid cell next to a word it's linked to, planar by construction</li>
+  </ol>
+  <div class="extras">
+    scroll to pan &nbsp;·&nbsp; pinch or ctrl+scroll to zoom &nbsp;·&nbsp; drag empty space to pan &nbsp;·&nbsp;
+    double-click (or shift-click) a word to give it its own circle &nbsp;·&nbsp; right-click a circle to delete it &nbsp;·&nbsp;
+    hover a word to see its closeness
+  </div>
+</div>
+
+<input id="wordInput" spellcheck="false" autocomplete="off" placeholder="type a word…">
+
+<div id="loading">
+  <div>loading word vectors…</div>
+  <div class="bar"><div id="loadFill"></div></div>
+</div>
+
+<script type="module" src="main.js"></script>
