@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="258" viewBox="0 0 936 258" role="img" aria-labelledby="title desc">
+<title id="title">Two places to check a user-defined livelit</title><desc id="desc">At its definition, a livelit declares Model, Action and Expansion and supplies init, update, view and expand. These members are checked together against the Livelit signature. Declaring Expansion as String while expand returns Int gives a definition-site type mismatch. A separate check remains at each use of the expansion in the surrounding program.</desc>
+<path d="M5 8 L258 5 L486 9 L728 4 L929 10 L932 83 L929 193 L935 245 L760 251 L487 247 L234 253 L6 249 L9 143 L3 95 Z" fill="#eeeacf"/>
+<text x="28" y="37" font-family="Rubik,Arial,sans-serif" font-size="24" fill="#213c30" font-weight="bold">A livelit’s contract is checked where it is defined</text>
+<text x="905" y="37" font-family="Rubik,Arial,sans-serif" font-size="17" fill="#213c30" text-anchor="end">Open #2576</text>
+<path d="M27 61 L583 65 L587 223 L328 225 L24 220 Z" fill="#e1e5ce"/>
+<text x="44" y="91" font-family="Rubik,Arial,sans-serif" font-size="20" fill="#213c30" font-weight="bold">Definition-site signature check</text>
+<text x="44" y="124" font-family="Liberation Mono,monospace" font-size="22" fill="#213c30">Model · Action · Expansion</text>
+<text x="44" y="153" font-family="Liberation Mono,monospace" font-size="21" fill="#213c30">init · update · view · expand</text>
+<path d="M42 165 L565 170 L563 214 L45 217 Z" fill="#f4dfcf"/>
+<text x="53" y="188" font-family="Liberation Mono,monospace" font-size="17" fill="#213c30">Expansion = String, but expand returns Int</text>
+<text x="53" y="208" font-family="Rubik,Arial,sans-serif" font-size="18" fill="#ae493b" font-weight="bold">→ type mismatch at the definition</text>
+<path d="M610 66 L610 221" fill="none" stroke="#afbaa0" stroke-width="1"/>
+<text x="638" y="91" font-family="Rubik,Arial,sans-serif" font-size="20" fill="#213c30" font-weight="bold">At each use</text>
+<text x="638" y="125" font-family="Rubik,Arial,sans-serif" font-size="21" fill="#213c30">Check the expansion</text>
+<text x="638" y="155" font-family="Rubik,Arial,sans-serif" font-size="21" fill="#213c30">in its surrounding</text>
+<text x="638" y="185" font-family="Rubik,Arial,sans-serif" font-size="21" fill="#213c30">program.</text>
+<text x="468" y="241" font-family="Rubik,Arial,sans-serif" font-size="18" fill="#213c30" text-anchor="middle">The use-site check remains alongside the new definition-site check.</text>
+</svg>

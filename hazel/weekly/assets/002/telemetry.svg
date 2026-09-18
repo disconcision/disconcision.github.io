@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="250" viewBox="0 0 936 250" role="img" aria-labelledby="title desc">
+<title id="title">What the Evaluation round trip includes</title><desc id="desc">The request round-trip bracket starts at postMessage and ends at onmessage. Evaluator slices lie inside this interval. Result decoding and redraw follow after the bracket. This is qualitative order, not measured durations or a timing decomposition.</desc>
+<path d="M5 8 L258 5 L486 9 L728 4 L929 10 L932 83 L929 185 L935 237 L760 243 L487 239 L234 245 L6 241 L9 143 L3 95 Z" fill="#eeeacf"/>
+<text x="28" y="36" font-family="Rubik,Arial,sans-serif" font-size="25" fill="#213c30" font-weight="bold">Where the round-trip clock stops</text>
+<text x="905" y="36" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30" text-anchor="end">Qualitative order · not to scale</text>
+<text x="333" y="76" font-family="Rubik,Arial,sans-serif" font-size="21" fill="#213c30" font-weight="bold" text-anchor="middle">request round trip</text>
+<path d="M92 104 L92 87 L574 87 L574 104" fill="none" stroke="#213c30" stroke-width="1.7"/>
+<path d="M92 143 L905 143" fill="none" stroke="#213c30" stroke-width="1.5"/><path d="M897 138 L905 143 L897 148" fill="none" stroke="#213c30" stroke-width="1.5"/>
+<path d="M92 130 L92 155" fill="none" stroke="#213c30" stroke-width="1.5"/>
+<text x="35" y="123" font-family="Liberation Mono,monospace" font-size="20" fill="#213c30">postMessage</text>
+<path d="M574 130 L574 155" fill="none" stroke="#213c30" stroke-width="1.5"/>
+<text x="574" y="123" font-family="Liberation Mono,monospace" font-size="20" fill="#213c30" text-anchor="middle">onmessage</text>
+<path d="M244 126 L308 128 L306 157 L242 160 Z" fill="#446e53"/>
+<path d="M360 129 L421 127 L423 158 L358 156 Z" fill="#446e53"/>
+<text x="333" y="187" font-family="Rubik,Arial,sans-serif" font-size="19" fill="#213c30" text-anchor="middle">evaluator slices</text>
+<path d="M627 122 L754 125 L752 165 L625 164 Z" fill="#f4dfcf"/>
+<text x="690" y="149" font-family="Rubik,Arial,sans-serif" font-size="18" fill="#213c30" text-anchor="middle">decode result</text>
+<path d="M786 125 L906 122 L909 163 L784 166 Z" fill="#f4dfcf"/>
+<text x="847" y="150" font-family="Rubik,Arial,sans-serif" font-size="18" fill="#213c30" text-anchor="middle">redraw</text>
+<text x="468" y="222" font-family="Rubik,Arial,sans-serif" font-size="19" fill="#213c30" text-anchor="middle">The clock stops before decoding; the screen can update later.</text>
+</svg>

@@ -1,0 +1,25 @@
+/* Issue-local additions: shared archive styles remain unchanged. */
+.issue-002 .prose{min-width:0}
+.issue-002 .prose p{text-wrap:pretty;hyphens:auto;hyphenate-limit-chars:8 3 3;font-kerning:normal;font-variant-ligatures:common-ligatures}
+.issue-002 .prose p[id]{scroll-margin-top:2rem}
+.issue-002 .prose code,.issue-002 .prose a{hyphens:manual}
+.issue-002 .prose pre{overflow-x:auto;padding:1rem;background:var(--wash);font-size:1rem}
+.issue-002 .article figure{min-width:0;width:100%}
+.issue-002 .image-stage{display:block;width:100%;aspect-ratio:var(--image-ratio)}
+.issue-002 .image-stage img{width:100%;height:100%;object-fit:contain}
+.issue-002 .image-tools{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.65rem 1.2rem;margin-top:.8rem;font:normal .875rem/1.4 var(--sans)}
+.issue-002 .image-switch{display:flex;gap:0}
+.issue-002 .image-switch[hidden]{display:none}
+.issue-002 .image-switch button{font:inherit;min-height:44px;padding:.5rem .9rem;border:1px solid var(--green);background:transparent;color:var(--green);cursor:pointer}
+.issue-002 .image-switch button+button{border-left:0}
+.issue-002 .image-switch button[aria-pressed="true"]{background:var(--green);color:var(--paper)}
+.issue-002 .image-switch button:focus-visible{outline:3px solid var(--red);outline-offset:3px;position:relative;z-index:1}
+.issue-002 .original-download{padding:.5rem 0;min-height:44px;display:inline-flex;align-items:center}
+.issue-002 .paper-slip{margin:1.5rem 0;max-width:72ch}
+.issue-002 .paper-slip .callout-label{font:700 .875rem/1.5 var(--sans);letter-spacing:.04em;text-transform:uppercase;margin:0 0 .3rem}
+.issue-002 .paper-slip .callout-value{font:700 2rem/1.15 Rubik,var(--sans);color:var(--green)}
+.issue-002 .edition-links{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;font:normal .875rem/1.5 var(--sans);margin:1.1rem 0 0}
+.issue-002 .prose table{font-size:1rem}
+.issue-002 figure svg{max-width:100%}
+@media(max-width:700px){.issue-002 .article figure{margin:1.2rem 0 1.6rem}.issue-002 .image-tools{align-items:start}.issue-002 .image-switch button{padding:.5rem .8rem}.issue-002 .paper-slip{padding:1.25rem}}
+@media print{.issue-002 .image-tools{display:none}.issue-002 .image-stage{break-inside:avoid}.issue-002 .edition-links{display:none}}

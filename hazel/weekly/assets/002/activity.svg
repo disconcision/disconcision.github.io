@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="300" viewBox="0 0 936 300" role="img" aria-labelledby="activity-title activity-desc">
+<title id="activity-title">Daily reachable commit objects, September 11–17, 2026</title>
+<desc id="activity-desc">504 SHA-distinct commit objects across captured remote refs by UTC committer date, including merges. Green denotes 338 commits with a declared Claude co-author trailer; red denotes 166 other commits with assistance unknown. Daily totals: September 11, 35; September 12, 46; September 13, 30; September 14, 173; September 15, 69; September 16, 50; September 17, 101. These are not push counts or estimates of AI-written code.</desc>
+<path d="M5 8 L258 5 L486 9 L728 4 L929 10 L932 93 L929 197 L935 287 L760 293 L487 289 L234 295 L6 291 L9 197 L3 95 Z" fill="#eeeacf"/>
+<text x="28" y="35" font-family="Rubik,Arial,sans-serif" font-size="24" font-weight="bold" fill="#213c30">Commit objects, by day</text>
+<text x="906" y="35" text-anchor="end" font-family="Rubik,Arial,sans-serif" font-size="18" fill="#213c30">504 across captured refs</text>
+<line x1="73" y1="215.00" x2="906" y2="215.00" stroke="#213c30" stroke-width="1.1"/>
+<text x="60" y="220.00" text-anchor="end" font-family="Rubik,Arial,sans-serif" font-size="15" fill="#213c30">0</text>
+<line x1="73" y1="177.50" x2="906" y2="177.50" stroke="#cbcbb9" stroke-width="0.8"/>
+<text x="60" y="182.50" text-anchor="end" font-family="Rubik,Arial,sans-serif" font-size="15" fill="#213c30">50</text>
+<line x1="73" y1="140.00" x2="906" y2="140.00" stroke="#cbcbb9" stroke-width="0.8"/>
+<text x="60" y="145.00" text-anchor="end" font-family="Rubik,Arial,sans-serif" font-size="15" fill="#213c30">100</text>
+<line x1="73" y1="102.50" x2="906" y2="102.50" stroke="#cbcbb9" stroke-width="0.8"/>
+<text x="60" y="107.50" text-anchor="end" font-family="Rubik,Arial,sans-serif" font-size="15" fill="#213c30">150</text>
+<line x1="73" y1="65.00" x2="906" y2="65.00" stroke="#cbcbb9" stroke-width="0.8"/>
+<text x="60" y="70.00" text-anchor="end" font-family="Rubik,Arial,sans-serif" font-size="15" fill="#213c30">200</text>
+<g data-date="2026-09-11" data-total="35" data-claude="33" data-other="2">
+<rect x="118.00" y="190.25" width="58" height="24.75" fill="#446e53"/>
+<rect x="118.00" y="188.75" width="58" height="1.50" fill="#ae493b"/>
+<text x="147.00" y="181.75" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">35</text>
+<text x="147.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 11</text></g>
+<g data-date="2026-09-12" data-total="46" data-claude="38" data-other="8">
+<rect x="226.00" y="186.50" width="58" height="28.50" fill="#446e53"/>
+<rect x="226.00" y="180.50" width="58" height="6.00" fill="#ae493b"/>
+<text x="255.00" y="173.50" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">46</text>
+<text x="255.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 12</text></g>
+<g data-date="2026-09-13" data-total="30" data-claude="24" data-other="6">
+<rect x="334.00" y="197.00" width="58" height="18.00" fill="#446e53"/>
+<rect x="334.00" y="192.50" width="58" height="4.50" fill="#ae493b"/>
+<text x="363.00" y="185.50" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">30</text>
+<text x="363.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 13</text></g>
+<g data-date="2026-09-14" data-total="173" data-claude="106" data-other="67">
+<rect x="442.00" y="135.50" width="58" height="79.50" fill="#446e53"/>
+<rect x="442.00" y="85.25" width="58" height="50.25" fill="#ae493b"/>
+<text x="471.00" y="78.25" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">173</text>
+<text x="471.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 14</text></g>
+<g data-date="2026-09-15" data-total="69" data-claude="37" data-other="32">
+<rect x="550.00" y="187.25" width="58" height="27.75" fill="#446e53"/>
+<rect x="550.00" y="163.25" width="58" height="24.00" fill="#ae493b"/>
+<text x="579.00" y="156.25" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">69</text>
+<text x="579.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 15</text></g>
+<g data-date="2026-09-16" data-total="50" data-claude="10" data-other="40">
+<rect x="658.00" y="207.50" width="58" height="7.50" fill="#446e53"/>
+<rect x="658.00" y="177.50" width="58" height="30.00" fill="#ae493b"/>
+<text x="687.00" y="170.50" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">50</text>
+<text x="687.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 16</text></g>
+<g data-date="2026-09-17" data-total="101" data-claude="90" data-other="11">
+<rect x="766.00" y="147.50" width="58" height="67.50" fill="#446e53"/>
+<rect x="766.00" y="139.25" width="58" height="8.25" fill="#ae493b"/>
+<text x="795.00" y="132.25" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="18" font-weight="bold" fill="#213c30">101</text>
+<text x="795.00" y="237" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Sep 17</text></g>
+<rect x="90" y="254" width="14" height="14" fill="#446e53"/>
+<text x="113" y="266" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Declared Claude co-author · 338</text>
+<rect x="477" y="254" width="14" height="14" fill="#ae493b"/>
+<text x="500" y="266" font-family="Rubik,Arial,sans-serif" font-size="16" fill="#213c30">Other / assistance unknown · 166</text>
+<text x="468" y="286" text-anchor="middle" font-family="Rubik,Arial,sans-serif" font-size="13" fill="#213c30">SHA-distinct · UTC committer dates · merges included · not a measure of AI-written code</text>
+</svg>
