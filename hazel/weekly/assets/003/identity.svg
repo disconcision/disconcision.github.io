@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="170" viewBox="0 0 936 170" role="img" aria-labelledby="title desc">
+<title id="title">An ID tally across the whole test program</title>
+<desc id="desc">PR2593 updates definition z from (21,22) to (20,22). With structural matching, 9 of 10 expression IDs across the full program survive; without matching, 6 survive. The ten slots are a count, not syntax order.</desc>
+<path d="M5 9 L915 3 L934 152 L926 166 L14 161 L2 142 Z" fill="#e4e6cf"/>
+<text x="28" y="37" fill="#243c30" font-family="Liberation Mono" font-size="24" font-weight="normal">Update z: (21, 22) → (20, 22)</text>
+<text x="628" y="37" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal">10 expression IDs in the program</text>
+<text x="28" y="80" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">With matching</text>
+<rect x="281" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="320" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="359" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="398" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="437" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="476" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="515" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="554" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="593" y="58" width="29" height="26" fill="#50745b"/>
+<rect x="632" y="58" width="29" height="26" fill="#b83b25"/>
+<text x="701" y="80" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">9/10 retained</text>
+<text x="28" y="121" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">Without matching</text>
+<rect x="281" y="99" width="29" height="26" fill="#50745b"/>
+<rect x="320" y="99" width="29" height="26" fill="#50745b"/>
+<rect x="359" y="99" width="29" height="26" fill="#50745b"/>
+<rect x="398" y="99" width="29" height="26" fill="#50745b"/>
+<rect x="437" y="99" width="29" height="26" fill="#50745b"/>
+<rect x="476" y="99" width="29" height="26" fill="#50745b"/>
+<rect x="515" y="99" width="29" height="26" fill="#b83b25"/>
+<rect x="554" y="99" width="29" height="26" fill="#b83b25"/>
+<rect x="593" y="99" width="29" height="26" fill="#b83b25"/>
+<rect x="632" y="99" width="29" height="26" fill="#b83b25"/>
+<text x="701" y="121" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">6/10 retained</text>
+<text x="28" y="153" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Tally, not syntax order.</text>
+<rect x="283" y="140" width="13" height="13" fill="#50745b"/>
+<text x="305" y="153" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">retained identity</text>
+<rect x="520" y="140" width="13" height="13" fill="#b83b25"/>
+<text x="543" y="153" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">new identity</text>
+</svg>

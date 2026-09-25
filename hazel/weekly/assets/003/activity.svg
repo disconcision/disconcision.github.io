@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="330" viewBox="0 0 936 330" role="img"><title>Distinct commit objects by UTC committer date</title>
+<path d="M5 9 L915 3 L934 312 L926 326 L14 321 L2 302 Z" fill="#e4e6cf"/>
+<text x="28" y="38" fill="#243c30" font-family="Rubik" font-size="27" font-weight="bold">Commit objects, by day</text>
+<text x="660" y="38" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal">288 across captured refs</text>
+<path d="M70 239.0 L908 239.0" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="24" y="246.0" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">0</text>
+<path d="M70 189.0 L908 189.0" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="24" y="196.0" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">50</text>
+<path d="M70 139.0 L908 139.0" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="24" y="146.0" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">100</text>
+<path d="M70 89.0 L908 89.0" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="24" y="96.0" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">150</text>
+<rect x="100" y="229.0" width="55" height="10.0" fill="#50745b"/>
+<rect x="100" y="193.0" width="55" height="36.0" fill="#b44d39"/>
+<text x="115" y="184.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">46</text>
+<text x="98" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 18</text>
+<rect x="213" y="238.0" width="55" height="1.0" fill="#b44d39"/>
+<text x="228" y="229.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">1</text>
+<text x="211" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 19</text>
+<text x="341" y="230.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">0</text>
+<text x="324" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 20</text>
+<rect x="439" y="237.0" width="55" height="2.0" fill="#50745b"/>
+<rect x="439" y="220.0" width="55" height="17.0" fill="#b44d39"/>
+<text x="454" y="211.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">19</text>
+<text x="437" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 21</text>
+<rect x="552" y="135.0" width="55" height="104.0" fill="#50745b"/>
+<rect x="552" y="95.0" width="55" height="40.0" fill="#b44d39"/>
+<text x="567" y="86.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">144</text>
+<text x="550" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 22</text>
+<rect x="665" y="185.0" width="55" height="54.0" fill="#50745b"/>
+<rect x="665" y="182.0" width="55" height="3.0" fill="#b44d39"/>
+<text x="680" y="173.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">57</text>
+<text x="663" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 23</text>
+<rect x="778" y="218.0" width="55" height="21.0" fill="#50745b"/>
+<text x="793" y="209.0" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold">21</text>
+<text x="776" y="265" fill="#243c30" font-family="Rubik" font-size="17" font-weight="normal">Sep 24</text>
+<rect x="45" y="284" width="15" height="15" fill="#50745b"/>
+<text x="70" y="298" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal">Declared Claude co-author · 191</text>
+<rect x="484" y="284" width="15" height="15" fill="#b44d39"/>
+<text x="509" y="298" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal">Other / assistance unknown · 97</text>
+<text x="60" y="322" fill="#243c30" font-family="Rubik" font-size="16" font-weight="normal">SHA-distinct • merges included • retained history, not pushes or AI code share</text>
+</svg>

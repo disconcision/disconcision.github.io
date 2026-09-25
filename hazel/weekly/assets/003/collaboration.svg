@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="298" viewBox="0 0 936 298" role="img"><title>A collaborative definition has three text leaves</title>
+<path d="M5 9 L915 3 L934 280 L926 294 L14 289 L2 270 Z" fill="#e4e6cf"/>
+<text x="28" y="42" fill="#243c30" font-family="Rubik" font-size="21" font-weight="bold">ONE SHARED ITEM</text>
+<text x="28" y="85" fill="#243c30" font-family="Liberation Mono" font-size="25" font-weight="normal">stable id + kind + order</text>
+<path d="M28 117 L291 112 L297 208 L32 213Z" fill="#f4eddc"/>
+<text x="43" y="146" fill="#50745b" font-family="Rubik" font-size="19" font-weight="bold">lead</text>
+<text x="43" y="187" fill="#243c30" font-family="Liberation Mono" font-size="22" font-weight="normal"># the answer #</text>
+<path d="M337 117 L600 112 L606 208 L341 213Z" fill="#f4eddc"/>
+<text x="352" y="146" fill="#50745b" font-family="Rubik" font-size="19" font-weight="bold">header</text>
+<text x="352" y="187" fill="#243c30" font-family="Liberation Mono" font-size="22" font-weight="normal">x : Int</text>
+<path d="M646 117 L909 112 L915 208 L650 213Z" fill="#f4eddc"/>
+<text x="661" y="146" fill="#50745b" font-family="Rubik" font-size="19" font-weight="bold">body</text>
+<text x="661" y="187" fill="#243c30" font-family="Liberation Mono" font-size="22" font-weight="normal">41</text>
+<text x="28" y="266" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal">Automerge merges leaf text. Hazel derives delimiters and re-parses.</text>
+</svg>

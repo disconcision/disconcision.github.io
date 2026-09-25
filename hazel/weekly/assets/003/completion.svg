@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="342" viewBox="0 0 936 342" role="img"><title>Canonical completion preserves the surrounding program</title>
+<path d="M5 9 L915 3 L934 324 L926 338 L14 333 L2 314 Z" fill="#e4e6cf"/>
+<text x="28" y="39" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold">WHAT YOU TYPED</text>
+<text x="430" y="39" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold">COMPLETED TERM</text>
+<text x="28" y="96" fill="#243c30" font-family="Liberation Mono" font-size="27" font-weight="normal">let x in 2</text>
+<path d="M366 85 L403 85 M393 77 L403 85 L393 93" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="430" y="96" fill="#243c30" font-family="Liberation Mono" font-size="27">let x <tspan fill="#b83b25">= ? </tspan>in 2</text>
+<text x="430" y="136" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal">The original body 2 stays the body.</text>
+<path d="M26 166 L908 166" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="28" y="224" fill="#243c30" font-family="Liberation Mono" font-size="27" font-weight="normal">let a = 1,2]</text>
+<path d="M366 212 L403 212 M393 204 L403 212 L393 220" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="430" y="224" fill="#243c30" font-family="Liberation Mono" font-size="27">let a = <tspan fill="#b83b25">[</tspan>1,2] <tspan fill="#b83b25">in ?</tspan></text>
+<text x="430" y="264" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal">The missing [ belongs inside the definition.</text>
+<text x="28" y="316" fill="#50745b" font-family="Rubik" font-size="19" font-weight="normal">Green: supplied text</text>
+<text x="430" y="316" fill="#b83b25" font-family="Rubik" font-size="19" font-weight="normal">Red: inserted completion</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="220" viewBox="0 0 936 220" role="img" aria-labelledby="title desc">
+<title id="title">Preserve the spelling; evaluate the value</title>
+<desc id="desc">Source 007 becomes semantic integer 7 with preserved lexeme 007. Printing the source restores 007. Evaluated result display is 7.</desc>
+<path d="M5 9 L915 3 L934 202 L926 216 L14 211 L2 192 Z" fill="#e4e6cf"/>
+<text x="28" y="40" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold">SOURCE</text>
+<text x="323" y="40" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold">TERM + PROVENANCE</text>
+<text x="748" y="40" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold">SOURCE AGAIN</text>
+<text x="48" y="117" fill="#243c30" font-family="Liberation Mono" font-size="47" font-weight="normal">007</text>
+<path d="M173 101 L283 101 M273 94 L283 101 L273 108" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="323" y="92" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">integer value</text>
+<text x="550" y="94" fill="#243c30" font-family="Liberation Mono" font-size="31" font-weight="normal">7</text>
+<text x="323" y="133" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">preserved lexeme</text>
+<text x="550" y="135" fill="#b83b25" font-family="Liberation Mono" font-size="31" font-weight="normal">007</text>
+<path d="M639 101 L716 101 M706 94 L716 101 L706 108" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="773" y="117" fill="#243c30" font-family="Liberation Mono" font-size="47" font-weight="normal">007</text>
+<path d="M28 158 L903 158" stroke="#50745b" stroke-width="2" fill="none"/>
+<text x="28" y="193" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">Evaluated result display:</text>
+<text x="316" y="195" fill="#b83b25" font-family="Liberation Mono" font-size="30" font-weight="normal">7</text>
+<text x="377" y="193" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal">Source spelling and displayed value have different jobs.</text>
+</svg>

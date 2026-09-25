@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="246" viewBox="0 0 936 246" role="img"><title>Palette colors fan out to semantic CSS roles</title>
+<path d="M5 9 L915 3 L934 228 L926 242 L14 237 L2 218 Z" fill="#e4e6cf"/>
+<text x="28" y="43" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold">ONE THEME DECISION</text>
+<text x="400" y="43" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold">SEVERAL CSS USES</text>
+<text x="28" y="124" fill="#243c30" font-family="Liberation Mono" font-size="31" font-weight="normal">palette.ink</text>
+<path d="M318 112 L369 112 M357 102 L369 112 L357 122" stroke="#50745b" stroke-width="3" fill="none"/>
+<text x="405" y="87" fill="#243c30" font-family="Liberation Mono" font-size="24" font-weight="normal">--text-default</text>
+<text x="405" y="123" fill="#243c30" font-family="Liberation Mono" font-size="24" font-weight="normal">--code-text</text>
+<text x="405" y="159" fill="#243c30" font-family="Liberation Mono" font-size="24" font-weight="normal">--token-exp</text>
+<text x="707" y="123" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">+ 6 others</text>
+<text x="28" y="212" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal">A shared palette entry changes these together; named roles can split decisions.</text>
+</svg>

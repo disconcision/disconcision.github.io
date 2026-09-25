@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="240" viewBox="0 0 936 240" role="img" aria-labelledby="title desc">
+<title id="title">Two shapes of Livelit expansion</title>
+<desc id="desc">Draft PR2597 gives Livelit.expand two alternatives. Functional wraps an implemented function expansion. Macro has a type shape but currently elaborates to a typed hole, not an implemented macro expansion.</desc>
+<path d="M5 9 L915 3 L934 222 L926 236 L14 231 L2 212 Z" fill="#e4e6cf"/>
+<text x="28" y="40" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold">DRAFT / #2597</text>
+<text x="28" y="129" fill="#243c30" font-family="Liberation Mono" font-size="26" font-weight="normal">Livelit.expand</text>
+<path d="M256 119 L293 119" stroke="#50745b" stroke-width="2" fill="none"/>
+<path d="M293 75 L293 178" stroke="#50745b" stroke-width="2" fill="none"/>
+<path d="M293 75 L332 75 M322 68 L332 75 L322 82" stroke="#50745b" stroke-width="2" fill="none"/>
+<path d="M293 178 L332 178 M322 171 L332 178 L322 185" stroke="#50745b" stroke-width="2" fill="none"/>
+<path d="M353 48 L903 44 L907 116 L355 120 Z" fill="#f4eddc"/>
+<text x="371" y="78" fill="#243c30" font-family="Liberation Mono" font-size="27" font-weight="normal">Functional(...)</text>
+<text x="371" y="106" fill="#50745b" font-family="Rubik" font-size="20" font-weight="normal">Function expansion implemented</text>
+<path d="M354 145 L906 149 L901 218 L350 215 Z" fill="#f4eddc"/>
+<text x="371" y="176" fill="#b83b25" font-family="Liberation Mono" font-size="27" font-weight="normal">Macro(...)</text>
+<text x="371" y="204" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal">Type shape present; elaborates to a typed hole</text>
+</svg>

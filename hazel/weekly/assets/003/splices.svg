@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="348" viewBox="0 0 936 348" role="img"><title>An editable expression and a slider have different owners</title>
+<path d="M5 9 L915 3 L934 330 L926 344 L14 339 L2 320 Z" fill="#e4e6cf"/>
+<text x="28" y="42" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold">CLIENT PROGRAM</text>
+<text x="535" y="42" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold">WIDGET STATE</text>
+<text x="28" y="83" fill="#243c30" font-family="Liberation Mono" font-size="26" font-weight="normal">let baseline = 10</text>
+<path d="M27 110 L451 105 L458 171 L30 178Z" fill="#f4eddc"/>
+<text x="45" y="139" fill="#50745b" font-family="Rubik" font-size="16" font-weight="normal">LOWER EXPRESSION</text>
+<text x="45" y="164" fill="#243c30" font-family="Liberation Mono" font-size="23" font-weight="normal">baseline</text>
+<path d="M25 192 L457 187 L452 258 L30 261Z" fill="#f4eddc"/>
+<text x="45" y="222" fill="#50745b" font-family="Rubik" font-size="16" font-weight="normal">UPPER EXPRESSION</text>
+<text x="45" y="247" fill="#243c30" font-family="Liberation Mono" font-size="23" font-weight="normal">baseline * 2</text>
+<text x="535" y="95" fill="#243c30" font-family="Liberation Mono" font-size="25" font-weight="normal">percentage = 50</text>
+<path d="M548 134 L861 134" stroke="#50745b" stroke-width="2" fill="none"/>
+<circle cx="704.5" cy="134" r="11" fill="#b83b25"/>
+<text x="535" y="197" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal">10 + (20 - 10) × 50 / 100</text>
+<text x="535" y="258" fill="#b83b25" font-family="Rubik" font-size="52" font-weight="bold">15</text>
+<text x="28" y="316" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal">SpliceRef identifies the embedded editor; value supplies its current result.</text>
+</svg>
