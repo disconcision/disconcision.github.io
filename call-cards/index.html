@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Call Cards</title>
+<meta name="description" content="Every shell command a coding agent submitted while working on Hazel, drawn as a chain of typed glyphs; vocabulary, sentence and axes-of-freedom statistics over 100,678 commands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #eceef1; --paper: #fbfbfa; --paper2: #f3f4f6; --ink: #161a20; --ink2: #3b4350; --muted: #626b77; --muted2: #a9b0b9; --hair: #d5dae0; --hair2: #e4e8ec;
+  --accent: #1c5cab; --accent-soft: #e0e9f6; --code-bg: #f1f3f5; --code-ink: #1d232b; --err: #c23b3b; --tip-bg: #161a20; --tip-ink: #f3f4f6;
+  --syn-kw: #4a3aa7; --syn-str: #0f7a52; --syn-num: #b0470f; --syn-var: #1c5cab; --syn-fn: #a8336a; --syn-meta: #8a5a00; --syn-cmt: #6b7480; --syn-type: #8a5a00;
+  --s1: #2a78d6; --s1-fill: #dee9f5; --s1-fill2: #bcd4ef; --s2: #eb6834; --s2-fill: #f9e6de; --s2-fill2: #f6cfbf; --s3: #1baf7a; --s3-fill: #dcf0e8; --s3-fill2: #b8e4d4; --s4: #c98500; --s4-fill: #f4ead7; --s4-fill2: #ecd8af; --s5: #d55181; --s5-fill: #f6e3e9; --s5-fill2: #f0c8d6; --s6: #4a3aa7; --s6-fill: #e2e0ee; --s6-fill2: #c6c1e1; --n: #6b7480; --n-fill: #e7e8e9; --n-fill2: #d0d2d5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #15171a; --paper: #1e2126; --paper2: #24282e; --ink: #e9ebee; --ink2: #c4c9d0; --muted: #a2a9b3; --muted2: #5d6570; --hair: #30353c; --hair2: #292d33;
+    --accent: #86b6ef; --accent-soft: #1f2d40; --code-bg: #14161a; --code-ink: #dfe3e8; --err: #ef7a7a; --tip-bg: #f3f4f6; --tip-ink: #161a20;
+    --syn-kw: #9085e9; --syn-str: #4fc48f; --syn-num: #f0895a; --syn-var: #86b6ef; --syn-fn: #e98bb3; --syn-meta: #e0b04f; --syn-cmt: #8b939e; --syn-type: #e0b04f;
+    --s1: #3987e5; --s1-fill: #222f41; --s1-fill2: #26405f; --s2: #d95926; --s2-fill: #382926; --s2-fill2: #563226; --s3: #199e70; --s3-fill: #1d3230; --s3-fill2: #1c463c; --s4: #c98500; --s4-fill: #362f21; --s4-fill2: #513f1b; --s5: #d55181; --s5-fill: #382833; --s5-fill2: #552f41; --s6: #9085e9; --s6-fill: #2e2f41; --s6-fill2: #403f60; --n: #8b939e; --n-fill: #2d3137; --n-fill2: #3f434a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #15171a; --paper: #1e2126; --paper2: #24282e; --ink: #e9ebee; --ink2: #c4c9d0; --muted: #a2a9b3; --muted2: #5d6570; --hair: #30353c; --hair2: #292d33;
+  --accent: #86b6ef; --accent-soft: #1f2d40; --code-bg: #14161a; --code-ink: #dfe3e8; --err: #ef7a7a; --tip-bg: #f3f4f6; --tip-ink: #161a20;
+    --syn-kw: #9085e9; --syn-str: #4fc48f; --syn-num: #f0895a; --syn-var: #86b6ef; --syn-fn: #e98bb3; --syn-meta: #e0b04f; --syn-cmt: #8b939e; --syn-type: #e0b04f;
+  --s1: #3987e5; --s1-fill: #222f41; --s1-fill2: #26405f; --s2: #d95926; --s2-fill: #382926; --s2-fill2: #563226; --s3: #199e70; --s3-fill: #1d3230; --s3-fill2: #1c463c; --s4: #c98500; --s4-fill: #362f21; --s4-fill2: #513f1b; --s5: #d55181; --s5-fill: #382833; --s5-fill2: #552f41; --s6: #9085e9; --s6-fill: #2e2f41; --s6-fill2: #403f60; --n: #8b939e; --n-fill: #2d3137; --n-fill2: #3f434a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14.5px; line-height: 1.5; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 30px 20px 80px; }
+h1 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 46px; line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 26px; margin: 0 0 8px; }
+h3 { font-size: 15px; font-weight: 600; margin: 18px 0 6px; }
+p { margin: 0 0 10px; max-width: 74ch; }
+.eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.lede { font-family: "Newsreader", Georgia, serif; font-size: 19px; color: var(--ink2); max-width: 66ch; margin: 12px 0 6px; line-height: 1.4; }
+header.top { padding-bottom: 18px; border-bottom: 1px solid var(--hair); margin-bottom: 14px; }
+.meta { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 10px; }
+.meta b { color: var(--ink); font-weight: 500; }
+code { font-family: "IBM Plex Mono", monospace; font-size: .92em; background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+a { color: var(--accent); }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; margin: 14px 0 18px; border-bottom: 1px solid var(--hair); }
+.tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 8px 12px; font: 500 14px "IBM Plex Sans", sans-serif; color: var(--muted); cursor: pointer; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.view { display: none; } .view.on { display: block; }
+.key { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 6px 14px; margin: 10px 0 6px; }
+.key .k { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink2); }
+.key svg { width: 64px; height: 26px; flex: none; }
+.key .nm { line-height: 1.25; } .key .nm small { display: block; color: var(--muted); font-size: 11px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; padding: 10px 12px; background: var(--paper); border: 1px solid var(--hair); border-radius: 6px; margin-bottom: 14px; }
+.filters label { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+select, input[type=text] { font: 13px "IBM Plex Sans", sans-serif; color: var(--ink); background: var(--paper2); border: 1px solid var(--hair); border-radius: 4px; padding: 4px 6px; }
+input[type=text] { min-width: 180px; }
+.btn { font: 500 12.5px "IBM Plex Sans", sans-serif; color: var(--ink); background: var(--paper2); border: 1px solid var(--hair); border-radius: 4px; padding: 5px 10px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); } .btn:focus-visible { outline: 2px solid var(--accent); }
+.count { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); margin-left: auto; }
+.card { background: var(--paper); border: 1px solid var(--hair); border-radius: 8px; padding: 10px 14px 8px; margin: 0 0 12px; }
+.card .hd { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--muted); }
+.card .hd .pur { color: var(--ink); font-weight: 500; }
+.card .hd .err { color: var(--err); }
+.card .desc { font-size: 13.5px; color: var(--ink2); margin: 3px 0 2px; }
+.card .desc i { color: var(--muted); font-style: normal; font-size: 12px; }
+.card svg.chain { width: 100%; height: auto; display: block; margin: 4px 0 2px; }
+.card .ft { display: flex; gap: 12px; align-items: flex-start; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+.card .ft .out { white-space: pre-wrap; overflow-wrap: anywhere; flex: 1; color: var(--ink2); max-height: 4.3em; overflow: hidden; }
+.card .ft .out.errt { color: var(--err); }
+.card .ft .tg { flex: none; background: none; border: 0; color: var(--accent); cursor: pointer; font: inherit; padding: 0; }
+.card pre.raw { display: none; background: var(--code-bg); color: var(--code-ink); padding: 10px 12px; border-radius: 4px; overflow-x: auto; font: 12px/1.45 "IBM Plex Mono", monospace; white-space: pre; margin: 8px 0 4px; max-height: 480px; overflow-y: auto; }
+.card pre.raw.on { display: block; }
+.node { cursor: default; } .node:hover .shape { filter: brightness(0.93); }
+.node text { font: 11.5px "IBM Plex Mono", monospace; fill: var(--ink); pointer-events: none; }
+.node .g { font-size: 12px; fill: var(--ink2); }
+.join { stroke: var(--muted2); fill: none; stroke-width: 1.4; }
+.join.pipe { stroke-width: 2.6; stroke: var(--muted); }
+.join.or { stroke-dasharray: 3 3; }
+.jt { font: 10px "IBM Plex Mono", monospace; fill: var(--muted); }
+.loopbox { fill: var(--s6-fill); stroke: var(--s6); stroke-dasharray: 4 3; stroke-width: 1; opacity: .9; }
+.cond .shape { stroke-dasharray: 3 2; }
+.flow text { font: 10px "IBM Plex Mono", monospace; fill: var(--ink); }
+.flow circle { stroke-width: 1.2; }
+.badge { font: 9.5px "IBM Plex Mono", monospace; fill: var(--muted); }
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--tip-bg); color: var(--tip-ink); border-radius: 6px; padding: 8px 10px; max-width: 520px; font: 11.5px/1.45 "IBM Plex Mono", monospace; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+#tip[hidden] { display: none; }
+#tip .r { font-family: "IBM Plex Sans", sans-serif; font-weight: 600; margin-bottom: 4px; }
+#tip .r span { font-weight: 400; opacity: .7; margin-left: 8px; }
+#tip pre { margin: 6px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 260px; overflow: hidden; }
+#tip .pm { opacity: .8; }
+#tip .diff { margin-top: 6px; border-top: 1px solid rgba(128,128,128,.4); padding-top: 4px; }
+#tip .old { color: #f0a3a3; } #tip .new { color: #9ee0b5; }
+:root:not([data-theme="dark"]) #tip .old { color: #ffb3b3; } :root:not([data-theme="dark"]) #tip .new { color: #a6f0c0; }
+table.voc { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.voc td, table.voc th { padding: 5px 10px 5px 0; border-bottom: 1px solid var(--hair2); vertical-align: middle; text-align: left; }
+table.voc th { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+table.voc td.n { text-align: right; font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.voc .bar { height: 6px; background: var(--s1); border-radius: 3px; display: inline-block; vertical-align: middle; }
+table.voc .bar.e2 { background: var(--s2); }
+table.voc .sh { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; }
+table.voc svg.mini { height: 22px; vertical-align: middle; }
+.exrow { background: var(--bg); padding: 10px 10px 0; }
+.rolehead { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding: 14px 0 4px; }
+.axes { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px 22px; }
+.axis h4 { margin: 0 0 6px; font-size: 13.5px; } .axis h4 small { color: var(--muted); font-weight: 400; }
+.axis .row { display: grid; grid-template-columns: 96px 1fr 52px; gap: 8px; align-items: center; font-size: 12px; margin: 2px 0; cursor: pointer; }
+.axis .row:hover .lbl { color: var(--accent); }
+.axis .row .lbl { font-family: "IBM Plex Mono", monospace; color: var(--ink2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.axis .row .bb { height: 9px; border-radius: 2px; background: var(--s1); }
+.axis .row .bb.e2 { background: var(--s2); }
+.axis .row .nn { font-family: "IBM Plex Mono", monospace; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.note { font-size: 12.5px; color: var(--muted); }
+.stats { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: 6px 0 14px; }
+.stat b { display: block; font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 26px; line-height: 1; }
+.stat span { font-size: 12px; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--hair); border-radius: 4px; overflow: hidden; }
+.seg button { background: var(--paper2); border: 0; padding: 4px 9px; font: 12px "IBM Plex Sans", sans-serif; color: var(--ink2); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--ink); }
+.sp { margin: 8px 0 4px; }
+.sp-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 6px; font-size: 12px; }
+.sp-bar .sp-copy { margin-left: auto; }
+pre.code { background: var(--code-bg); color: var(--code-ink); padding: 10px 12px; border-radius: 4px; font: 12px/1.5 "IBM Plex Mono", monospace; margin: 0; max-height: 600px; overflow: auto; tab-size: 4; }
+pre.code.pretty { white-space: pre-wrap; overflow-wrap: anywhere; }
+pre.code.orig { white-space: pre; }
+pre.code .lab { color: var(--muted); font-style: italic; }
+pre.code[hidden] { display: none; }
+.hljs-comment, .hljs-quote { color: var(--syn-cmt); font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-name, .hljs-doctag { color: var(--syn-kw); }
+.hljs-built_in, .hljs-title.function_, .hljs-title.function_.invoke__, .hljs-section { color: var(--syn-fn); }
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-selector-attr, .hljs-selector-pseudo { color: var(--syn-str); }
+.hljs-number, .hljs-symbol, .hljs-bullet, .hljs-link { color: var(--syn-num); }
+.hljs-variable, .hljs-template-variable, .hljs-attr, .hljs-attribute, .hljs-params, .hljs-property, .hljs-operator { color: var(--syn-var); }
+.hljs-meta, .hljs-meta .hljs-keyword, .hljs-subst { color: var(--syn-meta); }
+.hljs-type, .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-title { color: var(--syn-type); }
+.hljs-deletion { color: var(--err); }
+.hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: 600; }
+footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 12.5px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .node .shape { transition: filter .12s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<p class="eyebrow">Hazel · Claude Code shell calls · 100,678 commands · 391,422 segments · Dec 27, 2025 – Sep 21, 2026</p>
+<h1>Call Cards</h1>
+<p class="lede">Every shell command the agent submitted is a sentence made of a small vocabulary of moves. Each card draws one command as a chain of typed glyphs; hover a glyph for the exact text it stands for, open the script underneath to read it formatted and highlighted, or as typed.</p>
+<div class="meta"><span>vocabulary <b>818</b> shapes</span><span>top 10 cover <b>52.0%</b> of segments, top 50 <b>85.3%</b></span><span>sentences <b>16,636</b> distinct</span><span>sample on this page <b>2,928</b> calls</span></div>
+</header>
+
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-v="browse">Browse</button>
+<button role="tab" aria-selected="false" data-v="vocab">Vocabulary</button>
+<button role="tab" aria-selected="false" data-v="sent">Sentences</button>
+<button role="tab" aria-selected="false" data-v="axes">Axes of freedom</button>
+<button role="tab" aria-selected="false" data-v="key">Key</button>
+<button role="tab" aria-selected="false" data-v="about">About</button>
+</div>
+
+<section class="view on" id="v-browse">
+<div class="key" id="minikey"></div>
+<div class="filters">
+<label>purpose <select id="f-pur"></select></label>
+<label>era <select id="f-era"><option value="">any</option><option value="era1">era 1 (Jan–Apr)</option><option value="era2">era 2 (May on)</option></select></label>
+<label>model <select id="f-model"></select></label>
+<label>contains <select id="f-role"><option value="">any glyph</option></select></label>
+<label><input type="checkbox" id="f-err"> errored</label>
+<label><input type="checkbox" id="f-loop"> has loop</label>
+<label><input type="checkbox" id="f-sub"> subagent</label>
+<label>text <input type="text" id="f-text" placeholder="grep raw command…"></label>
+<label>sort <select id="f-sort"><option value="random">random</option><option value="cxd">most complex first</option><option value="cxa">simplest first</option><option value="new">newest first</option><option value="old">oldest first</option></select></label>
+<button class="btn" id="shuffle">shuffle</button>
+<button class="btn" id="clear">clear</button>
+<span class="count" id="count"></span>
+</div>
+<div id="axisnote" class="note" hidden></div>
+<div id="cards"></div>
+<div style="text-align:center;margin:10px 0"><button class="btn" id="more">show more</button></div>
+</section>
+
+<section class="view" id="v-vocab">
+<h2>The vocabulary</h2>
+<p>Every segment of every command, abstracted to its role and its flag pattern with paths, patterns and numbers removed. 818 shapes occur; 257 of them once. The table lists the 160 most common; click a row for sampled commands that contain that shape.</p>
+<div class="stats"><div class="stat"><b>52.0%</b><span>of segments are one of the top 10 shapes</span></div><div class="stat"><b>85.3%</b><span>top 50</span></div><div class="stat"><b>94.7%</b><span>top 100</span></div></div>
+<div id="vocab"></div>
+</section>
+
+<section class="view" id="v-sent">
+<h2>Sentences</h2>
+<p>The same commands reduced to a sequence of roles and joins (▸ then, | pipe). 16,636 distinct sentences over 100,678 commands; the top 10 cover 26.1%, the top 50 54.2%, the top 500 74.6%. Bars split each sentence's count between era 1 (blue) and era 2 (orange).</p>
+<div id="sent"></div>
+</section>
+
+<section class="view" id="v-axes">
+<h2>Axes of freedom</h2>
+<p>Each axis is one decision the agent makes when it writes a command, with the distribution of what it chose across all 100,678 shell calls. Click a bar to browse the sampled commands in that bin.</p>
+<div style="margin:6px 0 14px"><span class="seg" id="axera"><button aria-pressed="true" data-e="all">all</button><button aria-pressed="false" data-e="era1">era 1</button><button aria-pressed="false" data-e="era2">era 2</button></span></div>
+<div class="axes" id="axes"></div>
+</section>
+
+<section class="view" id="v-key">
+<h2>Key</h2>
+<p>Glyph silhouettes encode the role; colour encodes the family (look, shape output, act, verify, git, compute, wait). Joins: a thin arrow is <em>then</em> (<code>&amp;&amp;</code>, <code>;</code>, newline), a thick bar is a <em>pipe</em>, a dashed line is <em>or</em> (<code>||</code>). A dashed violet box is the body of a loop or conditional; a dashed outline marks a condition. Hooked arrows continue a chain onto the next row.</p>
+<div class="key" id="fullkey"></div>
+<h3>Inside a Python edit</h3>
+<p>A Python heredoc that edits source unfolds into a strip of steps: <b>R</b> read the file, <b>∈</b> assert the snippet is present, <b>1</b> assert it occurs exactly once, <b>⇄</b> replace (hover shows the old and new text and their line counts), <b>W</b> write back, <b>≫</b> print a report, <b>↻</b> loop, <b>ƒ</b> define a helper, <b>✂</b> splice by index. A ×n badge counts repeats.</p>
+<div id="flowkey"></div>
+</section>
+
+<section class="view" id="v-about">
+<h2>About</h2>
+<p>These are the shell commands Claude Code issued while working on <a href="https://github.com/hazelgrove/hazel">Hazel</a>, a live functional programming environment written in ReasonML, between Dec 27, 2025 – Sep 21, 2026: 100,678 commands out of 201,262 tool calls in the sessions that touched Hazel source. The statistics views are computed over all of them; the Browse view carries a sample of 2,928 calls, stratified by purpose and era and topped up with the most complex commands.</p>
+<p>Each command is split into segments on <code>&amp;&amp;</code>, <code>;</code>, <code>|</code> and newlines, and each segment is given a role by a rule-based parser (search, view, filter, edit, build, test, git, and so on). Python heredocs are parsed with the Python AST into a strip of steps. A shape is a segment with its paths, patterns and numbers removed; a sentence is a command reduced to its sequence of roles. The parser is approximate at the edges: under one percent of segments land in "other".</p>
+<p>Commands in cards are truncated to 2,500 characters (7,000 for the most complex), and each card shows at most the first 300 characters of what came back. Session titles are the agent's own one-line summaries. Generated 2026-09-21.</p>
+</section>
+<footer>Call Cards · generated 2026-09-21 from local Claude Code transcripts · <a href="https://andrewblinn.com">andrewblinn.com</a></footer>
+</div>
+<div id="tip" hidden></div>
+<script src="vendor/highlight.min.js"></script>
+<script src="vendor/reasonml.min.js"></script>
+<script src="vendor/ocaml.min.js"></script>
+<script src="data.js"></script>
+<script>
+(function(){
+const ROLE = {
+ cwd:{g:'nav',sh:'tab',ch:'⌂',name:'change directory',desc:'cd into a worktree before working'},
+ setup:{g:'nav',sh:'thin',ch:'⚑',name:'environment',desc:'export, ulimit, variables'},
+ locate:{g:'look',sh:'loz',ch:'◎',name:'locate files',desc:'find, ls, glob'},
+ search:{g:'look',sh:'loz',ch:'⌕',name:'search text',desc:'grep for a pattern in a file or tree'},
+ view:{g:'look',sh:'page',ch:'▤',name:'view a file',desc:'sed -n window, cat, head/tail of a file'},
+ inspect:{g:'look',sh:'thin',ch:'ⓘ',name:'inspect',desc:'wc, diff, pwd, date'},
+ filter:{g:'shape',sh:'funnel',ch:'⏷',name:'filter a stream',desc:'head N, tail N, grep -v, sort, awk after a pipe'},
+ report:{g:'shape',sh:'tag',ch:'❝',name:'echo',desc:'a label or === header in the output'},
+ edit:{g:'act',sh:'para',ch:'✎',name:'edit / write',desc:'Python heredoc edit, sed -i, cat > file, patch'},
+ fs:{g:'act',sh:'chev',ch:'⇄',name:'file ops',desc:'cp, mv, rm, mkdir, ln'},
+ build:{g:'verify',sh:'oct',ch:'⚙',name:'build',desc:'dune build, make'},
+ test:{g:'verify',sh:'oct',ch:'✓',name:'test',desc:'run_node.sh, node test bundle, dune test'},
+ format:{g:'verify',sh:'oct',ch:'≡',name:'format',desc:'dune fmt'},
+ 'git-read':{g:'git',sh:'caps',ch:'⎇',name:'git read',desc:'status, diff, log, show'},
+ 'git-write':{g:'git',sh:'capsf',ch:'⎇',name:'git write',desc:'add, commit, merge, checkout, worktree'},
+ gh:{g:'git',sh:'caps',ch:'◉',name:'GitHub CLI',desc:'gh pr, gh run, gh api'},
+ script:{g:'compute',sh:'sq',ch:'λ',name:'script',desc:'python / node / shell script that is not an edit'},
+ run:{g:'compute',sh:'sq',ch:'▶',name:'run',desc:'hazel CLI, a built binary'},
+ wait:{g:'wait',sh:'circ',ch:'◔',name:'sleep',desc:'wait N seconds'},
+ loop:{g:'wait',sh:'circ',ch:'↻',name:'loop / condition',desc:'for, while, until, if'},
+ process:{g:'wait',sh:'chev',ch:'⚡',name:'processes',desc:'lsof, kill, curl, servers'},
+ other:{g:'other',sh:'thin',ch:'·',name:'other',desc:''},
+};
+const GCOL = {nav:'n',look:'s1',shape:'n',act:'s2',verify:'s3',git:'s4',compute:'s5',wait:'s6',other:'n'};
+const FLOWG = {read:'R','assert-once':'1','assert-in':'∈',assert:'?',replace:'⇄',resub:'re',write:'W',print:'≫',loop:'↻','if':'?',def:'ƒ',call:'()',lines:'¶',index:'↦',splice:'✂',join:'⋈',assign:'=',try:'try',raise:'!',exit:'✕',with:'w',stmt:'·',open:'o'};
+const FLOWC = {read:'s1','assert-once':'s4','assert-in':'s4',assert:'s4',replace:'s2',resub:'s2',write:'s2',print:'n',loop:'s6','if':'s6',def:'s5',call:'s5',lines:'s1',index:'s1',splice:'s2',join:'s2',assign:'n',try:'s6',raise:'s4',exit:'s4',with:'s1',stmt:'n',open:'s1'};
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const CW = 7.0, PADX = 13, GL = 15, H = 32, GAP = 26, W = 940, FLOWH = 20;
+function nodeW(seg){ const lab = seg.label||''; let w = Math.max(54, Math.min(250, lab.length*CW + PADX*2 + GL)); if(seg.flow){ w = Math.max(w, 24 + seg.flow.steps.length*26 + 10); } return w; }
+function shapePath(sh, x, y, w, h){
+  const r=6, c=7;
+  switch(sh){
+    case 'tab': return `M${x} ${y+7} h${w*0.42} l5 -6 h${w*0.58-5} v${h-7} h${-w} Z`;
+    case 'loz': return `M${x+c} ${y} h${w-2*c} l${c} ${h/2} l${-c} ${h/2} h${-(w-2*c)} l${-c} ${-h/2} Z`;
+    case 'page': return `M${x} ${y} h${w-8} l8 8 v${h-8} h${-w} Z`;
+    case 'funnel': return `M${x} ${y} h${w} l-6 ${h*0.5} l6 ${h*0.5} h${-w} l4 ${-h*0.5} Z`;
+    case 'tag': return `M${x+8} ${y} h${w-8} v${h} h${-(w-8)} l-8 ${-h/2} Z`;
+    case 'para': return `M${x+7} ${y} h${w-7} l-7 ${h} h${-(w-7)} Z`;
+    case 'chev': return `M${x} ${y} h${w-7} l7 ${h/2} l-7 ${h/2} h${-(w-7)} l7 ${-h/2} Z`;
+    case 'oct': return `M${x+r} ${y} h${w-2*r} l${r} ${r} v${h-2*r} l${-r} ${r} h${-(w-2*r)} l${-r} ${-r} v${-(h-2*r)} Z`;
+    case 'caps': case 'capsf': return `M${x+h/2} ${y} h${w-h} a${h/2} ${h/2} 0 0 1 0 ${h} h${-(w-h)} a${h/2} ${h/2} 0 0 1 0 ${-h} Z`;
+    case 'sq': return `M${x+3} ${y} h${w-6} a3 3 0 0 1 3 3 v${h-6} a3 3 0 0 1 -3 3 h${-(w-6)} a3 3 0 0 1 -3 -3 v${-(h-6)} a3 3 0 0 1 3 -3 Z`;
+    case 'circ': return `M${x+h/2} ${y} h${w-h} a${h/2} ${h/2} 0 0 1 0 ${h} h${-(w-h)} a${h/2} ${h/2} 0 0 1 0 ${-h} Z`;
+    case 'thin': return `M${x} ${y+4} h${w} v${h-8} h${-w} Z`;
+    default: return `M${x+r} ${y} h${w-2*r} a${r} ${r} 0 0 1 ${r} ${r} v${h-2*r} a${r} ${r} 0 0 1 ${-r} ${r} h${-(w-2*r)} a${r} ${r} 0 0 1 ${-r} ${-r} v${-(h-2*r)} a${r} ${r} 0 0 1 ${r} ${-r} Z`;
+  }
+}
+function nodeSVG(seg, x, y, w, h, cid, si){
+  const R = ROLE[seg.role]||ROLE.other, col = GCOL[R.g];
+  const fill = (R.sh==='capsf'||seg.role==='edit') ? `var(--${col}-fill2)` : `var(--${col}-fill)`;
+  const dashed = seg.cond ? ' cond' : '';
+  let s = `<g class="node${dashed}" data-c="${cid}" data-s="${si}" tabindex="0"><path class="shape" d="${shapePath(R.sh,x,y,w,h)}" fill="${fill}" stroke="var(--${col})" stroke-width="1.3"/>`;
+  const tx = x + PADX + (R.sh==='tag'||R.sh==='loz'?4:0);
+  s += `<text class="g" x="${tx}" y="${y+ (seg.flow?13:h/2+4)}">${esc(R.ch)}</text>`;
+  s += `<text x="${tx+GL}" y="${y+(seg.flow?13:h/2+4)}">${esc(seg.label)}</text>`;
+  if(seg.negate) s += `<text class="badge" x="${x+w-10}" y="${y+10}">!</text>`;
+  if(seg.capture) s += `<text class="badge" x="${x+w-14}" y="${y+h-4}">$</text>`;
+  if(seg.flow){
+    let fx = x+14, fy = y+h-13;
+    s += `<g class="flow">`;
+    seg.flow.steps.forEach((st,i)=>{
+      const c = FLOWC[st.k]||'n';
+      s += `<circle cx="${fx}" cy="${fy}" r="7.5" fill="var(--${c}-fill2)" stroke="var(--${c})"/>`;
+      s += `<text x="${fx}" y="${fy+3.5}" text-anchor="middle">${esc(FLOWG[st.k]||'·')}</text>`;
+      if(st.n>1) s += `<text class="badge" x="${fx+8}" y="${fy-5}">×${st.n}</text>`;
+      if(i<seg.flow.steps.length-1) s += `<line x1="${fx+8}" y1="${fy}" x2="${fx+18}" y2="${fy}" stroke="var(--muted2)" stroke-width="1"/>`;
+      fx += 26;
+    });
+    s += `</g>`;
+  }
+  return s + `</g>`;
+}
+function joinSVG(kind, x1, x2, y){
+  const m = (x1+x2)/2;
+  if(kind==='pipe') return `<line class="join pipe" x1="${x1+2}" y1="${y}" x2="${x2-2}" y2="${y}"/><line class="join pipe" x1="${m-2}" y1="${y-6}" x2="${m-2}" y2="${y+6}"/><line class="join pipe" x1="${m+3}" y1="${y-6}" x2="${m+3}" y2="${y+6}"/>`;
+  const cls = kind==='or' ? 'join or' : 'join';
+  return `<line class="${cls}" x1="${x1+2}" y1="${y}" x2="${x2-3}" y2="${y}"/><path class="join" d="M${x2-8} ${y-4} L${x2-2} ${y} L${x2-8} ${y+4}"/>` + (kind==='or'?`<text class="jt" x="${m-6}" y="${y-6}">or</text>`:'');
+}
+function chainSVG(card){
+  const segs = card.chain; let x = 8, row = 0; const pos = [];
+  segs.forEach((seg,i)=>{
+    const w = nodeW(seg); const h = seg.flow ? H+FLOWH : H;
+    if(x + w > W - 8 && x > 26){ row++; x = 26; }
+    pos.push({x, w, h, row, seg, i}); x += w + GAP;
+  });
+  const rowH = []; pos.forEach(p=>{ rowH[p.row] = Math.max(rowH[p.row]||0, p.h); });
+  const rowY = []; let acc = 6; rowH.forEach((h,r)=>{ rowY[r] = acc; acc += h + 14; });
+  const total = acc;
+  let out = `<svg class="chain" viewBox="0 0 ${W} ${total}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="command as glyph chain">`;
+  let runs = []; let cur = null;
+  pos.forEach(p=>{ const d = p.seg.depth||0; if(d>0){ if(cur && cur.row===p.row && cur.d===d){ cur.x2 = p.x+p.w; } else { cur = {row:p.row, d, x1:p.x, x2:p.x+p.w}; runs.push(cur); } } else cur = null; });
+  runs.forEach(r=>{ const y = rowY[r.row]; out += `<rect class="loopbox" x="${r.x1-6}" y="${y-4}" width="${r.x2-r.x1+12}" height="${rowH[r.row]+8}" rx="8"/>`; });
+  pos.forEach((p,k)=>{
+    const y = rowY[p.row] + (rowH[p.row]-p.h)/2;
+    if(k>0){ const q = pos[k-1]; const jy = rowY[p.row] + rowH[p.row]/2;
+      if(q.row===p.row) out += joinSVG(p.seg.join, q.x+q.w, p.x, jy);
+      else { const qy = rowY[q.row] + rowH[q.row]/2;
+        out += `<path class="join" d="M${q.x+q.w+2} ${qy} h8"/><path class="join${p.seg.join==='pipe'?' pipe':''}" d="M${p.x-18} ${jy-14} v10 q0 4 4 4 h8"/><path class="join" d="M${p.x-8} ${jy-4} L${p.x-2} ${jy} L${p.x-8} ${jy+4}"/>`; }
+    }
+    out += nodeSVG(p.seg, p.x, y, p.w, p.h, card.id, p.i);
+  });
+  return out + `</svg>`;
+}
+const BYID = {}; CARDS.forEach(c=>BYID[c.id]=c);
+function cardHTML(c){
+  const meta = `<span class="pur">${esc(c.purpose)}</span><span>${esc(c.ts)}</span><span>${esc(c.model)}</span><span>${c.sub?'subagent':'top level'}</span><span title="segments + 3 per loop + Python steps + pipes">complexity ${c.cx||1}</span>${c.err?'<span class="err">errored</span>':''}<span>${esc(c.title)}</span>`;
+  const desc = c.desc ? `<div class="desc">${esc(c.desc)} <i>· the agent's description</i></div>` : (c.tool!=='Bash' ? `<div class="desc"><i>${esc(c.tool)} tool call</i></div>` : '');
+  const outTxt = c.err && c.errh ? c.errh : (c.out||'');
+  return `<article class="card" data-id="${c.id}"><div class="hd">${meta}</div>${desc}${chainSVG(c)}<div class="ft"><div class="out${c.err?' errt':''}">${outTxt?('› '+esc(outTxt)):'<span style="opacity:.6">no output</span>'}</div><button class="tg" data-id="${c.id}">script ▾</button></div><div class="sp" hidden></div></article>`;
+}
+// ---------- script panel: formatted + highlighted view of the command, filled on first open
+const HD_RE = /(<<-?\s*)(['"]?)(\w+)\2([^\n]*)\n([\s\S]*?)\n[ \t]*\3(?=\s*$|\s*\n|\s*\)|\s*;|\s*&&|\s*\|)/gm;
+function extractHD(cmd){ const bodies = []; const text = cmd.replace(HD_RE, (m, lt, q, delim, rest, body)=>{ bodies.push({delim, body}); return `${lt}${q}${delim}${q}${rest}\u0001${bodies.length-1}\u0001`; }); return {text, bodies}; }
+function splitSegs(text){
+  const segs = []; let buf = ''; let q = null; let depth = 0; let join = 'nl'; const n = text.length;
+  const flush = (nj)=>{ const s = buf.trim(); if(s) segs.push({join, text:s}); buf = ''; join = nj; };
+  for(let i=0;i<n;){
+    const ch = text[i];
+    if(q){ buf += ch; if(ch==='\\' && i+1<n){ buf += text[i+1]; i += 2; continue; } if(ch===q) q = null; i++; continue; }
+    if(ch==='"' || ch==="'"){ q = ch; buf += ch; i++; continue; }
+    if(ch==='\\' && i+1<n){ buf += ch + text[i+1]; i += 2; continue; }
+    if(text.startsWith('$(', i)){ depth++; buf += '$('; i += 2; continue; }
+    if(ch==='('){ depth++; buf += ch; i++; continue; }
+    if(ch===')'){ depth = Math.max(0, depth-1); buf += ch; i++; continue; }
+    if(depth===0){
+      if(text.startsWith('&&', i)){ flush('and'); i += 2; continue; }
+      if(text.startsWith('||', i)){ flush('or'); i += 2; continue; }
+      if(ch==='|'){ flush('pipe'); i++; continue; }
+      if(ch===';'){ flush('semi'); i++; continue; }
+      if(ch==='\n'){ flush('nl'); i++; continue; }
+    }
+    buf += ch; i++;
+  }
+  flush('nl');
+  return segs;
+}
+const HEADER_RE = /^(for|while|until|if|elif|case|select)\b/;
+function layoutShell(segs){
+  const lines = []; let ind = 0; let pipe = null; let inHeader = false; let headerLine = -1;
+  const emitPipe = ()=>{
+    if(!pipe) return;
+    const parts = pipe.parts; const one = parts.join(' | ');
+    if(parts.length===1 || one.length + pipe.ind*2 <= 100) lines.push({ind:pipe.ind, text:one});
+    else parts.forEach((p,i)=>lines.push({ind: pipe.ind + (i?1:0), text: p + (i<parts.length-1 ? ' |' : '')}));
+    pipe = null;
+  };
+  const appendToLast = (s)=>{ if(lines.length) lines[lines.length-1].text += s; else lines.push({ind:0, text:s.trim()}); };
+  const openBlock = (kw)=>{
+    emitPipe();
+    if(inHeader && lines.length - headerLine > 1){ lines.push({ind, text:kw}); } else appendToLast('; ' + kw);
+    inHeader = false; ind++;
+  };
+  const startCmd = (t, join)=>{
+    emitPipe();
+    if(join==='and') appendToLast(' &&'); else if(join==='or') appendToLast(' ||');
+    const isHeader = HEADER_RE.test(t);
+    const extra = (inHeader && !isHeader) ? 1 : 0;
+    if(isHeader){ inHeader = true; headerLine = lines.length; }
+    pipe = {ind: ind + extra, parts:[t]};
+  };
+  for(const seg of segs){
+    let t = seg.text.replace(/\\\n\s*/g, ' '); let join = seg.join; let m;
+    if(join==='pipe'){ if(pipe){ pipe.parts.push(t); continue; } appendToLast(' |'); pipe = {ind, parts:[t]}; continue; }
+    if(t==='do' || t==='then'){ openBlock(t); continue; }
+    if((m = t.match(/^(do|then)\s+([\s\S]*)$/))){ openBlock(m[1]); t = m[2]; join = 'nl'; }
+    if(t==='else'){ emitPipe(); ind = Math.max(0, ind-1); lines.push({ind, text:'else'}); ind++; continue; }
+    if((m = t.match(/^else\s+([\s\S]*)$/))){ emitPipe(); ind = Math.max(0, ind-1); lines.push({ind, text:'else'}); ind++; t = m[1]; join = 'nl'; }
+    if(/^(done|fi|esac)\b/.test(t)){ emitPipe(); ind = Math.max(0, ind-1); if(join==='and') appendToLast(' &&'); else if(join==='or') appendToLast(' ||'); lines.push({ind, text:t}); continue; }
+    if(/^elif\b/.test(t)){ emitPipe(); ind = Math.max(0, ind-1); lines.push({ind, text:t}); inHeader = true; headerLine = lines.length-1; continue; }
+    startCmd(t, join);
+  }
+  emitPipe();
+  return lines;
+}
+function langForFile(f){
+  const m = /\.([A-Za-z0-9]+)$/.exec(f||''); const e = m ? m[1].toLowerCase() : '';
+  return {re:'reasonml', rei:'reasonml', ml:'ocaml', mli:'ocaml', css:'css', md:'markdown', js:'javascript', mjs:'javascript', cjs:'javascript', ts:'typescript', tsx:'typescript', py:'python', json:'json', hz:'hazel', hzt:'hazel', html:'xml', xml:'xml', svg:'xml', yml:'yaml', yaml:'yaml', sh:'bash', bash:'bash', txt:'plaintext', log:'plaintext'}[e] || 'plaintext';
+}
+function bodyLang(line){
+  if(/\bpython3?\b/.test(line)) return 'python';
+  if(/\bnode\b/.test(line)) return 'javascript';
+  const m = /(?:>>?\s*|\btee\s+(?:-a\s+)?)(\S+)/.exec(line); if(m) return langForFile(m[1]);
+  if(/\bgh\s+(pr|issue|release)\b|--body/.test(line)) return 'markdown';
+  return 'plaintext';
+}
+function hl(text, lang){
+  if(window.hljs && lang!=='plaintext' && hljs.getLanguage(lang)){ try { return hljs.highlight(text, {language:lang, ignoreIllegals:true}).value; } catch(e){} }
+  return esc(text);
+}
+function prettyShell(cmd){
+  const {text, bodies} = extractHD(cmd);
+  const flat = layoutShell(splitSegs(text)).map(l=>'  '.repeat(l.ind) + l.text).join('\n');
+  const parts = flat.split(/\u0001(\d+)\u0001/);
+  let html = '';
+  for(let i=0;i<parts.length;i++){
+    if(i%2===0){ html += hl(parts[i], 'bash'); continue; }
+    const b = bodies[+parts[i]]; const prev = parts[i-1]; const line = prev.slice(prev.lastIndexOf('\n')+1);
+    html += '\n' + hl(b.body, bodyLang(line)) + '\n' + esc(b.delim);
+  }
+  return html;
+}
+function prettyHTML(card){
+  if(card.tool==='Edit'){
+    const m = /^old_string:\n([\s\S]*?)\n\nnew_string:\n([\s\S]*)$/.exec(card.raw); const lang = langForFile(((card.chain[0]||{}).p||{}).files ? card.chain[0].p.files[0] : '');
+    if(m) return `<span class="lab">old_string</span>\n${hl(m[1], lang)}\n\n<span class="lab">new_string</span>\n${hl(m[2], lang)}`;
+    return esc(card.raw);
+  }
+  if(card.tool!=='Bash') return hl(card.raw, 'json');
+  return prettyShell(card.raw);
+}
+function fillPanel(card, sp){
+  const trunc = card.rawlen && card.rawlen > card.raw.length ? `<span class="note">truncated to ${card.raw.length.toLocaleString()} of ${card.rawlen.toLocaleString()} characters</span>` : '';
+  sp.innerHTML = `<div class="sp-bar"><span class="seg"><button aria-pressed="true" data-m="pretty">formatted</button><button aria-pressed="false" data-m="orig">original</button></span>${trunc}<button class="btn sp-copy">copy original</button></div><pre class="code pretty">${prettyHTML(card)}</pre><pre class="code orig" hidden>${esc(card.raw)}</pre>`;
+}
+if(window.hljs) hljs.registerLanguage('hazel', function(h){ return { name:'Hazel', keywords:{ keyword:'let in fun case end type if then else test rec module of val and', literal:'true false' },
+  contains:[ {className:'comment', begin:/#/, end:/#/}, h.QUOTE_STRING_MODE, h.C_NUMBER_MODE, {className:'variable', begin:/\^\^?\w+/}, {className:'type', begin:/\b[A-Z][A-Za-z0-9_']*\b/} ] }; });
+// ---------- tooltip
+const tip = document.getElementById('tip');
+function segTip(seg){
+  const R = ROLE[seg.role]||ROLE.other;
+  let h = `<div class="r">${esc(R.name)}<span>${esc(seg.shape||'')}</span></div>`;
+  const p = seg.p||{}; const pm = [];
+  for(const k of ['pattern','scope','file','start','end','width','n','ctx','target','group','files','n_replace','guard','sub','message','secs','name','lines','redir','flags','glob','mode','old_lines','new_lines']){ if(p[k]!==undefined && p[k]!==null && p[k]!=='' && !(Array.isArray(p[k])&&!p[k].length)) pm.push(`${k}: ${esc(typeof p[k]==='object'?JSON.stringify(p[k]):p[k])}`); }
+  if(pm.length) h += `<div class="pm">${pm.join(' · ')}</div>`;
+  h += `<pre>${esc(seg.raw)}</pre>`;
+  if(seg.flow){
+    h += `<div class="pm">script: ${seg.flow.lines} lines · files ${esc(seg.flow.files.join(', '))} · guard ${esc(seg.flow.guard)}${seg.flow.regex?' · regex':''}${seg.flow.loop?' · loop':''}</div>`;
+    const reps = seg.flow.steps.flatMap(s=>s.reps||[]).slice(0,3);
+    reps.forEach((r,i)=>{ if(r.old_text||r.new_text) h += `<div class="diff">replace ${i+1}: ${r.old||'?'} → ${r.new||'?'} lines<pre class="old">- ${esc(r.old_text)}</pre><pre class="new">+ ${esc(r.new_text)}</pre></div>`; });
+  }
+  return h;
+}
+let tipOn = null;
+document.addEventListener('mousemove', e=>{
+  const n = e.target.closest && e.target.closest('.node');
+  if(n){ const c = BYID[n.dataset.c]; const seg = c && c.chain[+n.dataset.s];
+    if(seg){ if(tipOn!==n){ tip.innerHTML = segTip(seg); tipOn = n; } tip.hidden = false;
+      let x = e.clientX+14, y = e.clientY+16; const tw = tip.offsetWidth, th = tip.offsetHeight;
+      if(x+tw > window.innerWidth-8) x = Math.max(8, e.clientX - tw - 12);
+      if(y+th > window.innerHeight-8) y = Math.max(8, e.clientY - th - 12);
+      tip.style.left = x+'px'; tip.style.top = y+'px'; return; } }
+  tip.hidden = true; tipOn = null;
+});
+document.addEventListener('focusin', e=>{ const n = e.target.closest && e.target.closest('.node'); if(n){ const c = BYID[n.dataset.c]; const seg = c && c.chain[+n.dataset.s]; if(seg){ tip.innerHTML = segTip(seg); tip.hidden=false; const r = n.getBoundingClientRect(); tip.style.left = Math.min(r.left, window.innerWidth-540)+'px'; tip.style.top = (r.bottom+8)+'px'; } } });
+document.addEventListener('focusout', ()=>{ tip.hidden = true; });
+document.addEventListener('click', e=>{
+  const b = e.target.closest && e.target.closest('button.tg');
+  if(b){ const sp = b.closest('.card').querySelector('.sp'); if(sp.hidden && !sp.innerHTML) fillPanel(BYID[b.dataset.id], sp); sp.hidden = !sp.hidden; b.textContent = sp.hidden ? 'script ▾' : 'script ▴'; return; }
+  const m = e.target.closest && e.target.closest('.sp-bar button[data-m]');
+  if(m){ const sp = m.closest('.sp'); [...sp.querySelectorAll('.sp-bar button[data-m]')].forEach(x=>x.setAttribute('aria-pressed', x===m)); sp.querySelector('pre.pretty').hidden = m.dataset.m!=='pretty'; sp.querySelector('pre.orig').hidden = m.dataset.m!=='orig'; return; }
+  const cp = e.target.closest && e.target.closest('button.sp-copy');
+  if(cp && navigator.clipboard){ const card = BYID[cp.closest('.card').dataset.id]; navigator.clipboard.writeText(card.raw).then(()=>{ cp.textContent = 'copied'; setTimeout(()=>{ cp.textContent = 'copy original'; }, 1200); }); }
+});
+// ---------- browse
+const purs = [...new Set(CARDS.map(c=>c.purpose))].sort();
+const models = [...new Set(CARDS.map(c=>c.model))].sort();
+const roles = Object.keys(ROLE);
+const fpur = document.getElementById('f-pur'), fmodel = document.getElementById('f-model'), frole = document.getElementById('f-role');
+fpur.innerHTML = '<option value="">any</option>' + purs.map(p=>`<option>${esc(p)}</option>`).join('');
+fmodel.innerHTML = '<option value="">any</option>' + models.map(p=>`<option>${esc(p)}</option>`).join('');
+frole.innerHTML += roles.map(r=>`<option value="${r}">${esc(ROLE[r].ch+' '+ROLE[r].name)}</option>`).join('');
+let order = CARDS.map((c,i)=>i); let shown = 0; const PAGE = 30; let axisFilter = null;
+function filtered(){
+  const pur = fpur.value, era = document.getElementById('f-era').value, model = fmodel.value, role = frole.value;
+  const err = document.getElementById('f-err').checked, loop = document.getElementById('f-loop').checked, sub = document.getElementById('f-sub').checked;
+  const txt = document.getElementById('f-text').value.trim().toLowerCase();
+  const arr = order.map(i=>CARDS[i]).filter(c=>
+    (!pur || c.purpose===pur) && (!era || c.era===era) && (!model || c.model===model) && (!role || c.chain.some(s=>s.role===role)) &&
+    (!err || c.err) && (!loop || c.chain.some(s=>s.role==='loop')) && (!sub || c.sub) && (!txt || (c.raw||'').toLowerCase().includes(txt) || (c.desc||'').toLowerCase().includes(txt)) &&
+    (!axisFilter || (c.axes && c.axes[axisFilter.axis]===axisFilter.bin)));
+  const srt = document.getElementById('f-sort').value;
+  if(srt==='cxd') arr.sort((a,b)=>(b.cx||1)-(a.cx||1));
+  else if(srt==='cxa') arr.sort((a,b)=>(a.cx||1)-(b.cx||1));
+  else if(srt==='new') arr.sort((a,b)=>(b.ts>a.ts)-(b.ts<a.ts));
+  else if(srt==='old') arr.sort((a,b)=>(a.ts>b.ts)-(a.ts<b.ts));
+  return arr;
+}
+let cur = [];
+function render(reset){
+  if(reset){ cur = filtered(); shown = 0; document.getElementById('cards').innerHTML = ''; }
+  const slice = cur.slice(shown, shown+PAGE); shown += slice.length;
+  document.getElementById('cards').insertAdjacentHTML('beforeend', slice.map(cardHTML).join(''));
+  document.getElementById('count').textContent = `${shown} of ${cur.length} cards`;
+  document.getElementById('more').style.display = shown < cur.length ? '' : 'none';
+  const an = document.getElementById('axisnote'); if(axisFilter){ an.hidden=false; an.innerHTML = `axis filter: <b>${esc(axisFilter.axis)}</b> = <b>${esc(axisFilter.bin)}</b> <button class="btn" id="axclear" style="margin-left:8px">remove</button>`; document.getElementById('axclear').onclick = ()=>{ axisFilter=null; render(true); }; } else an.hidden=true;
+}
+['f-pur','f-era','f-model','f-role','f-err','f-loop','f-sub','f-sort'].forEach(id=>document.getElementById(id).addEventListener('change', ()=>render(true)));
+document.getElementById('f-text').addEventListener('input', ()=>render(true));
+document.getElementById('more').addEventListener('click', ()=>render(false));
+document.getElementById('shuffle').addEventListener('click', ()=>{ for(let i=order.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [order[i],order[j]]=[order[j],order[i]]; } document.getElementById('f-sort').value='random'; render(true); });
+document.getElementById('clear').addEventListener('click', ()=>{ ['f-pur','f-era','f-model','f-role'].forEach(id=>document.getElementById(id).value=''); ['f-err','f-loop','f-sub'].forEach(id=>document.getElementById(id).checked=false); document.getElementById('f-text').value=''; document.getElementById('f-sort').value='random'; axisFilter=null; render(true); });
+// ---------- key
+function keyItem(r){ const R = ROLE[r]; const seg = {role:r, label:R.name.split(' ')[0]}; const w = nodeW(seg); return `<div class="k"><svg viewBox="0 0 ${w+4} ${H+4}">${nodeSVG(seg,2,2,w,H,'key',0)}</svg><div class="nm">${esc(R.name)}<small>${esc(R.desc)}</small></div></div>`; }
+document.getElementById('fullkey').innerHTML = roles.filter(r=>r!=='other').map(keyItem).join('');
+document.getElementById('minikey').innerHTML = ['cwd','search','view','filter','report','edit','build','test','git-read','git-write','script','loop'].map(keyItem).join('');
+document.getElementById('flowkey').innerHTML = `<div class="k"><svg viewBox="0 0 400 44" style="width:400px;height:44px">${nodeSVG({role:'edit',label:'py-edit Foo.re, Bar.re',flow:{steps:[{k:'read',n:1},{k:'assert-once',n:1},{k:'replace',n:3},{k:'write',n:1},{k:'print',n:1}],files:['Foo.re'],lines:20,guard:'count==1',regex:false,loop:false},raw:'python3 - <<EOF …',p:{}},2,2,260,H+FLOWH,'key',1)}</svg></div>`;
+// ---------- vocabulary
+function exRows(ids){ const cs = ids.map(i=>BYID[i]).filter(Boolean).slice(0,6); return cs.length ? cs.map(cardHTML).join('') : '<p class="note">no sampled example on this page</p>'; }
+function miniChain(sentence){
+  const toks = sentence.split(' '); let x = 2; let s = ''; let prevJoin = 'then';
+  toks.forEach(t=>{ if(t==='|'||t==='▸'){ prevJoin = t==='|'?'pipe':'then'; return; }
+    const role = t==='py-edit' ? 'edit' : t; const R = ROLE[role]||ROLE.other; const col = GCOL[R.g]; const w = 16;
+    if(x>2){ s += prevJoin==='pipe' ? `<line x1="${x-8}" y1="9" x2="${x-1}" y2="9" stroke="var(--muted)" stroke-width="2.4"/>` : `<line x1="${x-8}" y1="9" x2="${x-1}" y2="9" stroke="var(--muted2)" stroke-width="1.2"/>`; }
+    s += `<path d="${shapePath(R.sh,x,1,w,16)}" fill="var(--${col}-fill2)" stroke="var(--${col})" stroke-width="1"/>`; x += w + 9; });
+  return `<svg class="mini" viewBox="0 0 ${x} 18" style="width:${x}px">${s}</svg>`;
+}
+(function buildVocab(){
+  const byRole = {}; STATS.shapes.forEach(s=>{ (byRole[s.role] = byRole[s.role]||[]).push(s); });
+  const max = STATS.shapes[0].n; let h = '';
+  for(const r of roles){ const list = byRole[r]; if(!list) continue;
+    h += `<div class="rolehead">${esc(ROLE[r].ch+'  '+ROLE[r].name)}</div><table class="voc"><tr><th style="width:44%">shape</th><th>share of segments</th><th class="n">count</th><th></th></tr>`;
+    list.forEach((s,i)=>{ const pct = (100*s.n/STATS.n_segments); h += `<tr class="vrow" data-k="${esc(r+'|'+i)}"><td class="sh">${esc(s.shape)}</td><td><span class="bar" style="width:${Math.max(2, 220*s.n/max)}px"></span> <span class="note">${pct.toFixed(1)}%</span></td><td class="n">${s.n.toLocaleString()}</td><td><button class="btn vx" data-role="${r}" data-i="${i}">examples</button></td></tr>`; });
+    h += '</table>';
+  }
+  document.getElementById('vocab').innerHTML = h;
+  document.getElementById('vocab').addEventListener('click', e=>{ const b = e.target.closest('button.vx'); if(!b) return; const tr = b.closest('tr'); const nxt = tr.nextElementSibling; if(nxt && nxt.classList.contains('exr')){ nxt.remove(); b.textContent='examples'; return; } const s = byRole[b.dataset.role][+b.dataset.i]; tr.insertAdjacentHTML('afterend', `<tr class="exr"><td colspan="4"><div class="exrow">${exRows(s.ex)}</div></td></tr>`); b.textContent='hide'; });
+})();
+(function buildSent(){
+  const max = STATS.sentences[0].n; let h = '<table class="voc"><tr><th>chain</th><th style="width:34%">sentence</th><th>era 1 / era 2</th><th class="n">count</th><th></th></tr>';
+  STATS.sentences.forEach((s,i)=>{ const w1 = 200*s.era1/max, w2 = 200*s.era2/max; h += `<tr><td>${miniChain(s.s)}</td><td class="sh">${esc(s.s)}</td><td><span class="bar" style="width:${Math.max(1,w1)}px"></span><span class="bar e2" style="width:${Math.max(1,w2)}px"></span></td><td class="n">${s.n.toLocaleString()}</td><td><button class="btn sx" data-i="${i}">examples</button></td></tr>`; });
+  document.getElementById('sent').innerHTML = h + '</table>';
+  document.getElementById('sent').addEventListener('click', e=>{ const b = e.target.closest('button.sx'); if(!b) return; const tr = b.closest('tr'); const nxt = tr.nextElementSibling; if(nxt && nxt.classList.contains('exr')){ nxt.remove(); b.textContent='examples'; return; } const s = STATS.sentences[+b.dataset.i]; tr.insertAdjacentHTML('afterend', `<tr class="exr"><td colspan="5"><div class="exrow">${exRows(s.ex)}</div></td></tr>`); b.textContent='hide'; });
+})();
+// ---------- axes
+const AXDESC = {segments:'segments per command', prelude:'how the working directory is fixed', limiter:'how output is capped', pipes:'pipes per command', files:'distinct files named', headers:'echo === section headers', stderr:'what happens to stderr', loop:'control flow', 'search scope':'scope of the first grep', window:'width of the first sed -n window (lines)', 'after edit':'what follows an edit in the same command', guard:'uniqueness guard in a Python edit', replacements:'replacements per Python edit', 'edit files':'files touched by a Python edit'};
+const AXORDER = {segments:['1','2','3','4','5','6','7','8','9','10+'], prelude:['cd worktree','absolute paths','bare cwd'], limiter:['none','grep only','head 1-5','head 6-10','head 11-30','head 31-100','head >100','tail 1-5','tail 6-10','tail 11-30','tail 31-100','tail >100'], pipes:['0','1','2','3','4+'], files:['0','1','2','3','4+'], headers:['0','1','2-3','4+'], stderr:['untouched','2>&1','2>/dev/null'], loop:['straight','loop'], 'search scope':['one file','directory','directory (recursive)','whole tree','whole tree (recursive)'], window:['1-10','11-30','31-60','61-120','>120'], 'after edit':['nothing','build','test'], guard:['count==1','assert in','other assert','none'], replacements:['0','1','2','3','4','5+'], 'edit files':['0','1','2','3+']};
+let axEra = 'all';
+function buildAxes(){
+  let h = '';
+  STATS.axes_order.forEach(a=>{ const d = STATS.axes[a][axEra]||{}; const keys = (AXORDER[a]||Object.keys(d)).filter(k=>k in d).concat(Object.keys(d).filter(k=>!(AXORDER[a]||[]).includes(k) && k!=='n/a'));
+    const tot = keys.reduce((s,k)=>s+(d[k]||0),0); const max = Math.max(...keys.map(k=>d[k]||0),1);
+    h += `<div class="axis"><h4>${esc(AXDESC[a]||a)} <small>· ${tot.toLocaleString()} calls${d['n/a']?` (${d['n/a'].toLocaleString()} n/a)`:''}</small></h4>`;
+    keys.forEach(k=>{ const v = d[k]||0; h += `<div class="row" data-a="${esc(a)}" data-b="${esc(k)}"><span class="lbl" title="${esc(k)}">${esc(k)}</span><span><span class="bb${axEra==='era2'?' e2':''}" style="width:${Math.max(1,100*v/max)}%;display:block"></span></span><span class="nn">${(100*v/tot).toFixed(0)}%</span></div>`; });
+    h += '</div>';
+  });
+  document.getElementById('axes').innerHTML = h;
+}
+buildAxes();
+document.getElementById('axera').addEventListener('click', e=>{ const b = e.target.closest('button'); if(!b) return; axEra = b.dataset.e; [...e.currentTarget.querySelectorAll('button')].forEach(x=>x.setAttribute('aria-pressed', x===b)); buildAxes(); });
+document.getElementById('axes').addEventListener('click', e=>{ const r = e.target.closest('.row'); if(!r) return; axisFilter = {axis:r.dataset.a, bin:r.dataset.b}; if(axEra!=='all') document.getElementById('f-era').value = axEra; showView('browse'); render(true); window.scrollTo({top:0}); });
+// ---------- tabs
+function showView(v){ document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on', x.id==='v-'+v)); document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected', b.dataset.v===v)); try{ localStorage.setItem('cc-view', v); }catch(e){} }
+document.querySelector('.tabs').addEventListener('click', e=>{ const b = e.target.closest('button'); if(b) showView(b.dataset.v); });
+let v0 = 'browse'; try{ v0 = localStorage.getItem('cc-view') || 'browse'; }catch(e){} showView(v0);
+render(true);
+window.CallCards = {prettyHTML, prettyShell, splitSegs, layoutShell, extractHD};
+})();
+</script>
+</body>
+</html>
