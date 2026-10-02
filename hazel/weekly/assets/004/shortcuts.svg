@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="194" viewBox="0 0 936 194" role="img" aria-labelledby="title desc">
+<title id="title">Meta follows the platform; Unbound clears the binding</title>
+<desc id="desc">Bound with modifier Meta and key z means CommandZ on a Mac and ControlZ on a PC. Unbound removes a default shortcut instead of falling back to it.</desc>
+<path d="M5 9 L918 3 L934 173 L926 189 L22 185 L3 168 Z" fill="#e4e6cf"/>
+<text x="28" y="43" fill="#243c30" font-family="Liberation Mono" font-size="27" font-weight="normal" text-anchor="start">Bound([Meta], &quot;z&quot;)</text>
+<path d="M396 34 L449 34 M440 28 L449 34 L440 40" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<text x="470" y="43" fill="#243c30" font-family="Rubik" font-size="24" font-weight="normal" text-anchor="start">Cmd+Z on Mac  /  Ctrl+Z on PC</text>
+<path d="M28 73 L905 73" stroke="#50745b" stroke-width="1" fill="none" opacity="0.4"/>
+<text x="28" y="123" fill="#243c30" font-family="Liberation Mono" font-size="27" font-weight="normal" text-anchor="start">Unbound</text>
+<path d="M396 114 L449 114 M440 108 L449 114 L440 120" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<text x="470" y="123" fill="#243c30" font-family="Rubik" font-size="24" font-weight="normal" text-anchor="start">Clear this default shortcut.</text>
+<text x="28" y="169" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Unbound is an override, not a request to use the default.</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="332" viewBox="0 0 936 332" role="img" aria-labelledby="title desc">
+<title id="title">The click still has a frame</title>
+<desc id="desc">Author-reported Cards focus benchmark. Walking focus action24–48ms, direct0–1ms; walking whole frame32–59ms, direct6–10ms. One common zero-based0–60ms axis; ranges are not additive.</desc>
+<path d="M5 9 L918 3 L934 311 L926 327 L22 323 L3 306 Z" fill="#e4e6cf"/>
+<text x="28" y="40" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">The click still has a frame</text>
+<text x="28" y="65" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="start">Reported ranges, milliseconds</text>
+<path d="M633 39 L662 39" stroke="#b83b25" stroke-width="5" fill="none" opacity="1"/>
+<text x="673" y="46" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">Walk</text>
+<path d="M771 39 L800 39" stroke="#50745b" stroke-width="5" fill="none" opacity="1"/>
+<text x="811" y="46" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">Direct</text>
+<path d="M396.0 79 L396.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="396.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">0</text>
+<path d="M480.0 79 L480.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="480.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">10</text>
+<path d="M564.0 79 L564.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="564.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">20</text>
+<path d="M648.0 79 L648.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="648.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">30</text>
+<path d="M732.0 79 L732.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="732.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">40</text>
+<path d="M816.0 79 L816.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="816.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">50</text>
+<path d="M900.0 79 L900.0 258" stroke="#50745b" stroke-width="1" fill="none" opacity="0.24"/>
+<text x="900.0" y="281" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">60</text>
+<path d="M396 258 L900.0 258" stroke="#50745b" stroke-width="1.5" fill="none" opacity="1"/>
+<text x="28" y="115" fill="#243c30" font-family="Rubik" font-size="23" font-weight="bold" text-anchor="start">Focus action</text>
+<text x="244" y="115" fill="#b83b25" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">walk</text>
+<text x="372" y="115" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="end">24–48</text>
+<path d="M597.6 108 L799.2 108" stroke="#b83b25" stroke-width="5" fill="none" opacity="1"/>
+<path d="M597.6 100 L597.6 116 M799.2 100 L799.2 116" stroke="#b83b25" stroke-width="2" fill="none" opacity="1"/>
+<text x="244" y="151" fill="#50745b" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">direct</text>
+<text x="372" y="151" fill="#50745b" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="end">0–1</text>
+<path d="M396.0 144 L404.4 144" stroke="#50745b" stroke-width="5" fill="none" opacity="1"/>
+<path d="M396.0 136 L396.0 152 M404.4 136 L404.4 152" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<text x="28" y="209" fill="#243c30" font-family="Rubik" font-size="23" font-weight="bold" text-anchor="start">Whole frame</text>
+<text x="244" y="209" fill="#b83b25" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">walk</text>
+<text x="372" y="209" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="end">32–59</text>
+<path d="M664.8 202 L891.6 202" stroke="#b83b25" stroke-width="5" fill="none" opacity="1"/>
+<path d="M664.8 194 L664.8 210 M891.6 194 L891.6 210" stroke="#b83b25" stroke-width="2" fill="none" opacity="1"/>
+<text x="244" y="245" fill="#50745b" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">direct</text>
+<text x="372" y="245" fill="#50745b" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="end">6–10</text>
+<path d="M446.4 238 L480.0 238" stroke="#50745b" stroke-width="5" fill="none" opacity="1"/>
+<path d="M446.4 230 L446.4 246 M480.0 230 L480.0 246" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<text x="28" y="311" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="start">Cards · dev build · headless Firefox · 2 runs × 4 clicks · PR #2602</text>
+</svg>

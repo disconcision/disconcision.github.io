@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="334" viewBox="0 0 936 334" role="img" aria-labelledby="title desc">
+<title id="title">The theme is a Hazel program</title>
+<desc id="desc">Configuration code evaluates to colors which style the same editor. A successful edit applies colors; an incomplete edit retains the last good theme; undo reconciles the theme with the restored result.</desc>
+<path d="M5 9 L918 3 L934 313 L926 329 L22 325 L3 308 Z" fill="#e4e6cf"/>
+<text x="28" y="42" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">The theme is a Hazel program</text>
+<path d="M29 70 L296 65 L305 124 L300 135 L34 132 L27 120 Z" fill="#f4eddc"/>
+<text x="166.0" y="108" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="middle">Configuration code</text>
+<path d="M351 70 L563 65 L572 124 L567 135 L356 132 L349 120 Z" fill="#f4eddc"/>
+<text x="460.5" y="108" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="middle">Evaluate</text>
+<path d="M622 70 L898 65 L907 124 L902 135 L627 132 L620 120 Z" fill="#f4eddc"/>
+<text x="763.5" y="108" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="middle">Style this editor</text>
+<path d="M309 100 L341 100 M332 94 L341 100 L332 106" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<path d="M580 100 L612 100 M603 94 L612 100 L603 106" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<path d="M856 139 L856 156 L78 156 L78 137 M72 146 L78 137 L84 146" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<text x="463" y="179" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="middle">The result changes the editor you are using.</text>
+<path d="M30 198 L284 193 L293 285 L288 296 L35 293 L28 281 Z" fill="#f4eddc"/>
+<text x="44" y="221" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold" text-anchor="start">SUCCESSFUL EDIT</text>
+<text x="44" y="251" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">Apply the new</text>
+<text x="44" y="280" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">colors.</text>
+<path d="M337 198 L591 193 L600 285 L595 296 L342 293 L335 281 Z" fill="#ead5c6"/>
+<text x="351" y="221" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold" text-anchor="start">INCOMPLETE EDIT</text>
+<text x="351" y="251" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">Keep the last</text>
+<text x="351" y="280" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">good theme.</text>
+<path d="M644 198 L898 193 L907 285 L902 296 L649 293 L642 281 Z" fill="#f4eddc"/>
+<text x="658" y="221" fill="#243c30" font-family="Rubik" font-size="19" font-weight="bold" text-anchor="start">UNDO</text>
+<text x="658" y="251" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">Reapply the</text>
+<text x="658" y="280" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">restored result.</text>
+<text x="30" y="320" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="start">In-session behavior; startup without a saved theme uses the defaults.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="270" viewBox="0 0 936 270" role="img" aria-labelledby="title desc">
+<title id="title">The widget can add a code region</title>
+<desc id="desc">The Dynamic Row or Column livelit starts with three cell refs holding1,2,3. An Add action creates a typed empty splice and appends its reference. Its Macro builds one parameter per cell.</desc>
+<path d="M5 9 L918 3 L934 249 L926 265 L22 261 L3 244 Z" fill="#e4e6cf"/>
+<text x="28" y="40" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">The widget can add a code region</text>
+<text x="28" y="76" fill="#50745b" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="start">THREE SAVED CELLS</text>
+<text x="505" y="76" fill="#50745b" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="start">AFTER ADDING A CELL</text>
+<path d="M30 100 L103 95 L112 145 L107 156 L35 153 L28 141 Z" fill="#f4eddc"/>
+<text x="70" y="138" fill="#243c30" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">1</text>
+<path d="M125 100 L198 95 L207 145 L202 156 L130 153 L123 141 Z" fill="#f4eddc"/>
+<text x="165" y="138" fill="#243c30" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">2</text>
+<path d="M220 100 L293 95 L302 145 L297 156 L225 153 L218 141 Z" fill="#f4eddc"/>
+<text x="260" y="138" fill="#243c30" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">3</text>
+<path d="M507 100 L580 95 L589 145 L584 156 L512 153 L505 141 Z" fill="#f4eddc"/>
+<text x="547" y="138" fill="#243c30" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">1</text>
+<path d="M602 100 L675 95 L684 145 L679 156 L607 153 L600 141 Z" fill="#f4eddc"/>
+<text x="642" y="138" fill="#243c30" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">2</text>
+<path d="M697 100 L770 95 L779 145 L774 156 L702 153 L695 141 Z" fill="#f4eddc"/>
+<text x="737" y="138" fill="#243c30" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">3</text>
+<path d="M792 100 L865 95 L874 145 L869 156 L797 153 L790 141 Z" fill="#ead5c6"/>
+<text x="832" y="138" fill="#b83b25" font-family="Rubik" font-size="33" font-weight="normal" text-anchor="middle">?</text>
+<path d="M338 125 L465 125 M456 119 L465 125 L456 131" stroke="#50745b" stroke-width="2" fill="none" opacity="1"/>
+<text x="402" y="106" fill="#b83b25" font-family="Rubik" font-size="26" font-weight="bold" text-anchor="middle">+</text>
+<text x="30" y="194" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">Model: 3 refs</text>
+<text x="507" y="194" fill="#243c30" font-family="Rubik" font-size="23" font-weight="normal" text-anchor="start">Model: 4 refs</text>
+<text x="30" y="233" fill="#243c30" font-family="Liberation Mono" font-size="21" font-weight="normal" text-anchor="start">new_splice(IntT, None) creates the empty region.</text>
+<text x="30" y="260" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="start">Macro builds one parameter for each cell; the count can change.</text>
+</svg>

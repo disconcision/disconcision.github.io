@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="336" viewBox="0 0 936 336" role="img" aria-labelledby="title desc">
+<title id="title">One call across the samples</title>
+<desc id="desc">Derived samples from the Aligning Samples tutorial. Rose is called with base170 and phase New, so adjustment50 gives220ml, while the ledger expects140. Choosing Full changes the adjustment to−30.</desc>
+<path d="M5 9 L918 3 L934 315 L926 331 L22 327 L3 310 Z" fill="#e4e6cf"/>
+<text x="28" y="38" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">One call across the samples</text>
+<text x="29" y="72" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="start">call</text>
+<text x="262" y="72" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="middle">base</text>
+<text x="375" y="72" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="middle">phase</text>
+<text x="549" y="72" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="middle">adjust</text>
+<text x="703" y="72" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="middle">result</text>
+<text x="857" y="72" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="middle">ledger</text>
+<path d="M29 81 L906 81" stroke="#50745b" stroke-width="1.4" fill="none" opacity="1"/>
+<text x="29" y="108" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">fern</text>
+<text x="262" y="108" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">250</text>
+<text x="375" y="108" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">Full</text>
+<text x="549" y="108" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">-30</text>
+<text x="703" y="108" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">220</text>
+<text x="857" y="108" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">220</text>
+<text x="29" y="136" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">orchid</text>
+<text x="262" y="136" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">180</text>
+<text x="375" y="136" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">New</text>
+<text x="549" y="136" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">+50</text>
+<text x="703" y="136" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">230</text>
+<text x="857" y="136" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">230</text>
+<text x="29" y="164" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">cactus</text>
+<text x="262" y="164" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">50</text>
+<text x="375" y="164" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">Waning</text>
+<text x="549" y="164" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">0</text>
+<text x="703" y="164" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">50</text>
+<text x="857" y="164" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">50</text>
+<text x="29" y="192" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">lily</text>
+<text x="262" y="192" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">200</text>
+<text x="375" y="192" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">Waxing</text>
+<text x="549" y="192" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">+20</text>
+<text x="703" y="192" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">220</text>
+<text x="857" y="192" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">220</text>
+<text x="29" y="220" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">daisy</text>
+<text x="262" y="220" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">160</text>
+<text x="375" y="220" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">New</text>
+<text x="549" y="220" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">+50</text>
+<text x="703" y="220" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">210</text>
+<text x="857" y="220" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="middle">210</text>
+<path d="M26 231 L901 226 L910 245 L905 256 L31 253 L24 241 Z" fill="#ead5c6"/>
+<text x="29" y="248" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="start">rose</text>
+<text x="262" y="248" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="middle">170</text>
+<text x="375" y="248" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="middle">New</text>
+<text x="549" y="248" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="middle">+50</text>
+<text x="703" y="248" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="middle">220</text>
+<text x="857" y="248" fill="#b83b25" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="middle">140</text>
+<text x="29" y="285" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Focus rose: New gives +50, so the result is 220 ml.</text>
+<text x="29" y="316" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Change its phase to Full: 170 − 30 = 140 ml, matching the ledger.</text>
+</svg>
