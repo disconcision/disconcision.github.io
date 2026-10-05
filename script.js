@@ -132,6 +132,22 @@
     showLockedHint();
   });
 
+  // The crate photos load small (images/books/small/), which is all the
+  // shelf needs at its resting size. The full-size ones are fetched the
+  // first time a mouse reaches the shelf (only a mouse can drag it bigger),
+  // and each is swapped in once decoded, so the swap only sharpens it.
+  let fullSize = false;
+  books.addEventListener("pointerenter", (e) => {
+    if (fullSize || e.pointerType !== "mouse") return;
+    fullSize = true;
+    books.querySelectorAll(".book-crate img").forEach((img) => {
+      const full = img.getAttribute("src").replace("/small/", "/");
+      const big = new Image();
+      big.src = full;
+      big.decode().then(() => (img.src = full), () => {});
+    });
+  });
+
   // Track clicked book link for click-vs-drag detection
   let clickedBookLink = null;
 
