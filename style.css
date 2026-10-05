@@ -138,6 +138,13 @@ a:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
 
+/* keyboard focus gets the same signal as hover */
+a:focus-visible {
+  outline: 2px solid #23d5ab;
+  outline-offset: 3px;
+  border-radius: 0.15em 0.6em 0.15em 0.4em;
+}
+
 h2 a:hover {
   border-radius: 0.1em 0.8em 0.1em 0.4em;
   background-size: 400% 400%;
