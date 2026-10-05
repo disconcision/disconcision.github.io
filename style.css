@@ -686,7 +686,7 @@ section#books.interactive
 
 /* Hint tooltip for bookshelf discoverability */
 .books-hint {
-  position: fixed;
+  position: absolute;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.8);
   color: #b5f8fb;

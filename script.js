@@ -54,11 +54,12 @@
     }
   }
 
-  // Position the hint at center of bookshelf
+  // Position the hint at center of bookshelf, in document coordinates, so
+  // it stays put on the shelf when the page scrolls
   function positionHint() {
     const booksRect = books.getBoundingClientRect();
-    hint.style.left = booksRect.left + booksRect.width / 2 + "px";
-    hint.style.top = booksRect.top + 8 + "px";
+    hint.style.left = booksRect.left + scrollX + booksRect.width / 2 + "px";
+    hint.style.top = booksRect.top + scrollY + 8 + "px";
   }
 
   // Update hint during drag - shows current lock state
