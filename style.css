@@ -887,6 +887,9 @@ section#newsfeed dl {
   overflow: hidden;
   transition: height 0.45s cubic-bezier(0.3, 0.7, 0.2, 1);
   mask-image: linear-gradient(to bottom, #000 calc(100% - 3.2em), transparent);
+  /* so that collapsing from far down keeps the button under the cursor:
+     scroll anchoring then pins something below the list, not inside it */
+  overflow-anchor: none;
 }
 section#newsfeed.open dl {
   mask-image: none;

@@ -242,42 +242,36 @@
   });
 })();
 
-// Newsfeed: a measured expand, a count of what's hidden, and a way back up
+// Newsfeed: a measured expand, and a count of what's hidden
 (function () {
   const feed = document.getElementById("newsfeed");
   const dl = feed && feed.querySelector("dl");
   const btn = feed && feed.querySelector(".feed-more");
   if (!dl || !btn) return;
+  const isOpen = () => feed.classList.contains("open");
 
-  const hidden = () =>
-    [...dl.querySelectorAll("dd")].filter((dd) => dd.offsetTop - dl.offsetTop + dd.offsetHeight > dl.clientHeight + 4).length;
-
-  function label() {
-    const open = feed.classList.contains("open");
-    const n = hidden();
-    btn.textContent = open ? "less" : n ? n + " more" : "more";
+  // entries the collapsed list cuts off; only measurable while collapsed
+  let hidden = 0;
+  function update() {
+    if (!isOpen())
+      hidden = [...dl.querySelectorAll("dd")].filter((dd) => dd.offsetTop - dl.offsetTop + dd.offsetHeight > dl.clientHeight + 4).length;
+    btn.textContent = isOpen() ? "less" : hidden ? hidden + " more" : "more";
   }
 
   btn.addEventListener("click", () => {
-    const open = !feed.classList.contains("open");
+    const open = !isOpen();
     feed.classList.toggle("open", open);
     btn.setAttribute("aria-expanded", String(open));
-    if (open) {
-      dl.style.height = dl.scrollHeight + "px";
-    } else {
-      dl.style.height = "";
-      // don't strand the reader far below a list that just collapsed
-      const top = feed.getBoundingClientRect().top;
-      if (top < 0) window.scrollBy({ top: top - 24, behavior: "smooth" });
-    }
-    label();
+    dl.style.height = open ? dl.scrollHeight + "px" : "";
+    btn.textContent = open ? "less" : hidden ? hidden + " more" : "more";
   });
-
+  dl.addEventListener("transitionend", (e) => e.target === dl && update());
   window.addEventListener("resize", () => {
-    if (feed.classList.contains("open")) dl.style.height = dl.scrollHeight + "px";
+    if (isOpen()) dl.style.height = dl.scrollHeight + "px";
+    else update();
   });
-  window.addEventListener("load", label);
-  label();
+  window.addEventListener("load", update);
+  update();
 })();
 
 // The footer's "updated" date follows the newest news entry
