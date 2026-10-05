@@ -70,13 +70,13 @@
 @font-face {
   font-family: "Cutive Mono";
   font-display: swap;
-  src: url("cutivemono.ttf");
+  src: url("cutivemono.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-display: swap;
-  src: url("OpenSans-Light.ttf");
+  src: url("OpenSans-Light.woff2") format("woff2");
 }
 
 /* BASE */
