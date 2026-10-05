@@ -898,6 +898,14 @@ section#newsfeed dl dt {
   font-size: 0.75em;
   white-space: nowrap;
 }
+/* the year prints once per year (kept for screen readers, just not shown);
+   a repeated month dims */
+section#newsfeed dt.same-year .yr {
+  color: transparent;
+}
+section#newsfeed dt.same-month .mo {
+  opacity: 0.35;
+}
 section#newsfeed dl dd {
   margin: 0;
 }

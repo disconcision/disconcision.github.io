@@ -223,6 +223,25 @@
   }
 })();
 
+// Newsfeed dates as a ledger: each year printed once, repeated months dimmed.
+// The markup stays <dt>Month YYYY</dt>; this only changes how it's shown.
+(function () {
+  let prevYear = null;
+  let prevKey = null;
+  document.querySelectorAll("#newsfeed dt").forEach((dt) => {
+    const m = dt.textContent.trim().match(/^([A-Za-z]+)\.?\s+(\d{4})$/);
+    if (!m) return;
+    const mo = m[1].slice(0, 3);
+    const yr = m[2];
+    dt.dataset.full = m[1] + " " + yr;
+    dt.innerHTML = '<span class="mo">' + mo + '</span> <span class="yr">' + yr + "</span>";
+    if (yr === prevYear) dt.classList.add("same-year");
+    if (mo + " " + yr === prevKey) dt.classList.add("same-month");
+    prevYear = yr;
+    prevKey = mo + " " + yr;
+  });
+})();
+
 // Newsfeed: a measured expand, a count of what's hidden, and a way back up
 (function () {
   const feed = document.getElementById("newsfeed");
