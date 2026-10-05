@@ -443,13 +443,21 @@ body > .container:has(#intro:hover)::before {
   padding-bottom: 2em;
 }
 
-#intro > p {
+/* the four intro paragraphs share one grid cell and crossfade, so hovering
+   a pillar doesn't reflow the pillars under the cursor */
+.intro-text {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 0 4em;
+}
+
+.intro-text > p {
+  grid-area: 1 / 1;
   font-size: 1.3em;
-  padding: 0 4em 0 4em;
   color: white;
   line-height: 1.5em;
-  /* background-color: rgb(173, 221, 236); */
-  /* text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; */
+  transition: opacity 0.3s ease, translate 0.3s ease;
 }
 
 #intro > section#forge {
@@ -554,25 +562,21 @@ video {
   translate: 0 6.3em;
 }
 
-p.d1,
-p.d2,
-p.d3 {
-  display: none;
+.intro-text > p:not(.general) {
+  opacity: 0;
+  translate: 0 0.25em;
+  pointer-events: none;
 }
-#intro p.general {
-  display: flex;
-  justify-content: center;
+#intro:has(#forge article:hover) .general {
+  opacity: 0;
 }
-#intro p.general:has(~ section > article:hover) {
-  display: none;
+#intro:has(.a1:hover) .d1,
+#intro:has(.a2:hover) .d2,
+#intro:has(.a3:hover) .d3 {
+  opacity: 1;
+  translate: 0 0;
 }
-#intro p.d1:has(~ section > article.a1:hover),
-#intro p.d2:has(~ section > article.a2:hover),
-#intro p.d3:has(~ section > article.a3:hover) {
-  display: inline-block;
-}
-#intro > p b,
-#intro > p h3 {
+.intro-text b {
   background-color: rgba(40, 0, 119, 0.4);
   color: rgb(255, 255, 255);
   font-weight: normal;
