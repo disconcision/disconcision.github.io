@@ -279,3 +279,10 @@
   window.addEventListener("load", label);
   label();
 })();
+
+// The footer's "updated" date follows the newest news entry
+(function () {
+  const newest = document.querySelector("#newsfeed dt");
+  const updated = document.querySelector("footer .updated");
+  if (newest && updated) updated.textContent = (newest.dataset.full || newest.textContent).trim().toLowerCase();
+})();
