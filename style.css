@@ -901,13 +901,22 @@ section#newsfeed dl dt {
   font-size: 0.75em;
   white-space: nowrap;
 }
-/* the year prints once per year (kept for screen readers, just not shown);
-   a repeated month dims */
-section#newsfeed dt.same-year .yr {
-  color: transparent;
+/* each year gets a heading (added by script.js), with a rule across the
+   entry column; the entries under it show just the month */
+section#newsfeed dt.year {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+  color: white;
+  letter-spacing: 0.08em;
 }
-section#newsfeed dt.same-month .mo {
-  opacity: 0.35;
+section#newsfeed dt.year:not(:first-child) {
+  margin-top: 0.8em;
+}
+section#newsfeed dt.year::after {
+  content: "";
+  border-top: 1px solid rgba(0, 235, 255, 0.3);
 }
 section#newsfeed dl dd {
   margin: 0;

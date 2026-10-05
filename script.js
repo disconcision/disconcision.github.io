@@ -223,22 +223,21 @@
   }
 })();
 
-// Newsfeed dates as a ledger: each year printed once, repeated months dimmed.
+// Newsfeed dates: a heading for each year, then just the month on each entry.
 // The markup stays <dt>Month YYYY</dt>; this only changes how it's shown.
 (function () {
   let prevYear = null;
-  let prevKey = null;
   document.querySelectorAll("#newsfeed dt").forEach((dt) => {
     const m = dt.textContent.trim().match(/^([A-Za-z]+)\.?\s+(\d{4})$/);
     if (!m) return;
-    const mo = m[1].slice(0, 3);
-    const yr = m[2];
-    dt.dataset.full = m[1] + " " + yr;
-    dt.innerHTML = '<span class="mo">' + mo + '</span> <span class="yr">' + yr + "</span>";
-    if (yr === prevYear) dt.classList.add("same-year");
-    if (mo + " " + yr === prevKey) dt.classList.add("same-month");
-    prevYear = yr;
-    prevKey = mo + " " + yr;
+    dt.dataset.full = m[1] + " " + m[2];
+    dt.textContent = m[1].slice(0, 3);
+    if (m[2] !== prevYear) {
+      const year = document.createElement("dt");
+      year.className = "year";
+      year.textContent = prevYear = m[2];
+      dt.before(year);
+    }
   });
 })();
 
@@ -276,7 +275,7 @@
 
 // The footer's "updated" date follows the newest news entry
 (function () {
-  const newest = document.querySelector("#newsfeed dt");
+  const newest = document.querySelector("#newsfeed dt:not(.year)");
   const updated = document.querySelector("footer .updated");
   if (newest && updated) updated.textContent = (newest.dataset.full || newest.textContent).trim().toLowerCase();
 })();
