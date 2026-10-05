@@ -1180,10 +1180,14 @@ footer a:hover {
   }
   nav > a {
     gap: 0.5em;
+    /* rows tall enough to tap */
+    padding-block: 0.55em;
   }
   nav > a:nth-child(3n + 1) { padding-left: 0.8em; }
   nav > a:nth-child(3n + 2) { padding-inline: 0.3em; }
   nav > a:nth-child(3n) { padding-right: 0.5em; }
+  nav > a:nth-child(-n + 3) { padding-top: 0.9em; }
+  nav > a:nth-last-child(-n + 3) { padding-bottom: 0.9em; }
 
   .intro-text {
     padding: 0 1.4em;
@@ -1280,5 +1284,11 @@ footer a:hover {
   main > section#news img,
   main > section#news video {
     width: 8em;
+  }
+}
+
+@media (max-width: 360px) {
+  nav {
+    font-size: 1em;
   }
 }
