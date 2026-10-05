@@ -1189,37 +1189,73 @@ footer a:hover {
   nav > a:nth-child(-n + 3) { padding-top: 0.9em; }
   nav > a:nth-last-child(-n + 3) { padding-bottom: 0.9em; }
 
-  .intro-text {
-    padding: 0 1.4em;
-  }
-  .intro-text > p {
-    font-size: 1.05em;
-  }
   .intro-text br,
   section#newsfeed br {
     display: none;
   }
 
-  #intro > section#forge {
-    padding: 0.5em 0.6em 0;
+  /* phones can't hover, so each pillar's paragraph would stay hidden until
+     tapped: give every pillar its own row, beside its paragraph. A tap
+     still lights the forge. */
+  #intro {
+    display: grid;
+    grid-template-columns: 6.4em 1fr;
+    gap: 1.7em 1.1em;
+    padding: 1.8em 1.3em 2.2em 1em;
   }
+  .intro-text,
+  #intro > section#forge {
+    display: contents;
+  }
+  .intro-text > p {
+    grid-area: auto;
+    font-size: 1em;
+    line-height: 1.45em;
+  }
+  .intro-text > p.general {
+    grid-column: 1 / -1;
+    font-size: 1.05em;
+    padding: 0 0.3em;
+  }
+  .intro-text > p:not(.general),
+  #intro:has(#forge article:hover) .general {
+    opacity: 1;
+    translate: none;
+    pointer-events: auto;
+  }
+  .intro-text > p:not(.general) {
+    grid-column: 2;
+    align-self: center;
+  }
+  #intro > section#forge > article {
+    grid-column: 1;
+    gap: 0.5em;
+  }
+  #forge .a2, .intro-text .d2 { grid-row: 2; }
+  #forge .a1, .intro-text .d1 { grid-row: 3; }
+  #forge .a3, .intro-text .d3 { grid-row: 4; }
+
   #intro > section#forge img {
     width: 6.4em;
   }
   #intro > section#forge > article b {
-    font-size: 1.05em;
+    font-size: 0.95em;
     white-space: nowrap;
   }
   #intro > section#forge article:hover img,
   #intro > section#forge > article:hover:first-child img,
   #intro > section#forge > article:hover:last-child img {
-    scale: 1.35;
+    scale: 1.12;
     translate: 0;
   }
   #intro > section#forge article:hover b,
   #intro > section#forge > article:hover:first-child b,
   #intro > section#forge > article:hover:last-child b {
-    translate: 0 2.4em;
+    translate: 0 0.5em;
+  }
+  /* the fire reaches down behind the taller, stacked forge */
+  body > .container::before {
+    height: 50em;
   }
 
   main > section#newsfeed {
