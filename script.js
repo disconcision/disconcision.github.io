@@ -222,3 +222,41 @@
     updateInteractiveState();
   }
 })();
+
+// Newsfeed: a measured expand, a count of what's hidden, and a way back up
+(function () {
+  const feed = document.getElementById("newsfeed");
+  const dl = feed && feed.querySelector("dl");
+  const btn = feed && feed.querySelector(".feed-more");
+  if (!dl || !btn) return;
+
+  const hidden = () =>
+    [...dl.querySelectorAll("dd")].filter((dd) => dd.offsetTop - dl.offsetTop + dd.offsetHeight > dl.clientHeight + 4).length;
+
+  function label() {
+    const open = feed.classList.contains("open");
+    const n = hidden();
+    btn.textContent = open ? "less" : n ? n + " more" : "more";
+  }
+
+  btn.addEventListener("click", () => {
+    const open = !feed.classList.contains("open");
+    feed.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    if (open) {
+      dl.style.height = dl.scrollHeight + "px";
+    } else {
+      dl.style.height = "";
+      // don't strand the reader far below a list that just collapsed
+      const top = feed.getBoundingClientRect().top;
+      if (top < 0) window.scrollBy({ top: top - 24, behavior: "smooth" });
+    }
+    label();
+  });
+
+  window.addEventListener("resize", () => {
+    if (feed.classList.contains("open")) dl.style.height = dl.scrollHeight + "px";
+  });
+  window.addEventListener("load", label);
+  label();
+})();

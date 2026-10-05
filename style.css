@@ -842,7 +842,6 @@ main > section#news article:hover > p > span {
 /* NEWSFEED */
 
 main > section#newsfeed {
-  display: flex;
   padding: 1.5em 2.5em 2.5em 2.5em;
   background-color: rgb(9 55 69);
   border-radius: 0.3em 3.5em 1em 0.3em;
@@ -852,59 +851,55 @@ main > section#newsfeed {
   color: white;
   border-bottom: 0.3px solid #5dffb0;
 }
-section#newsfeed label {
-  width: 90%;
-  text-align: right;
-  font-family: "Open Sans", "Courier New", monospace;
+/* the expand button: script.js measures the list and counts what's hidden */
+.feed-more {
   position: absolute;
+  right: 2.2em;
+  bottom: 0.7em;
+  padding: 0.5em 0.7em;
+  border: 0;
+  background: none;
   color: #00ffdf;
-  padding: 1.4em;
-  bottom: 0;
-  font-size: 0.6em;
+  font-family: "Open Sans", "Courier New", monospace;
+  font-size: 0.68em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   cursor: pointer;
 }
-section#newsfeed label:hover {
+.feed-more:hover {
   color: white;
-}
-section#newsfeed input {
-  display: none;
-}
-section#newsfeed label:after {
-  content: "MORE";
-}
-section#newsfeed input:checked + label:after {
-  content: "LESS";
-}
-section#newsfeed input:checked ~ dl {
-  height: 84.5em;
 }
 
 main > section#newsfeed:hover {
   border-radius: 1.6em 7.5em 2.4em 3.6em;
 }
 
+/* dates and entries on a two-column grid; the last visible line fades
+   out instead of being sliced in half */
 section#newsfeed dl {
+  display: grid;
+  grid-template-columns: 4.93em 1fr;
+  column-gap: 1.77em;
+  row-gap: 0.5em;
   line-height: 1.4em;
   margin: 0;
   height: 17em;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.45s cubic-bezier(0.3, 0.7, 0.2, 1);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 3.2em), transparent);
+}
+section#newsfeed.open dl {
+  mask-image: none;
 }
 section#newsfeed dl dt {
-  width: 10%;
   color: #00ebff;
-  display: inline-block;
-  vertical-align: top;
   text-align: right;
-  margin-right: 2em;
   font-variant: oldstyle-nums;
   font-size: 0.75em;
+  white-space: nowrap;
 }
 section#newsfeed dl dd {
-  margin-inline-start: 0;
-  width: 85%;
-  display: inline-block;
-  margin-bottom: 0.5em;
+  margin: 0;
 }
 section#newsfeed dl a {
   color: #b9e2ff;
