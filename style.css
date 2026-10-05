@@ -1117,3 +1117,156 @@ footer a:hover {
   background: none;
   background-color: var(--highlight-color);
 }
+
+/* NARROW SCREENS
+   Everything is sized in em, so between tablet and desktop the whole
+   column simply scales with the window; below 700px it restacks for phones. */
+
+@media (max-width: 1030px) {
+  body > .container {
+    font-size: calc((100vw - 40px) / 61.7);
+    margin-inline: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+
+  body > .container {
+    font-size: 14px;
+    margin: 0.6em;
+    border-radius: 2.5em 4.5em 1.6em 1.6em;
+  }
+
+  header {
+    grid-template-columns: 7.5em 1fr;
+    grid-template-rows: 4.2em 1fr;
+    border-radius: 0.8em 4.5em 0.7em 0.3em;
+  }
+  header:hover {
+    border-radius: 2.5em 4.5em 1em 1.2em;
+  }
+  header > .portrait {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  header > h1 {
+    font-size: clamp(1.6em, 7.2vw, 2.6em);
+    white-space: nowrap;
+    padding-left: 0.3em;
+  }
+  header > h2 {
+    font-size: 1.15em;
+    padding-left: 0.5em;
+  }
+
+  nav {
+    font-size: 1.15em;
+    padding-left: 0.2em;
+  }
+  nav > a {
+    gap: 0.5em;
+  }
+  nav > a:nth-child(3n + 1) { padding-left: 0.8em; }
+  nav > a:nth-child(3n + 2) { padding-inline: 0.3em; }
+  nav > a:nth-child(3n) { padding-right: 0.5em; }
+
+  .intro-text {
+    padding: 0 1.4em;
+  }
+  .intro-text > p {
+    font-size: 1.05em;
+  }
+  .intro-text br,
+  section#newsfeed br {
+    display: none;
+  }
+
+  #intro > section#forge {
+    padding: 0.5em 0.6em 0;
+  }
+  #intro > section#forge img {
+    width: 6.4em;
+  }
+  #intro > section#forge > article b {
+    font-size: 1.05em;
+    white-space: nowrap;
+  }
+  #intro > section#forge article:hover img,
+  #intro > section#forge > article:hover:first-child img,
+  #intro > section#forge > article:hover:last-child img {
+    scale: 1.35;
+    translate: 0;
+  }
+  #intro > section#forge article:hover b,
+  #intro > section#forge > article:hover:first-child b,
+  #intro > section#forge > article:hover:last-child b {
+    translate: 0 2.4em;
+  }
+
+  main > section#newsfeed {
+    padding: 1.2em 1.2em 2.4em;
+  }
+  section#newsfeed dl {
+    grid-template-columns: 4.6em 1fr;
+    column-gap: 0.9em;
+    font-size: 1em;
+  }
+
+  main > p {
+    padding: 1.4em 1.8em;
+    font-size: 1.05em;
+  }
+
+  main > section#projects > article#fructure,
+  main > section#projects > article#context-patterns,
+  main > section#projects > article#depthop {
+    display: flex;
+    flex-direction: column;
+  }
+  main > section#projects > article#fructure .videolink {
+    order: -1;
+    height: 3em;
+  }
+  main > section#projects > article#fructure .videolink a {
+    font-size: 1em;
+    padding-right: 0.8em;
+  }
+  main > section#projects > article#fructure .videolink .scrot {
+    display: none;
+  }
+  main > section#projects figure,
+  main > section#projects > article#fructure figure {
+    height: 11em;
+    overflow: hidden;
+    border-radius: 2em;
+  }
+  main > section#projects > article figure img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 2em;
+  }
+  main > section#projects .container {
+    grid-template-columns: 3em 1fr 2.6em;
+    padding-bottom: 1.4em;
+  }
+  main > section#projects .container h1 {
+    font-size: 2em;
+  }
+  main > section#projects .container h2 {
+    font-size: 1.05em;
+  }
+
+  main > section#news {
+    flex-direction: column;
+    padding: 1em;
+  }
+  main > section#news img,
+  main > section#news video {
+    width: 8em;
+  }
+}
