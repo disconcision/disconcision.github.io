@@ -337,6 +337,13 @@ nav > a {
   height: fit-content;
 }
 
+/* the staggered padding that used to be inline on every link */
+nav > a:nth-child(3n + 1) { padding-left: 1.5em; }
+nav > a:nth-child(3n + 2) { padding-inline: 0.75em; }
+nav > a:nth-child(3n) { padding-right: 1.5em; }
+nav > a:nth-child(-n + 3) { padding-top: 0.6em; }
+nav > a:nth-last-child(-n + 3) { padding-bottom: 0.6em; }
+
 nav > a:hover {
   /*cursor: url("images/chefskiss.png"), default;*/
   background: none;
