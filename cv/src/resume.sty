@@ -1,0 +1,119 @@
+% resume.sty
+
+% Copyright (c) 2012 Cies Breijs
+%
+% The MIT License
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+% This is a heavily modified version of Cies' original template.
+% The original is available: https://github.com/cies/resume
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{accent}{rgb}{0.0, 0.72, 0.67}
+\definecolor{mygray}{gray}{0.6}
+\definecolor{titlegray}{gray}{0}
+\hypersetup{colorlinks,linkcolor={accent},citecolor={accent},urlcolor={accent}}
+
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+% palatino-style serif, with old-style figures (osf) so digits in dates
+% have ascenders/descenders instead of sitting uniformly on the baseline
+\usepackage[osf]{newpxtext}
+
+% Experimental:
+%   \usepackage{tgpagella}                 % TeX Gyre Pagella (lining figures)
+%   \usepackage[ScaleRM=1.08]{libertinus}  % Libertinus Serif at 1.08 scale
+
+% typographic refinements (font expansion + character protrusion).
+\usepackage[expansion,protrusion]{microtype}
+
+%%% DOCUMENT WIDE
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\xspaceskip7pt  % more spacing between sentences
+\sloppy  % prefer wider word spacing over text poking past the right margin
+
+%%% COMMANDS
+
+% main title: name + date in the top-right corner
+% The date is set in a deliberately zero-height \vbox so it floats in the
+% top-right corner without taking vertical space; the local \vfuzz silences
+% the (harmless, expected) "overfull \vbox" report this trick provokes.
+\newcommand\maintitle[2]{%
+  \begingroup\vfuzz\maxdimen
+  \vbox to 0pt{\hfill\emph{\textcolor{mygray}{#2}}}%
+  \endgroup
+\vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}}
+
+% titles for root sections
+\newcommand*\roottitle[1]{
+\subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}
+
+% boolean switch toggling fontawesome icons on/off, in both the section
+% titles and the contact line (see \contact / \atsep below)
+\newif\ifshowicons
+\showiconsfalse  % \showiconstrue to show icons, \showiconsfalse to hide
+\newcommand{\icon}[1]{\ifshowicons #1\fi}
+
+% section title: title + optional (toggleable) icon
+\newcommand{\sectiontitle}[2]{\roottitle{#1\hspace{0.1cm}\icon{#2}}}
+
+% pretty bullet. includes surrounding spacing
+\newcommand*\sbull{\ \ $\boldsymbol{\cdot}$ \ \ }
+
+\newcommand{\contacticon}[1]{\raisebox{-0.35ex}{#1}}
+\newcommand{\contact}[3]{\ifshowicons\hspace{0.5cm}\contacticon{#1}~\else\sbull\fi\href{#2}{#3}}
+\newcommand{\atsep}{\ifshowicons~\contacticon{\faAt}~\else{\,@\,}\fi}
+
+% it seems not to work when simply using \parindent...
+\newlength{\newparindent}
+\addtolength{\newparindent}{\parindent}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}%
+{
+  \begin{list}{}%
+    {\setlength{\leftmargin}{\newparindent}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}%
+  }
+  {
+\end{list}}
+
+\newcommand{\bodytext}[1]{\nopagebreak[4]
+  \begin{indentsection}
+  \item[]#1
+\end{indentsection}\pagebreak[2]}
+
+% cv entry: bold title, meta line, optional indented body
+\NewDocumentCommand{\headedsubsection}{s m m +g}{%
+  \nopagebreak[4]
+  \begin{indentsection}
+  \item[]%
+    \textbf{#2}%
+    \IfBooleanTF{#1}{{\sbull #3}}{\emph{\textcolor{mygray}{\sbull #3}}}%
+    \IfValueT{#4}{\bodytext{#4}}%
+\end{indentsection}\nopagebreak[4]}
+
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
