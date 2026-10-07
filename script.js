@@ -132,6 +132,38 @@
     showLockedHint();
   });
 
+  // Book titles: each spine's link carries its title as an aria-label,
+  // shown as its crate's tooltip, centred over the spine
+  books.addEventListener("mouseover", (e) => {
+    const link = e.target.closest("svg a");
+    if (!link) return;
+    const box = link.getBBox();
+    const width = link.ownerSVGElement.viewBox.baseVal.width;
+    const crate = link.closest(".book-crate");
+    crate.dataset.tooltip = link.getAttribute("aria-label");
+    crate.style.setProperty("--tooltip-x", ((box.x + box.width / 2) / width) * 100 + "%");
+  });
+  books.addEventListener("mouseout", (e) => {
+    const link = e.target.closest("svg a");
+    if (link && !link.contains(e.relatedTarget)) link.closest(".book-crate").dataset.tooltip = "";
+  });
+
+  // The crate photos load small (images/books/small/), which is all the
+  // shelf needs at its resting size. The full-size ones are fetched the
+  // first time a mouse reaches the shelf (only a mouse can drag it bigger),
+  // and each is swapped in once decoded, so the swap only sharpens it.
+  let fullSize = false;
+  books.addEventListener("pointerenter", (e) => {
+    if (fullSize || e.pointerType !== "mouse") return;
+    fullSize = true;
+    books.querySelectorAll(".book-crate img").forEach((img) => {
+      const full = img.getAttribute("src").replace("/small/", "/");
+      const big = new Image();
+      big.src = full;
+      big.decode().then(() => (img.src = full), () => {});
+    });
+  });
+
   // Track clicked book link for click-vs-drag detection
   let clickedBookLink = null;
 
