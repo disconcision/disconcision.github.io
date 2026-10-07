@@ -21,6 +21,12 @@ Located in `index.html` within `<section id="newsfeed">`. Uses a definition list
 </dd>
 ```
 
+## CV
+
+- `cv/index.html` - the HTML CV, edited by hand
+- `cv/src/` - the LaTeX source (`resume.tex`, `resume.sty`); `make -C cv/src` builds `cv/andrewblinncv.pdf` (needs latexmk)
+- Keep the two in step. The PDF is dated with `\today`, so update the date in `cv/index.html` when rebuilding it.
+
 ## Branch Preview Process
 
 When working on a branch, use **raw.githack.com** to preview changes before merging:
