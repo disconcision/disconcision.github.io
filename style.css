@@ -513,8 +513,7 @@ body > .container:has(#intro:hover)::before {
   padding: 0.4em;
 }
 
-#intro > section#forge img,
-video {
+#intro > section#forge img {
   transition: scale 0.3s ease-in-out, border-radius 0.3s ease-in-out,
     translate 0.3s ease-in-out;
   z-index: 2;
@@ -805,7 +804,7 @@ main > section#news > article p {
 }
 
 main > section#news img,
-video {
+main > section#news video {
   transition: all 0.2s ease-out;
   width: 13em;
   border-radius: 7.5em;
