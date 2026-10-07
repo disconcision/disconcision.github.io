@@ -138,6 +138,13 @@ a:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
 
+/* keyboard focus gets the same signal as hover */
+a:focus-visible {
+  outline: 2px solid #23d5ab;
+  outline-offset: 3px;
+  border-radius: 0.15em 0.6em 0.15em 0.4em;
+}
+
 h2 a:hover {
   border-radius: 0.1em 0.8em 0.1em 0.4em;
   background-size: 400% 400%;
@@ -330,6 +337,13 @@ nav > a {
   height: fit-content;
 }
 
+/* the staggered padding that used to be inline on every link */
+nav > a:nth-child(3n + 1) { padding-left: 1.5em; }
+nav > a:nth-child(3n + 2) { padding-inline: 0.75em; }
+nav > a:nth-child(3n) { padding-right: 1.5em; }
+nav > a:nth-child(-n + 3) { padding-top: 0.6em; }
+nav > a:nth-last-child(-n + 3) { padding-bottom: 0.6em; }
+
 nav > a:hover {
   /*cursor: url("images/chefskiss.png"), default;*/
   background: none;
@@ -429,13 +443,21 @@ body > .container:has(#intro:hover)::before {
   padding-bottom: 2em;
 }
 
-#intro > p {
+/* the four intro paragraphs share one grid cell and crossfade, so hovering
+   a pillar doesn't reflow the pillars under the cursor */
+.intro-text {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 0 4em;
+}
+
+.intro-text > p {
+  grid-area: 1 / 1;
   font-size: 1.3em;
-  padding: 0 4em 0 4em;
   color: white;
   line-height: 1.5em;
-  /* background-color: rgb(173, 221, 236); */
-  /* text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; */
+  transition: opacity 0.3s ease, translate 0.3s ease;
 }
 
 #intro > section#forge {
@@ -540,25 +562,21 @@ video {
   translate: 0 6.3em;
 }
 
-p.d1,
-p.d2,
-p.d3 {
-  display: none;
+.intro-text > p:not(.general) {
+  opacity: 0;
+  translate: 0 0.25em;
+  pointer-events: none;
 }
-#intro p.general {
-  display: flex;
-  justify-content: center;
+#intro:has(#forge article:hover) .general {
+  opacity: 0;
 }
-#intro p.general:has(~ section > article:hover) {
-  display: none;
+#intro:has(.a1:hover) .d1,
+#intro:has(.a2:hover) .d2,
+#intro:has(.a3:hover) .d3 {
+  opacity: 1;
+  translate: 0 0;
 }
-#intro p.d1:has(~ section > article.a1:hover),
-#intro p.d2:has(~ section > article.a2:hover),
-#intro p.d3:has(~ section > article.a3:hover) {
-  display: inline-block;
-}
-#intro > p b,
-#intro > p h3 {
+.intro-text b {
   background-color: rgba(40, 0, 119, 0.4);
   color: rgb(255, 255, 255);
   font-weight: normal;
@@ -686,7 +704,7 @@ section#books.interactive
 
 /* Hint tooltip for bookshelf discoverability */
 .books-hint {
-  position: fixed;
+  position: absolute;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.8);
   color: #b5f8fb;
@@ -824,7 +842,6 @@ main > section#news article:hover > p > span {
 /* NEWSFEED */
 
 main > section#newsfeed {
-  display: flex;
   padding: 1.5em 2.5em 2.5em 2.5em;
   background-color: rgb(9 55 69);
   border-radius: 0.3em 3.5em 1em 0.3em;
@@ -834,59 +851,75 @@ main > section#newsfeed {
   color: white;
   border-bottom: 0.3px solid #5dffb0;
 }
-section#newsfeed label {
-  width: 90%;
-  text-align: right;
-  font-family: "Open Sans", "Courier New", monospace;
+/* the expand button: script.js measures the list and counts what's hidden */
+.feed-more {
   position: absolute;
+  right: 2.2em;
+  bottom: 0.7em;
+  padding: 0.5em 0.7em;
+  border: 0;
+  background: none;
   color: #00ffdf;
-  padding: 1.4em;
-  bottom: 0;
-  font-size: 0.6em;
+  font-family: "Open Sans", "Courier New", monospace;
+  font-size: 0.68em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   cursor: pointer;
 }
-section#newsfeed label:hover {
+.feed-more:hover {
   color: white;
-}
-section#newsfeed input {
-  display: none;
-}
-section#newsfeed label:after {
-  content: "MORE";
-}
-section#newsfeed input:checked + label:after {
-  content: "LESS";
-}
-section#newsfeed input:checked ~ dl {
-  height: 84.5em;
 }
 
 main > section#newsfeed:hover {
   border-radius: 1.6em 7.5em 2.4em 3.6em;
 }
 
+/* dates and entries on a two-column grid; the last visible line fades
+   out instead of being sliced in half */
 section#newsfeed dl {
+  display: grid;
+  grid-template-columns: 4.93em 1fr;
+  column-gap: 1.77em;
+  row-gap: 0.5em;
   line-height: 1.4em;
   margin: 0;
   height: 17em;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.45s cubic-bezier(0.3, 0.7, 0.2, 1);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 3.2em), transparent);
+  /* so that collapsing from far down keeps the button under the cursor:
+     scroll anchoring then pins something below the list, not inside it */
+  overflow-anchor: none;
+}
+section#newsfeed.open dl {
+  mask-image: none;
 }
 section#newsfeed dl dt {
-  width: 10%;
   color: #00ebff;
-  display: inline-block;
-  vertical-align: top;
   text-align: right;
-  margin-right: 2em;
   font-variant: oldstyle-nums;
   font-size: 0.75em;
+  white-space: nowrap;
+}
+/* each year gets a heading (added by script.js), with a rule across the
+   entry column; the entries under it show just the month */
+section#newsfeed dt.year {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+  color: white;
+  letter-spacing: 0.08em;
+}
+section#newsfeed dt.year:not(:first-child) {
+  margin-top: 0.8em;
+}
+section#newsfeed dt.year::after {
+  content: "";
+  border-top: 1px solid rgba(0, 235, 255, 0.3);
 }
 section#newsfeed dl dd {
-  margin-inline-start: 0;
-  width: 85%;
-  display: inline-block;
-  margin-bottom: 0.5em;
+  margin: 0;
 }
 section#newsfeed dl a {
   color: #b9e2ff;
@@ -1095,4 +1128,203 @@ footer a:hover {
   border-radius: 0.2em;
   background: none;
   background-color: var(--highlight-color);
+}
+
+/* NARROW SCREENS
+   Everything is sized in em, so between tablet and desktop the whole
+   column simply scales with the window; below 700px it restacks for phones. */
+
+@media (max-width: 1030px) {
+  body > .container {
+    font-size: calc((100vw - 40px) / 61.7);
+    margin-inline: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+
+  body > .container {
+    font-size: 14px;
+    margin: 0.6em;
+    border-radius: 2.5em 4.5em 1.6em 1.6em;
+  }
+
+  header {
+    grid-template-columns: 7.5em 1fr;
+    grid-template-rows: 4.2em 1fr;
+    border-radius: 0.8em 4.5em 0.7em 0.3em;
+  }
+  header:hover {
+    border-radius: 2.5em 4.5em 1em 1.2em;
+  }
+  header > .portrait {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  header > h1 {
+    font-size: clamp(1.6em, 7.2vw, 2.6em);
+    white-space: nowrap;
+    padding-left: 0.3em;
+  }
+  header > h2 {
+    font-size: 1.15em;
+    padding-left: 0.5em;
+  }
+
+  nav {
+    font-size: 1.15em;
+    padding-left: 0.2em;
+  }
+  nav > a {
+    gap: 0.5em;
+    /* rows tall enough to tap */
+    padding-block: 0.55em;
+  }
+  nav > a:nth-child(3n + 1) { padding-left: 0.8em; }
+  nav > a:nth-child(3n + 2) { padding-inline: 0.3em; }
+  nav > a:nth-child(3n) { padding-right: 0.5em; }
+  nav > a:nth-child(-n + 3) { padding-top: 0.9em; }
+  nav > a:nth-last-child(-n + 3) { padding-bottom: 0.9em; }
+
+  .intro-text br,
+  section#newsfeed br {
+    display: none;
+  }
+
+  /* phones can't hover, so each pillar's paragraph would stay hidden until
+     tapped: give every pillar its own row, beside its paragraph. A tap
+     still lights the forge. */
+  #intro {
+    display: grid;
+    grid-template-columns: 6.4em 1fr;
+    gap: 1.7em 1.1em;
+    padding: 1.8em 1.3em 2.2em 1em;
+  }
+  .intro-text,
+  #intro > section#forge {
+    display: contents;
+  }
+  .intro-text > p {
+    grid-area: auto;
+    font-size: 1em;
+    line-height: 1.45em;
+  }
+  .intro-text > p.general {
+    grid-column: 1 / -1;
+    font-size: 1.05em;
+    padding: 0 0.3em;
+  }
+  .intro-text > p:not(.general),
+  #intro:has(#forge article:hover) .general {
+    opacity: 1;
+    translate: none;
+    pointer-events: auto;
+  }
+  .intro-text > p:not(.general) {
+    grid-column: 2;
+    align-self: center;
+  }
+  #intro > section#forge > article {
+    grid-column: 1;
+    gap: 0.5em;
+  }
+  #forge .a2, .intro-text .d2 { grid-row: 2; }
+  #forge .a1, .intro-text .d1 { grid-row: 3; }
+  #forge .a3, .intro-text .d3 { grid-row: 4; }
+
+  #intro > section#forge img {
+    width: 6.4em;
+  }
+  #intro > section#forge > article b {
+    font-size: 0.95em;
+    white-space: nowrap;
+  }
+  #intro > section#forge article:hover img,
+  #intro > section#forge > article:hover:first-child img,
+  #intro > section#forge > article:hover:last-child img {
+    scale: 1.12;
+    translate: 0;
+  }
+  #intro > section#forge article:hover b,
+  #intro > section#forge > article:hover:first-child b,
+  #intro > section#forge > article:hover:last-child b {
+    translate: 0 0.5em;
+  }
+  /* the fire reaches down behind the taller, stacked forge */
+  body > .container::before {
+    height: 50em;
+  }
+
+  main > section#newsfeed {
+    padding: 1.2em 1.2em 2.4em;
+  }
+  section#newsfeed dl {
+    grid-template-columns: 4.6em 1fr;
+    column-gap: 0.9em;
+    font-size: 1em;
+  }
+
+  main > p {
+    padding: 1.4em 1.8em;
+    font-size: 1.05em;
+  }
+
+  main > section#projects > article#fructure,
+  main > section#projects > article#context-patterns,
+  main > section#projects > article#depthop {
+    display: flex;
+    flex-direction: column;
+  }
+  main > section#projects > article#fructure .videolink {
+    order: -1;
+    height: 3em;
+  }
+  main > section#projects > article#fructure .videolink a {
+    font-size: 1em;
+    padding-right: 0.8em;
+  }
+  main > section#projects > article#fructure .videolink .scrot {
+    display: none;
+  }
+  main > section#projects figure,
+  main > section#projects > article#fructure figure {
+    height: 11em;
+    overflow: hidden;
+    border-radius: 2em;
+  }
+  main > section#projects > article figure img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 2em;
+  }
+  main > section#projects .container {
+    grid-template-columns: 3em 1fr 2.6em;
+    padding-bottom: 1.4em;
+  }
+  main > section#projects .container h1 {
+    font-size: 2em;
+  }
+  main > section#projects .container h2 {
+    font-size: 1.05em;
+  }
+
+  main > section#news {
+    flex-direction: column;
+    padding: 1em;
+  }
+  main > section#news img,
+  main > section#news video {
+    width: 8em;
+  }
+}
+
+@media (max-width: 360px) {
+  nav {
+    font-size: 1em;
+  }
 }

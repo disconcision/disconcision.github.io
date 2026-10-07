@@ -54,11 +54,12 @@
     }
   }
 
-  // Position the hint at center of bookshelf
+  // Position the hint at center of bookshelf, in document coordinates, so
+  // it stays put on the shelf when the page scrolls
   function positionHint() {
     const booksRect = books.getBoundingClientRect();
-    hint.style.left = booksRect.left + booksRect.width / 2 + "px";
-    hint.style.top = booksRect.top + 8 + "px";
+    hint.style.left = booksRect.left + scrollX + booksRect.width / 2 + "px";
+    hint.style.top = booksRect.top + scrollY + 8 + "px";
   }
 
   // Update hint during drag - shows current lock state
@@ -220,4 +221,61 @@
     // Re-enable interactive mode after drag ends
     updateInteractiveState();
   }
+})();
+
+// Newsfeed dates: a heading for each year, then just the month on each entry.
+// The markup stays <dt>Month YYYY</dt>; this only changes how it's shown.
+(function () {
+  let prevYear = null;
+  document.querySelectorAll("#newsfeed dt").forEach((dt) => {
+    const m = dt.textContent.trim().match(/^([A-Za-z]+)\.?\s+(\d{4})$/);
+    if (!m) return;
+    dt.dataset.full = m[1] + " " + m[2];
+    dt.textContent = m[1].slice(0, 3);
+    if (m[2] !== prevYear) {
+      const year = document.createElement("dt");
+      year.className = "year";
+      year.textContent = prevYear = m[2];
+      dt.before(year);
+    }
+  });
+})();
+
+// Newsfeed: a measured expand, and a count of what's hidden
+(function () {
+  const feed = document.getElementById("newsfeed");
+  const dl = feed && feed.querySelector("dl");
+  const btn = feed && feed.querySelector(".feed-more");
+  if (!dl || !btn) return;
+  const isOpen = () => feed.classList.contains("open");
+
+  // entries the collapsed list cuts off; only measurable while collapsed
+  let hidden = 0;
+  function update() {
+    if (!isOpen())
+      hidden = [...dl.querySelectorAll("dd")].filter((dd) => dd.offsetTop - dl.offsetTop + dd.offsetHeight > dl.clientHeight + 4).length;
+    btn.textContent = isOpen() ? "less" : hidden ? hidden + " more" : "more";
+  }
+
+  btn.addEventListener("click", () => {
+    const open = !isOpen();
+    feed.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    dl.style.height = open ? dl.scrollHeight + "px" : "";
+    btn.textContent = open ? "less" : hidden ? hidden + " more" : "more";
+  });
+  dl.addEventListener("transitionend", (e) => e.target === dl && update());
+  window.addEventListener("resize", () => {
+    if (isOpen()) dl.style.height = dl.scrollHeight + "px";
+    else update();
+  });
+  window.addEventListener("load", update);
+  update();
+})();
+
+// The footer's "updated" date follows the newest news entry
+(function () {
+  const newest = document.querySelector("#newsfeed dt:not(.year)");
+  const updated = document.querySelector("footer .updated");
+  if (newest && updated) updated.textContent = (newest.dataset.full || newest.textContent).trim().toLowerCase();
 })();
