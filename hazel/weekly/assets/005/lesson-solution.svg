@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="236" viewBox="0 0 936 236" role="img" aria-labelledby="title desc">
+<title id="title">Test the lesson with an answer</title>
+<desc id="desc">An author-provided optional solution is substituted for a tutorial lesson starter in the test suite. It is stitched to the same tests and all tests must pass. Students still receive the starter code.</desc>
+<path d="M6 10 L917 3 L934 215 L925 232 L23 227 L3 209 Z" fill="#e4e6cf"/>
+<text x="28" y="39" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">Test the lesson with an answer</text>
+<path d="M29 67 L271 62 L281 159 L275 170 L35 167 L27 154 Z" fill="#f4eddc"/>
+<text x="44" y="91" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="start">@solution</text>
+<text x="44" y="126" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Author supplies</text>
+<text x="44" y="153" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">a complete answer.</text>
+<path d="M342 67 L584 62 L594 159 L588 170 L348 167 L340 154 Z" fill="#f4eddc"/>
+<text x="357" y="91" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="start">Same lesson tests</text>
+<text x="357" y="126" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Stitch the answer</text>
+<text x="357" y="153" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">into the lesson.</text>
+<path d="M654 67 L896 62 L906 159 L900 170 L660 167 L652 154 Z" fill="#f4eddc"/>
+<text x="669" y="91" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="start">Every test passes</text>
+<text x="669" y="126" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Indeterminate is</text>
+<text x="669" y="153" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">a failed check, too.</text>
+<path d="M289 114 L329 114 M320 108 L329 114 L320 120" stroke="#50745b" stroke-width="2" fill="none" stroke-opacity="1"/>
+<path d="M603 114 L641 114 M632 108 L641 114 L632 120" stroke="#50745b" stroke-width="2" fill="none" stroke-opacity="1"/>
+<text x="30" y="206" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">Students still see @code. The optional solution is never shown.</text>
+</svg>

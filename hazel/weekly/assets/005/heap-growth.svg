@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="290" viewBox="0 0 936 290" role="img" aria-labelledby="title desc">
+<title id="title">What 160 caret moves leave behind</title>
+<desc id="desc">Author-reported heap growth after 160 caret moves and forced garbage collection, release build. Exercises derivation: 5.3MB before and 3.3MB after. Shadowing and Closures,14judgments: 11.2MB before and2.6MB after. Linear zero-based0–12MB axis.</desc>
+<path d="M6 10 L917 3 L934 269 L925 286 L23 281 L3 263 Z" fill="#e4e6cf"/>
+<text x="28" y="37" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">What 160 caret moves leave behind</text>
+<text x="28" y="64" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">Heap growth, MB · after forced garbage collection</text>
+<rect x="685" y="49" width="16" height="16" fill="#b83b25"/>
+<text x="708" y="63" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="start">Before</text>
+<rect x="797" y="49" width="16" height="16" fill="#50745b"/>
+<text x="820" y="63" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="start">After</text>
+<path d="M416 80 L416 231" stroke="#50745b" stroke-width="1" fill="none" stroke-opacity="0.26"/>
+<text x="416" y="249" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">0</text>
+<path d="M560 80 L560 231" stroke="#50745b" stroke-width="1" fill="none" stroke-opacity="0.26"/>
+<text x="560" y="249" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">4</text>
+<path d="M704 80 L704 231" stroke="#50745b" stroke-width="1" fill="none" stroke-opacity="0.26"/>
+<text x="704" y="249" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">8</text>
+<path d="M848 80 L848 231" stroke="#50745b" stroke-width="1" fill="none" stroke-opacity="0.26"/>
+<text x="848" y="249" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">12</text>
+<text x="29" y="114" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="start">Exercises derivation</text>
+<rect x="416" y="96" width="190.79999999999998" height="22" fill="#b83b25"/>
+<text x="598.8" y="114" fill="#f4eddc" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="end">5.3</text>
+<rect x="416" y="124" width="118.8" height="22" fill="#50745b"/>
+<text x="526.8" y="142" fill="#f4eddc" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="end">3.3</text>
+<text x="29" y="198" fill="#243c30" font-family="Rubik" font-size="22" font-weight="bold" text-anchor="start">Shadowing &amp; Closures</text>
+<text x="29" y="225" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">14 judgments</text>
+<rect x="416" y="180" width="403.2" height="22" fill="#b83b25"/>
+<text x="811.2" y="198" fill="#f4eddc" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="end">11.2</text>
+<rect x="416" y="208" width="93.60000000000001" height="22" fill="#50745b"/>
+<text x="501.6" y="226" fill="#f4eddc" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="end">2.6</text>
+<text x="29" y="271" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="start">Andrew’s release-build report · open #2644 · growth, not total heap</text>
+</svg>

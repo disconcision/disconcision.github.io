@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="248" viewBox="0 0 936 248" role="img" aria-labelledby="title desc">
+<title id="title">Start from one recorded invocation</title>
+<desc id="desc">Show steps on a sample of n * fact(n - 1) starts from the selected sample bindings. The source example selects n=1 and starts from 1 * fact(1 - 1). The stepper retains function values for that probe; moving the caret leaves its drawer open, editing closes it.</desc>
+<path d="M6 10 L917 3 L934 227 L925 244 L23 239 L3 221 Z" fill="#e4e6cf"/>
+<text x="28" y="39" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">Start from one recorded invocation</text>
+<path d="M29 69 L392 64 L402 146 L396 157 L35 154 L27 141 Z" fill="#f4eddc"/>
+<path d="M523 69 L896 64 L906 146 L900 157 L529 154 L521 141 Z" fill="#f4eddc"/>
+<text x="46" y="95" fill="#50745b" font-family="Rubik" font-size="19" font-weight="bold" text-anchor="start">PROBED EXPRESSION</text>
+<text x="46" y="132" fill="#243c30" font-family="Liberation Mono" font-size="26" font-weight="normal" text-anchor="start">n * fact(n - 1)</text>
+<text x="540" y="95" fill="#50745b" font-family="Rubik" font-size="19" font-weight="bold" text-anchor="start">SELECTED SAMPLE: n = 1</text>
+<text x="540" y="132" fill="#243c30" font-family="Liberation Mono" font-size="26" font-weight="normal" text-anchor="start">1 * fact(1 - 1)</text>
+<path d="M415 116 L509 116 M500 110 L509 116 L500 122" stroke="#50745b" stroke-width="2" fill="none" stroke-opacity="1"/>
+<text x="462" y="88" fill="#243c30" font-family="Rubik" font-size="18" font-weight="normal" text-anchor="middle">Show steps</text>
+<text x="30" y="193" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">The drawer steps that expression with the sample’s captured bindings.</text>
+<text x="30" y="226" fill="#243c30" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="start">Move the caret: it stays open.  Edit the program: it closes.</text>
+</svg>

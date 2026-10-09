@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="260" viewBox="0 0 936 260" role="img" aria-labelledby="title desc">
+<title id="title">A finger down is only the beginning</title>
+<desc id="desc">Touch-down commits nothing. Release in the same cell without movement completes a tap. Movement cancels the tap, preserving caret and selection while scrolling. A held touch opens the context menu.</desc>
+<path d="M6 10 L917 3 L934 239 L925 256 L23 251 L3 233 Z" fill="#e4e6cf"/>
+<text x="28" y="38" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">A finger down is only the beginning</text>
+<text x="28" y="68" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">Wait before moving the caret or opening the keyboard.</text>
+<path d="M29 91 L271 86 L281 201 L275 212 L35 209 L27 196 Z" fill="#f4eddc"/>
+<text x="44" y="114" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="start">TAP</text>
+<text x="44" y="143" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">Lift in the same cell</text>
+<text x="44" y="174" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">Move caret;</text>
+<text x="44" y="201" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">focus input.</text>
+<path d="M342 91 L584 86 L594 201 L588 212 L348 209 L340 196 Z" fill="#ead5c6"/>
+<text x="357" y="114" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="start">SCROLL</text>
+<text x="357" y="143" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">Finger moves</text>
+<text x="357" y="174" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">Cancel the tap;</text>
+<text x="357" y="201" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">keep the selection.</text>
+<path d="M654 91 L896 86 L906 201 L900 212 L660 209 L652 196 Z" fill="#f4eddc"/>
+<text x="669" y="114" fill="#50745b" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="start">HOLD</text>
+<text x="669" y="143" fill="#243c30" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">Keep the touch held</text>
+<text x="669" y="174" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">Open the</text>
+<text x="669" y="201" fill="#243c30" font-family="Rubik" font-size="22" font-weight="normal" text-anchor="start">context menu.</text>
+<text x="29" y="241" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="start">Draft phone stack: touch input and layout are still under development.</text>
+</svg>
