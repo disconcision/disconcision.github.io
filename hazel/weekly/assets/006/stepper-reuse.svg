@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="312" viewBox="0 0 936 312" role="img" aria-labelledby="title desc">
+<title id="title">Keep the earlier steps</title>
+<desc id="desc">Conceptual comparison of a stepper pass after adding a fourth step. Before: analyze all four step editors. After PR 2659: retain analysis for unchanged earlier steps and analyze the new step. Reuse requires editor, expression, settings, context and expected type to match.</desc>
+<path d="M6 8 L919 3 L927 12 L933 296 L925 309 L14 305 L3 292 Z" fill="#e4e6cf"/>
+<text x="28" y="40" fill="#243c30" font-family="Rubik" font-size="28" font-weight="bold" text-anchor="start">Keep the earlier steps</text>
+<text x="28" y="71" fill="#50745b" font-family="Rubik" font-size="20" font-weight="normal" text-anchor="start">After adding one more step</text>
+<text x="29" y="124" fill="#243c30" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="start">BEFORE</text>
+<path d="M238 96 L371 91 L379 100 L385 151 L377 164 L246 160 L235 147 Z" fill="#ead5c6"/>
+<text x="310.0" y="117" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 1</text>
+<text x="310.0" y="145" fill="#b83b25" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">analyze</text>
+<path d="M388 126 L401 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M395 120 L401 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M395 132 L401 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M410 96 L543 91 L551 100 L557 151 L549 164 L418 160 L407 147 Z" fill="#ead5c6"/>
+<text x="482.0" y="117" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 2</text>
+<text x="482.0" y="145" fill="#b83b25" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">analyze</text>
+<path d="M560 126 L573 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M567 120 L573 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M567 132 L573 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M582 96 L715 91 L723 100 L729 151 L721 164 L590 160 L579 147 Z" fill="#ead5c6"/>
+<text x="654.0" y="117" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 3</text>
+<text x="654.0" y="145" fill="#b83b25" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">analyze</text>
+<path d="M732 126 L745 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M739 120 L745 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M739 132 L745 126" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M754 96 L887 91 L895 100 L901 151 L893 164 L762 160 L751 147 Z" fill="#ead5c6"/>
+<text x="826.0" y="117" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 4</text>
+<text x="826.0" y="145" fill="#b83b25" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">analyze</text>
+<text x="29" y="216" fill="#243c30" font-family="Rubik" font-size="21" font-weight="bold" text-anchor="start">WITH #2659</text>
+<path d="M238 188 L371 183 L379 192 L385 243 L377 256 L246 252 L235 239 Z" fill="#f4eddc"/>
+<text x="310.0" y="209" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 1</text>
+<text x="310.0" y="237" fill="#50745b" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">reuse</text>
+<path d="M388 218 L401 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M395 212 L401 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M395 224 L401 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M410 188 L543 183 L551 192 L557 243 L549 256 L418 252 L407 239 Z" fill="#f4eddc"/>
+<text x="482.0" y="209" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 2</text>
+<text x="482.0" y="237" fill="#50745b" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">reuse</text>
+<path d="M560 218 L573 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M567 212 L573 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M567 224 L573 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M582 188 L715 183 L723 192 L729 243 L721 256 L590 252 L579 239 Z" fill="#f4eddc"/>
+<text x="654.0" y="209" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 3</text>
+<text x="654.0" y="237" fill="#50745b" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">reuse</text>
+<path d="M732 218 L745 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M739 212 L745 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M739 224 L745 218" fill="none" stroke="#50745b" stroke-width="2" opacity="1"/>
+<path d="M754 188 L887 183 L895 192 L901 243 L893 256 L762 252 L751 239 Z" fill="#ead5c6"/>
+<text x="826.0" y="209" fill="#243c30" font-family="Rubik" font-size="20" font-weight="bold" text-anchor="middle">Step 4</text>
+<text x="826.0" y="237" fill="#b83b25" font-family="Rubik" font-size="21" font-weight="normal" text-anchor="middle">analyze</text>
+<text x="29" y="286" fill="#243c30" font-family="Rubik" font-size="19" font-weight="normal" text-anchor="start">Changed editor, expression, settings, context or expected type? Analyze again.</text>
+</svg>
