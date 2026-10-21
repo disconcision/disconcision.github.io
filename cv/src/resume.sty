@@ -67,6 +67,13 @@
   \endgroup
 \vspace{-0.4em}\noindent{\huge \textbf{\textsc{#1}}}}
 
+% space above section titles: article's \subsection uses 3.25ex. 2ex is a
+% stopgap from Oct 2026 that keeps the CV on two pages with the Preprints
+% section. Go back to 3.25ex the next time something is added (and find the
+% room another way), or when the probes paper moves into Papers if accepted.
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-2ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}{\normalfont\large\bfseries}}
+
 % titles for root sections
 \newcommand*\roottitle[1]{
 \subsection*{\textsc{\textcolor{titlegray}{#1}}}\vspace{-0.4em}\nopagebreak[4]}
