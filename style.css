@@ -379,6 +379,49 @@ nav.bottom a {
   color: #b5f8fb;
 }
 
+/* the bottom nav is a labelled row of smaller links per group */
+nav.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  /* sized so the longest row ends about as far from the right edge as the labels start from the left */
+  font-size: 1.5em;
+  padding: 1em 1.5em 1.2em 2em;
+}
+nav.bottom > div {
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  align-items: baseline;
+}
+/* block, not flex, so the label's baseline is its text and not the arrow */
+nav.bottom h3 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #5b9fb8;
+}
+nav.bottom p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em 1.1em;
+  margin: 0;
+  font: inherit;
+}
+
+/* a row's one arrow does the header arrows' hover turn for any link in the row */
+nav.bottom h3 > .glyph {
+  width: 0.8em;
+  margin-right: 0.6em;
+  vertical-align: -0.1em;
+  transition: all;
+  transition-duration: 0.5s;
+  filter: invert(1) brightness(0.4) sepia(1) hue-rotate(136deg) saturate(5.5);
+}
+nav.bottom > div:has(a:hover, a:focus-visible) h3 > .glyph {
+  rotate: 180deg;
+  filter: invert(1) brightness(0.4) sepia(1) hue-rotate(306deg) saturate(9.5);
+}
+
 /* MAIN SECTIONS */
 
 main > p:hover {
@@ -1187,6 +1230,15 @@ footer a:hover {
   nav > a:nth-child(3n) { padding-right: 0.5em; }
   nav > a:nth-child(-n + 3) { padding-top: 0.9em; }
   nav > a:nth-last-child(-n + 3) { padding-bottom: 0.9em; }
+
+  nav.bottom {
+    font-size: 1.1em;
+    padding: 1em 1em 1.2em 1.2em;
+    gap: 0.6em;
+  }
+  nav.bottom > div { grid-template-columns: 1fr; gap: 0.2em; }
+  nav.bottom h3 > .glyph { margin-right: 0.4em; }
+  nav.bottom p { padding-left: 1.2em; gap: 0.2em 0.9em; }
 
   .intro-text br,
   section#newsfeed br {

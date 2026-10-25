@@ -273,7 +273,7 @@
   });
 })();
 
-// Newsfeed: a measured expand, and a count of what's hidden
+// Newsfeed: a measured expand
 (function () {
   const feed = document.getElementById("newsfeed");
   const dl = feed && feed.querySelector("dl");
@@ -281,33 +281,27 @@
   if (!dl || !btn) return;
   const isOpen = () => feed.classList.contains("open");
 
-  // entries the collapsed list cuts off; only measurable while collapsed
-  let hidden = 0;
-  function update() {
-    if (!isOpen())
-      hidden = [...dl.querySelectorAll("dd")].filter((dd) => dd.offsetTop - dl.offsetTop + dd.offsetHeight > dl.clientHeight + 4).length;
-    btn.textContent = isOpen() ? "less" : hidden ? hidden + " more" : "more";
-  }
-
   btn.addEventListener("click", () => {
     const open = !isOpen();
     feed.classList.toggle("open", open);
     btn.setAttribute("aria-expanded", String(open));
     dl.style.height = open ? dl.scrollHeight + "px" : "";
-    btn.textContent = open ? "less" : hidden ? hidden + " more" : "more";
+    btn.textContent = open ? "less" : "more";
   });
-  dl.addEventListener("transitionend", (e) => e.target === dl && update());
   window.addEventListener("resize", () => {
     if (isOpen()) dl.style.height = dl.scrollHeight + "px";
-    else update();
   });
-  window.addEventListener("load", update);
-  update();
 })();
 
-// The footer's "updated" date follows the newest news entry
+// The footer's "updated" date follows the newest news entry that isn't in the future
 (function () {
-  const newest = document.querySelector("#newsfeed dt:not(.year)");
+  const now = new Date();
+  const full = (dt) => (dt.dataset.full || dt.textContent).trim();
+  const notFuture = (dt) => {
+    const d = new Date(full(dt).replace(/^(\w+) (\d{4})$/, "$1 1, $2"));
+    return isNaN(d) || d <= now;
+  };
+  const newest = [...document.querySelectorAll("#newsfeed dt:not(.year)")].find(notFuture);
   const updated = document.querySelector("footer .updated");
-  if (newest && updated) updated.textContent = (newest.dataset.full || newest.textContent).trim().toLowerCase();
+  if (newest && updated) updated.textContent = full(newest).toLowerCase();
 })();

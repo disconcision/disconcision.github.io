@@ -16,10 +16,50 @@
 
   <title>andrew blinn</title>
 
-  <meta name="description"        content="I use programming language theory as a lens on UI design, trying to make engagement with abstractions more fluid, tangible, and fun" />
-  <meta property="og:description" content="I use programming language theory as a lens on UI design, trying to make engagement with abstractions more fluid, tangible, and fun" />
+  <meta name="description"        content="I use programming language theory to explore & explain user interfaces, making engagement with abstractions more tangible and more fun" />
+  <meta property="og:description" content="I use programming language theory to explore & explain user interfaces, making engagement with abstractions more tangible and more fun" />
   <meta property="og:title"       content="Andrew Blinn" />
   <meta property="og:image"       content="images/me/square-600.webp" />
+
+  <!-- JSON can't hold comments, so the sameAs groups are, in order:
+       the header links, the footer links, then profiles not linked on the page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrew Blinn",
+    "url": "https://andrewblinn.com/",
+    "image": "https://andrewblinn.com/images/me/square-600.webp",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Michigan" },
+    "sameAs": [
+      "https://github.com/disconcision",
+      "https://bsky.app/profile/disconcision.com",
+      "https://scholar.google.com/citations?user=OccotHkAAAAJ",
+      "https://twitter.com/disconcision",
+      "https://www.are.na/andrew-blinn",
+
+      "https://disconcision.com/",
+      "https://types.pl/@disconcision",
+      "https://instagram.com/disconcision",
+      "https://www.goodreads.com/disconcision",
+      "https://letterboxd.com/disconcision/",
+      "https://dl.acm.org/profile/99659746231",
+      "https://dblp.org/pid/295/3328.html",
+      "https://arxiv.org/a/blinn_a_1",
+      "https://orcid.org/0000-0001-6938-7379",
+      "https://conf.researchr.org/profile/conf/andrewblinn1",
+      "https://www.linkedin.com/in/andrewblinn/",
+
+      "https://huggingface.co/disconcision",
+      "https://openreview.net/profile?id=%7Eandrew_blinn1",
+      "https://www.researchgate.net/profile/Andrew-Blinn",
+      "https://news.ycombinator.com/user?id=disconcision",
+      "https://www.youtube.com/@disconcision",
+      "https://www.threads.net/@disconcision",
+      "https://www.pinterest.com/disconcision/"
+    ]
+  }
+  </script>
 </head>
 
 <body><div class=container>
@@ -32,14 +72,11 @@
 
   <nav>
     <a href="cv/"> <img class=glyph alt="" src="images/icons/noun-arrow-1621454.svg" /> <span>cv</span></a>
-    <a rel="me" href="https://twitter.com/disconcision"> <img class=glyph alt="" src="images/icons/noun-arrow-1621631.svg" /> <span>twitter</span></a>
-    <a rel="me" href="https://disconcision.com/"> <img class=glyph alt="" src="images/icons/noun-arrow-1621705.svg" /><span>tumblr</span></a>
-    <a rel="me" href="https://scholar.google.com/citations?user=OccotHkAAAAJ"> <img class=glyph alt="" src="images/icons/noun-arrow-1621725.svg" /> <span>papers</span></a>
-    <a rel="me" href="https://bsky.app/profile/disconcision.com"> <img class=glyph alt="" src="images/icons/noun-arrow-1621680.svg" /> <span>bluesky</span></a>
-    <a rel="me" href="https://www.are.na/andrew-blinn"> <img class=glyph alt="" src="images/icons/noun-arrow-1621563.svg" /> <span>are.na</span></a>
     <a rel="me" href="https://github.com/disconcision"> <img class=glyph alt="" src="images/icons/noun-arrow-1621741.svg" /><span>github</span></a>
-    <a rel="me" href="https://types.pl/@disconcision"> <img class=glyph alt="" src="images/icons/noun-arrow-1621740.svg" /><span>mastodon</span></a>
-    <a rel="me" href="https://instagram.com/disconcision"> <img class=glyph alt="" src="images/icons/noun-arrow-1621738.svg" /><span>instagram</span></a>
+    <a rel="me" href="https://bsky.app/profile/disconcision.com"> <img class=glyph alt="" src="images/icons/noun-arrow-1621680.svg" /> <span>bluesky</span></a>
+    <a rel="me" href="https://scholar.google.com/citations?user=OccotHkAAAAJ"> <img class=glyph alt="" src="images/icons/noun-arrow-1621725.svg" /> <span>papers</span></a>
+    <a rel="me" href="https://twitter.com/disconcision"> <img class=glyph alt="" src="images/icons/noun-arrow-1621631.svg" /> <span>twitter</span></a>
+    <a rel="me" href="https://www.are.na/andrew-blinn"> <img class=glyph alt="" src="images/icons/noun-arrow-1621563.svg" /> <span>are.na</span></a>
   </nav>
 
   <main>
@@ -81,13 +118,20 @@
       </section>  
     </div>
 
-     <!-- Old stuff to add to feed:
-       490 guest lectures x2
-       hazel mere milestones: ADTs, assisant-1, other stuff?
-     -->
-
     <section id=newsfeed>
       <dl>
+        <dt>November 2026</dt>
+        <dd>
+          Attending <a href="https://uist.acm.org/2026/">UIST 2026</a> in Detroit
+        </dd>
+        <!-- after the joint announcement, replace the entry above with:
+        <dd>
+          Presenting <a href="papers/D2.pdf">Declarative Dragging</a>
+          (<a href="https://uist.acm.org/2026/awards/#best-paper">Best Paper</a>)
+          at <a href="https://uist.acm.org/2026/">UIST 2026</a> in Detroit
+          with <a href="https://joshuahhh.com/">Joshua Horowitz</a>
+        </dd>
+        -->
         <dt>October 2026</dt>
         <dd>
           Attended <a href="https://2026.splashcon.org/">SPLASH 2026</a> in Oakland
@@ -676,57 +720,46 @@
         <div class="book-crate" data-tooltip="">
           <img src="images/books/small/bs4.webp" alt="Book crate" />
           <svg viewBox="0 0 1449 1434" preserveAspectRatio="none">
-          <!-- Book 1: Cambridge Encyclopedia of Language -->
           <a href="https://archive.org/details/cambridgeencycl000crys" target="_blank" rel="noopener"
              aria-label="The Cambridge Encyclopedia of Language · David Crystal">
             <polygon points="112.5,232.5 112.5,1349.5 261.0,1349.5 261.0,232.5 112.5,232.5" />
           </a>
-          <!-- Book 2: Cambridge Encyclopedia of the English Language -->
-          <a href="https://www-cambridge-org.proxy.lib.umich.edu/highereducation/books/the-cambridge-encyclopedia-of-the-english-language/2B10AC8766B73D09955C899572C1E7EC#contents" target="_blank" rel="noopener"
+          <a href="https://www.cambridge.org/highereducation/books/the-cambridge-encyclopedia-of-the-english-language/2B10AC8766B73D09955C899572C1E7EC#contents" target="_blank" rel="noopener"
              aria-label="The Cambridge Encyclopedia of the English Language · David Crystal">
             <polygon points="270.0,232.5 270.0,1342.5 386.5,1342.5 386.5,232.5 270.0,232.5" />
           </a>
-          <!-- Book 3: Visual Complexity -->
           <a href="https://standardsmanual.com/products/visual-complexity-mapping-patterns-of-information" target="_blank" rel="noopener"
              aria-label="Visual Complexity · Manuel Lima">
             <polygon points="396.5,243.5 386.5,1349.5 487.5,1349.5 487.5,243.5 396.5,243.5" />
           </a>
-          <!-- Book 4: McSweeney's Quarterly Concern #13 -->
           <a href="https://www.denverartmuseum.org/en/object/2009.283.1-4" target="_blank" rel="noopener"
              aria-label="McSweeney's Quarterly Concern #13 · Chris Ware, ed.">
             <polygon points="507.5,396.5 493.5,1349.5 625.0,1349.5 631.0,396.5 507.5,396.5" />
           </a>
-          <!-- Book 5: Theory of Games and Economic Behavior -->
           <a href="https://press.princeton.edu/books/paperback/9780691130613/theory-of-games-and-economic-behavior" target="_blank" rel="noopener"
              aria-label="Theory of Games and Economic Behavior · von Neumann & Morgenstern">
             <polygon points="647.0,456.0 631.0,1321.0 759.5,1326.0 769.5,456.0 647.0,456.0" />
           </a>
-          <!-- Book 6: The Mathematical Theory of Communication -->
           <a href="https://www.press.uillinois.edu/books/?id=p725487" target="_blank" rel="noopener"
              aria-label="The Mathematical Theory of Communication · Shannon & Weaver">
             <polygon points="775.5,523.5 769.5,1321.0 832.0,1321.0 837.0,523.5 775.5,523.5" />
           </a>
-          <!-- Book 7: Hallucinogenic and Poisonous Mushroom Field Guide -->
           <a href="https://www.paracay.com/hallucinogenic-and-poisonous-mushroom-field-guide-3rd-edition-clone" target="_blank" rel="noopener"
              aria-label="Hallucinogenic and Poisonous Mushroom Field Guide · Gary P. Menser">
             <polygon points="877.5,633.0 832.0,633.0 832.0,1332.0 877.5,1332.0 877.5,633.0" />
           </a>
-          <!-- Book 8: The Origin of Consciousness in the Breakdown of the Bicameral Mind -->
           <a href="https://www.julianjaynes.org/resources/books/ooc/" target="_blank" rel="noopener"
              aria-label="The Origin of Consciousness in the Breakdown of the Bicameral Mind · Julian Jaynes">
             <polygon points="895.5,467.0 888.5,1332.0 1012.0,1332.0 1012.0,467.0 895.5,467.0" />
           </a>
-          <!-- Book 9: The Stroke: Theory of Writing -->
           <a href="https://www.hyphenpress.co.uk/books/978-0-907259-30-5" target="_blank" rel="noopener"
              aria-label="The Stroke: Theory of Writing · Gerrit Noordzij">
             <polygon points="1007.0,535.0 1037.0,535.0 1037.0,1326.0 1007.0,1321.0 1007.0,535.0" />
           </a>
-          <!-- Book 10: The First Six Books of the Elements of Euclid -->
           <a href="https://www.c82.net/euclid/" target="_blank" rel="noopener"
              aria-label="The First Six Books of the Elements of Euclid · Oliver Byrne (Taschen)">
             <polygon points="1063.5,285.0 1063.5,1349.5 1225.0,1349.5 1223.0,280.0 1063.5,285.0" />
           </a>
-          <!-- Book 11: Type-One -->
           <a href="https://designreviewed.com/artefacts/type-one-discipline-and-progress-in-typography-gestalten-2004/" target="_blank" rel="noopener"
              aria-label="Type-One: Discipline and Progress in Typography · Gestalten">
             <polygon points="1268.5,87.0 1240.5,1360.5 1338.5,1370.5 1368.5,87.0 1268.5,87.0" />
@@ -737,57 +770,46 @@
         <div class="book-crate" data-tooltip="">
           <img src="images/books/small/bs5.webp" alt="Book crate" />
           <svg viewBox="0 0 1444 1427" preserveAspectRatio="none">
-          <!-- Book 1: Jane Fonda's Workout Book -->
           <a href="https://www.goodreads.com/book/show/332962.Jane_Fonda_s_Workout_Book" target="_blank" rel="noopener"
              aria-label="Jane Fonda's Workout Book · Jane Fonda">
             <polygon points="122.5,207.0 136.5,1315.0 222.5,1309.5 211.5,207.0" />
           </a>
-          <!-- Book 2: The Physiology Coloring Book -->
           <a href="https://www.goodreads.com/book/show/663160.The_Physiology_Coloring_Book" target="_blank" rel="noopener"
              aria-label="The Physiology Coloring Book · Wynn Kapit">
             <polygon points="222.5,234.0 234.5,1309.5 294.5,1309.5 284.0,234.0" />
           </a>
-          <!-- Book 3: Tank Girl: The Gifting -->
           <a href="https://www.goodreads.com/book/show/489683.Tank_Girl" target="_blank" rel="noopener"
              aria-label="Tank Girl: The Gifting · Alan Martin">
             <polygon points="294.5,325.5 312.0,1289.0 345.5,1289.0 337.0,325.5" />
           </a>
-          <!-- Book 4: Fanged Noumena -->
           <a href="https://www.goodreads.com/book/show/10838202-fanged-noumena" target="_blank" rel="noopener"
              aria-label="Fanged Noumena: Collected Writings 1987–2007 · Nick Land">
             <polygon points="355.0,650.0 360.5,1278.5 466.0,1278.5 466.0,644.5" />
           </a>
-          <!-- Book 5: Shape as Memory -->
           <a href="https://www.goodreads.com/book/show/341022.Shape_as_Memory" target="_blank" rel="noopener"
              aria-label="Shape as Memory · Michael Leyton">
             <polygon points="466.0,596.0 480.0,1278.5 508.0,1278.5 495.0,590.0" />
           </a>
-          <!-- Book 6: On Dialogue -->
           <a href="https://www.goodreads.com/book/show/204526.On_Dialogue" target="_blank" rel="noopener"
              aria-label="On Dialogue · David Bohm">
             <polygon points="495.0,562.0 512.5,1288.0 545.0,1289.0 536.0,562.0" />
           </a>
-          <!-- Book 7: Wholeness and the Implicate Order -->
           <a href="https://www.goodreads.com/book/show/204523.Wholeness_and_the_Implicate_Order" target="_blank" rel="noopener"
              aria-label="Wholeness and the Implicate Order · David Bohm">
             <polygon points="536.0,556.5 549.0,1282.5 601.0,1282.5 593.5,562.0" />
           </a>
-          <!-- Book 8: The Universal History of Numbers -->
           <a href="https://www.goodreads.com/book/show/1148778.The_Universal_History_of_Numbers" target="_blank" rel="noopener"
              aria-label="The Universal History of Numbers · Georges Ifrah">
             <polygon points="593.5,415.0 601.0,1328.0 771.0,1328.0 762.5,408.5" />
           </a>
-          <!-- Book 9: Total Interaction -->
           <a href="https://birkhauser.com/en/book/9783764376772" target="_blank" rel="noopener"
              aria-label="Total Interaction · Gerhard M. Buurman (Ed.)">
             <polygon points="771.0,402.0 783.0,1340.0 912.5,1340.0 909.0,398.0" />
           </a>
-          <!-- Book 10: Code as Creative Medium -->
           <a href="https://mitpress.mit.edu/9780262542043/code-as-creative-medium/" target="_blank" rel="noopener"
              aria-label="Code as Creative Medium · Golan Levin & Tega Brain">
             <polygon points="920.0,623.0 920.0,1328.0 983.5,1328.0 983.5,623.0" />
           </a>
-          <!-- Book 11: The Feynman Lectures on Physics (3 volumes) -->
           <a href="https://www.goodreads.com/book/show/5546.The_Feynman_Lectures_on_Physics" target="_blank" rel="noopener"
              aria-label="The Feynman Lectures on Physics · Feynman, Leighton & Sands">
             <polygon points="983.5,193.0 989.0,1328.0 1336.0,1340.0 1345.5,188.0" />
@@ -884,47 +906,38 @@
         <div class="book-crate" data-tooltip="">
           <img src="images/books/small/bs7.webp" alt="Book crate" />
           <svg viewBox="0 0 1452 1464" preserveAspectRatio="none">
-          <!-- Book 1: Emergence: Morphogenetic Design Strategies -->
           <a href="https://www.icd.uni-stuttgart.de/publications/books-journals/emergence-morphogenetic-design-strategies-2/" target="_blank" rel="noopener"
              aria-label="Emergence: Morphogenetic Design Strategies · Hensel, Menges & Weinstock">
             <polygon points="157,1337 139,199 175.5,199 199,1337" />
           </a>
-          <!-- Book 2: B.P.R.D., Vol. 5: The Black Flame -->
           <a href="https://www.goodreads.com/book/show/356347.B_P_R_D_Vol_5" target="_blank" rel="noopener"
              aria-label="B.P.R.D., Vol. 5: The Black Flame · Mignola, Arcudi & Davis">
             <polygon points="230,324.5 188.5,328.5 205.5,1331 242.5,1337" />
           </a>
-          <!-- Book 3: Hellboy, Vol. 5: Conqueror Worm -->
           <a href="https://www.goodreads.com/book/show/102462.Hellboy_Vol_5" target="_blank" rel="noopener"
              aria-label="Hellboy, Vol. 5: Conqueror Worm · Mike Mignola">
             <polygon points="250,1331 238,328.5 273,328.5 280,1326.5" />
           </a>
-          <!-- Book 4: Snotgirl, Vol. 1: Green Hair Don't Care -->
           <a href="https://www.goodreads.com/book/show/31387205-snotgirl-vol-1" target="_blank" rel="noopener"
              aria-label="Snotgirl, Vol. 1: Green Hair Don't Care · O'Malley & Hung">
             <polygon points="309,1305 298,360 324.5,360 338,1305" />
           </a>
-          <!-- Book 5: Schott's Food & Drink Miscellany -->
           <a href="https://www.goodreads.com/book/show/40701.Schott_s_Food_and_Drink_Miscellany" target="_blank" rel="noopener"
              aria-label="Schott's Food & Drink Miscellany · Ben Schott">
             <polygon points="354.5,697 394.5,674 676.5,1272.5 638,1292.5" />
           </a>
-          <!-- Book 6: A Pattern Language -->
           <a href="https://www.goodreads.com/book/show/79766.A_Pattern_Language" target="_blank" rel="noopener"
              aria-label="A Pattern Language · Christopher Alexander">
             <polygon points="694.5,1300 394.5,648 555,581.5 845.5,1235.5" />
           </a>
-          <!-- Book 7: Schott's Original Miscellany -->
           <a href="https://www.goodreads.com/book/show/40700.Schott_s_Original_Miscellany" target="_blank" rel="noopener"
              aria-label="Schott's Original Miscellany · Ben Schott">
             <polygon points="887.5,1300 612,680 665.5,659 938,1276.5" />
           </a>
-          <!-- Book 8: Merriam-Webster's Visual Dictionary -->
           <a href="https://www.goodreads.com/book/show/15094561-merriam-webster-s-visual-dictionary" target="_blank" rel="noopener"
              aria-label="Merriam-Webster's Visual Dictionary · Second Edition">
             <polygon points="965.5,1345 919.5,366 1136,349 1162.5,1345" />
           </a>
-          <!-- Book 9: Deep Learning -->
           <a href="https://www.goodreads.com/book/show/24072897-deep-learning" target="_blank" rel="noopener"
              aria-label="Deep Learning · Goodfellow, Bengio & Courville">
             <polygon points="1182,1337 1176,426.5 1316,426.5 1316,1337" />
@@ -935,67 +948,54 @@
         <div class="book-crate" data-tooltip="">
           <img src="images/books/small/bs8.webp" alt="Book crate" />
           <svg viewBox="0 0 1382 1369" preserveAspectRatio="none">
-          <!-- Book 1: The Dream Machine (horizontal top) -->
           <a href="https://press.stripe.com/the-dream-machine" target="_blank" rel="noopener"
              aria-label="The Dream Machine · M. Mitchell Waldrop">
             <polygon points="143,126 1011,172.5 1003,306.5 143,261.5" />
           </a>
-          <!-- Book 2: Bootstrapping Computing (horizontal) -->
           <a href="https://buddybindery.com/bootstrapping-computing" target="_blank" rel="noopener"
              aria-label="Bootstrapping Computing · Alexander Obenauer">
             <polygon points="233,273.5 233,333.5 1011,369.5 1019,313.5" />
           </a>
-          <!-- Book 3: The Self-Made Tapestry -->
           <a href="https://philipball.co.uk/the-self-made-tapestry-pattern-formation-in-nature/" target="_blank" rel="noopener"
              aria-label="The Self-Made Tapestry · Philip Ball">
             <polygon points="105.5,323.5 124,1228.5 187,1228.5 178,323.5" />
           </a>
-          <!-- Book 4: Category Theory for Programmers -->
           <a href="https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/" target="_blank" rel="noopener"
              aria-label="Category Theory for Programmers · Bartosz Milewski">
             <polygon points="185,364.5 198,1216.5 319,1216.5 319,364.5" />
           </a>
-          <!-- Book 5: The Machinery of Life -->
           <a href="https://ccsb.scripps.edu/goodsell/machinery-of-life/" target="_blank" rel="noopener"
              aria-label="The Machinery of Life · David S. Goodsell">
             <polygon points="329,350.5 329,1210.5 376,1216.5 370,350.5" />
           </a>
-          <!-- Book 6: The Origins of Order -->
           <a href="https://www.goodreads.com/book/show/783559.The_Origins_of_Order" target="_blank" rel="noopener"
              aria-label="The Origins of Order · Stuart Kauffman">
             <polygon points="406,377.5 398,1194.5 509,1194.5 525,383.5" />
           </a>
-          <!-- Book 7: Investigations -->
           <a href="https://global.oup.com/academic/product/investigations-9780195121056" target="_blank" rel="noopener"
              aria-label="Investigations · Stuart Kauffman">
             <polygon points="530,411.5 515,1194.5 585.5,1194.5 594.5,411.5" />
           </a>
-          <!-- Book 8: At Home in the Universe -->
           <a href="https://www.goodreads.com/book/show/319006.At_Home_in_the_Universe" target="_blank" rel="noopener"
              aria-label="At Home in the Universe · Stuart Kauffman">
             <polygon points="594.5,389.5 594.5,1188.5 659.5,1188.5 674.5,389.5" />
           </a>
-          <!-- Book 9: Quantum Computing Since Democritus -->
           <a href="https://www.scottaaronson.com/democritus/" target="_blank" rel="noopener"
              aria-label="Quantum Computing Since Democritus · Scott Aaronson">
             <polygon points="680.5,411.5 674.5,1194.5 752.5,1194.5 766.5,411.5" />
           </a>
-          <!-- Book 10: On the Genealogy of Morality -->
           <a href="https://www.goodreads.com/book/show/80448.On_the_Genealogy_of_Morals" target="_blank" rel="noopener"
              aria-label="On the Genealogy of Morality · Friedrich Nietzsche">
             <polygon points="774.5,451.5 761.5,1184.5 819.5,1184.5 831.5,451.5" />
           </a>
-          <!-- Book 11: Hacker's Delight -->
           <a href="https://www.goodreads.com/book/show/276079.Hacker_s_Delight" target="_blank" rel="noopener"
              aria-label="Hacker's Delight · Henry S. Warren Jr.">
             <polygon points="836.5,374.5 819.5,1210.5 935.5,1210.5 945.5,377.5" />
           </a>
-          <!-- Book 12: PiHKAL -->
           <a href="https://archive.org/details/pihkalchemicallo0000shul" target="_blank" rel="noopener"
              aria-label="PiHKAL: A Chemical Love Story · Ann & Alexander Shulgin">
             <polygon points="953.5,411.5 945.5,1188.5 1088,1194.5 1105,411.5" />
           </a>
-          <!-- Book 13: The Age of Em -->
           <a href="https://ageofem.com/" target="_blank" rel="noopener"
              aria-label="The Age of Em · Robin Hanson">
             <polygon points="1121,364.5 1105,1194.5 1191,1194.5 1223,369.5" />
@@ -1006,102 +1006,82 @@
         <div class="book-crate" data-tooltip="">
           <img src="images/books/small/bs9.webp" alt="Book crate" />
           <svg viewBox="0 0 1442 1448" preserveAspectRatio="none">
-          <!-- Book 1: Anatomy of Lisp (horizontal top) -->
           <a href="https://www.goodreads.com/book/show/1905938.Anatomy_of_Lisp" target="_blank" rel="noopener"
              aria-label="Anatomy of Lisp · John Allen">
             <polygon points="143.5,226 151.5,317 1048.5,289 1048.5,197 143.5,226" />
           </a>
-          <!-- Book 2: Understanding Comics (horizontal) -->
           <a href="https://scottmccloud.com/2-print/1-uc/" target="_blank" rel="noopener"
              aria-label="Understanding Comics · Scott McCloud">
             <polygon points="164.5,325 171.5,378 1143.5,335 1135.5,289 164.5,325" />
           </a>
-          <!-- Book 3: The Mythical Man-Month (horizontal) -->
           <a href="https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month" target="_blank" rel="noopener"
              aria-label="The Mythical Man-Month · Frederick Brooks">
             <polygon points="182.5,383 182.5,421 1023.5,407 1023.5,361 182.5,383" />
           </a>
-          <!-- Book 4: Metaphors We Live By -->
           <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo3637992.html" target="_blank" rel="noopener"
              aria-label="Metaphors We Live By · Lakoff & Johnson">
             <polygon points="164.5,503 182.5,1272 253.5,1262 237.5,503 164.5,503" />
           </a>
-          <!-- Book 5: The Social Construction of What? -->
           <a href="https://www.hup.harvard.edu/books/9780674004122" target="_blank" rel="noopener"
              aria-label="The Social Construction of What? · Ian Hacking">
             <polygon points="237.5,433 253.5,1272 321,1272 293.5,433 237.5,433" />
           </a>
-          <!-- Book 6: God & Golem, Inc. -->
           <a href="https://www.goodreads.com/book/show/589647.God_Golem_Inc_" target="_blank" rel="noopener"
              aria-label="God &amp; Golem, Inc. · Norbert Wiener">
             <polygon points="304,533 327,1279 354,1279 332,537 304,533" />
           </a>
-          <!-- Book 7: Cybernetics -->
           <a href="https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/" target="_blank" rel="noopener"
              aria-label="Cybernetics · Norbert Wiener">
             <polygon points="340,547 360,1272 404,1272 386,547 340,547" />
           </a>
-          <!-- Book 8: CCRU: Writings 1997-2003 -->
           <a href="https://www.goodreads.com/book/show/34964054-ccru" target="_blank" rel="noopener"
              aria-label="CCRU: Writings 1997-2003">
             <polygon points="386,513 410,1262 506,1262 488,513 386,513" />
           </a>
-          <!-- Book 9: Evolution in Four Dimensions -->
           <a href="https://mitpress.mit.edu/9780262600699/evolution-in-four-dimensions/" target="_blank" rel="noopener"
              aria-label="Evolution in Four Dimensions · Jablonka & Lamb">
             <polygon points="488,433 511,1268 626,1272 614,427 488,433" />
           </a>
-          <!-- Book 10: What is Life? -->
           <a href="https://www.cambridge.org/core/books/what-is-life/A876185F2DB06FF5C2CC67C9A60DAD7F" target="_blank" rel="noopener"
              aria-label="What is Life? · Erwin Schrödinger">
             <polygon points="620,493 631,1262 670,1262 656,493 620,493" />
           </a>
-          <!-- Book 11: Ways of Seeing -->
           <a href="https://www.penguin.co.uk/books/56465/ways-of-seeing-by-berger-john/9780141035796" target="_blank" rel="noopener"
              aria-label="Ways of Seeing · John Berger">
             <polygon points="710,1252 677,1252 664,557 693,557 710,1252" />
           </a>
-          <!-- Book 12: Technics and Civilization -->
           <a href="https://press.uchicago.edu/ucp/books/book/chicago/T/bo10388066.html" target="_blank" rel="noopener"
              aria-label="Technics and Civilization · Lewis Mumford">
             <polygon points="716,1246 804.5,1246 787.5,533 693,537 716,1246" />
           </a>
-          <!-- Book 13: The History of Magic -->
           <a href="https://www.gutenberg.org/ebooks/70033" target="_blank" rel="noopener"
              aria-label="The History of Magic · Éliphas Lévi">
             <polygon points="793.5,513 813.5,1252 900.5,1252 885.5,513 793.5,513" />
           </a>
-          <!-- Book 14: The Humane Interface -->
           <a href="https://www.goodreads.com/book/show/344726.The_Humane_Interface" target="_blank" rel="noopener"
              aria-label="The Humane Interface · Jef Raskin">
             <polygon points="885.5,421 908.5,1279 966.5,1279 952.5,415 885.5,421" />
           </a>
-          <!-- Book 15: A Thousand Years of Nonlinear History -->
           <a href="https://www.zonebooks.org/books/109-a-thousand-years-of-nonlinear-history" target="_blank" rel="noopener"
              aria-label="A Thousand Years of Nonlinear History · Manuel De Landa">
             <polygon points="958.5,440 1038.5,440 1048.5,1279 972.5,1272 958.5,440" />
           </a>
-          <!-- Book 16: Visual Grammar -->
           <a href="https://papress.com/products/visual-grammar" target="_blank" rel="noopener"
              aria-label="Visual Grammar · Christian Leborg">
             <polygon points="1076.5,473 1032.5,478 1048.5,1294 1090.5,1288 1076.5,473" />
           </a>
-          <!-- Book 17: Machine Code for Beginners -->
           <a href="https://archive.org/details/machine-code-for-beginners" target="_blank" rel="noopener"
              aria-label="Machine Code for Beginners">
             <polygon points="1076.5,383 1098.5,1294 1115.5,1294 1098.5,383 1076.5,383" />
           </a>
-          <!-- Book 18: How Things Work in Your Home -->
           <a href="https://www.goodreads.com/book/show/2890704-how-things-work-in-your-home-and-what-to-do-when-they-don-t" target="_blank" rel="noopener"
              aria-label="How Things Work in Your Home · Time-Life Books">
             <polygon points="1115.5,341 1115.5,1300 1195,1300 1187,335 1115.5,341" />
           </a>
-          <!-- Book 19: The Annotated Arch -->
           <a href="https://www.carolcstrickland.com/_i_the_annotated_arch__a_crash_course_in_the_history_of_architecture__i__66950.htm" target="_blank" rel="noopener"
              aria-label="The Annotated Arch · Carol Strickland">
             <polygon points="1195,269 1206,1313 1257,1313 1251,261 1195,269" />
           </a>
-          <!-- Book 20: The Way Life Works -->
           <a href="https://www.goodreads.com/book/show/323290.The_Way_Life_Works" target="_blank" rel="noopener"
              aria-label="The Way Life Works · Hoagland & Dodson">
             <polygon points="1263,218 1263,1322 1329,1322 1329,218 1263,218" />
@@ -1173,27 +1153,32 @@
       
   </main>
 
-  <!-- other links:
-    https://www.researchgate.net/profile/Andrew-Blinn
-    https://dl.acm.org/profile/99659746231
-    https://dblp.org/pid/295/3328.html
-    https://www.pinterest.com/disconcision/
-  -->
-    
   <nav class="bottom">
-    <a rel="me" href="https://www.threads.net/@disconcision"><img class=glyph alt="" src="images/icons/noun-arrow-1621737.svg" /><span>threads</span></a>
-    <a rel="me" href="https://conf.researchr.org/profile/conf/andrewblinn1"><img class=glyph alt="" src="images/icons/noun-arrow-1621721.svg" /> <span>researchr</span></a>
-    <a rel="me" href="https://www.linkedin.com/in/andrewblinn/"><img class=glyph alt="" src="images/icons/noun-arrow-1621670.svg" /><span>linkedin</span></a>
-    <a rel="me" href="https://huggingface.co/disconcision"><img class=glyph alt="" src="images/icons/noun-arrow-1621660.svg" /> <span>hugface</span></a>
-    <a rel="me" href="https://orcid.org/0000-0001-6938-7379"><img class=glyph alt="" src="images/icons/noun-arrow-1621652.svg" /> <span>orcid</span></a>
-    <a rel="me" href="https://www.goodreads.com/disconcision"><img class=glyph alt="" src="images/icons/noun-arrow-1621588.svg" /> <span>goodreads</span></a>
-    <a rel="me" href="https://dl.acm.org/profile/99659746231"> <img class=glyph alt="" src="images/icons/noun-arrow-1621741.svg" /><span>acm</span></a>
-    <a rel="me" href="https://dblp.org/pid/295/3328.html"> <img class=glyph alt="" src="images/icons/noun-arrow-1621740.svg" /><span>dblp</span></a>
-    <a rel="me" href="https://www.researchgate.net/profile/Andrew-Blinn"> <img class=glyph alt="" src="images/icons/noun-arrow-1621738.svg" /><span>rsgate</span></a>
+    <div>
+      <h3><img class=glyph alt="" src="images/icons/noun-arrow-1621705.svg" />personal</h3>
+      <p>
+        <a rel="me" href="https://disconcision.com/">tumblr</a>
+        <a rel="me" href="https://types.pl/@disconcision">mastodon</a>
+        <a rel="me" href="https://instagram.com/disconcision">instagram</a>
+        <a rel="me" href="https://www.goodreads.com/disconcision">goodreads</a>
+        <a rel="me" href="https://letterboxd.com/disconcision/">letterboxd</a>
+      </p>
+    </div>
+    <div>
+      <h3><img class=glyph alt="" src="images/icons/noun-arrow-1621652.svg" />academic</h3>
+      <p>
+        <a rel="me" href="https://dl.acm.org/profile/99659746231">acm</a>
+        <a rel="me" href="https://dblp.org/pid/295/3328.html">dblp</a>
+        <a rel="me" href="https://arxiv.org/a/blinn_a_1">arxiv</a>
+        <a rel="me" href="https://orcid.org/0000-0001-6938-7379">orcid</a>
+        <a rel="me" href="https://conf.researchr.org/profile/conf/andrewblinn1">researchr</a>
+        <a rel="me" href="https://www.linkedin.com/in/andrewblinn/">linkedin</a>
+      </p>
+    </div>
   </nav>
 
   <footer>
-    <p>updated 💅 <span class="updated">september 2026</span> &nbsp;
+    <p>updated 💅 <span class="updated">october 2026</span> &nbsp;
        <a href="#top"> <span class="arrowup glyph"></span></a></p></footer>
     
 </div>
