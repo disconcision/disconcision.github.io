@@ -83,7 +83,28 @@
       animation: drift 6s linear infinite alternate;
     }
 
-    .home { font-size: 0.85rem; color: var(--muted); }
+    /* home links, top and bottom: the homepage's arrow, turning on hover the way it does there */
+    .homelink {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45em;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .homelink .glyph {
+      width: 1.05em;
+      height: 1.05em;
+      opacity: 0.6;
+      transition: all 0.5s;
+    }
+
+    .homelink:hover .glyph,
+    .homelink:focus-visible .glyph {
+      rotate: 180deg;
+      opacity: 1;
+      filter: invert(1);
+    }
 
     h1 {
       font-weight: normal;
@@ -320,7 +341,7 @@
 
 <body>
   <main>
-    <a class="home mono" href="../../">← andrew blinn</a>
+    <a class="homelink mono" href="../../"><img class="glyph" alt="" src="../../images/icons/noun-arrow-1621563.svg" />andrewblinn.com</a>
 
     <h1>Declarative Dragging</h1>
     <p class="byline">
@@ -384,7 +405,7 @@
     <p>
       To provide greater expressive range and customizability, D2 is <em>composable</em>: simple model-driven
       drag-and-drop behaviors can be combined to create more complex ones, and modifiers can layer features like
-      floating, snapping, and transitions. For more details, see §3.2 and §5 of
+      floating, snapping, and transitions. For more details, see
       <a href="../D2.pdf">the paper</a>.
     </p>
 
@@ -410,12 +431,11 @@
 
     <h2>Where it came from</h2>
     <blockquote>
-      Declarative dragging is actually a fairly personal project for both Josh and I. For myself, the idea of a math
-      game based on tangible expressions has been a long time obsession. I made a few prototypes over the years, but
-      none proved juicy enough to satisfy. Back in 2022, I came up with the scheme to make it draggable, and
-      excitedly sketched out a primitive version of what would become model-driven dragging. However, implementing
-      it seemed daunting, so it sat on the whiteboard for the next two years, mocking me every time I went to make a
-      sandwich.
+      Back in 2022, I had a prototype of a game aimed at making math more tangible, a long-running obsession of
+      mine. It had a lot going for it, but the fundamental mechanic, based on selecting transformations from a menu,
+      lacked the juicy tactility I craved. I eventually came up with a primitive version of what would become
+      model-driven dragging, but implementing it seemed daunting, so it sat on my whiteboard for the next two years,
+      haunting me every time I went to make a sandwich.
       <cite>— Andrew</cite>
     </blockquote>
     <figure>
@@ -424,23 +444,22 @@
       <figcaption>Andrew's whiteboard in June 2023, sketching a basic version of model-driven dragging for tree rewriting.</figcaption>
     </figure>
     <blockquote>
-      In 2023, Andrew visited Seattle. Toward the end of a lovely walk, we stopped for coffee. Andrew showed me Nool [a math game prototype],
-      and told me about his idea to make it draggable. I was intrigued, but I didn't do anything about it until last
-      year. That's when my friend Elliot was playing with order-preserving maps between trees. I came up with a fun
-      way to draw them, but I realized I didn't just want to draw them – I wanted to reach in and pull them around,
-      and feel out the mathematical space they determined. That felt pretty tough, until I remembered Andrew's ideas.
-      And over a day or two I whipped up something that worked. It felt very exciting to turn these static diagrams
-      into something alive, and it was exciting to imagine what else might be possible. So I kept building demos,
-      and iterating on the ideas, until it was clear that you could really do a lot with it, and I brought Andrew
-      back in, and we built a system, and wrote a paper.
+      On a really nice walk in Seattle back in 2023, Andrew shared his draggy ideas with me. I kept thinking about
+      them over the years, but didn't do anything about it. And then last year, it all came together. My buddy Elliot
+      was playing with order-preserving maps between trees. I came up with a fun way to draw these structures, but I
+      realized I didn't just want to draw them – I wanted to reach in and pull them around, and feel out their
+      dynamics (what became the twisted trees demo above). That felt pretty tough, until I remembered Andrew's ideas.
+      I got working on a library that, with Andrew's help, grew into declarative dragging.
       <cite>— Josh</cite>
     </blockquote>
 
     <h2>Since the paper</h2>
     <div class="since">
       <p>
-        Josh has been working on a variety of new, more intricate mathematical explorables, including the
-        permutation lab below.
+        Josh has been working on a variety of new, more intricate mathematical explorables. We've found Dragology
+        particularly suited to interfaces that combine parallel representations, where you see the same system from
+        different perspectives. In the permutation lab below, interacting with any one representation fluidly updates
+        the others, even halfway through a drag, showing their relationships in real time.
       </p>
       <figure class="wide">
         <a href="https://joshuahhh.com/dragology/#/demos/permutation-lab"><video src="clips/permutation-lab.mp4" autoplay muted loop playsinline preload="metadata"></video></a>
@@ -450,7 +469,7 @@
         </figcaption>
       </figure>
       <p>
-        Andrew has been working to bring declarative dragging to other contexts, including his research on user
+        Andrew has been working to bring declarative dragging to existing applications, including his research on user
         interfaces for programming languages, as well as restarting work on the math game concept that
         kicked it all off.
       </p>
@@ -482,7 +501,7 @@
 }</pre>
 
     <footer class="mono">
-      <a href="../../">andrewblinn.com</a>
+      <a class="homelink mono" href="../../"><img class="glyph" alt="" src="../../images/icons/noun-arrow-1621563.svg" />andrewblinn.com</a>
     </footer>
   </main>
 
