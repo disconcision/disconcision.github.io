@@ -180,6 +180,19 @@
     nav.links a svg { width: 1.05em; height: 1.05em; fill: currentColor; }
     nav.links a svg.npm { width: 2.4em; height: 0.95em; }
     nav.links a.icon { border-color: transparent; }
+    /* the draggable version of the row: pulled out by its padding so the pills sit where the static ones did */
+    .pills-draggable { margin: -6px; position: relative; z-index: 5; }
+    /* the pill being dragged keeps its hover look, wherever the pointer is */
+    .pills-draggable a.is-dragged {
+      color: white;
+      border-color: transparent;
+      background: var(--link-gradient);
+      background-size: 800% 800%;
+      animation: drift 6s linear infinite alternate;
+      rotate: 1.5deg;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    }
+    .pills-draggable svg { display: block; overflow: visible; }
 
     /* the paper itself is the main link: filled, with a document icon */
     nav.links a.paper { gap: 0.675em; background: var(--ink); color: white; border-color: var(--ink); }
@@ -311,6 +324,15 @@
 
     .demos .card:hover span { color: var(--accent); }
 
+    /* the draggable version of the grid: it spans the grid's columns, pulled out
+       by its padding so the cards sit where the static ones did, and drawn above
+       the text that follows so a dragged card floats over it */
+    .cards-draggable { grid-column: 1 / -1; margin: -10px; position: relative; z-index: 5; }
+    .cards-draggable svg { display: block; overflow: visible; }
+    .cards-draggable .card.is-dragged { rotate: 1.5deg; }
+    .cards-draggable .card.is-dragged span { color: var(--accent); }
+    .cards-draggable .card.is-dragged video { box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14); }
+
     .since video {
       display: block;
       width: 100%;
@@ -390,6 +412,19 @@
       a:hover { animation: none; }
     }
   </style>
+  <!-- Dragology (built from the repo) for the draggable link pills; React from a CDN -->
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.2.0",
+        "react/jsx-runtime": "https://esm.sh/react@19.2.0/jsx-runtime",
+        "react-dom": "https://esm.sh/react-dom@19.2.0?deps=react@19.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.2.0/client?deps=react@19.2.0"
+      }
+    }
+  </script>
+  <script type="module" src="pills.js"></script>
+  <script type="module" src="cards.js"></script>
 </head>
 
 <body>
@@ -473,7 +508,7 @@
       <a class="card" href="https://joshuahhh.com/dragology/#/demos/animate-algebra-tree"><video src="clips/animate-algebra.mp4" autoplay muted loop playsinline preload="metadata"></video><span>algebra</span></a>
       <a class="card" href="https://joshuahhh.com/dragology/#/demos/twisted-trees"><video src="clips/twisted-trees.mp4" autoplay muted loop playsinline preload="metadata"></video><span>twisted trees</span></a>
       <a class="card" href="https://joshuahhh.com/dragology/#/demos/bezier"><video src="clips/bezier.mp4" autoplay muted loop playsinline preload="metadata"></video><span>bézier curve</span></a>
-      <a class="card" href="https://joshuahhh.com/dragology/#/demos/braid"><video src="clips/braid.mp4" autoplay muted loop playsinline preload="metadata"></video><span>braid</span></a>
+      <a class="card" href="https://joshuahhh.com/dragology/#/demos/braid-old"><video src="clips/braid.mp4" autoplay muted loop playsinline preload="metadata"></video><span>braid</span></a>
       <a class="card" href="https://joshuahhh.com/dragology/#/demos/card-piles"><video src="clips/card-piles.mp4" autoplay muted loop playsinline preload="metadata"></video><span>card piles</span></a>
       <a class="card" href="https://joshuahhh.com/dragology/#/demos/face-creator"><video src="clips/face.mp4" autoplay muted loop playsinline preload="metadata"></video><span>face</span></a>
       <a class="card" href="https://joshuahhh.com/dragology/#/demos/sprouting-tree"><video src="clips/sprouting-tree.mp4" autoplay muted loop playsinline preload="metadata"></video><span>sprouting tree</span></a>
