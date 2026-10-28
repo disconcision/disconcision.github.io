@@ -26,6 +26,14 @@
       src: url("../../OpenSans-Light.woff2") format("woff2");
     }
 
+    /* the page's bold: Open Sans Regular, one step up from the Light body text */
+    @font-face {
+      font-family: "Open Sans";
+      font-weight: bold;
+      font-display: swap;
+      src: url("../../OpenSans-Regular.ttf") format("truetype");
+    }
+
     @font-face {
       font-family: "Cutive Mono";
       font-display: swap;
@@ -87,23 +95,28 @@
     .homelink {
       display: inline-flex;
       align-items: center;
-      gap: 0.45em;
+      gap: 0.3em;
       font-size: 0.85rem;
       color: var(--muted);
     }
 
+    /* sized so the arrow's long stroke is as thick as the link underline, and lowered to sit on it */
+    /* drawn as a mask over the accent color, so it's exactly the underline's red */
     .homelink .glyph {
-      width: 1.05em;
-      height: 1.05em;
-      opacity: 0.6;
+      flex: none;
+      width: 1.15em;
+      height: 1.15em;
+      translate: 0 0.235em;
+      background: var(--accent);
+      -webkit-mask: url("../../images/icons/noun-arrow-1621563.svg") center / contain no-repeat;
+      mask: url("../../images/icons/noun-arrow-1621563.svg") center / contain no-repeat;
       transition: all 0.5s;
     }
 
     .homelink:hover .glyph,
     .homelink:focus-visible .glyph {
       rotate: 180deg;
-      opacity: 1;
-      filter: invert(1);
+      background: white;
     }
 
     h1 {
@@ -121,7 +134,7 @@
       position: relative;
       isolation: isolate;
       display: inline-block;
-      margin: 0.9rem 0 0;
+      margin: 1.25rem 0 0;
       padding: 0.2rem 0.85rem 0.25rem;
       font-family: "Cutive Mono", "Courier New", monospace;
       font-size: 0.95rem;
@@ -148,7 +161,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin: 1.5rem 0 2.2rem;
+      margin: 1.85rem 0 2.2rem;
     }
 
     nav.links a {
@@ -166,9 +179,10 @@
 
     nav.links a svg { width: 1.05em; height: 1.05em; fill: currentColor; }
     nav.links a svg.npm { width: 2.4em; height: 0.95em; }
+    nav.links a.icon { border-color: transparent; }
 
     /* the paper itself is the main link: filled, with a document icon */
-    nav.links a.paper { gap: 0.45em; background: var(--ink); color: white; border-color: var(--ink); }
+    nav.links a.paper { gap: 0.675em; background: var(--ink); color: white; border-color: var(--ink); }
     nav.links a.paper:hover { background: var(--link-gradient); background-size: 800% 800%; border-color: transparent; }
     nav.links a.paper svg.pdf { width: 0.95em; height: 1.2em; fill: none; }
 
@@ -197,17 +211,44 @@
       border-top: 1px solid var(--rule);
     }
 
+    /* the video starts as a still in a thin red frame; clicking swaps in the YouTube player */
     .video {
       position: relative;
       aspect-ratio: 16 / 9;
       margin: 1.8rem 0 0.4rem;
-      border-radius: 10px;
+      border: 1.5px solid var(--accent);
+      border-radius: 12px;
       overflow: hidden;
-      background: #000;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      background: white;
     }
 
     .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    .video-poster { position: absolute; inset: 0; display: block; }
+    .video-poster:hover { background: none; }
+    .video-poster img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+
+    .video-poster .play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 64px;
+      height: 64px;
+      translate: -50% -50%;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: background 0.25s ease, scale 0.25s ease;
+    }
+    .video-poster .play svg { width: 22px; height: 22px; margin-left: 4px; fill: var(--accent); transition: fill 0.25s ease; }
+    .video-poster:hover .play,
+    .video-poster:focus-visible .play { background: var(--accent); scale: 1.08; }
+    .video-poster:hover .play svg,
+    .video-poster:focus-visible .play svg { fill: white; }
+    .video-poster:hover img { transform: scale(1.015); }
 
     figure { margin: 1.4rem 0; }
 
@@ -296,9 +337,21 @@
     }
 
     blockquote {
+      position: relative;
       margin: 1.2rem 0;
-      padding: 0.2rem 0 0.2rem 1.1rem;
-      border-left: 3px solid var(--accent);
+      padding: 0.2rem 0 0.2rem calc(1.1rem + 3px);
+    }
+
+    /* the quote bar is drawn rather than a border, so its ends can be rounded */
+    blockquote::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      border-radius: 3px;
+      background: var(--accent);
     }
 
     /* the speaker signs the quote, in the accent red so it's clearly a quote */
@@ -341,7 +394,7 @@
 
 <body>
   <main>
-    <a class="homelink mono" href="../../"><img class="glyph" alt="" src="../../images/icons/noun-arrow-1621563.svg" />andrewblinn.com</a>
+    <a class="homelink mono" href="../../"><span class="glyph" aria-hidden="true"></span>andrewblinn.com</a>
 
     <h1>Declarative Dragging</h1>
     <p class="byline">
@@ -352,12 +405,12 @@
     <span class="award">★ <a href="https://uist.acm.org/2026/awards/#best-paper">Best Paper Award</a>, UIST 2026</span>
 
     <nav class="links" aria-label="Links">
-      <a class="paper" href="../D2.pdf">paper <svg class="pdf" viewBox="0 0 16 20" aria-hidden="true"><path d="M2 1h8l5 5v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 1v5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><text x="8" y="15.5" text-anchor="middle" font-size="5.2" font-family="system-ui, sans-serif" font-weight="700" fill="currentColor">PDF</text></svg></a>
+      <a class="paper" href="../D2.pdf"><svg class="pdf" viewBox="0 0 16 20" aria-hidden="true"><path d="M2 1h8l5 5v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 1v5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><text x="8" y="15.5" text-anchor="middle" font-size="5.2" font-family="system-ui, sans-serif" font-weight="700" fill="currentColor">PDF</text></svg>paper</a>
       <a href="https://www.youtube.com/watch?v=l7v-UwpsEbk">video</a>
       <a href="https://declarative-dragging.github.io/">explorable supplement</a>
       <a href="https://joshuahhh.com/dragology/#/demos">demos</a>
-      <a href="https://github.com/joshuahhh/dragology" aria-label="code on GitHub" title="code on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
-      <a href="https://www.npmjs.com/package/dragology" aria-label="dragology on npm" title="dragology on npm"><svg class="npm" viewBox="0 0 18 7" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h18v6H9v1H5V6H0V0zm1 1v4h2V2h1v3h1V1H1zm5 0v5h2V5h2V1H6zm2 1h1v2H8V2zm3-1v4h2V2h1v3h1V2h1v3h1V1h-6z"/></svg></a>
+      <a href="https://github.com/joshuahhh/dragology" class="icon" aria-label="code on GitHub" title="code on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+      <a href="https://www.npmjs.com/package/dragology" class="icon" aria-label="dragology on npm" title="dragology on npm"><svg class="npm" viewBox="0 0 18 7" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h18v6H9v1H5V6H0V0zm1 1v4h2V2h1v3h1V1H1zm5 0v5h2V5h2V1H6zm2 1h1v2H8V2zm3-1v4h2V2h1v3h1V2h1v3h1V1h-6z"/></svg></a>
     </nav>
 
     <p class="hook">What if making a diagram draggable was as simple as specifying what it can become?</p>
@@ -368,7 +421,7 @@
         mathematicians to creative tool builders, often don't bother.
       </p>
       <p>
-        Declarative dragging inverts the problem. Rather than programming all that visual behavior directly, you
+        <strong>Declarative dragging</strong> inverts the problem. Rather than programming all that visual behavior directly, you
         simply say, for each element you want to make draggable, which future states of your application dragging it
         should lead to. Our system speculatively renders those states to work
         out where things can go, then combines these possible worlds into a smooth, responsive drag-and-drop
@@ -381,9 +434,11 @@
     </div>
 
     <div class="video">
-      <iframe src="https://www.youtube-nocookie.com/embed/l7v-UwpsEbk?rel=0" title="Dragology: UIST 2026 video"
-        loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-        allowfullscreen></iframe>
+      <a class="video-poster" href="https://www.youtube.com/watch?v=l7v-UwpsEbk" aria-label="Play the video">
+        <img src="video-poster.webp" width="1600" height="900"
+          alt="Title card: Declarative Dragging, with illustrations labelled Model-Driven and Composable." />
+        <span class="play"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l14 8-14 8z" /></svg></span>
+      </a>
     </div>
     <p class="note">A five-minute video introducing declarative dragging.</p>
 
@@ -501,11 +556,22 @@
 }</pre>
 
     <footer class="mono">
-      <a class="homelink mono" href="../../"><img class="glyph" alt="" src="../../images/icons/noun-arrow-1621563.svg" />andrewblinn.com</a>
+      <a class="homelink mono" href="../../"><span class="glyph" aria-hidden="true"></span>andrewblinn.com</a>
     </footer>
   </main>
 
   <script>
+    // Swap the video's still for the YouTube player, already playing.
+    document.querySelector(".video-poster").addEventListener("click", (e) => {
+      e.preventDefault();
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/l7v-UwpsEbk?rel=0&autoplay=1";
+      iframe.title = "Dragology: UIST 2026 video";
+      iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+      iframe.allowFullscreen = true;
+      e.currentTarget.replaceWith(iframe);
+    });
+
     // Only play the clips that are on screen.
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) e.isIntersecting ? e.target.play().catch(() => { }) : e.target.pause();
