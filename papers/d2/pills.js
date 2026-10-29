@@ -3,7 +3,7 @@
 // pills, then redraws the same links inside a draggable.
 
 import { createRoot } from "react-dom/client";
-import { DraggableRenderer, translate } from "./dragology.js";
+import { DraggableRenderer, translate } from "./js/dragology.js";
 import { h, isWebKit, move, targetLines } from "./drag-shared.js";
 
 const GAP = 8; // matches nav.links { gap: 0.5rem }

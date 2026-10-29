@@ -11,7 +11,7 @@ import {
   Modifier,
   modifier,
   translate,
-} from "./dragology.js";
+} from "./js/dragology.js";
 
 export const h = React.createElement;
 const ACCENT = "#dc3400";
