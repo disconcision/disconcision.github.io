@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>D2 page: the clips, originals and remakes</title>
+<style>
+  body { margin: 0 auto; max-width: 980px; padding: 1rem; font: 15px/1.45 system-ui, sans-serif; color: #1d1d1f; background: #fdfcf8; }
+  h1 { font-weight: 500; font-size: 1.3rem; }
+  p { color: #6b6b70; max-width: 46rem; }
+  table { border-collapse: separate; border-spacing: 0.8rem; width: 100%; }
+  th { font: 0.85rem "Courier New", monospace; text-align: left; vertical-align: top; width: 7rem; }
+  thead th { width: auto; }
+  td { width: 44%; vertical-align: top; }
+  video { display: block; width: 100%; height: auto; border: 1px solid #e7e4dc; border-radius: 8px; background: white; }
+  .none { color: #a19d95; font-style: italic; }
+  .controls { margin: 0.5rem 0 1rem; }
+  button { font: inherit; padding: 0.3rem 0.8rem; border-radius: 6px; border: 1px solid #ccc8bf; background: white; cursor: pointer; }
+  @media (max-width: 560px) { th { display: none; } table { border-spacing: 0.4rem; } td { width: 50%; } }
+</style>
+<h1>The page's clips: the originals, and remakes in the page's colors</h1>
+<p>Left, Josh's recordings, as the page plays them now. Right, the same demos in the page's four colors, each replaying the original's cursor path and timing (tracked frame by frame from the original), with a hand while grabbing. The perm lab's remake is its live figure's own ghost hand, in the compact layout desktop shows. <a href="index.html">The review page</a> · <a href="../">the page as it is</a></p>
+<div class="controls"><button id="restart">Restart all together</button></div>
+<table>
+  <thead><tr><th></th><th>original</th><th>remake</th></tr></thead>
+  <tr><th>animate-algebra</th><td><video src="../clips/animate-algebra.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/animate-algebra.mp4" poster="clips/animate-algebra.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>twisted-trees</th><td><video src="../clips/twisted-trees.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/twisted-trees.mp4" poster="clips/twisted-trees.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>bezier</th><td><video src="../clips/bezier.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/bezier.mp4" poster="clips/bezier.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>braid</th><td><video src="../clips/braid.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/braid.mp4" poster="clips/braid.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>card-piles</th><td><video src="../clips/card-piles.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/card-piles.mp4" poster="clips/card-piles.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>face</th><td><video src="../clips/face.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/face.mp4" poster="clips/face.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>sprouting-tree</th><td><video src="../clips/sprouting-tree.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/sprouting-tree.mp4" poster="clips/sprouting-tree.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>tromino</th><td><video src="../clips/tromino.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/tromino.mp4" poster="clips/tromino.webp" autoplay muted loop playsinline></video></td></tr>
+  <tr><th>permutation-lab</th><td><video src="../clips/permutation-lab.mp4" autoplay muted loop playsinline></video></td><td><video src="clips/permutation-lab.mp4" poster="clips/permutation-lab.webp" autoplay muted loop playsinline></video></td></tr>
+</table>
+<script>
+  document.getElementById("restart").onclick = () => {
+    for (const v of document.querySelectorAll("video")) { v.currentTime = 0; v.play(); }
+  };
+</script>
