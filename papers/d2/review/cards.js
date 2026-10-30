@@ -5,7 +5,8 @@
 //   the page, and each card plays its clip until the pointer comes over its
 //   picture; then the demo goes live, starting where the clip had got to
 //   (each clip's log, clips/<name>.log.json, says which state it showed
-//   when), and stays live.
+//   when), and stays live. While the pointer is on the cards the other clips
+//   hold still, and they play again a few seconds after it leaves.
 // - Desktop, ?cards=live: as the page is now, every card live from the start.
 // - Phones: the static grid, playing the clips; on the phone review page
 //   (data-phone-live), one card per row, each going live when tapped.
@@ -19,6 +20,7 @@ import { DraggableRenderer, translate } from "./js/dragology.js";
 import { h, isWebKit, move, targetLines } from "./drag-shared.js";
 
 const PAD = 10; // room around the cards for the hover tilt
+const QUIET_MS = 8000; // how long the clips wait, once the pointer leaves the cards, to play again
 const MODE = new URLSearchParams(location.search).get("cards") === "live" ? "live" : "clips";
 const PHONE_LIVE = document.documentElement.hasAttribute("data-phone-live");
 
@@ -227,9 +229,32 @@ async function desktop() {
   host.addEventListener("click", (e) => { if (dragged) e.preventDefault(); }, true);
   const onDragStatus = (s) => { if (s.type === "dragging") dragged = true; };
 
-  // Only play the clips that are on screen, as the static grid did.
+  // Only play the clips that are on screen, as the static grid did, and none
+  // while the reader is at the cards: once the pointer comes onto one, the
+  // others' clips stop, so only the one in hand moves, and they start again
+  // QUIET_MS after it has left the cards.
+  let quiet = false;
+  let wake;
+  const shown = new Set();
   const io = new IntersectionObserver((entries) => {
-    for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
+    for (const e of entries) {
+      if (e.isIntersecting) shown.add(e.target);
+      else shown.delete(e.target);
+      e.isIntersecting && !quiet ? e.target.play().catch(() => {}) : e.target.pause();
+    }
+  });
+  host.addEventListener("pointerover", (e) => {
+    if (!e.target.closest?.(".card")) return;
+    quiet = true;
+    clearTimeout(wake);
+    host.querySelectorAll("video.clip-video").forEach((v) => v.pause());
+  });
+  host.addEventListener("pointerleave", () => {
+    clearTimeout(wake);
+    wake = setTimeout(() => {
+      quiet = false;
+      for (const v of shown) if (v.isConnected) v.play().catch(() => {});
+    }, QUIET_MS);
   });
   const watchVideos = () => host.querySelectorAll("video").forEach((v) => io.observe(v));
 
