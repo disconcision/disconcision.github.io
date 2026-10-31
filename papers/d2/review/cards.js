@@ -5,8 +5,10 @@
 //   the page, and each card plays its clip until the pointer comes over its
 //   picture; then the demo goes live, starting where the clip had got to
 //   (each clip's log, clips/<name>.log.json, says which state it showed
-//   when), and stays live. While the pointer is on the cards the other clips
-//   hold still, and they play again a few seconds after it leaves.
+//   when). A card only looked at goes back to its clip, from the same
+//   moment, when the pointer leaves it; one pressed in stays live. A press
+//   in any card stills the other clips, and they play again a few seconds
+//   after the pointer leaves the cards.
 // - Desktop, ?cards=live: as the page is now, every card live from the start.
 // - Phones: the static grid, playing the clips; on the phone review page
 //   (data-phone-live), one card per row, each going live when tapped.
@@ -53,14 +55,23 @@ function stateAt(log, t) {
   return at?.state ? { state: at.state, view } : undefined;
 }
 
-/** Cards gone live, by card id: where they started */
+/** Cards gone live, by card id: where they started, the clip's time then,
+ * and whether the reader has pressed in them since */
 const wentLive = new Map();
+/** Cards gone back to their clips, by card id: the time to pick up from */
+const resumeAt = new Map();
+/** The clips' playing (desktop): which are on screen, and whether they're
+ * holding still while the reader is at a card */
+const playing = { io: null, shown: new Set(), quiet: false };
 
+/** Live from where `video` is, unless the pointer has left it meanwhile */
 async function goLive(id, video) {
   const log = await loadLog(video.getAttribute("src"));
+  if (!PHONE_LIVE && !video.matches(":hover")) return false;
   const initial = log ? stateAt(log, video.currentTime) : undefined;
   video.pause();
-  wentLive.set(id, { initial });
+  wentLive.set(id, { initial, at: video.currentTime, used: false });
+  return true;
 }
 
 // # The draggable grid (desktop)
@@ -81,28 +92,41 @@ function Card({ spec, width, dragging, live }) {
       dangerouslySetInnerHTML: spec.inner,
     });
   }
-  const went = MODE === "live" ? { initial: undefined } : wentLive.get(spec.id);
+  const went = MODE === "live" ? { initial: undefined, used: true } : wentLive.get(spec.id);
   const picture = went
     ? h(live.LiveDemo, { id: spec.demoId, size: width - 2, fallback: spec.fallback, initial: went.initial })
     : h("video", {
         src: spec.clip,
         poster: spec.poster,
-        autoPlay: true,
+        autoPlay: !playing.quiet,
         muted: true,
         loop: true,
         playsInline: true,
         className: "clip-video",
+        ref: (v) => v && playing.io?.observe(v),
+        onLoadedMetadata: (e) => {
+          // back from being live: on from where it was
+          if (!resumeAt.has(spec.id)) return;
+          e.currentTarget.currentTime = resumeAt.get(spec.id);
+          resumeAt.delete(spec.id);
+        },
         onPointerEnter: async (e) => {
-          await goLive(spec.id, e.currentTarget);
-          rerender((n) => n + 1);
+          if (await goLive(spec.id, e.currentTarget)) rerender((n) => n + 1);
         },
       });
+  // Left without a press in it, a live card goes back to its clip.
+  const back = () => {
+    if (!went || went.used) return;
+    resumeAt.set(spec.id, went.at);
+    wentLive.delete(spec.id);
+    rerender((n) => n + 1);
+  };
   return h(
     "div",
-    { className: `${className} is-live`, style: { width: `${width}px` } },
+    { className: `${className} is-live`, style: { width: `${width}px` }, "data-card": spec.id },
     h(
       "div",
-      { className: "picture" },
+      { className: "picture", onPointerLeave: back },
       picture,
       h("a", {
         className: "open",
@@ -230,29 +254,36 @@ async function desktop() {
   const onDragStatus = (s) => { if (s.type === "dragging") dragged = true; };
 
   // Only play the clips that are on screen, as the static grid did, and none
-  // while the reader is at the cards: once the pointer comes onto one, the
-  // others' clips stop, so only the one in hand moves, and they start again
-  // QUIET_MS after it has left the cards.
-  let quiet = false;
+  // while the reader is at work in a card: a press in one stills the others'
+  // clips, so only the one in hand moves, and they start again QUIET_MS after
+  // the pointer has left the cards. (The card under the pointer is live, so
+  // still, by itself.) A press marks its card as used, so it stays live.
   let wake;
-  const shown = new Set();
-  const io = new IntersectionObserver((entries) => {
+  const { shown } = playing;
+  const io = (playing.io = new IntersectionObserver((entries) => {
     for (const e of entries) {
       if (e.isIntersecting) shown.add(e.target);
       else shown.delete(e.target);
-      e.isIntersecting && !quiet ? e.target.play().catch(() => {}) : e.target.pause();
+      e.isIntersecting && !playing.quiet ? e.target.play().catch(() => {}) : e.target.pause();
     }
-  });
-  host.addEventListener("pointerover", (e) => {
-    if (!e.target.closest?.(".card")) return;
-    quiet = true;
-    clearTimeout(wake);
-    host.querySelectorAll("video.clip-video").forEach((v) => v.pause());
-  });
+  }));
+  host.addEventListener(
+    "pointerdown",
+    (e) => {
+      const card = e.target.closest?.("[data-card]");
+      if (!card) return;
+      const went = wentLive.get(card.dataset.card);
+      if (went) went.used = true;
+      playing.quiet = true;
+      clearTimeout(wake);
+      host.querySelectorAll("video.clip-video").forEach((v) => v.pause());
+    },
+    true,
+  );
   host.addEventListener("pointerleave", () => {
     clearTimeout(wake);
     wake = setTimeout(() => {
-      quiet = false;
+      playing.quiet = false;
       for (const v of shown) if (v.isConnected) v.play().catch(() => {});
     }, QUIET_MS);
   });
@@ -287,10 +318,24 @@ function TappedDemo({ live, spec, size, initial }) {
  * Keeps a touch that starts on something draggable in `host` (Dragology
  * gives those cursor: grab) from scrolling the page: the renderer's svg asks
  * for that with touch-action, which iOS Safari doesn't always honor, so the
- * touch's moves are cancelled. A touch anywhere else still scrolls. (As
- * tap-to-wake.ts's holdDragTouches, for the other live figures.)
+ * touch's moves are cancelled. A touch anywhere else still scrolls. And a
+ * touch the browser takes back partway (a second finger, a system gesture)
+ * gets a pointercancel and never a pointerup, which would leave a drag stuck
+ * partway, so it's let go of where it last was. (As tap-to-wake.ts's
+ * holdDragTouches, for the other live figures.)
  */
 function holdDragTouches(host) {
+  let id = null;
+  let last = null;
+  host.addEventListener("pointerdown", (e) => { id = e.pointerId; last = e; }, true);
+  document.addEventListener("pointermove", (e) => { if (e.pointerId === id) last = e; }, true);
+  document.addEventListener("pointerup", (e) => { if (e.pointerId === id) id = null; }, true);
+  document.addEventListener("pointercancel", (e) => {
+    if (e.pointerId !== id || !last) return;
+    id = null;
+    const { clientX, clientY } = last;
+    document.dispatchEvent(new PointerEvent("pointerup", { pointerId: e.pointerId, pointerType: e.pointerType, isPrimary: e.isPrimary, clientX, clientY, bubbles: true }));
+  }, true);
   let held = false;
   host.addEventListener("touchstart", (e) => { held = !!e.target.closest?.('[style*="cursor: grab"]'); }, { passive: true });
   host.addEventListener("touchmove", (e) => { if (held) e.preventDefault(); }, { passive: false });
