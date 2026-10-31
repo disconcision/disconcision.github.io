@@ -553,12 +553,13 @@
     @media (prefers-reduced-motion: reduce) {
       a:hover { animation: none; }
     }
-    /* review: the link pills a little tighter on phones, so they fit two lines */
+    /* the link pills a little tighter on phones, so they fit two lines: paper,
+       video, demos; the supplement and the two icons */
     @media (max-width: 560px) {
       .links a { padding: 0.25rem 0.7rem; }
       .links a.icon { padding-inline: 0.35rem; }
     }
-    /* review: a card's clip, until it goes live */
+    /* a card's clip, until it goes live */
     .cards-draggable .picture video.clip-video { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border: 0; border-radius: 0; }
     /* review (phone.html): one demo per row, each live when tapped */
     .demos.one-column { grid-template-columns: 1fr; gap: 1.2rem; }
@@ -593,9 +594,7 @@
 </head>
 
 <body>
-  <div class="review-bar">Review copy. Desktop cards: <a href="review/index.html">clips until hover</a> · <a href="review/index.html?cards=live">live from the start</a>.
-  Phones: <a href="review/index.html">static</a> · <b>live parts to try</b>;
-  Figure 1 on phones: <a href="review/index.html">paper's, recolored</a> · <a href="review/index.html?fig1=live">live figure's</a>.
+  <div class="review-bar">Review copy: the page with its live parts on phones, to try.
   <a href="review/compare.html">Clips: originals vs remakes</a> · <a href="./">the page as it is</a></div>
   <main>
     <a class="homelink mono" href="../../"><span class="glyph" aria-hidden="true"></span>andrewblinn.com</a>
@@ -654,7 +653,7 @@
       drag-and-drop interaction, all without detailed work required by the interface author.
     </p>
     <figure class="bleed" id="fig1-figure">
-      <img src="review/how-it-works-four.webp" width="1600" height="596" loading="lazy"
+      <img src="how-it-works-four.webp" width="1600" height="596" loading="lazy"
         alt="Diagram: a model state is rendered to a view; when a drag starts, possible target states are rendered speculatively, and where the dragged element lands in each becomes a drop zone for an animated drag." />
       <figcaption>
         Dragology is a library implementing “declarative dragging”: a new way for interface developers to make
