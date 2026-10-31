@@ -567,6 +567,8 @@
     .demos .tap-card .name { display: block; font-family: "Cutive Mono", "Courier New", monospace; margin-top: 0.25rem; text-align: center; font-size: 0.8rem; text-decoration: none; }
     .tap-hint { position: absolute; right: 6px; bottom: 6px; font: 0.75rem "Cutive Mono", monospace; color: white; background: var(--accent); border-radius: 4px; padding: 0.1em 0.45em; }
     .tap-dormant svg { touch-action: pan-y !important; }
+    /* review (phone.html): pressing and dragging in a live figure, a card's included, selects no text and pops no callout */
+    html[data-phone-live] :is(#fig1-figure, .demos, figure.whiteboard, #perm-figure) { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
     /* review: the bar of links between the review pages */
     .review-bar { font: 0.78rem/1.5 system-ui, sans-serif; background: #fff8e6; border-bottom: 1px solid #ecd9a6; padding: 0.4rem 1rem; color: #6b5a2b; }
     .review-bar a { color: inherit; margin-right: 0.2rem; }

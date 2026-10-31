@@ -280,7 +280,20 @@ async function desktop() {
 // # Phones, on the phone review page: one card per row, live when tapped
 
 function TappedDemo({ live, spec, size, initial }) {
-  return h(live.LiveDemo, { id: spec.demoId, size, fallback: spec.fallback, initial });
+  return h(live.LiveDemo, { id: spec.demoId, size, fallback: spec.fallback, initial, touch: true });
+}
+
+/**
+ * Keeps a touch that starts on something draggable in `host` (Dragology
+ * gives those cursor: grab) from scrolling the page: the renderer's svg asks
+ * for that with touch-action, which iOS Safari doesn't always honor, so the
+ * touch's moves are cancelled. A touch anywhere else still scrolls. (As
+ * tap-to-wake.ts's holdDragTouches, for the other live figures.)
+ */
+function holdDragTouches(host) {
+  let held = false;
+  host.addEventListener("touchstart", (e) => { held = !!e.target.closest?.('[style*="cursor: grab"]'); }, { passive: true });
+  host.addEventListener("touchmove", (e) => { if (held) e.preventDefault(); }, { passive: false });
 }
 
 async function phone() {
@@ -316,6 +329,7 @@ async function phone() {
       card.classList.add("is-tapped");
       const holder = document.createElement("div");
       picture.replaceChildren(holder);
+      holdDragTouches(holder);
       createRoot(holder).render(
         createElement(TappedDemo, { live, spec, size: picture.clientWidth, initial: wentLive.get(spec.id).initial }),
       );
