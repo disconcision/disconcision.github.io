@@ -4,7 +4,7 @@
 // image on request; served otherwise, it keeps unsaved work in this browser,
 // to Download or Copy.
 
-import { drawPiece, mountWalk, pieceSize, SOURCES } from "../walk.js";
+import { drawPiece, mountWalk, PAPER_LOOK, paperLook, pieceSize, SOURCES } from "../walk.js";
 
 const LAYOUT_URL = "../walk/layout.json";
 /** The layout Claude started with, for Revert */
@@ -92,7 +92,7 @@ function drawPieces() {
       el.dataset.id = p.id;
       pieceEls.set(p.id, el);
     }
-    drawPiece(el, p, "../");
+    drawPiece(el, p, "../", paperLook(layout));
     el.style.pointerEvents = p.locked ? "none" : "";
     el.style.cursor = "move";
     stage.append(el); // in order, bottom to top
@@ -250,6 +250,7 @@ function drawPanel() {
   $("sel-title").textContent = p ? `${name(p)} (${p.id})` : "Page frame";
   if (p) $("look").value = p.look;
   drawNums();
+  drawSliders();
   $("undo").disabled = !undos.length;
   $("redo").disabled = !redos.length;
 }
@@ -268,6 +269,47 @@ function drawNums() {
 function draw() {
   drawPieces();
   drawOverlay();
+}
+
+// # The paper's look: a slider for each of PAPER_LOOK's settings
+
+const SLIDERS = [
+  { key: "lift", label: "shadow lift", min: 0, max: 30, step: 0.5, show: (v) => v.toFixed(1) },
+  { key: "shadow", label: "shadow dark", min: 0, max: 0.5, step: 0.01, show: (v) => v.toFixed(2) },
+  { key: "corner", label: "corners", min: 0, max: 40, step: 0.5, show: (v) => v.toFixed(1) },
+  { key: "opacity", label: "opacity", min: 0.5, max: 1, step: 0.01, show: (v) => v.toFixed(2) },
+];
+
+/** The layout before the slider being dragged moved, for undo */
+let sliderBefore = null;
+for (const sl of SLIDERS) {
+  const row = document.createElement("label");
+  row.className = "slider";
+  row.innerHTML = `<span>${sl.label}</span><input type="range" min="${sl.min}" max="${sl.max}" step="${sl.step}" data-k="${sl.key}"><output></output>`;
+  const input = row.querySelector("input");
+  input.oninput = () => {
+    sliderBefore ??= snapshot();
+    layout.paper = { ...paperLook(layout), [sl.key]: Number(input.value) };
+    drawPieces();
+    drawSliders();
+  };
+  input.onchange = () => {
+    if (sliderBefore === null || sliderBefore === snapshot()) return void (sliderBefore = null);
+    undos.push(sliderBefore);
+    redos.length = 0;
+    sliderBefore = null;
+    committed();
+  };
+  $("paper-sliders").append(row);
+}
+
+function drawSliders() {
+  const look = paperLook(layout);
+  for (const sl of SLIDERS) {
+    const input = document.querySelector(`#paper-sliders [data-k="${sl.key}"]`);
+    input.value = look[sl.key];
+    input.nextElementSibling.textContent = sl.show(look[sl.key]);
+  }
 }
 
 // # Changes, undo, saving
@@ -310,7 +352,8 @@ function formatted(l) {
           .join(", ")} }`
       : JSON.stringify(v);
   const piece = (p) => flat({ ...p, crop: box(p.crop), x: r(p.x), y: r(p.y), scale: r(p.scale, 4), rotate: r(p.rotate) });
-  return `{\n  "frame": ${flat(box(l.frame))},\n  "pieces": [\n${l.pieces.map((p) => `    ${piece(p)}`).join(",\n")}\n  ]\n}\n`;
+  const paper = l.paper && `  "paper": ${flat(Object.fromEntries(Object.entries(l.paper).map(([key, v]) => [key, r(v, 2)])))},\n`;
+  return `{\n  "frame": ${flat(box(l.frame))},\n${paper ?? ""}  "pieces": [\n${l.pieces.map((p) => `    ${piece(p)}`).join(",\n")}\n  ]\n}\n`;
 }
 
 let saveTimer;
@@ -558,6 +601,7 @@ $("uncrop").onclick = () =>
     Object.assign(p, add(p, at));
     p.crop = { x: 0, y: 0, w: S.w, h: S.h };
   });
+$("paper-reset").onclick = () => change(() => (layout.paper = { ...PAPER_LOOK }));
 $("frame-map").onclick = () => change(() => (layout.frame = { x: 0, y: 0, w: SOURCES["walk-map"].w, h: SOURCES["walk-map"].h }));
 $("frame-pieces").onclick = () =>
   change(() => {

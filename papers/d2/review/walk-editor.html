@@ -41,6 +41,9 @@
     .help b { color: var(--ink); font-weight: 600; }
     .help p { margin: 0.3rem 0; }
     kbd { font: 0.72rem ui-monospace, monospace; border: 1px solid #ccc8bf; border-bottom-width: 2px; border-radius: 4px; padding: 0 0.25em; background: white; }
+    .slider { display: grid; grid-template-columns: 6.2rem 1fr 2.6rem; align-items: center; gap: 0.4rem; margin: 0.15rem 0; }
+    .slider input { width: 100%; margin: 0; }
+    .slider output { font: 0.75rem ui-monospace, monospace; color: var(--muted); text-align: right; }
   </style>
 </head>
 <body>
@@ -93,6 +96,12 @@
         <button id="frame-pieces">Fit to the pieces</button>
       </div>
       <div class="nums" id="nums"></div>
+    </div>
+
+    <h2>Paper <span style="text-transform:none;letter-spacing:0">(every sketch)</span></h2>
+    <div id="paper-sliders"></div>
+    <div class="row">
+      <button id="paper-reset" title="the shadow as it was first, square and opaque">Reset</button>
     </div>
 
     <h2>Gestures</h2>

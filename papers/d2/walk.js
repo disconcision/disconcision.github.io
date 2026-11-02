@@ -7,6 +7,8 @@
 // A layout is in the map's pixels ("canvas units"):
 //
 //   frame   the part of the canvas the figure shows: {x, y, w, h}
+//   paper   how the paper pieces look, PAPER_LOOK's settings (any left out
+//           are PAPER_LOOK's)
 //   pieces  bottom to top, each a crop of one of SOURCES:
 //     src     the image's name in SOURCES
 //     crop    the part of the image it shows, in the image's pixels: {x, y, w, h}
@@ -29,6 +31,20 @@ export const SOURCES = {
 /** A paper piece's white border, in canvas units */
 export const PAPER = 9;
 
+/**
+ * How the paper pieces look, unless the layout says otherwise:
+ *
+ *   lift     how far the shadow falls below the paper, in canvas units (it
+ *            blurs over three times that)
+ *   shadow   the shadow's darkness, 0 to 1
+ *   corner   the paper's corners' radius, in canvas units
+ *   opacity  the paper's, so the map shows through it a little below 1
+ */
+export const PAPER_LOOK = { lift: 10, shadow: 0.2, corner: 0, opacity: 1 };
+
+/** The layout's paper look, filled in */
+export const paperLook = (layout) => ({ ...PAPER_LOOK, ...layout.paper });
+
 /** A piece's size on the canvas */
 export function pieceSize(p) {
   return { w: p.crop.w * p.scale, h: p.crop.h * p.scale };
@@ -36,22 +52,31 @@ export function pieceSize(p) {
 
 /**
  * Draws piece `p` into `el` (a div, made the first time; its img too), placed
- * on a stage of canvas units. `dir` is where walk/ is, relative to the page.
+ * on a stage of canvas units, a paper piece as `paper` (PAPER_LOOK's
+ * settings) says. `dir` is where walk/ is, relative to the page.
  */
-export function drawPiece(el, p, dir) {
+export function drawPiece(el, p, dir, paper = PAPER_LOOK) {
   const { w, h } = pieceSize(p);
   const s = SOURCES[p.src];
+  const onPaper = p.look === "paper";
+  // the paper is a border around the image, so its corners round outside
+  // and the image's inside them
+  const border = onPaper ? PAPER : 0;
   Object.assign(el.style, {
     position: "absolute",
-    left: `${p.x - w / 2}px`,
-    top: `${p.y - h / 2}px`,
+    boxSizing: "content-box",
+    left: `${p.x - w / 2 - border}px`,
+    top: `${p.y - h / 2 - border}px`,
     width: `${w}px`,
     height: `${h}px`,
     transform: p.rotate ? `rotate(${p.rotate}deg)` : "",
     overflow: "hidden",
     display: p.hidden ? "none" : "",
-    background: p.look === "paper" ? "white" : "",
-    boxShadow: p.look === "paper" ? `0 0 0 ${PAPER}px white, 0 10px 30px ${PAPER}px rgba(0, 0, 0, 0.2)` : "",
+    background: onPaper ? "white" : "",
+    border: onPaper ? `${PAPER}px solid white` : "",
+    borderRadius: onPaper && paper.corner ? `${paper.corner}px` : "",
+    boxShadow: onPaper ? `0 ${paper.lift}px ${3 * paper.lift}px rgba(0, 0, 0, ${paper.shadow})` : "",
+    opacity: onPaper && paper.opacity < 1 ? String(paper.opacity) : "",
     mixBlendMode: p.look === "ink" ? "multiply" : "",
   });
   let img = el.querySelector("img");
@@ -98,7 +123,7 @@ export function mountWalk(host, layout, dir) {
     stage.replaceChildren();
     for (const p of layout.pieces) {
       const el = document.createElement("div");
-      drawPiece(el, p, dir);
+      drawPiece(el, p, dir, paperLook(layout));
       stage.append(el);
     }
     fit();
