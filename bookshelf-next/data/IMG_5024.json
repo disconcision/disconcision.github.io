@@ -1,0 +1,712 @@
+{
+  "id": "IMG_5024",
+  "width": 2880,
+  "height": 2880,
+  "books": [
+    {
+      "title": "Operating Systems",
+      "author": "Stuart E. Madnick and John J. Donovan",
+      "href": "https://books.google.com/books/about/Operating_Systems.html?id=74ZQAAAAMAAJ",
+      "points": [
+        [
+          490,
+          448
+        ],
+        [
+          2038,
+          500
+        ],
+        [
+          2054,
+          528
+        ],
+        [
+          2046,
+          688
+        ],
+        [
+          2034,
+          718
+        ],
+        [
+          494,
+          686
+        ],
+        [
+          472,
+          656
+        ],
+        [
+          480,
+          478
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://books.google.com/books/about/Operating_Systems.html?id=74ZQAAAAMAAJ",
+        "pageTitle": "Operating Systems — Stuart E. Madnick, John J. Donovan",
+        "evidence": "Scanned book listing explicitly identifies both authors, McGraw-Hill 1974, 640 pages, and table of contents. Author’s MIT publications page independently identifies the same book.",
+        "source": "turn49view6; turn46view4",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Database Design",
+      "author": "Gio Wiederhold",
+      "href": "https://books.google.com/books/about/Database_Design.html?id=0NJQAAAAMAAJ",
+      "points": [
+        [
+          482,
+          690
+        ],
+        [
+          2060,
+          726
+        ],
+        [
+          2074,
+          752
+        ],
+        [
+          2072,
+          918
+        ],
+        [
+          2052,
+          952
+        ],
+        [
+          488,
+          910
+        ],
+        [
+          460,
+          888
+        ],
+        [
+          466,
+          724
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://books.google.com/books/about/Database_Design.html?id=0NJQAAAAMAAJ",
+        "pageTitle": "Database Design — Gio Wiederhold",
+        "evidence": "Scanned book listing identifies Database Design by Gio Wiederhold, McGraw-Hill 1983, and the book’s chapter subjects. The ACM full-text anthology link returned a verification screen, so this readable book page is used.",
+        "source": "turn48view3",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Harrow the Ninth",
+      "author": "Tamsyn Muir",
+      "href": "https://us.macmillan.com/books/9781250313218/harrowtheninth/",
+      "points": [
+        [
+          520,
+          1094
+        ],
+        [
+          712,
+          1096
+        ],
+        [
+          710,
+          2364
+        ],
+        [
+          664,
+          2386
+        ],
+        [
+          512,
+          2362
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://us.macmillan.com/books/9781250313218/harrowtheninth/",
+        "pageTitle": "Harrow the Ninth",
+        "evidence": "Macmillan publisher page identifies the title, Tamsyn Muir, Locked Tomb volume2, and an excerpt.",
+        "source": "turn46view0",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "The Gutenberg Galaxy",
+      "author": "Marshall McLuhan",
+      "href": "https://utpdistribution.com/9781442660809/the-gutenberg-galaxy/",
+      "points": [
+        [
+          720,
+          930
+        ],
+        [
+          822,
+          930
+        ],
+        [
+          998,
+          1048
+        ],
+        [
+          1000,
+          1234
+        ],
+        [
+          864,
+          1234
+        ],
+        [
+          860,
+          2366
+        ],
+        [
+          832,
+          2402
+        ],
+        [
+          712,
+          2402
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://utpdistribution.com/9781442660809/the-gutenberg-galaxy/",
+        "pageTitle": "The Gutenberg Galaxy: The Making of Typographic Man",
+        "evidence": "University of Toronto Press distribution page identifies Marshall McLuhan, the exact title/subtitle, and the book’s description.",
+        "source": "turn46view1",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Scott Pilgrim Gets It Together (Volume 4)",
+      "author": "Bryan Lee O’Malley",
+      "href": "https://onipress.shop/products/scott-pilgrim-vol-4-b-w-scott-pilgrim-gets-it-together",
+      "points": [
+        [
+          870,
+          1238
+        ],
+        [
+          960,
+          1236
+        ],
+        [
+          978,
+          1246
+        ],
+        [
+          974,
+          2354
+        ],
+        [
+          952,
+          2372
+        ],
+        [
+          864,
+          2366
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://onipress.shop/products/scott-pilgrim-vol-4-b-w-scott-pilgrim-gets-it-together",
+        "pageTitle": "Scott Pilgrim Vol. 4 B/W: Scott Pilgrim Gets It Together",
+        "evidence": "Oni Press product page identifies the exact volume4 title and Bryan Lee O’Malley, and shows its cover and synopsis.",
+        "source": "turn49view4",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Scott Pilgrim vs. the Universe (Volume 5)",
+      "author": "Bryan Lee O’Malley",
+      "href": "https://onipress.shop/products/scott-pilgrim-vol-5-b-w-scott-pilgrim-vs-the-universe",
+      "points": [
+        [
+          986,
+          1238
+        ],
+        [
+          1060,
+          1240
+        ],
+        [
+          1074,
+          1256
+        ],
+        [
+          1066,
+          2346
+        ],
+        [
+          1052,
+          2364
+        ],
+        [
+          980,
+          2360
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://onipress.shop/products/scott-pilgrim-vol-5-b-w-scott-pilgrim-vs-the-universe",
+        "pageTitle": "Scott Pilgrim Vol. 5 B/W: Scott Pilgrim vs. The Universe",
+        "evidence": "Oni Press product page identifies the exact volume5 title and Bryan Lee O’Malley as writer and artist.",
+        "source": "turn50view0",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Scott Pilgrim’s Finest Hour (Volume 6)",
+      "author": "Bryan Lee O’Malley",
+      "href": "https://onipress.shop/products/scott-pilgrim-vol-6-b-w-scott-pilgrims-finest-hour",
+      "points": [
+        [
+          1082,
+          1244
+        ],
+        [
+          1184,
+          1242
+        ],
+        [
+          1202,
+          1252
+        ],
+        [
+          1200,
+          2352
+        ],
+        [
+          1182,
+          2366
+        ],
+        [
+          1078,
+          2364
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://onipress.shop/products/scott-pilgrim-vol-6-b-w-scott-pilgrims-finest-hour",
+        "pageTitle": "Scott Pilgrim Vol. 6 B/W: Scott Pilgrim’s Finest Hour",
+        "evidence": "Oni Press product page identifies the exact volume6 title and Bryan Lee O’Malley as writer and artist.",
+        "source": "turn50view3",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Scott Pilgrim and the Infinite Sadness (Volume 3)",
+      "author": "Bryan Lee O’Malley",
+      "href": "https://onipress.shop/products/scott-pilgrim-vol-3-b-w-scott-pilgrim-and-the-infinite-sadness",
+      "points": [
+        [
+          1212,
+          1244
+        ],
+        [
+          1286,
+          1244
+        ],
+        [
+          1302,
+          1254
+        ],
+        [
+          1302,
+          2352
+        ],
+        [
+          1290,
+          2364
+        ],
+        [
+          1208,
+          2360
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://onipress.shop/products/scott-pilgrim-vol-3-b-w-scott-pilgrim-and-the-infinite-sadness",
+        "pageTitle": "Scott Pilgrim Vol. 3 B/W: Scott Pilgrim and the Infinite Sadness",
+        "evidence": "Oni Press product page identifies the exact volume3 title and Bryan Lee O’Malley as writer and artist.",
+        "source": "turn50view1",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Scott Pilgrim vs. the World (Volume 2)",
+      "author": "Bryan Lee O’Malley",
+      "href": "https://onipress.shop/products/scott-pilgrim-vol-2-b-w-scott-pilgrim-vs-the-world",
+      "points": [
+        [
+          1312,
+          1256
+        ],
+        [
+          1374,
+          1250
+        ],
+        [
+          1388,
+          1262
+        ],
+        [
+          1388,
+          2368
+        ],
+        [
+          1374,
+          2376
+        ],
+        [
+          1306,
+          2356
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://onipress.shop/products/scott-pilgrim-vol-2-b-w-scott-pilgrim-vs-the-world",
+        "pageTitle": "Scott Pilgrim Vol. 2 B/W: Scott Pilgrim vs. The World",
+        "evidence": "Oni Press product page identifies the exact volume2 title and Bryan Lee O’Malley as writer and artist.",
+        "source": "turn50view2",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "God & Golem, Inc.",
+      "author": "Norbert Wiener",
+      "href": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+      "points": [
+        [
+          1390,
+          1250
+        ],
+        [
+          1432,
+          1242
+        ],
+        [
+          1438,
+          2388
+        ],
+        [
+          1416,
+          2406
+        ],
+        [
+          1392,
+          2394
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+        "pageTitle": "God & Golem, Inc.",
+        "evidence": "MIT Press book page identifies Norbert Wiener, the exact title and subtitle, and includes an open-access edition link.",
+        "source": "turn51view1",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Elements of Clojure",
+      "author": "Zachary Tellman",
+      "href": "https://elementsofclojure.com/",
+      "points": [
+        [
+          1440,
+          994
+        ],
+        [
+          1482,
+          994
+        ],
+        [
+          1492,
+          2412
+        ],
+        [
+          1444,
+          2410
+        ],
+        [
+          1436,
+          2394
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://elementsofclojure.com/",
+        "pageTitle": "Elements of Clojure",
+        "evidence": "Author’s book page identifies Elements of Clojure by Zachary Tellman and includes excerpts and a PDF.",
+        "source": "turn15view0",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Building SimCity: How to Put the World in a Machine",
+      "author": "Chaim Gingold",
+      "href": "https://mitpress.mit.edu/9780262377584/building-simcity/",
+      "points": [
+        [
+          1492,
+          994
+        ],
+        [
+          1614,
+          992
+        ],
+        [
+          1632,
+          1004
+        ],
+        [
+          1630,
+          2402
+        ],
+        [
+          1612,
+          2420
+        ],
+        [
+          1500,
+          2414
+        ],
+        [
+          1488,
+          2402
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://mitpress.mit.edu/9780262377584/building-simcity/",
+        "pageTitle": "Building SimCity: How to Put the World in a Machine",
+        "evidence": "MIT Press book page identifies the exact title/subtitle, Chaim Gingold, June2024 publication, and a detailed description of simulation and Maxis history.",
+        "source": "turn46view5",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Talisnam: 52 Stories",
+      "author": "ctrlcreep",
+      "href": "https://ctrlcreep.net/",
+      "points": [
+        [
+          1642,
+          990
+        ],
+        [
+          1712,
+          990
+        ],
+        [
+          1722,
+          1006
+        ],
+        [
+          1720,
+          2416
+        ],
+        [
+          1646,
+          2416
+        ],
+        [
+          1636,
+          2400
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "kind": "author-landing-page-listing-book",
+        "url": "https://ctrlcreep.net/",
+        "pageTitle": "ctrlcreep.net",
+        "evidence": "Root agent opened the author homepage in the in-app browser and inspected its actual rendered content. The page identifies ctrlcreep and explicitly lists talisnam with a link to https://www.amazon.com/gp/product/B0FPVNPL2T. This destination is the verified author landing page listing the book, not a dedicated book listing.",
+        "limitation": "The Amazon book listing itself could not be opened successfully. The selected href therefore links to the verified author page that lists Talisnam.",
+        "source": "Root agent rendered browser inspection, 2026-11-02",
+        "method": "Opened https://ctrlcreep.net/ in the in-app browser and inspected the rendered author name, book title link, and Amazon destination.",
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "title": "Fukt #23: The Sound Issue",
+      "author": "Bjørn Hegardt (editor)",
+      "href": "https://www.fuktmagazine.com/shop/23",
+      "points": [
+        [
+          1734,
+          976
+        ],
+        [
+          1842,
+          976
+        ],
+        [
+          1850,
+          990
+        ],
+        [
+          1842,
+          2430
+        ],
+        [
+          1830,
+          2452
+        ],
+        [
+          1746,
+          2452
+        ],
+        [
+          1732,
+          2436
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://www.fuktmagazine.com/shop/23",
+        "pageTitle": "FUKT #23 – The Sound Issue",
+        "evidence": "The magazine publisher’s issue page explicitly names issue23 and The Sound Issue and displays the matching pink cover.",
+        "source": "turn50view4",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "The Scaling Era: An Oral History of AI, 2019–2025",
+      "author": "Dwarkesh Patel with Gavin Leech",
+      "href": "https://press.stripe.com/scaling",
+      "points": [
+        [
+          1858,
+          954
+        ],
+        [
+          1996,
+          958
+        ],
+        [
+          1996,
+          2418
+        ],
+        [
+          1982,
+          2450
+        ],
+        [
+          1852,
+          2448
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://press.stripe.com/scaling",
+        "pageTitle": "Stripe Press — The Scaling Era",
+        "evidence": "Publisher’s book page identifies the exact title and Dwarkesh Patel with Gavin Leech.",
+        "source": "turn15view1",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Your Linux Toolbox",
+      "author": "Julia Evans",
+      "href": "https://nostarch.com/linuxtoolbox",
+      "points": [
+        [
+          2006,
+          1044
+        ],
+        [
+          2114,
+          1040
+        ],
+        [
+          2124,
+          1052
+        ],
+        [
+          2126,
+          2396
+        ],
+        [
+          2110,
+          2414
+        ],
+        [
+          1998,
+          2412
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://nostarch.com/linuxtoolbox",
+        "pageTitle": "Your Linux Toolbox | No Starch Press",
+        "evidence": "Publisher page identifies Your Linux Toolbox by Julia Evans, an August 2019 box set of seven zines.",
+        "source": "turn15view2",
+        "checked": "2026-11-01"
+      }
+    },
+    {
+      "title": "Designing Design",
+      "author": "Kenya Hara",
+      "href": "https://www.lars-mueller-publishers.com/designing-design",
+      "points": [
+        [
+          2194,
+          860
+        ],
+        [
+          2418,
+          860
+        ],
+        [
+          2430,
+          874
+        ],
+        [
+          2416,
+          2456
+        ],
+        [
+          2404,
+          2472
+        ],
+        [
+          2166,
+          2474
+        ],
+        [
+          2134,
+          2432
+        ],
+        [
+          2132,
+          932
+        ]
+      ],
+      "verification": {
+        "status": "verified",
+        "url": "https://www.lars-mueller-publishers.com/designing-design",
+        "pageTitle": "Designing Design | Lars Müller Publishers",
+        "evidence": "Publisher page identifies Designing Design by Kenya Hara and includes numerous interior images and the book’s design philosophy.",
+        "source": "turn46view2",
+        "method": "Opened destination and read matching book metadata",
+        "checked": "2026-11-01"
+      }
+    }
+  ],
+  "outlineMethod": "Manual tracing against repaired image at 1440px, stored at native 2880px. Multi-vertex boundaries follow visible slants and rounded/worn corners; book sides included where clearly visible.",
+  "outlineQA": "Numbered overlay visually inspected against repaired image. All17 book faces follow their visible physical edges; the Gutenberg Galaxy and Designing Design include exposed side covers."
+}

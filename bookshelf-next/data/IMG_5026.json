@@ -1,0 +1,449 @@
+{
+  "id": "IMG_5026",
+  "width": 2880,
+  "height": 2880,
+  "books": [
+    {
+      "title": "Measurement",
+      "author": "Paul Lockhart",
+      "href": "https://www.jstor.org/stable/j.ctt2jbt0k",
+      "points": [
+        [
+          366,
+          662
+        ],
+        [
+          1868,
+          592
+        ],
+        [
+          1878,
+          604
+        ],
+        [
+          1882,
+          790
+        ],
+        [
+          1874,
+          838
+        ],
+        [
+          1864,
+          864
+        ],
+        [
+          1608,
+          872
+        ],
+        [
+          1606,
+          820
+        ],
+        [
+          1596,
+          808
+        ],
+        [
+          1284,
+          810
+        ],
+        [
+          1268,
+          822
+        ],
+        [
+          1262,
+          874
+        ],
+        [
+          370,
+          872
+        ],
+        [
+          358,
+          848
+        ],
+        [
+          356,
+          680
+        ]
+      ],
+      "kind": "book",
+      "verification": {
+        "url": "https://www.jstor.org/stable/j.ctt2jbt0k",
+        "pageTitle": "Measurement — JSTOR",
+        "evidence": "The book record names Measurement, Paul Lockhart, 2012, and Belknap Press of Harvard University Press, with the book description and chapter contents.",
+        "source": "turn27view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "Harvard University Press returned a JavaScript bot-verification page, so the verified publisher-distributed JSTOR book page is used."
+      }
+    },
+    {
+      "title": "SimLife: The Genetic Playground",
+      "author": "Maxis",
+      "href": "https://archive.org/details/msdos_SimLife_1992",
+      "points": [
+        [
+          376,
+          876
+        ],
+        [
+          640,
+          874
+        ],
+        [
+          654,
+          882
+        ],
+        [
+          664,
+          898
+        ],
+        [
+          660,
+          2536
+        ],
+        [
+          644,
+          2558
+        ],
+        [
+          374,
+          2556
+        ],
+        [
+          358,
+          2542
+        ],
+        [
+          362,
+          900
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://archive.org/details/msdos_SimLife_1992",
+        "pageTitle": "SimLife — Internet Archive",
+        "evidence": "The preserved software entry names SimLife, Maxis, and 1992, describes creating evolving ecosystems, and lists Windows 3.x among its platforms.",
+        "source": "turn25view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "This catalog preserves the DOS version of the same game; the photographed box is the Windows edition."
+      }
+    },
+    {
+      "title": "SimTower: The Vertical Empire",
+      "author": "Yoot Saito / OPeNBooK / Maxis",
+      "href": "https://www.macintoshrepository.org/3915-simtower-the-vertical-empire",
+      "points": [
+        [
+          688,
+          876
+        ],
+        [
+          950,
+          876
+        ],
+        [
+          968,
+          888
+        ],
+        [
+          980,
+          930
+        ],
+        [
+          964,
+          2532
+        ],
+        [
+          952,
+          2552
+        ],
+        [
+          678,
+          2556
+        ],
+        [
+          664,
+          2546
+        ],
+        [
+          666,
+          900
+        ],
+        [
+          674,
+          884
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://www.macintoshrepository.org/3915-simtower-the-vertical-empire",
+        "pageTitle": "SimTower: The Vertical Empire — Macintosh Repository",
+        "evidence": "The Macintosh catalog names SimTower, OPeNBooK and Maxis, identifies Yoot Saito, and includes Macintosh releases and packaging images.",
+        "source": "turn30view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text"
+      }
+    },
+    {
+      "title": "SimCity 2000",
+      "author": "Maxis",
+      "href": "https://www.gog.com/en/game/simcity_2000_special_edition",
+      "points": [
+        [
+          1006,
+          930
+        ],
+        [
+          1256,
+          928
+        ],
+        [
+          1266,
+          938
+        ],
+        [
+          1266,
+          2532
+        ],
+        [
+          996,
+          2534
+        ],
+        [
+          982,
+          2524
+        ],
+        [
+          982,
+          972
+        ],
+        [
+          990,
+          946
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://www.gog.com/en/game/simcity_2000_special_edition",
+        "pageTitle": "SimCity 2000 Special Edition — GOG",
+        "evidence": "The authorized storefront names SimCity 2000, Maxis and Electronic Arts, describes the city-building game, and identifies its included Urban Renewal Kit.",
+        "source": "turn27view1",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "Current purchasable Special Edition of the base game shown, rather than a claim that the photographed box itself is that edition."
+      }
+    },
+    {
+      "title": "MacWrite",
+      "author": "Randy Wigginton / Apple",
+      "href": "https://ithistory.org/software/macwrite",
+      "points": [
+        [
+          1284,
+          810
+        ],
+        [
+          1596,
+          810
+        ],
+        [
+          1606,
+          822
+        ],
+        [
+          1620,
+          2558
+        ],
+        [
+          1606,
+          2576
+        ],
+        [
+          1292,
+          2574
+        ],
+        [
+          1272,
+          2562
+        ],
+        [
+          1260,
+          838
+        ],
+        [
+          1268,
+          820
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://ithistory.org/software/macwrite",
+        "pageTitle": "MacWrite — IT History Society",
+        "evidence": "The dedicated entry identifies MacWrite as Apple’s 1984 Macintosh word processor and discusses its fonts, styles and WYSIWYG interface.",
+        "source": "turn21view2",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text"
+      }
+    },
+    {
+      "title": "A-Train",
+      "author": "Artdink / Maxis",
+      "href": "https://www.computinghistory.org.uk/det/37883/A-Train/",
+      "points": [
+        [
+          1630,
+          876
+        ],
+        [
+          1890,
+          876
+        ],
+        [
+          1904,
+          890
+        ],
+        [
+          1918,
+          2530
+        ],
+        [
+          1904,
+          2550
+        ],
+        [
+          1642,
+          2548
+        ],
+        [
+          1628,
+          2536
+        ],
+        [
+          1614,
+          902
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://www.computinghistory.org.uk/det/37883/A-Train/",
+        "pageTitle": "A-Train — Centre for Computing History",
+        "evidence": "The museum names A-Train, Artdink and Maxis, and explicitly identifies the 1992 internationally published game derived from Take the A-Train III.",
+        "source": "turn28view1",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "Museum artifact is the Macintosh release; the photographed IBM box is another platform edition of this same Artdink/Maxis game."
+      }
+    },
+    {
+      "title": "SimEarth: The Living Planet",
+      "author": "Will Wright / Maxis",
+      "href": "https://collection.sciencemuseumgroup.org.uk/objects/co8590845/simearth-the-living-planet-computer-game",
+      "points": [
+        [
+          1946,
+          876
+        ],
+        [
+          2190,
+          876
+        ],
+        [
+          2206,
+          890
+        ],
+        [
+          2222,
+          2534
+        ],
+        [
+          2210,
+          2554
+        ],
+        [
+          1960,
+          2552
+        ],
+        [
+          1940,
+          2540
+        ],
+        [
+          1918,
+          902
+        ],
+        [
+          1928,
+          884
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8590845/simearth-the-living-planet-computer-game",
+        "pageTitle": "SimEarth: The Living Planet computer game — Science Museum Group",
+        "evidence": "The collection identifies the 1990 Maxis game by Will Wright, documents an IBM/Tandy PC boxed release, and describes its Gaia-inspired planetary simulation.",
+        "source": "turn29view1",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text"
+      }
+    },
+    {
+      "title": "SimAnt: The Electronic Ant Colony",
+      "author": "Will Wright / Maxis",
+      "href": "https://archive.org/details/msdos_SimAnt_-_The_Electronic_Ant_Colony_1991",
+      "points": [
+        [
+          2252,
+          866
+        ],
+        [
+          2502,
+          868
+        ],
+        [
+          2514,
+          884
+        ],
+        [
+          2528,
+          2522
+        ],
+        [
+          2518,
+          2550
+        ],
+        [
+          2284,
+          2552
+        ],
+        [
+          2268,
+          2538
+        ],
+        [
+          2238,
+          894
+        ],
+        [
+          2244,
+          876
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://archive.org/details/msdos_SimAnt_-_The_Electronic_Ant_Colony_1991",
+        "pageTitle": "SimAnt — The Electronic Ant Colony — Internet Archive",
+        "evidence": "The preservation entry names SimAnt, Maxis, 1991, and the ant-colony simulation, and lists Windows 3.x as one of its releases.",
+        "source": "turn30view2",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "This catalog preserves the DOS release; the photographed box is the Windows edition of the same game."
+      }
+    }
+  ],
+  "outlineMethod": "Manually traced on the repaired photograph at 1440px, scaled exactly 2x to the 2880px canvas; box folds and occluded edges traced, then visually inspected with numbered overlays."
+}

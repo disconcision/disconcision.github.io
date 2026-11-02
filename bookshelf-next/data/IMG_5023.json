@@ -1,0 +1,331 @@
+{
+  "id": "IMG_5023",
+  "width": 2880,
+  "height": 2880,
+  "books": [
+    {
+      "title": "Macromedia Flash MX",
+      "author": "Macromedia",
+      "href": "https://www.webdesignmuseum.org/software/macromedia-flash-mx-in-2002",
+      "points": [
+        [
+          558,
+          410
+        ],
+        [
+          2240,
+          502
+        ],
+        [
+          2252,
+          516
+        ],
+        [
+          2240,
+          802
+        ],
+        [
+          2232,
+          814
+        ],
+        [
+          538,
+          722
+        ],
+        [
+          530,
+          710
+        ],
+        [
+          546,
+          448
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://www.webdesignmuseum.org/software/macromedia-flash-mx-in-2002",
+        "pageTitle": "Macromedia Flash MX in 2002 — Web Design Museum",
+        "evidence": "The exhibit names Flash MX, Macromedia, its March 2002 release, and the same OS 9.1/OS X 10.1 and Windows requirements printed on the box.",
+        "source": "turn21view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text"
+      }
+    },
+    {
+      "title": "Macintosh Pascal",
+      "author": "THINK Technologies / Apple",
+      "href": "https://www.macintoshrepository.org/61202-macintosh-pascal-1-0",
+      "points": [
+        [
+          432,
+          764
+        ],
+        [
+          750,
+          764
+        ],
+        [
+          764,
+          778
+        ],
+        [
+          766,
+          2498
+        ],
+        [
+          752,
+          2520
+        ],
+        [
+          418,
+          2522
+        ],
+        [
+          400,
+          2508
+        ],
+        [
+          402,
+          810
+        ],
+        [
+          410,
+          778
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://www.macintoshrepository.org/61202-macintosh-pascal-1-0",
+        "pageTitle": "Macintosh Pascal 1.0 — Macintosh Repository",
+        "evidence": "The catalog identifies Macintosh Pascal, THINK Technologies as author, Apple as publisher, and the 1984 interpreted Pascal environment.",
+        "source": "turn18view2",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "The spine does not expose a version number. This page documents the original Macintosh Pascal product, not MPW Pascal or later THINK Pascal."
+      }
+    },
+    {
+      "title": "MacPaint",
+      "author": "Bill Atkinson / Apple",
+      "href": "https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/",
+      "points": [
+        [
+          784,
+          774
+        ],
+        [
+          1098,
+          776
+        ],
+        [
+          1110,
+          786
+        ],
+        [
+          1120,
+          848
+        ],
+        [
+          1116,
+          2502
+        ],
+        [
+          1102,
+          2522
+        ],
+        [
+          776,
+          2520
+        ],
+        [
+          764,
+          2506
+        ],
+        [
+          768,
+          794
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/",
+        "pageTitle": "MacPaint and QuickDraw Source Code — Computer History Museum",
+        "evidence": "The museum introduces the original 1984 MacPaint program, identifies Bill Atkinson, and publishes its Apple-authorized source code.",
+        "source": "turn18view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text"
+      }
+    },
+    {
+      "title": "HyperCard",
+      "author": "Bill Atkinson / Apple",
+      "href": "https://hypercard.org/",
+      "points": [
+        [
+          1142,
+          772
+        ],
+        [
+          1436,
+          776
+        ],
+        [
+          1450,
+          786
+        ],
+        [
+          1460,
+          836
+        ],
+        [
+          1462,
+          2508
+        ],
+        [
+          1448,
+          2528
+        ],
+        [
+          1136,
+          2520
+        ],
+        [
+          1118,
+          2510
+        ],
+        [
+          1120,
+          800
+        ],
+        [
+          1128,
+          780
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://hypercard.org/",
+        "pageTitle": "HyperCard — The software erector set",
+        "evidence": "The dedicated HyperCard site contains HyperTalk documentation, preserved stacks, historical interviews, and tools for reading original stacks.",
+        "source": "turn18view1",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text"
+      }
+    },
+    {
+      "title": "SimCity 2000: Urban Renewal Kit",
+      "author": "Maxis",
+      "href": "https://patcoston.com/co/urkdef.aspx",
+      "points": [
+        [
+          1514,
+          902
+        ],
+        [
+          1686,
+          898
+        ],
+        [
+          1698,
+          910
+        ],
+        [
+          1698,
+          2470
+        ],
+        [
+          1684,
+          2494
+        ],
+        [
+          1480,
+          2488
+        ],
+        [
+          1466,
+          2474
+        ],
+        [
+          1462,
+          934
+        ],
+        [
+          1472,
+          926
+        ],
+        [
+          1506,
+          922
+        ],
+        [
+          1506,
+          908
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://patcoston.com/co/urkdef.aspx",
+        "pageTitle": "ClubOpolis: What is SCURK?",
+        "evidence": "This contemporary fan page identifies SCURK as the SimCity 2000 Urban Renewal Kit add-on, reproduces its manual description, and discusses Windows 3.1, DOS and Mac editions.",
+        "source": "turn29view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "Identified from crane icon, Urban Renewal Kit badge and Requires SimCity 2000 text. This is not the base game in IMG_5026."
+      }
+    },
+    {
+      "title": "Microsoft Excel for Macintosh",
+      "author": "Microsoft",
+      "href": "https://www.versionmuseum.com/history-of/microsoft-excel",
+      "points": [
+        [
+          1740,
+          866
+        ],
+        [
+          2496,
+          868
+        ],
+        [
+          2510,
+          880
+        ],
+        [
+          2504,
+          2478
+        ],
+        [
+          2490,
+          2504
+        ],
+        [
+          1724,
+          2498
+        ],
+        [
+          1706,
+          2482
+        ],
+        [
+          1702,
+          912
+        ],
+        [
+          1712,
+          884
+        ]
+      ],
+      "kind": "software",
+      "verification": {
+        "url": "https://www.versionmuseum.com/history-of/microsoft-excel",
+        "pageTitle": "Design History of Microsoft Excel — Version Museum",
+        "evidence": "The dedicated visual history includes Excel for Mac from 1985, with early Macintosh screenshots and a discussion of the original spreadsheet product.",
+        "source": "turn31view0",
+        "checked": "2026-11-01",
+        "method": "Opened destination and read matching text",
+        "note": "The box spine does not establish the precise Excel version; the link is to its illustrated product history, including the early Mac releases."
+      }
+    }
+  ],
+  "outlineMethod": "Manually traced on the repaired photograph at 1440px, scaled exactly 2x to the 2880px canvas; box folds and occluded edges traced, then visually inspected with numbered overlays."
+}

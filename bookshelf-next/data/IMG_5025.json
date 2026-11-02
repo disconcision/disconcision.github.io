@@ -1,0 +1,707 @@
+{
+  "id": "IMG_5025",
+  "width": 2880,
+  "height": 2880,
+  "books": [
+    {
+      "title": "The Symbolic Species: The Co-evolution of Language and the Brain",
+      "author": "Terrence W. Deacon",
+      "href": "https://openlibrary.org/books/OL992645M/The_symbolic_species",
+      "points": [
+        [
+          692,
+          686
+        ],
+        [
+          2292,
+          656
+        ],
+        [
+          2294,
+          836
+        ],
+        [
+          2282,
+          866
+        ],
+        [
+          2232,
+          896
+        ],
+        [
+          2048,
+          892
+        ],
+        [
+          1874,
+          896
+        ],
+        [
+          1862,
+          890
+        ],
+        [
+          1772,
+          892
+        ],
+        [
+          1758,
+          948
+        ],
+        [
+          1676,
+          946
+        ],
+        [
+          1672,
+          910
+        ],
+        [
+          1478,
+          908
+        ],
+        [
+          1462,
+          914
+        ],
+        [
+          1376,
+          916
+        ],
+        [
+          1374,
+          992
+        ],
+        [
+          1276,
+          992
+        ],
+        [
+          1242,
+          940
+        ],
+        [
+          1230,
+          878
+        ],
+        [
+          700,
+          876
+        ],
+        [
+          690,
+          860
+        ]
+      ],
+      "verification": {
+        "url": "https://openlibrary.org/books/OL992645M/The_symbolic_species",
+        "pageTitle": "The Symbolic Species: The Co-evolution of Language and the Brain",
+        "evidence": "Opened first-edition record identifies exact title/subtitle, Terrence William Deacon, W.W. Norton, 1997 and ISBN 0393038386, with a description. Norton’s JavaScript-only body could not be read, so this verified fallback is used.",
+        "source": "turn44view3",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Smalltalk-80: The Language and Its Implementation",
+      "author": "Adele Goldberg and David Robson",
+      "href": "https://rmod-files.lille.inria.fr/FreeBooks/BlueBookHughes/BlueBookImplementationTOC.html",
+      "points": [
+        [
+          380,
+          842
+        ],
+        [
+          404,
+          830
+        ],
+        [
+          612,
+          836
+        ],
+        [
+          640,
+          848
+        ],
+        [
+          660,
+          886
+        ],
+        [
+          664,
+          2458
+        ],
+        [
+          638,
+          2494
+        ],
+        [
+          606,
+          2506
+        ],
+        [
+          402,
+          2506
+        ],
+        [
+          380,
+          2492
+        ]
+      ],
+      "verification": {
+        "url": "https://rmod-files.lille.inria.fr/FreeBooks/BlueBookHughes/BlueBookImplementationTOC.html",
+        "pageTitle": "Smalltalk-80: The Language and Its Implementation",
+        "evidence": "Authorized HTML excerpt names the full title, both authors, 1983 Addison-Wesley and ISBN 0-201-11371-6; states authors granted permission.",
+        "source": "turn20view0",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Compilers: Principles, Techniques, and Tools",
+      "author": "Alfred V. Aho, Ravi Sethi and Jeffrey D. Ullman",
+      "href": "https://www.cs.columbia.edu/~aho/books.html",
+      "points": [
+        [
+          676,
+          890
+        ],
+        [
+          890,
+          888
+        ],
+        [
+          896,
+          2454
+        ],
+        [
+          880,
+          2470
+        ],
+        [
+          684,
+          2472
+        ],
+        [
+          674,
+          2458
+        ]
+      ],
+      "verification": {
+        "url": "https://www.cs.columbia.edu/~aho/books.html",
+        "pageTitle": "Compilers: Principles, Techniques, and Tools",
+        "evidence": "Aho’s bibliography explicitly lists the three-author 1986 first edition separately from the four-author 2007 second edition.",
+        "source": "turn20view1",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Let’s Talk LISP",
+      "author": "Laurent Siklóssy",
+      "href": "https://books.google.com/books/about/Let_s_talk_LISP.html?id=2cYmAAAAMAAJ",
+      "points": [
+        [
+          900,
+          862
+        ],
+        [
+          920,
+          856
+        ],
+        [
+          996,
+          858
+        ],
+        [
+          1014,
+          872
+        ],
+        [
+          1030,
+          926
+        ],
+        [
+          1034,
+          2430
+        ],
+        [
+          1020,
+          2480
+        ],
+        [
+          1008,
+          2492
+        ],
+        [
+          906,
+          2494
+        ],
+        [
+          900,
+          2476
+        ]
+      ],
+      "verification": {
+        "url": "https://books.google.com/books/about/Let_s_talk_LISP.html?id=2cYmAAAAMAAJ",
+        "pageTitle": "Let’s Talk LISP",
+        "evidence": "Opened book record explicitly names Let’s Talk LISP, Laurent Siklóssy, Prentice-Hall 1976, and ISBN 0135327628; contents and a description are present.",
+        "source": "turn44view2",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Perceptrons: An Introduction to Computational Geometry",
+      "author": "Marvin Minsky and Seymour Papert",
+      "href": "https://mitpress.mit.edu/9780262130431/perceptrons/",
+      "points": [
+        [
+          1042,
+          940
+        ],
+        [
+          1168,
+          942
+        ],
+        [
+          1184,
+          956
+        ],
+        [
+          1186,
+          2418
+        ],
+        [
+          1170,
+          2436
+        ],
+        [
+          1046,
+          2436
+        ],
+        [
+          1040,
+          2424
+        ]
+      ],
+      "verification": {
+        "url": "https://mitpress.mit.edu/9780262130431/perceptrons/",
+        "pageTitle": "Perceptrons: An Introduction to Computational Geometry",
+        "evidence": "MIT Press identifies Perceptrons, subtitle, Minsky and Papert, and the 1969 edition.",
+        "source": "turn20view2",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Structure and Interpretation of Computer Programs, second edition",
+      "author": "Harold Abelson and Gerald Jay Sussman with Julie Sussman",
+      "href": "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/",
+      "points": [
+        [
+          1194,
+          1004
+        ],
+        [
+          1372,
+          1004
+        ],
+        [
+          1374,
+          2408
+        ],
+        [
+          1358,
+          2430
+        ],
+        [
+          1208,
+          2432
+        ],
+        [
+          1192,
+          2420
+        ]
+      ],
+      "verification": {
+        "url": "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/",
+        "pageTitle": "Structure and Interpretation of Computer Programs, second edition",
+        "evidence": "MIT Press page explicitly identifies second edition, Harold Abelson and Gerald Jay Sussman with Julie Sussman, July 1996, and links the open-access HTML text.",
+        "source": "turn22view3",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "The Scheme Programming Language",
+      "author": "R. Kent Dybvig",
+      "href": "https://www.scheme.com/tspl2/",
+      "points": [
+        [
+          1380,
+          918
+        ],
+        [
+          1460,
+          918
+        ],
+        [
+          1466,
+          2466
+        ],
+        [
+          1450,
+          2480
+        ],
+        [
+          1394,
+          2480
+        ],
+        [
+          1384,
+          2470
+        ]
+      ],
+      "verification": {
+        "url": "https://www.scheme.com/tspl2/",
+        "pageTitle": "The Scheme Programming Language",
+        "evidence": "Author-hosted text identifies R. Kent Dybvig and The Scheme Programming Language, Second Edition, electronically reproduced with Prentice Hall permission.",
+        "source": "turn20view4",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      },
+      "note": "The spine shows Prentice Hall but does not state an edition; the linked author-hosted edition is the second."
+    },
+    {
+      "title": "Semantics Engineering with PLT Redex",
+      "author": "Matthias Felleisen, Robert Bruce Findler and Matthew Flatt",
+      "href": "https://redex.racket-lang.org/sewpr-toc.html",
+      "points": [
+        [
+          1480,
+          914
+        ],
+        [
+          1654,
+          910
+        ],
+        [
+          1666,
+          920
+        ],
+        [
+          1666,
+          2468
+        ],
+        [
+          1652,
+          2482
+        ],
+        [
+          1488,
+          2478
+        ],
+        [
+          1476,
+          2466
+        ]
+      ],
+      "verification": {
+        "url": "https://redex.racket-lang.org/sewpr-toc.html",
+        "pageTitle": "Semantics Engineering with PLT Redex",
+        "evidence": "Dedicated Redex book page gives the exact title, all three authors, and complete contents.",
+        "source": "turn20view3",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Apple Human Interface Guidelines: The Apple Desktop Interface",
+      "author": "Apple Computer",
+      "href": "https://guidebookgallery.org/books/applehumaninterfaceguidelines/",
+      "points": [
+        [
+          1680,
+          956
+        ],
+        [
+          1736,
+          954
+        ],
+        [
+          1744,
+          968
+        ],
+        [
+          1744,
+          2476
+        ],
+        [
+          1736,
+          2496
+        ],
+        [
+          1686,
+          2496
+        ],
+        [
+          1674,
+          2480
+        ]
+      ],
+      "verification": {
+        "url": "https://guidebookgallery.org/books/applehumaninterfaceguidelines/",
+        "pageTitle": "Apple Human Interface Guidelines: The Apple Desktop Interface",
+        "evidence": "Detailed book page reproduces contents and back cover, identifies Addison-Wesley 1987 and ISBN 0-2011-7753-6, matching spine code 17753.",
+        "source": "turn20view5",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "A Theory of Fun for Game Design, second edition",
+      "author": "Raph Koster",
+      "href": "https://www.theoryoffun.com/",
+      "points": [
+        [
+          1766,
+          900
+        ],
+        [
+          1850,
+          898
+        ],
+        [
+          1860,
+          912
+        ],
+        [
+          1856,
+          2492
+        ],
+        [
+          1842,
+          2502
+        ],
+        [
+          1766,
+          2500
+        ],
+        [
+          1756,
+          2488
+        ]
+      ],
+      "verification": {
+        "url": "https://www.theoryoffun.com/",
+        "pageTitle": "A Theory of Fun for Game Design, second edition",
+        "evidence": "Dedicated book site identifies Theory of Fun, Raph Koster and the second edition, with excerpts and cartoons.",
+        "source": "turn22view4",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Game Programming Patterns",
+      "author": "Robert Nystrom",
+      "href": "https://github.com/munificent/game-programming-patterns",
+      "points": [
+        [
+          1876,
+          912
+        ],
+        [
+          1982,
+          914
+        ],
+        [
+          1988,
+          2498
+        ],
+        [
+          1976,
+          2510
+        ],
+        [
+          1876,
+          2504
+        ],
+        [
+          1866,
+          2490
+        ]
+      ],
+      "verification": {
+        "url": "https://github.com/munificent/game-programming-patterns",
+        "pageTitle": "Game Programming Patterns",
+        "evidence": "Author’s repository README explicitly identifies itself as the source repository for the book Game Programming Patterns and contains the book text, illustrations and generated HTML. The dedicated book website repeatedly returned a fetch error, so the successfully opened author-maintained source repository is used.",
+        "source": "turn47view0",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      },
+      "note": "Author-maintained book-source fallback; dedicated gameprogrammingpatterns.com could not be fetched in this session."
+    },
+    {
+      "title": "Pattern Calculus: Computing with Functions and Structures",
+      "author": "Barry Jay",
+      "href": "https://link.springer.com/book/10.1007/978-3-540-89185-7",
+      "points": [
+        [
+          1998,
+          914
+        ],
+        [
+          2046,
+          914
+        ],
+        [
+          2054,
+          930
+        ],
+        [
+          2054,
+          2450
+        ],
+        [
+          1998,
+          2452
+        ]
+      ],
+      "verification": {
+        "url": "https://link.springer.com/book/10.1007/978-3-540-89185-7",
+        "pageTitle": "Pattern Calculus: Computing with Functions and Structures",
+        "evidence": "Springer book page gives Pattern Calculus, subtitle, Barry Jay and copyright 2009.",
+        "source": "turn24view0",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "The Art of Prolog: Advanced Programming Techniques",
+      "author": "Leon Sterling and Ehud Shapiro",
+      "href": "https://mitpress.mit.edu/9780262691055/the-art-of-prolog/",
+      "points": [
+        [
+          2098,
+          912
+        ],
+        [
+          2122,
+          898
+        ],
+        [
+          2312,
+          900
+        ],
+        [
+          2344,
+          916
+        ],
+        [
+          2346,
+          966
+        ],
+        [
+          2330,
+          2454
+        ],
+        [
+          2316,
+          2488
+        ],
+        [
+          2292,
+          2500
+        ],
+        [
+          2106,
+          2488
+        ],
+        [
+          2080,
+          2466
+        ],
+        [
+          2076,
+          2432
+        ],
+        [
+          2084,
+          944
+        ]
+      ],
+      "verification": {
+        "url": "https://mitpress.mit.edu/9780262691055/the-art-of-prolog/",
+        "pageTitle": "The Art of Prolog: Advanced Programming Techniques",
+        "evidence": "MIT Press lists The Art of Prolog, Advanced Programming Techniques, both authors and the 1986 edition.",
+        "source": "turn24view2",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Semiotics of Programming",
+      "author": "Kumiko Tanaka-Ishii",
+      "href": "https://www.u-tokyo.ac.jp/biblioplaza/en/F_00238.html",
+      "points": [
+        [
+          2366,
+          956
+        ],
+        [
+          2436,
+          956
+        ],
+        [
+          2450,
+          974
+        ],
+        [
+          2448,
+          2486
+        ],
+        [
+          2434,
+          2514
+        ],
+        [
+          2370,
+          2518
+        ],
+        [
+          2344,
+          2502
+        ],
+        [
+          2336,
+          2478
+        ]
+      ],
+      "verification": {
+        "url": "https://www.u-tokyo.ac.jp/biblioplaza/en/F_00238.html",
+        "pageTitle": "Semiotics of Programming",
+        "evidence": "Author-written university book page explicitly names title, Tanaka-Ishii Kumiko, Cambridge University Press, March 2010, and gives detailed discussion and contents.",
+        "source": "turn24view1",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    }
+  ],
+  "outlineMethod": "Manually traced vertices on a 1440px view of the repaired image, then scaled exactly 2x. Sloped and rounded boundaries use multiple vertices. Numbered overlays visually checked.",
+  "unresolvedLinks": []
+}

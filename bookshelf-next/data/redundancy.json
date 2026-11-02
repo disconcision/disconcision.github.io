@@ -1,0 +1,184 @@
+{
+  "decision": {
+    "keep_existing": [
+      "bs0",
+      "bs1",
+      "bs2",
+      "bs3",
+      "bs4",
+      "bs5",
+      "bs6",
+      "bs7",
+      "bs8",
+      "bs9"
+    ],
+    "add_new": [
+      "IMG_5022",
+      "IMG_5023",
+      "IMG_5024",
+      "IMG_5025",
+      "IMG_5026",
+      "IMG_5029"
+    ],
+    "exclude_new": [
+      "IMG_5027",
+      "IMG_5028",
+      "IMG_5030"
+    ],
+    "total_crates": 16,
+    "two_row_count": [
+      8,
+      8
+    ],
+    "drop_for_parity": false,
+    "reason": "Three new photographs repeat existing collections. Retaining the older collections preserves all identified titles and produces an even number without dropping a distinct crate."
+  },
+  "comparisons": [
+    {
+      "new_crate": "IMG_5027",
+      "existing_crate": "bs6",
+      "existing_title_count": 20,
+      "shared_titles": [
+        "Corporate Fields · AA Publications",
+        "The Extended Organism · J. Scott Turner",
+        "Structure and Architecture · Angus J. Macdonald",
+        "Disappearing Architecture · Flachbart & Weibel",
+        "A New Program for Graphic Design · David Reinfurt",
+        "Genetic Architectures · Estévez, Dollens et al.",
+        "SITELESS · François Blanciak",
+        "How to Lie with Maps · Mark Monmonier",
+        "Regular Expression Pocket Reference · Tony Stubblebine",
+        "UML Pocket Reference · Dan Pilone",
+        "The Culture of the Copy · Hillel Schwartz",
+        "The Society of the Spectacle · Guy Debord",
+        "Drosscape · Alan Berger",
+        "You Are Here: Personal Geographies · Katharine Harmon",
+        "Else/Where: Mapping · Janet Abrams & Peter Hall",
+        "Mapping: An Illustrated Guide · Roger Fawcett-Tang",
+        "Visual Explanations · Edward Tufte",
+        "Handbook of Pictorial Symbols · Rudolf Modley"
+      ],
+      "new_only_titles": [],
+      "existing_titles_missing_from_new": [
+        "Scott Pilgrim Vol. 2 · Bryan Lee O'Malley",
+        "Scott Pilgrim Vol. 1 · Bryan Lee O'Malley"
+      ],
+      "decision": "exclude new photograph; retain repaired existing crate",
+      "reason": "IMG_5027 adds no identified titles to bs6. The older image retains extra titles.",
+      "evidence": {
+        "method": "Side-by-side visual inspection of the repaired PSD exports, cross-checked against current index.html aria-label book inventory. Original normalized photograph checked where lettering is occluded.",
+        "existing_image": "assets/bs6.png",
+        "new_image": "assets/IMG_5027.png",
+        "confidence": "high",
+        "caveat": null
+      }
+    },
+    {
+      "new_crate": "IMG_5028",
+      "existing_crate": "bs9",
+      "existing_title_count": 20,
+      "shared_titles": [
+        "Anatomy of Lisp · John Allen",
+        "Understanding Comics · Scott McCloud",
+        "The Mythical Man-Month · Frederick Brooks",
+        "Metaphors We Live By · Lakoff & Johnson",
+        "The Social Construction of What? · Ian Hacking",
+        "Cybernetics · Norbert Wiener",
+        "CCRU: Writings 1997-2003",
+        "Evolution in Four Dimensions · Jablonka & Lamb",
+        "Ways of Seeing · John Berger",
+        "Technics and Civilization · Lewis Mumford",
+        "The History of Magic · Éliphas Lévi",
+        "The Humane Interface · Jef Raskin",
+        "A Thousand Years of Nonlinear History · Manuel De Landa",
+        "Visual Grammar · Christian Leborg",
+        "Machine Code for Beginners",
+        "How Things Work in Your Home · Time-Life Books",
+        "The Annotated Arch · Carol Strickland",
+        "The Way Life Works · Hoagland & Dodson"
+      ],
+      "new_only_titles": [],
+      "existing_titles_missing_from_new": [
+        "God & Golem, Inc. · Norbert Wiener",
+        "What is Life? · Erwin Schrödinger"
+      ],
+      "decision": "exclude new photograph; retain repaired existing crate",
+      "reason": "IMG_5028 adds no identified titles to bs9. The older image retains extra titles.",
+      "evidence": {
+        "method": "Side-by-side visual inspection of the repaired PSD exports, cross-checked against current index.html aria-label book inventory. Original normalized photograph checked where lettering is occluded.",
+        "existing_image": "assets/bs9.png",
+        "new_image": "assets/IMG_5028.png",
+        "confidence": "high",
+        "caveat": "Cybernetics is mostly occluded behind Hacking and CCRU. The visible cover/text fragment is consistent with the corresponding book in bs9; 17 other shared titles are directly readable."
+      }
+    },
+    {
+      "new_crate": "IMG_5030",
+      "existing_crate": "bs8",
+      "existing_title_count": 13,
+      "shared_titles": [
+        "The Dream Machine · M. Mitchell Waldrop",
+        "Bootstrapping Computing · Alexander Obenauer",
+        "The Self-Made Tapestry · Philip Ball",
+        "Category Theory for Programmers · Bartosz Milewski",
+        "The Machinery of Life · David S. Goodsell",
+        "The Origins of Order · Stuart Kauffman",
+        "Investigations · Stuart Kauffman",
+        "At Home in the Universe · Stuart Kauffman",
+        "Quantum Computing Since Democritus · Scott Aaronson",
+        "On the Genealogy of Morality · Friedrich Nietzsche",
+        "Hacker's Delight · Henry S. Warren Jr.",
+        "PiHKAL: A Chemical Love Story · Ann & Alexander Shulgin",
+        "The Age of Em · Robin Hanson"
+      ],
+      "new_only_titles": [],
+      "existing_titles_missing_from_new": [],
+      "decision": "exclude new photograph; retain repaired existing crate",
+      "reason": "IMG_5030 adds no identified titles to bs8. The visible collection matches completely.",
+      "evidence": {
+        "method": "Side-by-side visual inspection of the repaired PSD exports, cross-checked against current index.html aria-label book inventory. Original normalized photograph checked where lettering is occluded.",
+        "existing_image": "assets/bs8.png",
+        "new_image": "assets/IMG_5030.png",
+        "confidence": "high",
+        "caveat": null
+      }
+    }
+  ],
+  "isolated_overlaps": [
+    {
+      "title": "Scott Pilgrim, Vol. 2",
+      "crates": [
+        "bs6",
+        "IMG_5024"
+      ],
+      "evidence": "The horizontal blue/pink volume in bs6 and last blue/pink upright Scott Pilgrim volume in IMG_5024 both show 2. Confirmed in the original IMG_5024 source photograph.",
+      "note": "IMG_5024 volumes run 4,5,6,3,2 left to right. The previous manifest mistakenly described a second copy of volume6."
+    },
+    {
+      "title": "God & Golem, Inc.",
+      "crates": [
+        "bs9",
+        "IMG_5024"
+      ],
+      "evidence": "Wiener title is legible in both crates.",
+      "note": "A single repeated book does not make either crate redundant."
+    }
+  ],
+  "similar_but_distinct": [
+    {
+      "items": [
+        {
+          "crate": "IMG_5023",
+          "title": "SimCity 2000 Urban Renewal Kit"
+        },
+        {
+          "crate": "IMG_5026",
+          "title": "SimCity 2000"
+        }
+      ],
+      "evidence": "IMG_5023 shows the crane icon, Urban Renewal Kit badge, and Requires SimCity 2000 text. IMG_5026 shows the UFO icon and base-game package.",
+      "decision": "Retain and link separately; expansion/toolkit and base game are distinct products."
+    }
+  ],
+  "additional_new_crate_check": "The six retained new crate photographs were visually reviewed. No whole-crate redundancy exists among them. The two isolated old/new book overlaps above are insufficient reason to remove any of the six."
+}

@@ -1,0 +1,25 @@
+/* Four complete columns, with the existing transparent image spacing intact. */
+section#books{--crate-size:240px;--shelf-rows:2;display:block;box-sizing:border-box;min-height:0;height:auto;padding:10px 12px 12px;overflow:hidden;cursor:grab}
+section#books .shelf-window{width:100%;overflow-x:auto;overflow-y:hidden;touch-action:pan-x pan-y pinch-zoom;scrollbar-color:#1f9677 transparent;scrollbar-width:thin;overscroll-behavior-x:contain;scroll-snap-type:x mandatory}
+section#books .crates-container{display:grid;grid-template-columns:repeat(var(--shelf-columns),var(--crate-size));grid-template-rows:repeat(var(--shelf-rows),var(--crate-size));height:auto;gap:0;width:max-content;align-items:stretch}
+section#books .book-crate{width:var(--crate-size);height:var(--crate-size);display:block;scroll-snap-align:start}
+section#books .book-crate img{width:100%;height:100%;object-fit:contain;max-width:none;margin:0;user-select:none;-webkit-user-drag:none}
+section#books .book-crate svg{overflow:visible}
+section#books .book-crate svg a,
+section#books .book-crate svg a:focus,
+section#books .book-crate svg a:focus-visible,
+section#books .book-crate svg a:active{outline:none;box-shadow:none;-webkit-tap-highlight-color:transparent}
+section#books .book-crate svg a:focus-visible polygon{fill:rgba(255,255,255,.31);stroke:transparent}
+section#books .book-crate svg a:hover polygon{fill:rgba(255,255,255,.31)}
+section#books.dragging{cursor:grabbing}
+section#books.dragging .shelf-window,section#books.settling .shelf-window{scroll-snap-type:none}
+section#books .book-crate::after{font-size:12px;white-space:normal;width:max-content;max-width:92%;box-sizing:border-box;line-height:1.35;text-align:center;bottom:6%;overflow:visible;text-overflow:clip;z-index:30}
+section#books .shelf-window:focus-visible{outline:1px solid #77af8b;outline-offset:2px}
+section#books .shelf-gesture-hint{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 36px);padding:3px 7px;border:1px solid #7ec5a44d;border-radius:4px;background:#061f1af2;color:#d0f7e7;box-shadow:0 2px 6px #0004;font:11px/1.3 "Open Sans",system-ui,sans-serif;text-align:center;pointer-events:none;z-index:40;opacity:0;visibility:hidden;transition:opacity .15s ease}
+section#books .hint-keyboard{display:none}
+@media(hover:hover){section#books:not(.interactive):not(.dragging):hover .shelf-gesture-hint{opacity:1;visibility:visible}}
+section#books:not(.interactive):not(.dragging):has(.shelf-window:focus-visible) .shelf-gesture-hint{opacity:1;visibility:visible}
+section#books:has(.shelf-window:focus-visible) .hint-pointer{display:none}
+section#books:has(.shelf-window:focus-visible) .hint-keyboard{display:inline}
+@media(max-width:600px){section#books{padding-inline:8px}}
+@media(prefers-reduced-motion:reduce){section#books .book-crate svg,section#books .book-crate svg polygon,section#books .shelf-gesture-hint{transition:none}}

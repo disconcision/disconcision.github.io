@@ -1,0 +1,434 @@
+{
+  "id": "IMG_5022",
+  "width": 2880,
+  "height": 2880,
+  "books": [
+    {
+      "title": "The New Media Reader",
+      "author": "Noah Wardrip-Fruin and Nick Montfort (editors)",
+      "href": "https://www.newmediareader.com/",
+      "points": [
+        [
+          384,
+          920
+        ],
+        [
+          420,
+          910
+        ],
+        [
+          624,
+          910
+        ],
+        [
+          676,
+          922
+        ],
+        [
+          712,
+          952
+        ],
+        [
+          722,
+          974
+        ],
+        [
+          722,
+          2414
+        ],
+        [
+          704,
+          2476
+        ],
+        [
+          662,
+          2510
+        ],
+        [
+          426,
+          2514
+        ],
+        [
+          406,
+          2502
+        ],
+        [
+          394,
+          2470
+        ]
+      ],
+      "verification": {
+        "url": "https://www.newmediareader.com/",
+        "pageTitle": "The New Media Reader",
+        "evidence": "Book site title identifies the two editors; contents, excerpts, CD material and resources are for The New Media Reader.",
+        "source": "turn6view0",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Real World Haskell",
+      "author": "Bryan O’Sullivan, John Goerzen and Don Stewart",
+      "href": "https://www.complete.org/real-world-haskell/",
+      "points": [
+        [
+          732,
+          964
+        ],
+        [
+          950,
+          962
+        ],
+        [
+          960,
+          978
+        ],
+        [
+          964,
+          2416
+        ],
+        [
+          950,
+          2452
+        ],
+        [
+          740,
+          2454
+        ]
+      ],
+      "verification": {
+        "url": "https://www.complete.org/real-world-haskell/",
+        "pageTitle": "Real World Haskell",
+        "evidence": "Author John Goerzen’s page names this book and all three authors and links its online text.",
+        "source": "turn7view0",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Clojure Programming",
+      "author": "Chas Emerick, Brian Carper and Christophe Grand",
+      "href": "https://www.oreilly.com/library/view/clojure-programming/9781449310387/",
+      "points": [
+        [
+          978,
+          972
+        ],
+        [
+          1168,
+          968
+        ],
+        [
+          1180,
+          982
+        ],
+        [
+          1186,
+          2444
+        ],
+        [
+          1172,
+          2454
+        ],
+        [
+          988,
+          2454
+        ]
+      ],
+      "verification": {
+        "url": "https://www.oreilly.com/library/view/clojure-programming/9781449310387/",
+        "pageTitle": "Clojure Programming",
+        "evidence": "O’Reilly book page identifies Clojure Programming, all three authors, April 2012, and 628 pages.",
+        "source": "turn7view3",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Programming Rust",
+      "author": "Jim Blandy and Jason Orendorff",
+      "href": "https://www.oreilly.com/library/view/programming-rust/9781491927274/",
+      "points": [
+        [
+          1188,
+          972
+        ],
+        [
+          1390,
+          970
+        ],
+        [
+          1398,
+          986
+        ],
+        [
+          1406,
+          2454
+        ],
+        [
+          1390,
+          2464
+        ],
+        [
+          1204,
+          2462
+        ],
+        [
+          1194,
+          2454
+        ]
+      ],
+      "verification": {
+        "url": "https://www.oreilly.com/library/view/programming-rust/9781491927274/",
+        "pageTitle": "Programming Rust",
+        "evidence": "O’Reilly page names Jim Blandy and Jason Orendorff, December 2017, 619 pages; this matches the photographed first-edition spine.",
+        "source": "turn7view4",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Real World OCaml",
+      "author": "Yaron Minsky, Anil Madhavapeddy and Jason Hickey",
+      "href": "https://dev.realworldocaml.org/",
+      "points": [
+        [
+          1412,
+          964
+        ],
+        [
+          1568,
+          964
+        ],
+        [
+          1580,
+          980
+        ],
+        [
+          1580,
+          2458
+        ],
+        [
+          1422,
+          2466
+        ],
+        [
+          1414,
+          2454
+        ]
+      ],
+      "verification": {
+        "url": "https://dev.realworldocaml.org/",
+        "pageTitle": "Real World OCaml",
+        "evidence": "Dedicated book site identifies title and Minsky/Madhavapeddy, and its prologue explicitly credits Jason Hickey as coauthor of the first edition. The living site hosts the revised second edition.",
+        "source": "turn44view0; turn45view1",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      },
+      "note": "Photograph is the first edition; the living book site hosts the revised edition."
+    },
+    {
+      "title": "Interactive Data Visualization for the Web, second edition",
+      "author": "Scott Murray",
+      "href": "https://scottmurray.org/work/d3-book-2e",
+      "points": [
+        [
+          1590,
+          964
+        ],
+        [
+          1730,
+          962
+        ],
+        [
+          1744,
+          980
+        ],
+        [
+          1746,
+          2452
+        ],
+        [
+          1732,
+          2464
+        ],
+        [
+          1596,
+          2466
+        ]
+      ],
+      "verification": {
+        "url": "https://scottmurray.org/work/d3-book-2e",
+        "pageTitle": "Interactive Data Visualization for the Web, second edition",
+        "evidence": "Author’s page explicitly identifies the second edition and provides examples, errata and a description of its updated D3 material.",
+        "source": "turn6view3",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "TeX: The Program",
+      "author": "Donald E. Knuth",
+      "href": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+      "points": [
+        [
+          1756,
+          900
+        ],
+        [
+          1770,
+          872
+        ],
+        [
+          1802,
+          874
+        ],
+        [
+          1982,
+          880
+        ],
+        [
+          2000,
+          898
+        ],
+        [
+          2002,
+          2474
+        ],
+        [
+          1990,
+          2498
+        ],
+        [
+          1772,
+          2504
+        ],
+        [
+          1758,
+          2486
+        ]
+      ],
+      "verification": {
+        "url": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+        "pageTitle": "TeX: The Program",
+        "evidence": "Knuth’s author page lists Computers & Typesetting Volume B, TeX: The Program, 1986, ISBN 0-201-13437-3.",
+        "source": "turn7view1",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "METAFONT: The Program",
+      "author": "Donald E. Knuth",
+      "href": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+      "points": [
+        [
+          2014,
+          896
+        ],
+        [
+          2036,
+          876
+        ],
+        [
+          2210,
+          876
+        ],
+        [
+          2228,
+          892
+        ],
+        [
+          2226,
+          2486
+        ],
+        [
+          2212,
+          2506
+        ],
+        [
+          2030,
+          2506
+        ],
+        [
+          2016,
+          2492
+        ]
+      ],
+      "verification": {
+        "url": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+        "pageTitle": "METAFONT: The Program",
+        "evidence": "Knuth’s author page lists Computers & Typesetting Volume D, METAFONT: The Program, 1986, ISBN 0-201-13438-1.",
+        "source": "turn7view1",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    },
+    {
+      "title": "Computer Modern Typefaces",
+      "author": "Donald E. Knuth",
+      "href": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+      "points": [
+        [
+          2238,
+          900
+        ],
+        [
+          2260,
+          874
+        ],
+        [
+          2444,
+          872
+        ],
+        [
+          2466,
+          882
+        ],
+        [
+          2470,
+          902
+        ],
+        [
+          2462,
+          2478
+        ],
+        [
+          2448,
+          2506
+        ],
+        [
+          2418,
+          2514
+        ],
+        [
+          2264,
+          2512
+        ],
+        [
+          2240,
+          2492
+        ]
+      ],
+      "verification": {
+        "url": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+        "pageTitle": "Computer Modern Typefaces",
+        "evidence": "Knuth’s author page lists Computers & Typesetting Volume E, Computer Modern Typefaces, 1986, ISBN 0-201-13446-2.",
+        "source": "turn7view1",
+        "checkedAt": "2026-11-01",
+        "verified": true,
+        "method": "Opened destination and inspected page text"
+      }
+    }
+  ],
+  "outlineMethod": "Manually traced vertices on a 1440px view of the repaired image, then scaled exactly 2x. Sloped and rounded boundaries use multiple vertices. Numbered overlays visually checked.",
+  "unresolvedLinks": []
+}

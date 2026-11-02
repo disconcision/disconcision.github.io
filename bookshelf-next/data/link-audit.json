@@ -1,0 +1,3595 @@
+[
+  {
+    "crate": "IMG_5022",
+    "index": 0,
+    "title": "The New Media Reader",
+    "oldHref": "https://www.newmediareader.com/",
+    "href": "https://www.newmediareader.com/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.newmediareader.com/",
+      "pageTitle": "The New Media Reader - Noah Wardrip-Fruin and Nick Montfort, eds.",
+      "evidence": "Dedicated book site title names the editors; body supplies book contents, CD contents, excerpts and resources.",
+      "source": "turn82view0",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 1,
+    "title": "Real World Haskell",
+    "oldHref": "https://www.complete.org/real-world-haskell/",
+    "href": "https://www.complete.org/real-world-haskell/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.complete.org/real-world-haskell/",
+      "pageTitle": "Real World Haskell | www.complete.org",
+      "evidence": "Author John Goerzen’s page names Real World Haskell and its three authors Bryan O’Sullivan, John Goerzen and Don Stewart.",
+      "source": "turn82view1",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 2,
+    "title": "Clojure Programming",
+    "oldHref": "https://www.oreilly.com/library/view/clojure-programming/9781449310387/",
+    "href": "https://www.oreilly.com/library/view/clojure-programming/9781449310387/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.oreilly.com/library/view/clojure-programming/9781449310387/",
+      "pageTitle": "Clojure Programming [Book]",
+      "evidence": "Publisher page names Clojure Programming by Chas Emerick, Brian Carper and Christophe Grand, April 2012, 628 pages.",
+      "source": "turn82view2; turn94view6",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 3,
+    "title": "Programming Rust",
+    "oldHref": "https://www.oreilly.com/library/view/programming-rust/9781491927274/",
+    "href": "https://www.oreilly.com/library/view/programming-rust/9781491927274/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.oreilly.com/library/view/programming-rust/9781491927274/",
+      "pageTitle": "Programming Rust [Book]",
+      "evidence": "Publisher page names Programming Rust by Jim Blandy and Jason Orendorff, December 2017, 619 pages; it distinguishes the second edition in its related titles.",
+      "source": "turn82view3; turn94view7",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 4,
+    "title": "Real World OCaml",
+    "oldHref": "https://dev.realworldocaml.org/",
+    "href": "https://dev.realworldocaml.org/",
+    "status": "verified",
+    "reason": "Correct book’s official living site; explicitly note it now hosts the second edition, while the photographed copy is the first edition.",
+    "verification": {
+      "url": "https://dev.realworldocaml.org/",
+      "pageTitle": "Real World OCaml",
+      "evidence": "Home page names Real World OCaml and authors Yaron Minsky and Anil Madhavapeddy. The opened prologue explicitly credits Jason Hickey as coauthor of the first edition, establishing continuity with the photographed book.",
+      "source": "turn82view4; turn123view0; turn128view1",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read matching title/author text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 5,
+    "title": "Interactive Data Visualization for the Web, second edition",
+    "oldHref": "https://scottmurray.org/work/d3-book-2e",
+    "href": "https://scottmurray.org/work/d3-book-2e",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://scottmurray.org/work/d3-book-2e",
+      "pageTitle": "Interactive Data Visualization for the Web, 2nd Ed. — Scott Murray",
+      "evidence": "Scott Murray’s own page names the second edition, dated August 2017, and provides code examples and errata.",
+      "source": "turn82view5",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 6,
+    "title": "TeX: The Program",
+    "oldHref": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+    "href": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+      "pageTitle": "Knuth: Computers and Typesetting",
+      "evidence": "Donald Knuth’s bibliography explicitly lists Volume B, TeX: The Program, Addison-Wesley 1986, ISBN 0-201-13437-3.",
+      "source": "turn82view6",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 7,
+    "title": "METAFONT: The Program",
+    "oldHref": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+    "href": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+      "pageTitle": "Knuth: Computers and Typesetting",
+      "evidence": "Donald Knuth’s bibliography explicitly lists Volume D, METAFONT: The Program, Addison-Wesley 1986, ISBN 0-201-13438-1.",
+      "source": "turn82view6",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5022",
+    "index": 8,
+    "title": "Computer Modern Typefaces",
+    "oldHref": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+    "href": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www-cs-faculty.stanford.edu/~knuth/abcde.html",
+      "pageTitle": "Knuth: Computers and Typesetting",
+      "evidence": "Donald Knuth’s bibliography explicitly lists Volume E, Computer Modern Typefaces, Addison-Wesley 1986, ISBN 0-201-13446-2.",
+      "source": "turn82view6",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5023",
+    "index": 0,
+    "title": "Macromedia Flash MX",
+    "oldHref": "https://www.webdesignmuseum.org/software/macromedia-flash-mx-in-2002",
+    "href": "https://www.webdesignmuseum.org/software/macromedia-flash-mx-in-2002",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.webdesignmuseum.org/software/macromedia-flash-mx-in-2002",
+      "pageTitle": "Macromedia Flash MX in 2002 - Web Design Museum",
+      "evidence": "Product exhibit explicitly names Macromedia Flash MX, Macromedia, its March 2002 release and Flash Player 6; original software screenshots and system requirements match the photographed package.",
+      "source": "turn94view0; turn99view8",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5023",
+    "index": 1,
+    "title": "Macintosh Pascal",
+    "oldHref": "https://www.macintoshrepository.org/61202-macintosh-pascal-1-0",
+    "href": "https://www.macintoshrepository.org/61202-macintosh-pascal-1-0",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.macintoshrepository.org/61202-macintosh-pascal-1-0",
+      "pageTitle": "Macintosh Pascal 1.0 - Macintosh Repository",
+      "evidence": "Preserved software record names Macintosh Pascal 1.0, THINK Technologies as author, Apple Computer as publisher and 1984. The photograph does not expose an exact version; this is the original Macintosh Pascal product.",
+      "source": "turn94view1",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5023",
+    "index": 2,
+    "title": "MacPaint",
+    "oldHref": "https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/",
+    "href": "https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/",
+      "pageTitle": "MacPaint and QuickDraw Source Code - CHM",
+      "evidence": "Computer History Museum’s primary source-code release identifies Bill Atkinson as MacPaint’s author and acknowledges permission from Apple and code supplied by Atkinson.",
+      "source": "turn94view2; turn99view9",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5023",
+    "index": 3,
+    "title": "HyperCard",
+    "oldHref": "https://hypercard.org/",
+    "href": "https://hypercard.org/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://hypercard.org/",
+      "pageTitle": "HyperCard | The software erector set.",
+      "evidence": "Dedicated HyperCard archive presents the original HyperTalk Reference distributed with HyperCard 2.4, interviews with its creators, and preserved HyperCard documentation and stacks.",
+      "source": "turn94view3",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5023",
+    "index": 4,
+    "title": "SimCity 2000: Urban Renewal Kit",
+    "oldHref": "https://patcoston.com/co/urkdef.aspx",
+    "href": "https://patcoston.com/co/urkdef.aspx",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://patcoston.com/co/urkdef.aspx",
+      "pageTitle": "ClubOpolis: What is SCURK?",
+      "evidence": "Page reproduces the SCURK manual’s identification as SimCity 2000 Urban Renewal Kit and describes its terrain, city and artwork editing. It is the add-on, distinct from base SimCity 2000.",
+      "source": "turn94view4",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5023",
+    "index": 5,
+    "title": "Microsoft Excel for Macintosh",
+    "oldHref": "https://www.versionmuseum.com/history-of/microsoft-excel",
+    "href": "https://www.versionmuseum.com/history-of/microsoft-excel",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.versionmuseum.com/history-of/microsoft-excel",
+      "pageTitle": "37 Years of Microsoft Excel Design History - 70 Images - Version Museum",
+      "evidence": "Product history contains a specific Microsoft Excel for Mac (1985) section and original early Macintosh Excel interface screenshots. The box does not establish an exact version; destination is a product history rather than a claimed exact edition.",
+      "source": "turn94view5; turn99view10",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 0,
+    "title": "Operating Systems",
+    "oldHref": "https://books.google.com/books/about/Operating_Systems.html?id=74ZQAAAAMAAJ",
+    "href": "https://books.google.com/books/about/Operating_Systems.html?id=74ZQAAAAMAAJ",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Operating_Systems.html?id=74ZQAAAAMAAJ",
+      "pageTitle": "Operating Systems - Stuart E. Madnick, John J. Donovan - Google Books",
+      "evidence": "Digitized book record explicitly names Operating Systems, Stuart E. Madnick and John J. Donovan, McGraw-Hill 1974 and 640 pages.",
+      "source": "turn99view0",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 1,
+    "title": "Database Design",
+    "oldHref": "https://books.google.com/books/about/Database_Design.html?id=0NJQAAAAMAAJ",
+    "href": "https://books.google.com/books/about/Database_Design.html?id=0NJQAAAAMAAJ",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Database_Design.html?id=0NJQAAAAMAAJ",
+      "pageTitle": "Database Design - Gio Wiederhold - Google Books",
+      "evidence": "Digitized book record explicitly names Database Design, Gio Wiederhold, McGraw-Hill 1983, 751 pages and the book’s database design contents.",
+      "source": "turn99view1",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 2,
+    "title": "Harrow the Ninth",
+    "oldHref": "https://us.macmillan.com/books/9781250313218/harrowtheninth/",
+    "href": "https://us.macmillan.com/books/9781250313218/harrowtheninth/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://us.macmillan.com/books/9781250313218/harrowtheninth/",
+      "pageTitle": "Harrow the Ninth",
+      "evidence": "Macmillan page names Harrow the Ninth, Tamsyn Muir and Locked Tomb volume 2, with cover and excerpt.",
+      "source": "turn99view2",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 3,
+    "title": "The Gutenberg Galaxy",
+    "oldHref": "https://utpdistribution.com/9781442660809/the-gutenberg-galaxy/",
+    "href": "https://utpdistribution.com/9781442660809/the-gutenberg-galaxy/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://utpdistribution.com/9781442660809/the-gutenberg-galaxy/",
+      "pageTitle": "The Gutenberg Galaxy",
+      "evidence": "University of Toronto Press distribution page names The Gutenberg Galaxy: The Making of Typographic Man by Marshall McLuhan.",
+      "source": "turn99view3; turn104view11",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 4,
+    "title": "Scott Pilgrim Gets It Together (Volume 4)",
+    "oldHref": "https://onipress.shop/products/scott-pilgrim-vol-4-b-w-scott-pilgrim-gets-it-together",
+    "href": "https://onipress.shop/products/scott-pilgrim-vol-4-b-w-scott-pilgrim-gets-it-together",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://onipress.shop/products/scott-pilgrim-vol-4-b-w-scott-pilgrim-gets-it-together",
+      "pageTitle": "Scott Pilgrim Vol. 4 B/W: Scott Pilgrim Gets It Together – Oni Press",
+      "evidence": "Oni Press product body explicitly names the exact volume 4 title and credits Bryan Lee O’Malley; synopsis matches this installment.",
+      "source": "turn99view4; turn106view1",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 5,
+    "title": "Scott Pilgrim vs. the Universe (Volume 5)",
+    "oldHref": "https://onipress.shop/products/scott-pilgrim-vol-5-b-w-scott-pilgrim-vs-the-universe",
+    "href": "https://onipress.shop/products/scott-pilgrim-vol-5-b-w-scott-pilgrim-vs-the-universe",
+    "status": "verified",
+    "reason": "Initial direct opens failed, but opening the fresh publisher search result succeeded; actual product body then verified.",
+    "verification": {
+      "url": "https://onipress.shop/products/scott-pilgrim-vol-5-b-w-scott-pilgrim-vs-the-universe",
+      "pageTitle": "Scott Pilgrim Vol. 5 B/W: Scott Pilgrim vs. The Universe – Oni Press",
+      "evidence": "Oni Press product body names volume 5, Scott Pilgrim vs. The Universe, credits Bryan Lee O’Malley as writer and artist, and describes this as the penultimate series volume.",
+      "source": "turn123view1; turn128view0",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read matching title/author text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 6,
+    "title": "Scott Pilgrim’s Finest Hour (Volume 6)",
+    "oldHref": "https://onipress.shop/products/scott-pilgrim-vol-6-b-w-scott-pilgrims-finest-hour",
+    "href": "https://onipress.shop/products/scott-pilgrim-vol-6-b-w-scott-pilgrims-finest-hour",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://onipress.shop/products/scott-pilgrim-vol-6-b-w-scott-pilgrims-finest-hour",
+      "pageTitle": "Scott Pilgrim Vol. 6 B/W: Scott Pilgrim’s Finest Hour – Oni Press",
+      "evidence": "Oni Press product body explicitly names volume 6, Scott Pilgrim’s Finest Hour, and Bryan Lee O’Malley as writer and artist.",
+      "source": "turn99view6; turn104view9",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 7,
+    "title": "Scott Pilgrim and the Infinite Sadness (Volume 3)",
+    "oldHref": "https://onipress.shop/products/scott-pilgrim-vol-3-b-w-scott-pilgrim-and-the-infinite-sadness",
+    "href": "https://onipress.shop/products/scott-pilgrim-vol-3-b-w-scott-pilgrim-and-the-infinite-sadness",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://onipress.shop/products/scott-pilgrim-vol-3-b-w-scott-pilgrim-and-the-infinite-sadness",
+      "pageTitle": "Scott Pilgrim Vol. 3 B/W: Scott Pilgrim and the Infinite Sadness – Oni Press",
+      "evidence": "Oni Press product body explicitly names volume 3 and its exact subtitle, and Bryan Lee O’Malley as writer and artist; ISBN 9781932664225.",
+      "source": "turn99view7; turn104view10",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 8,
+    "title": "Scott Pilgrim vs. the World (Volume 2)",
+    "oldHref": "https://onipress.shop/products/scott-pilgrim-vol-2-b-w-scott-pilgrim-vs-the-world",
+    "href": "https://onipress.shop/products/scott-pilgrim-vol-2-b-w-scott-pilgrim-vs-the-world",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://onipress.shop/products/scott-pilgrim-vol-2-b-w-scott-pilgrim-vs-the-world",
+      "pageTitle": "Scott Pilgrim Vol. 2 B/W: Scott Pilgrim vs. The World – Oni Press",
+      "evidence": "Oni Press product body explicitly names volume 2 and its exact subtitle, and Bryan Lee O’Malley as writer and artist.",
+      "source": "turn104view0; turn106view2",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 9,
+    "title": "God & Golem, Inc.",
+    "oldHref": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+    "href": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+    "status": "verified",
+    "reason": "Current publisher destination opened and matched title and author.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+      "pageTitle": "God & Golem, Inc.",
+      "evidence": "MIT Press page names Norbert Wiener, the full title and subtitle, ISBN 9780262730112, and the paperback and hardcover editions.",
+      "source": "turn83view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 10,
+    "title": "Elements of Clojure",
+    "oldHref": "https://elementsofclojure.com/",
+    "href": "https://elementsofclojure.com/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://elementsofclojure.com/",
+      "pageTitle": "Elements of Clojure",
+      "evidence": "Dedicated author book page begins Elements of Clojure by Zachary Tellman and links the full PDF.",
+      "source": "turn104view1",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 11,
+    "title": "Building SimCity: How to Put the World in a Machine",
+    "oldHref": "https://mitpress.mit.edu/9780262377584/building-simcity/",
+    "href": "https://mitpress.mit.edu/9780262377584/building-simcity/",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262377584/building-simcity/",
+      "pageTitle": "Building SimCity",
+      "evidence": "MIT Press page names Building SimCity: How to Put the World in a Machine by Chaim Gingold, June 2024; both ebook and paperback listed.",
+      "source": "turn104view2",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 12,
+    "title": "Talisnam: 52 Stories",
+    "oldHref": "https://ctrlcreep.net/",
+    "href": "https://ctrlcreep.net/",
+    "status": "verified",
+    "reason": "Web extraction was blank; root reopened the actual author homepage in a rendered browser and verified its Talisnam book link.",
+    "verification": {
+      "url": "https://ctrlcreep.net/",
+      "pageTitle": "ctrlcreep.net",
+      "evidence": "Fresh rendered page identifies ctrlcreep and explicitly lists talisnam, linking to https://www.amazon.com/gp/product/B0FPVNPL2T. This destination is the author landing page listing the book; no claim is made that the Amazon listing was opened.",
+      "source": "Root browser inspection, ctrlcreep.net, 2026-11-01",
+      "checked": "2026-11-01",
+      "method": "Opened and read the actual browser-rendered destination; confirmed visible author and book link"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 13,
+    "title": "Fukt #23: The Sound Issue",
+    "oldHref": "https://www.fuktmagazine.com/shop/23",
+    "href": "https://www.fuktmagazine.com/shop/23",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.fuktmagazine.com/shop/23",
+      "pageTitle": "The Sound Issue — FUKT Magazine",
+      "evidence": "Publisher’s issue page names FUKT #23 – The Sound Issue, 2025/26, with editor-in-chief Bjørn Hegardt and ISBN 9783982009865.",
+      "source": "turn104view4; turn106view3",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 14,
+    "title": "The Scaling Era: An Oral History of AI, 2019–2025",
+    "oldHref": "https://press.stripe.com/scaling",
+    "href": "https://press.stripe.com/scaling",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://press.stripe.com/scaling",
+      "pageTitle": "Stripe Press — The Scaling Era",
+      "evidence": "Publisher’s page begins The Scaling Era: An Oral History of AI, 2019–2025 and Dwarkesh Patel with Gavin Leech.",
+      "source": "turn104view5",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 15,
+    "title": "Your Linux Toolbox",
+    "oldHref": "https://nostarch.com/linuxtoolbox",
+    "href": "https://nostarch.com/linuxtoolbox",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://nostarch.com/linuxtoolbox",
+      "pageTitle": "Your Linux Toolbox | No Starch Press",
+      "evidence": "Publisher page names Your Linux Toolbox by Julia Evans, August 2019, seven-zine box set, ISBN 9781593279776.",
+      "source": "turn104view6",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5024",
+    "index": 16,
+    "title": "Designing Design",
+    "oldHref": "https://www.lars-mueller-publishers.com/designing-design",
+    "href": "https://www.lars-mueller-publishers.com/designing-design",
+    "status": "verified",
+    "reason": "Current destination reopened; matching book or software product confirmed.",
+    "verification": {
+      "url": "https://www.lars-mueller-publishers.com/designing-design",
+      "pageTitle": "Designing Design | Lars Müller Publishers",
+      "evidence": "Publisher page names Kenya Hara and Designing Design, describes the book and presents its cover and interior images.",
+      "source": "turn104view7",
+      "checked": "2026-11-01",
+      "method": "Reopened current destination with web tool and read actual page text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 0,
+    "title": "The Symbolic Species: The Co-evolution of Language and the Brain",
+    "oldHref": "https://openlibrary.org/books/OL992645M/The_symbolic_species",
+    "href": "https://openlibrary.org/books/OL992645M/The_symbolic_species",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://openlibrary.org/books/OL992645M/The_symbolic_species",
+      "pageTitle": "The Symbolic Species: The Co-evolution of Language and the Brain",
+      "evidence": "The catalogue record identifies The Symbolic Species, its subtitle, Terrence William Deacon, first edition, W. W. Norton and 1997.",
+      "source": "turn91view0",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 1,
+    "title": "Smalltalk-80: The Language and Its Implementation",
+    "oldHref": "https://rmod-files.lille.inria.fr/FreeBooks/BlueBookHughes/BlueBookImplementationTOC.html",
+    "href": "https://rmod-files.lille.inria.fr/FreeBooks/BlueBookHughes/BlueBookImplementationTOC.html",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://rmod-files.lille.inria.fr/FreeBooks/BlueBookHughes/BlueBookImplementationTOC.html",
+      "pageTitle": "Smalltalk-80: The Language and Its Implementation",
+      "evidence": "The authorized excerpt names Smalltalk-80: The Language and Its Implementation, Adele Goldberg and David Robson, Addison-Wesley 1983, ISBN 0201113716, and states the authors granted reproduction permission.",
+      "source": "turn91view1",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 2,
+    "title": "Compilers: Principles, Techniques, and Tools",
+    "oldHref": "https://www.cs.columbia.edu/~aho/books.html",
+    "href": "https://www.cs.columbia.edu/~aho/books.html",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.cs.columbia.edu/~aho/books.html",
+      "pageTitle": "Compilers: Principles, Techniques, and Tools",
+      "evidence": "Alfred Aho’s bibliography lists Compilers: Principles, Techniques, and Tools by Aho, Ravi Sethi and Jeffrey Ullman, Addison-Wesley 1986, separately from the second edition.",
+      "source": "turn91view2",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 3,
+    "title": "Let’s Talk LISP",
+    "oldHref": "https://books.google.com/books/about/Let_s_talk_LISP.html?id=2cYmAAAAMAAJ",
+    "href": "https://books.google.com/books/about/Let_s_talk_LISP.html?id=2cYmAAAAMAAJ",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Let_s_talk_LISP.html?id=2cYmAAAAMAAJ",
+      "pageTitle": "Let’s Talk LISP",
+      "evidence": "Google Books displays Let’s Talk LISP by Laurent Siklóssy, Prentice-Hall 1976, 237 pages, with description and contents.",
+      "source": "turn91view3",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 4,
+    "title": "Perceptrons: An Introduction to Computational Geometry",
+    "oldHref": "https://mitpress.mit.edu/9780262130431/perceptrons/",
+    "href": "https://mitpress.mit.edu/9780262130431/perceptrons/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262130431/perceptrons/",
+      "pageTitle": "Perceptrons: An Introduction to Computational Geometry",
+      "evidence": "MIT Press identifies Perceptrons, subtitle An Introduction to Computational Geometry, Marvin Minsky and Seymour Papert, ISBN 9780262130431 and January 1969 publication.",
+      "source": "turn91view4",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 5,
+    "title": "Structure and Interpretation of Computer Programs, second edition",
+    "oldHref": "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/",
+    "href": "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/",
+      "pageTitle": "Structure and Interpretation of Computer Programs, second edition",
+      "evidence": "MIT Press names Structure and Interpretation of Computer Programs, second edition, Harold Abelson and Gerald Jay Sussman with Julie Sussman, and July 1996 publication.",
+      "source": "turn91view5",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 6,
+    "title": "The Scheme Programming Language",
+    "oldHref": "https://www.scheme.com/tspl2/",
+    "href": "https://www.scheme.com/tspl2/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.scheme.com/tspl2/",
+      "pageTitle": "The Scheme Programming Language",
+      "evidence": "The author-hosted text names R. Kent Dybvig and The Scheme Programming Language, Second Edition, copyright 1996, and states electronic reproduction was authorized by Prentice Hall.",
+      "source": "turn107view0",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 7,
+    "title": "Semantics Engineering with PLT Redex",
+    "oldHref": "https://redex.racket-lang.org/sewpr-toc.html",
+    "href": "https://redex.racket-lang.org/sewpr-toc.html",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://redex.racket-lang.org/sewpr-toc.html",
+      "pageTitle": "Semantics Engineering with PLT Redex",
+      "evidence": "The dedicated Redex book page names Semantics Engineering with PLT Redex and Matthias Felleisen, Robert Bruce Findler and Matthew Flatt above the complete contents.",
+      "source": "turn91view7",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 8,
+    "title": "Apple Human Interface Guidelines: The Apple Desktop Interface",
+    "oldHref": "https://guidebookgallery.org/books/applehumaninterfaceguidelines/",
+    "href": "https://guidebookgallery.org/books/applehumaninterfaceguidelines/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://guidebookgallery.org/books/applehumaninterfaceguidelines/",
+      "pageTitle": "Apple Human Interface Guidelines: The Apple Desktop Interface",
+      "evidence": "The book archive reproduces title, subtitle, 1987 Addison-Wesley publication, ISBN 0201177536, contents and back cover, which identifies the book as created by people at Apple Computer.",
+      "source": "turn97view0",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 9,
+    "title": "A Theory of Fun for Game Design, second edition",
+    "oldHref": "https://www.theoryoffun.com/",
+    "href": "https://www.theoryoffun.com/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.theoryoffun.com/",
+      "pageTitle": "A Theory of Fun for Game Design, second edition",
+      "evidence": "The dedicated A Theory of Fun for Game Design site identifies Raph Koster in its author section and the English second edition from O’Reilly, with excerpts and illustrations.",
+      "source": "turn107view1",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 10,
+    "title": "Game Programming Patterns",
+    "oldHref": "https://github.com/munificent/game-programming-patterns",
+    "href": "https://github.com/munificent/game-programming-patterns",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://github.com/munificent/game-programming-patterns",
+      "pageTitle": "Game Programming Patterns",
+      "evidence": "The repository README explicitly identifies this as the source repository for Game Programming Patterns and contains book text and illustrations. Its owner profile identifies Bob Nystrom as the author of Game Programming Patterns and pins this repository.",
+      "source": "turn107view2; turn144view0",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text",
+      "note": "The dedicated gameprogrammingpatterns.com website returned HTTP 400 on this audit; the successfully opened author-maintained source repository is retained."
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 11,
+    "title": "Pattern Calculus: Computing with Functions and Structures",
+    "oldHref": "https://link.springer.com/book/10.1007/978-3-540-89185-7",
+    "href": "https://link.springer.com/book/10.1007/978-3-540-89185-7",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-3-540-89185-7",
+      "pageTitle": "Pattern Calculus: Computing with Functions and Structures",
+      "evidence": "Springer displays Pattern Calculus: Computing with Functions and Structures by Barry Jay, copyright 2009.",
+      "source": "turn97view3",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 12,
+    "title": "The Art of Prolog: Advanced Programming Techniques",
+    "oldHref": "https://mitpress.mit.edu/9780262691055/the-art-of-prolog/",
+    "href": "https://mitpress.mit.edu/9780262691055/the-art-of-prolog/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262691055/the-art-of-prolog/",
+      "pageTitle": "The Art of Prolog: Advanced Programming Techniques",
+      "evidence": "MIT Press displays The Art of Prolog: Advanced Programming Techniques by Leon Sterling and Ehud Shapiro, ISBN 9780262691055, 1986 edition.",
+      "source": "turn97view4",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5025",
+    "index": 13,
+    "title": "Semiotics of Programming",
+    "oldHref": "https://www.u-tokyo.ac.jp/biblioplaza/en/F_00238.html",
+    "href": "https://www.u-tokyo.ac.jp/biblioplaza/en/F_00238.html",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.u-tokyo.ac.jp/biblioplaza/en/F_00238.html",
+      "pageTitle": "Semiotics of Programming",
+      "evidence": "The University of Tokyo’s author-written book page displays Semiotics of Programming, TANAKA-ISHII Kumiko, Cambridge University Press, 2010 and ISBN 9780521736275, with detailed book discussion.",
+      "source": "turn97view5",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 0,
+    "title": "Measurement",
+    "oldHref": "https://www.jstor.org/stable/j.ctt2jbt0k",
+    "href": "https://www.jstor.org/stable/j.ctt2jbt0k",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.jstor.org/stable/j.ctt2jbt0k",
+      "pageTitle": "Measurement — JSTOR",
+      "evidence": "The publisher-distributed JSTOR record names Measurement by Paul Lockhart, 2012, Belknap Press of Harvard University Press, 416 pages, with book description and chapter contents.",
+      "source": "turn97view6",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text",
+      "note": "Harvard University Press returned a JavaScript bot-verification page, so the verified publisher-distributed JSTOR book page is used."
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 1,
+    "title": "SimLife: The Genetic Playground",
+    "oldHref": "https://archive.org/details/msdos_SimLife_1992",
+    "href": "https://archive.org/details/msdos_SimLife_1992",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://archive.org/details/msdos_SimLife_1992",
+      "pageTitle": "SimLife — Internet Archive",
+      "evidence": "The preservation record identifies SimLife, Maxis and 1992; its description concerns creating evolving ecosystems and its listed platforms include Windows 3.x.",
+      "source": "turn107view3",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text",
+      "note": "This catalog preserves the DOS version of the same game; the photographed box is the Windows edition."
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 2,
+    "title": "SimTower: The Vertical Empire",
+    "oldHref": "https://www.macintoshrepository.org/3915-simtower-the-vertical-empire",
+    "href": "https://www.macintoshrepository.org/3915-simtower-the-vertical-empire",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.macintoshrepository.org/3915-simtower-the-vertical-empire",
+      "pageTitle": "SimTower: The Vertical Empire — Macintosh Repository",
+      "evidence": "The software archive names SimTower: The Vertical Empire, OPeNBooK as author and Maxis as publisher, 1994, and identifies Yoot Saito in its description, with packaging images.",
+      "source": "turn100view0",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 3,
+    "title": "SimCity 2000",
+    "oldHref": "https://www.gog.com/en/game/simcity_2000_special_edition",
+    "href": "https://www.gog.com/en/game/simcity_2000_special_edition",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.gog.com/en/game/simcity_2000_special_edition",
+      "pageTitle": "SimCity 2000 Special Edition — GOG",
+      "evidence": "GOG displays SimCity 2000 Special Edition, identifies Maxis and Electronic Arts, and describes the city-building game and included Urban Renewal Kit.",
+      "source": "turn109view1; turn107view4",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text",
+      "note": "Current purchasable Special Edition of the base game shown, rather than a claim that the photographed box itself is that edition."
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 4,
+    "title": "MacWrite",
+    "oldHref": "https://ithistory.org/software/macwrite",
+    "href": "https://ithistory.org/software/macwrite",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://ithistory.org/software/macwrite",
+      "pageTitle": "MacWrite — IT History Society",
+      "evidence": "The dedicated IT History Society entry identifies MacWrite as the 1984 word processor for the first Macintosh systems and names Apple Computer as developer/publisher.",
+      "source": "turn100view2",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 5,
+    "title": "A-Train",
+    "oldHref": "https://www.computinghistory.org.uk/det/37883/A-Train/",
+    "href": "https://www.computinghistory.org.uk/det/37883/A-Train/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.computinghistory.org.uk/det/37883/A-Train/",
+      "pageTitle": "A-Train — Centre for Computing History",
+      "evidence": "The Centre for Computing History artifact page identifies A-Train and explains that Artdink’s Take the A-Train III was released internationally by Maxis as A-Train in 1992.",
+      "source": "turn100view3",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text",
+      "note": "Museum artifact is the Macintosh release; the photographed IBM box is another platform edition of this same Artdink/Maxis game."
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 6,
+    "title": "SimEarth: The Living Planet",
+    "oldHref": "https://collection.sciencemuseumgroup.org.uk/objects/co8590845/simearth-the-living-planet-computer-game",
+    "href": "https://collection.sciencemuseumgroup.org.uk/objects/co8590845/simearth-the-living-planet-computer-game",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8590845/simearth-the-living-planet-computer-game",
+      "pageTitle": "SimEarth: The Living Planet computer game — Science Museum Group",
+      "evidence": "The museum collection identifies SimEarth: The Living Planet, Will Wright and Maxis, 1990, and an IBM/Tandy boxed artifact; its description discusses the Gaia-inspired planetary simulation.",
+      "source": "turn107view5",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5026",
+    "index": 7,
+    "title": "SimAnt: The Electronic Ant Colony",
+    "oldHref": "https://archive.org/details/msdos_SimAnt_-_The_Electronic_Ant_Colony_1991",
+    "href": "https://archive.org/details/msdos_SimAnt_-_The_Electronic_Ant_Colony_1991",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://archive.org/details/msdos_SimAnt_-_The_Electronic_Ant_Colony_1991",
+      "pageTitle": "SimAnt — The Electronic Ant Colony — Internet Archive",
+      "evidence": "The preservation record names SimAnt: The Electronic Ant Colony, Maxis and 1991, describes the ant-colony simulation, and includes Windows 3.x among its platforms.",
+      "source": "turn107view6",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text",
+      "note": "This catalog preserves the DOS release; the photographed box is the Windows edition of the same game."
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 0,
+    "title": "Common Lisp the Language, Second Edition",
+    "oldHref": "https://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html",
+    "href": "https://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.cs.cmu.edu/Groups/AI/html/cltl/cltl2.html",
+      "pageTitle": "Common Lisp the Language, 2nd Edition",
+      "evidence": "The authorized full-text page identifies Common Lisp the Language, second edition, Guy L. Steele Jr., Digital Press 1990 and ISBN 1555580416, with a reproduction-permission statement.",
+      "source": "turn100view6",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 1,
+    "title": "Advanced Topics in Types and Programming Languages",
+    "oldHref": "https://mitpress.mit.edu/9780262162289/advanced-topics-in-types-and-programming-languages/",
+    "href": "https://mitpress.mit.edu/9780262162289/advanced-topics-in-types-and-programming-languages/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262162289/advanced-topics-in-types-and-programming-languages/",
+      "pageTitle": "Advanced Topics in Types and Programming Languages",
+      "evidence": "MIT Press displays Advanced Topics in Types and Programming Languages, edited by Benjamin C. Pierce, ISBN 9780262162289, December 2004.",
+      "source": "turn100view7",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 2,
+    "title": "Types and Programming Languages",
+    "oldHref": "https://mitpress.mit.edu/9780262162098/types-and-programming-languages/",
+    "href": "https://mitpress.mit.edu/9780262162098/types-and-programming-languages/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262162098/types-and-programming-languages/",
+      "pageTitle": "Types and Programming Languages",
+      "evidence": "MIT Press displays Types and Programming Languages by Benjamin C. Pierce, ISBN 9780262162098, 2002 publication.",
+      "source": "turn105view0",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 3,
+    "title": "Practical Foundations for Programming Languages, Second Edition",
+    "oldHref": "https://www.cs.cmu.edu/~rwh/pfpl.html",
+    "href": "https://www.cs.cmu.edu/~rwh/pfpl.html",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.cs.cmu.edu/~rwh/pfpl.html",
+      "pageTitle": "Practical Foundations for Programming Languages",
+      "evidence": "Robert Harper’s dedicated page names Practical Foundations for Programming Languages, Second Edition, by Robert Harper, Cambridge University Press 2016, with preface, online text and errata.",
+      "source": "turn105view1",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 4,
+    "title": "How to Design Programs",
+    "oldHref": "https://htdp.org/2003-09-26/Book/",
+    "href": "https://htdp.org/2003-09-26/Book/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://htdp.org/2003-09-26/Book/",
+      "pageTitle": "How to Design Programs: An Introduction to Computing and Programming",
+      "evidence": "The publisher-endorsed online text names How to Design Programs and all four authors: Matthias Felleisen, Robert Bruce Findler, Matthew Flatt and Shriram Krishnamurthi; it identifies MIT Press and copyright 2001.",
+      "source": "turn105view2",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 5,
+    "title": "The Little Typer",
+    "oldHref": "https://thelittletyper.com/",
+    "href": "https://thelittletyper.com/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://thelittletyper.com/",
+      "pageTitle": "The Little Typer",
+      "evidence": "The dedicated book site displays The Little Typer by Daniel P. Friedman and David Thrane Christiansen, alongside implementation resources and errata.",
+      "source": "turn105view3",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 6,
+    "title": "Debugging",
+    "oldHref": "https://www.oreilly.com/library/view/debugging/9780814474570/",
+    "href": "https://www.oreilly.com/library/view/debugging/9780814474570/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.oreilly.com/library/view/debugging/9780814474570/",
+      "pageTitle": "Debugging [Book]",
+      "evidence": "O’Reilly’s distributed book page identifies Debugging by David J. Agans, September 2002, AMACOM, 192 pages, with book description and chapter contents.",
+      "source": "turn107view7",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 7,
+    "title": "Introduction to Programming with Greenfoot, Second Edition",
+    "oldHref": "https://www.greenfoot.org/book/",
+    "href": "https://www.greenfoot.org/book/",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.greenfoot.org/book/",
+      "pageTitle": "Introduction to Programming with Greenfoot, 2e",
+      "evidence": "The dedicated Greenfoot book page identifies Introduction to Programming with Greenfoot, second edition, Michael Kölling, Pearson 2016 and ISBN 9780134054292, with book resources.",
+      "source": "turn105view5",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 8,
+    "title": "Type-Driven Development with Idris",
+    "oldHref": "https://www.manning.com/books/type-driven-development-with-idris",
+    "href": "https://www.manning.com/books/type-driven-development-with-idris",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.manning.com/books/type-driven-development-with-idris",
+      "pageTitle": "Type-Driven Development with Idris - Edwin Brady | Manning",
+      "evidence": "Manning displays Type-Driven Development with Idris by Edwin Brady, March 2017, ISBN 9781617293023, 480 pages, and identifies Brady as Idris’s designer in its author biography.",
+      "source": "turn107view8",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "IMG_5029",
+    "index": 9,
+    "title": "Thinking on the Web: Berners-Lee, Gödel and Turing",
+    "oldHref": "https://www.wiley-vch.de/en/areas-interest/computing-computer-sciences/thinking-on-the-web-978-0-471-76866-1",
+    "href": "https://www.wiley-vch.de/en/areas-interest/computing-computer-sciences/thinking-on-the-web-978-0-471-76866-1",
+    "status": "verified",
+    "reason": "Freshly opened page identifies the correct book or software product.",
+    "verification": {
+      "url": "https://www.wiley-vch.de/en/areas-interest/computing-computer-sciences/thinking-on-the-web-978-0-471-76866-1",
+      "pageTitle": "Wiley-VCH - Thinking on the Web",
+      "evidence": "Wiley-VCH displays Thinking on the Web: Berners-Lee, Gödel, and Turing by H. Peter Alesso and Craig F. Smith, first-edition December 2008 paperback, ISBN 9780471768661, with description and author biographies.",
+      "source": "turn105view7",
+      "checked": "2026-11-01",
+      "method": "Freshly opened destination and read matching title, author or software producer, and identifying publication/product text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 0,
+    "title": "Hark! A Vagrant · Kate Beaton",
+    "oldHref": "https://www.goodreads.com/book/show/10767466-hark-a-vagrant",
+    "href": "https://drawnandquarterly.com/books/hark-a-vagrant/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://drawnandquarterly.com/books/hark-a-vagrant/",
+      "pageTitle": "Hark! A Vagrant – Drawn & Quarterly",
+      "evidence": "Publisher page names Kate Beaton alongside the exact book heading and ISBN 9781770460607.",
+      "source": "turn77view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 1,
+    "title": "Never Learn Anything from History · Kate Beaton",
+    "oldHref": "https://www.goodreads.com/book/show/6464060-never-learn-anything-from-history",
+    "href": "https://topatoco.com/products/beat-never-book",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://topatoco.com/products/beat-never-book",
+      "pageTitle": "Never Learn Anything From History Book – TopatoCo",
+      "evidence": "Book heading and Kate Beaton byline; description identifies her 2007–2009 comic collection.",
+      "source": "turn84view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 2,
+    "title": "Sweet Bro and Hella Jeff · Andrew Hussie",
+    "oldHref": "https://www.goodreads.com/en/book/show/17277755-sweet-bro-and-hella-jeff",
+    "href": "https://topatoco.com/products/mspa-sbahj-ebooks",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://topatoco.com/products/mspa-sbahj-ebooks",
+      "pageTitle": "Sweet Bro and Hella Jeff e-Books – TopatoCo",
+      "evidence": "Creator storefront names Andrew Hussie, offers the first Sweet Bro and Hella Jeff book separately from its sequel, and describes both as digital versions of the physical books.",
+      "source": "turn77view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 3,
+    "title": "Louis Riel · Chester Brown",
+    "oldHref": "https://drawnandquarterly.com/books/louis-riel/",
+    "href": "https://drawnandquarterly.com/books/louis-riel/",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://drawnandquarterly.com/books/louis-riel/",
+      "pageTitle": "Louis Riel – Drawn & Quarterly",
+      "evidence": "Publisher page heading Louis Riel, Chester Brown author link and biography description, ISBN 9781894937894.",
+      "source": "turn58view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 4,
+    "title": "The Planiverse · A.K. Dewdney",
+    "oldHref": "https://www.goodreads.com/book/show/866402.The_Planiverse",
+    "href": "https://link.springer.com/book/10.1007/978-1-4613-0199-8",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-1-4613-0199-8",
+      "pageTitle": "The Planiverse: Computer Contact with a Two-Dimensional World | Springer",
+      "evidence": "Publisher page explicitly names The Planiverse and author Alexander Keewatin Dewdney.",
+      "source": "turn77view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 5,
+    "title": "Ex.Mag vol. 2 - PARANORMAL ROMANCE · PEOW Press",
+    "oldHref": "https://peow.studio/products/ex-mag-2",
+    "href": "https://peow.studio/products/ex-mag-2",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://peow.studio/products/ex-mag-2",
+      "pageTitle": "ExMag 2 – Peow",
+      "evidence": "Publisher page identifies Ex. MAG vol 2, Paranormal Romance theme, named contributors, and ISBN 978-91-87325-52-6. Redirect remains specific to this book.",
+      "source": "turn58view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 6,
+    "title": "The Buzz About Bees · Jürgen Tautz",
+    "oldHref": "https://link.springer.com/book/10.1007/978-3-540-78729-7",
+    "href": "https://link.springer.com/book/10.1007/978-3-540-78729-7",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-3-540-78729-7",
+      "pageTitle": "The Buzz about Bees: Biology of a Superorganism | Springer",
+      "evidence": "Exact book heading and author Jürgen Tautz appear in publisher's overview.",
+      "source": "turn58view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 7,
+    "title": "Lost at Sea · Bryan Lee O'Malley",
+    "oldHref": "https://www.goodreads.com/book/show/564758.Lost_at_Sea",
+    "href": "https://onipress.shop/products/lost-at-sea-hardcover",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://onipress.shop/products/lost-at-sea-hardcover",
+      "pageTitle": "Lost at Sea (Hardcover) – Oni Press",
+      "evidence": "Publisher heading identifies Lost at Sea; description names Bryan Lee O'Malley and Raleigh's journey.",
+      "source": "turn84view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 8,
+    "title": "There Is No Antimemetics Division · qntm",
+    "oldHref": "https://qntm.org/scp",
+    "href": "https://scp-wiki.wikidot.com/antimemetics-division-hub",
+    "status": "replaced",
+    "reason": "Opened original qntm.org URL; HTTP 403 prevented verification. Replaced with author's original story hub.",
+    "verification": {
+      "url": "https://scp-wiki.wikidot.com/antimemetics-division-hub",
+      "pageTitle": "Antimemetics Division Hub – SCP Foundation",
+      "evidence": "Author-hosted original story hub explicitly has There Is No Antimemetics Division by qntm and links its completed chapters and sequels. This retains the original work rather than the substantially rewritten 2025 commercial edition.",
+      "source": "turn132view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 9,
+    "title": "Seconds · Bryan Lee O'Malley",
+    "oldHref": "https://www.goodreads.com/en/book/show/18630542-seconds",
+    "href": "https://www.goodreads.com/en/book/show/18630542-seconds",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://www.goodreads.com/en/book/show/18630542-seconds",
+      "pageTitle": "Seconds by Bryan Lee O'Malley | Goodreads",
+      "evidence": "Actual Goodreads page heading Seconds and Bryan Lee O'Malley byline; description concerns Katie's restaurant and magical mushrooms.",
+      "source": "turn61view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 10,
+    "title": "The Deep Hot Biosphere · Thomas Gold",
+    "oldHref": "https://www.goodreads.com/book/show/853851.The_Deep_Hot_Biosphere",
+    "href": "https://link.springer.com/book/10.1007/978-1-4612-1400-7",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-1-4612-1400-7",
+      "pageTitle": "The Deep Hot Biosphere: The Myth of Fossil Fuels | Springer",
+      "evidence": "Publisher overview has exact book title and Thomas Gold author entry.",
+      "source": "turn77view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 11,
+    "title": "Dos and Don'ts: 10 Years of VICE Magazine's Street Fashion Critiques · Vice Magazine",
+    "oldHref": "https://www.goodreads.com/en/book/show/618.Dos_and_Don_ts",
+    "href": "https://www.goodreads.com/en/book/show/618.Dos_and_Don_ts",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://www.goodreads.com/en/book/show/618.Dos_and_Don_ts",
+      "pageTitle": "Dos and Don'ts: 10 Years of VICE Magazine's Street Fashion Critiques | Goodreads",
+      "evidence": "Actual page heading matches full title, with Vice Magazine, Gavin McInnes and Suroosh Alvi author entries; first published September 2004.",
+      "source": "turn61view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 12,
+    "title": "Cinema Sewer Vol. 1 · Robin Bougie",
+    "oldHref": "https://cinemasewer.storenvy.com/products/13564533-cinema-sewer-vol-1-softcover",
+    "href": "https://cinemasewer.storenvy.com/products/13564533-cinema-sewer-vol-1-softcover",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://cinemasewer.storenvy.com/products/13564533-cinema-sewer-vol-1-softcover",
+      "pageTitle": "Cinema Sewer vol 1 (softcover) – Cinema Sewer",
+      "evidence": "Book page identifies volume 1, collection of first twelve issues; shop description names Robin Bougie as publisher and creator.",
+      "source": "turn61view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 13,
+    "title": "Cinema Sewer Vol. 2 · Robin Bougie",
+    "oldHref": "https://cinemasewer.storenvy.com/products/13564557-cinema-sewer-vol-2-softcover",
+    "href": "https://cinemasewer.storenvy.com/products/13564557-cinema-sewer-vol-2-softcover",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://cinemasewer.storenvy.com/products/13564557-cinema-sewer-vol-2-softcover",
+      "pageTitle": "Cinema Sewer vol 2 (softcover) – Cinema Sewer",
+      "evidence": "Book page identifies volume 2 and collection of issues 13–16; shop description explicitly identifies Robin Bougie.",
+      "source": "turn61view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 14,
+    "title": "Hellboy: The Right Hand of Doom · Mike Mignola",
+    "oldHref": "https://www.goodreads.com/book/show/102460.Hellboy_Vol_4",
+    "href": "https://www.penguinrandomhouse.com/books/242288/hellboy-volume-4-the-right-hand-of-doom-2nd-edition-by-mike-mignola-various-artists/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.penguinrandomhouse.com/books/242288/hellboy-volume-4-the-right-hand-of-doom-2nd-edition-by-mike-mignola-various-artists/",
+      "pageTitle": "Hellboy Volume 4: The Right Hand of Doom (2nd edition) – Penguin Random House",
+      "evidence": "Opened publisher/distributor page explicitly identifies the volume-four title, Mike Mignola byline, Dark Horse Books publisher and ISBN 9781621150572.",
+      "source": "turn112view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 15,
+    "title": "Hellboy: Strange Places · Mike Mignola",
+    "oldHref": "https://www.goodreads.com/book/show/131374389-hellboy-volume-6",
+    "href": "https://www.penguinrandomhouse.com/books/242324/hellboy-volume-6-strange-places-by-mike-mignola-various-artists/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.penguinrandomhouse.com/books/242324/hellboy-volume-6-strange-places-by-mike-mignola-various-artists/",
+      "pageTitle": "Hellboy Volume 6: Strange Places – Penguin Random House",
+      "evidence": "Book heading, Mike Mignola author entry, Dark Horse Books publisher and ISBN 9781621150596 all match volume six; description collects The Third Wish and The Island.",
+      "source": "turn84view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 16,
+    "title": "League of Extraordinary Gentlemen Vol. II · Alan Moore",
+    "oldHref": "https://www.goodreads.com/book/show/107007.The_League_of_Extraordinary_Gentlemen_Vol_2",
+    "href": "https://books.apple.com/us/book/league-of-extraordinary-gentlemen-vol-2/id556775210",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://books.apple.com/us/book/league-of-extraordinary-gentlemen-vol-2/id556775210",
+      "pageTitle": "League of Extraordinary Gentlemen Vol.2 – Apple Books",
+      "evidence": "Opened DC Comics seller listing identifies volume 2 and Alan Moore and Kevin O'Neill, with WildStorm publisher and Martian-invasion synopsis. DC's own catalog page omitted its author credits in returned text.",
+      "source": "turn119view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 17,
+    "title": "The Black Dossier · Alan Moore",
+    "oldHref": "https://www.goodreads.com/book/show/107009.The_League_of_Extraordinary_Gentlemen",
+    "href": "https://www.dc.com/graphic-novels/the-league-of-extraordinary-gentlemen-1999/the-league-of-extraordinary-gentlemen-the-black-dossier-new-printing",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.dc.com/graphic-novels/the-league-of-extraordinary-gentlemen-1999/the-league-of-extraordinary-gentlemen-the-black-dossier-new-printing",
+      "pageTitle": "The League of Extraordinary Gentlemen: The Black Dossier New Printing | DC",
+      "evidence": "Publisher page explicitly names Black Dossier and lists Written by Alan Moore, Art by Kevin O'Neill; 192-page printing.",
+      "source": "turn85view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs0",
+    "index": 18,
+    "title": "League of Extraordinary Gentlemen Vol. I · Alan Moore",
+    "oldHref": "https://www.goodreads.com/book/show/297627.The_League_of_Extraordinary_Gentlemen_Vol_1",
+    "href": "https://www.abebooks.com/products/isbn/9781563898587/11017392955",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.abebooks.com/products/isbn/9781563898587/11017392955",
+      "pageTitle": "The League of Extraordinary Gentlemen, Vol. 1 – AbeBooks",
+      "evidence": "Opened book-specific listing explicitly identifies volume 1, Moore, Alan, DC Comics publisher and ISBN 9781563898587. DC's own catalog page omitted author credits in returned text.",
+      "source": "turn119view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 0,
+    "title": "Astronomy · Fred Hoyle",
+    "oldHref": "https://archive.org/details/astronom00hoyl",
+    "href": "https://archive.org/details/astronom00hoyl",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://archive.org/details/astronom00hoyl",
+      "pageTitle": "Astronomy : Hoyle, Fred, Sir – Internet Archive",
+      "evidence": "Opened catalog of scanned physical book identifies Astronomy by Hoyle, Fred, Sir, published London Macdonald in 1962.",
+      "source": "turn59view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 1,
+    "title": "Information Theory, Inference, and Learning Algorithms · David MacKay",
+    "oldHref": "https://www.goodreads.com/book/show/201357.Information_Theory_Inference_and_Learning_Algorithms",
+    "href": "https://www.cambridgebookshop.co.uk/products/information-theory-inference-and-learning-algorithms",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.cambridgebookshop.co.uk/products/information-theory-inference-and-learning-algorithms",
+      "pageTitle": "Information Theory, Inference and Learning Algorithms – Cambridge University Press Bookshop",
+      "evidence": "Publisher's bookstore page explicitly states exact book title, author David J. C. MacKay and ISBN 9780521642989.",
+      "source": "turn84view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 2,
+    "title": "The Logic of Architecture: Design, Computation, and Cognition · William J. Mitchell",
+    "oldHref": "https://www.goodreads.com/book/show/1504418.The_Logic_of_Architecture",
+    "href": "https://mitpress.mit.edu/9780262631167/the-logic-of-architecture/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262631167/the-logic-of-architecture/",
+      "pageTitle": "The Logic of Architecture – MIT Press",
+      "evidence": "Publisher page gives The Logic of Architecture, subtitle Design, Computation, and Cognition, and William J. Mitchell byline.",
+      "source": "turn76view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 3,
+    "title": "Space-Time Algebra · David Hestenes",
+    "oldHref": "https://www.goodreads.com/book/show/25788601-space-time-algebra",
+    "href": "https://link.springer.com/book/10.1007/978-3-319-18413-5",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-3-319-18413-5",
+      "pageTitle": "Space-Time Algebra | Springer",
+      "evidence": "Publisher overview explicitly gives Space-Time Algebra and David Hestenes as author.",
+      "source": "turn76view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 4,
+    "title": "A Combinatorial Introduction to Topology · Michael Henle",
+    "oldHref": "https://www.goodreads.com/book/show/208760.A_Combinatorial_Introduction_to_Topology",
+    "href": "https://www.doverpublications.com/retailers/pdfs/2022/DoverMathBacklist2022.pdf#page=54",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.doverpublications.com/retailers/pdfs/2022/DoverMathBacklist2022.pdf#page=54",
+      "pageTitle": "Dover Publications Math Backlist 2022, page 54",
+      "evidence": "Opened publisher catalog page 54 pairs A Combinatorial Introduction to Topology with Michael Henle and ISBN 9780486679662. Publisher storefront returned title/SKU but omitted author text, so this primary catalog is the verified fallback.",
+      "source": "turn126view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 5,
+    "title": "Counterexamples in Analysis · Gelbaum & Olmsted",
+    "oldHref": "https://www.goodreads.com/book/show/818070.Counterexamples_in_Analysis",
+    "href": "https://www.searchpress.com/book/9780486428758/counterexamples-in-analysis",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.searchpress.com/book/9780486428758/counterexamples-in-analysis",
+      "pageTitle": "Counterexamples in Analysis – Search Press",
+      "evidence": "Dover distributor page gives exact title, Bernard R. Gelbaum and John M. H. Olmsted byline, and ISBN 9780486428758.",
+      "source": "turn75view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 6,
+    "title": "The Extended Phenotype · Richard Dawkins",
+    "oldHref": "https://www.goodreads.com/book/show/61538.The_Extended_Phenotype",
+    "href": "https://india.oup.com/product/the-extended-phenotype-9780198788911/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://india.oup.com/product/the-extended-phenotype-9780198788911/",
+      "pageTitle": "The Extended Phenotype – OUP India",
+      "evidence": "Publisher page gives exact title, Richard Dawkins byline, ISBN 9780198788911, and description of genes' effects beyond an organism's body.",
+      "source": "turn131view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 7,
+    "title": "Gaia · James Lovelock",
+    "oldHref": "https://www.goodreads.com/book/show/274230.Gaia",
+    "href": "https://www.oup.com.au/books/higher-education/science/9780198784883",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.oup.com.au/books/higher-education/science/9780198784883",
+      "pageTitle": "Gaia – Oxford University Press",
+      "evidence": "Publisher page gives Gaia: A New Look at Life on Earth, James Lovelock byline and ISBN 9780198784883.",
+      "source": "turn131view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 8,
+    "title": "Collected Fictions · Jorge Luis Borges",
+    "oldHref": "https://www.goodreads.com/book/show/17961.Collected_Fictions",
+    "href": "https://www.penguinrandomhouse.com/books/330909/collected-fictions-by-jorge-luis-borges-translated-by-andrew-hurley/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.penguinrandomhouse.com/books/330909/collected-fictions-by-jorge-luis-borges-translated-by-andrew-hurley/",
+      "pageTitle": "Collected Fictions – Penguin Random House",
+      "evidence": "Publisher body explicitly credits Jorge Luis Borges and translator Andrew Hurley under Collected Fictions, with ISBN 9780140286809.",
+      "source": "turn119view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 9,
+    "title": "The Birth of Tragedy · Friedrich Nietzsche",
+    "oldHref": "https://www.goodreads.com/book/show/2823.The_Birth_of_Tragedy",
+    "href": "https://www.penguinrandomhouse.com/books/261088/the-birth-of-tragedy-by-friedrich-nietzsche-translated-by-shaun-whiteside-edited-by-michael-tanner/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://www.penguinrandomhouse.com/books/261088/the-birth-of-tragedy-by-friedrich-nietzsche-translated-by-shaun-whiteside-edited-by-michael-tanner/",
+      "pageTitle": "The Birth of Tragedy – Penguin Random House",
+      "evidence": "Publisher body explicitly credits Friedrich Nietzsche under The Birth of Tragedy, with ISBN 9780140433395.",
+      "source": "turn132view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 10,
+    "title": "Inconsistent Geometry · Chris Mortensen",
+    "oldHref": "https://www.goodreads.com/book/show/12878483-inconsistent-geometry",
+    "href": "https://collegepublications.co.uk/logic/?00017=",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://collegepublications.co.uk/logic/?00017=",
+      "pageTitle": "Inconsistent Geometry – College Publications",
+      "evidence": "Opened publisher's specific book page gives Inconsistent Geometry, Chris Mortensen, ISBN 978-1-84890-022-6, publication date and detailed description.",
+      "source": "turn114view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 11,
+    "title": "Visual Complex Analysis · Tristan Needham",
+    "oldHref": "https://www.goodreads.com/book/show/149800.Visual_Complex_Analysis",
+    "href": "https://academic.oup.com/book/52945",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://academic.oup.com/book/52945",
+      "pageTitle": "Visual Complex Analysis | Oxford Academic",
+      "evidence": "Publisher book heading explicitly states Visual Complex Analysis followed by Tristan Needham, print ISBN 9780198534471.",
+      "source": "turn132view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 12,
+    "title": "The Making of Prince of Persia · Jordan Mechner",
+    "oldHref": "https://www.jordanmechner.com/en/books/journals/",
+    "href": "https://www.jordanmechner.com/en/books/journals/",
+    "status": "verified",
+    "reason": "Opened current destination; actual book title and author match.",
+    "verification": {
+      "url": "https://www.jordanmechner.com/en/books/journals/",
+      "pageTitle": "Jordan Mechner - The Making of Prince of Persia",
+      "evidence": "Author's page identifies exact title and describes Jordan Mechner's journals of creating Prince of Persia, with original and illustrated editions.",
+      "source": "turn60view7",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs1",
+    "index": 13,
+    "title": "Unflattening · Nick Sousanis",
+    "oldHref": "https://www.goodreads.com/book/show/23503006-unflattening",
+    "href": "https://spinweaveandcut.com/unflattening/",
+    "status": "replaced",
+    "reason": "Opened original Goodreads URL; robot challenge or fetch failure prevented title/author verification. Replaced with opened, matching destination.",
+    "verification": {
+      "url": "https://spinweaveandcut.com/unflattening/",
+      "pageTitle": "Unflattening – Spin Weave and Cut",
+      "evidence": "Nick Sousanis's own site explicitly describes Unflattening as his comics dissertation published by Harvard University Press in 2015, with excerpts, editions and awards.",
+      "source": "turn114view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected returned page text"
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 0,
+    "title": "Versioning: Evolutionary Techniques in Architecture · SHoP Architects",
+    "oldHref": "https://searchworks.stanford.edu/view/5334132",
+    "href": "https://cincinnatistate.ecampus.com/versioning-evolutionary-techniques/bk/9780470845691",
+    "status": "replaced",
+    "reason": "Original Stanford catalog URL inaccessible. No accessible dedicated publisher page found; verified university bookstore record used as bibliographic fallback.",
+    "verification": {
+      "url": "https://cincinnatistate.ecampus.com/versioning-evolutionary-techniques/bk/9780470845691",
+      "pageTitle": "Versioning: Evolutionary Techniques in Architecture",
+      "evidence": "Actual university bookstore record titles Versioning: Evolutionary Techniques in Architecture and identifies Guest Editor: SHoP/Sharples Holden Pasquarelli. ISBN 9780470845691; contents include introduction by SHoP.",
+      "source": "turn117view3",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 1,
+    "title": "Design Through Making · Bob Sheil",
+    "oldHref": "https://onlinelibrary.wiley.com/doi/10.1002/ad.97",
+    "href": "https://books.google.com/books/about/Design_Through_Making.html?id=_Cmo0QEACAAJ",
+    "status": "replaced",
+    "reason": "Original Wiley DOI returned 403 and identifies only the introductory article in search discovery. Replaced with verified full-book Google Books record; publisher pages inaccessible.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Design_Through_Making.html?id=_Cmo0QEACAAJ",
+      "pageTitle": "Design Through Making - Google Books",
+      "evidence": "Opened book record identifies Design Through Making, editor Bob Sheil, Wiley, 2005, ISBN 9780470090930, 144 pages.",
+      "source": "turn110view2",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 2,
+    "title": "The Algorithmic Beauty of Plants · Prusinkiewicz & Lindenmayer",
+    "oldHref": "https://www.algorithmicbotany.org/papers/",
+    "href": "https://www.algorithmicbotany.org/papers/",
+    "status": "verified",
+    "reason": "Current author-group destination really contains this book, not merely a similar title.",
+    "verification": {
+      "url": "https://www.algorithmicbotany.org/papers/",
+      "pageTitle": "Algorithmic Botany: Publications",
+      "evidence": "Author research-group site has a dedicated Algorithmic Beauty of Plants section explaining its electronic edition. Opened Springer book page independently confirms Przemyslaw Prusinkiewicz and Aristid Lindenmayer as authors.",
+      "source": "turn64view2; turn80view1; turn101view3",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 3,
+    "title": "Snotgirl Vol. 2: California Screaming · Bryan Lee O'Malley",
+    "oldHref": "https://www.goodreads.com/book/show/36420147-snotgirl-vol-2",
+    "href": "https://www.simonandschuster.com/books/Snotgirl-Volume-2-California-Screaming/Bryan-Lee-OMalley/Snotgirl/9781534306615",
+    "status": "replaced",
+    "reason": "Old Goodreads destination returned a JavaScript robot check; replaced with verified publisher-distributor book page.",
+    "verification": {
+      "url": "https://www.simonandschuster.com/books/Snotgirl-Volume-2-California-Screaming/Bryan-Lee-OMalley/Snotgirl/9781534306615",
+      "pageTitle": "Snotgirl Volume 2: California Screaming | Simon & Schuster",
+      "evidence": "Actual distributor page gives Snotgirl Volume 2: California Screaming, by Bryan Lee O’Malley, illustrated by Leslie Hung; published by Image Comics.",
+      "source": "turn96view3",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 4,
+    "title": "Data Visualization Handbook · Koponen & Hildén",
+    "oldHref": "https://datavizhandbook.info",
+    "href": "https://datavizhandbook.info",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://datavizhandbook.info",
+      "pageTitle": "Data Visualization Handbook",
+      "evidence": "Dedicated book homepage names Data visualization handbook, credits Koponen and Hildén, describes the book and provides downloads and purchase links.",
+      "source": "turn64view4",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 5,
+    "title": "Vehicles: Experiments in Synthetic Psychology · Valentino Braitenberg",
+    "oldHref": "https://mitpress.mit.edu/9780262521123/vehicles/",
+    "href": "https://mitpress.mit.edu/9780262521123/vehicles/",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262521123/vehicles/",
+      "pageTitle": "Vehicles",
+      "evidence": "MIT Press page explicitly titles Vehicles: Experiments in Synthetic Psychology and names Valentino Braitenberg.",
+      "source": "turn62view0",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 6,
+    "title": "Beyond Good and Evil · Friedrich Nietzsche",
+    "oldHref": "https://standardebooks.org/ebooks/friedrich-nietzsche/beyond-good-and-evil/helen-zimmern",
+    "href": "https://www.gutenberg.org/ebooks/4363",
+    "status": "replaced",
+    "reason": "Original Standard Ebooks destination could not be read by this tool due to unsupported XHTML content; replaced with verified ebook edition.",
+    "verification": {
+      "url": "https://www.gutenberg.org/ebooks/4363",
+      "pageTitle": "Beyond Good and Evil by Friedrich Wilhelm Nietzsche | Project Gutenberg",
+      "evidence": "Actual ebook page titles Beyond Good and Evil and identifies Friedrich Wilhelm Nietzsche as author and Helen Zimmern as translator.",
+      "source": "turn96view4",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 7,
+    "title": "Abel's Proof · Peter Pesic",
+    "oldHref": "https://www.goodreads.com/book/show/195144241",
+    "href": "https://peterpesic.com/abels-proof",
+    "status": "replaced",
+    "reason": "Old Goodreads numeric destination returned 403; replaced with verified dedicated author page.",
+    "verification": {
+      "url": "https://peterpesic.com/abels-proof",
+      "pageTitle": "Abel’s Proof — Peter Pesic",
+      "evidence": "Author’s dedicated page gives Abel’s Proof: An Essay on the Sources and Meaning of Mathematical Unsolvability; Peter Pesic is identified in the site header and book description.",
+      "source": "turn96view0",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 8,
+    "title": "Understanding Media · Marshall McLuhan",
+    "oldHref": "https://www.goodreads.com/book/show/126274.Understanding_Media",
+    "href": "https://mitpress.mit.edu/9780262631594/understanding-media/",
+    "status": "replaced",
+    "reason": "Old Goodreads destination returned a JavaScript robot check; replaced with verified publisher page.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262631594/understanding-media/",
+      "pageTitle": "Understanding Media",
+      "evidence": "Actual MIT Press book page identifies Understanding Media: The Extensions of Man, by Marshall McLuhan.",
+      "source": "turn96view1",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 9,
+    "title": "The Annotated Flatland · Edwin Abbott (Ian Stewart)",
+    "oldHref": "https://www.goodreads.com/book/show/433567.The_Annotated_Flatland",
+    "href": "https://www.hachettebookgroup.com/titles/ian-stewart/the-annotated-flatland/9780465011230/?lens=basic-books",
+    "status": "replaced",
+    "reason": "Old Goodreads destination inaccessible; replaced with verified publisher page for the annotated edition.",
+    "verification": {
+      "url": "https://www.hachettebookgroup.com/titles/ian-stewart/the-annotated-flatland/9780465011230/?lens=basic-books",
+      "pageTitle": "The Annotated Flatland by Ian Stewart | Hachette Book Group",
+      "evidence": "Publisher page identifies The Annotated Flatland, text by Ian Stewart, and describes his commentary on Edwin A. Abbott’s original Flatland.",
+      "source": "turn96view2",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 10,
+    "title": "Envisioning Information · Edward Tufte",
+    "oldHref": "https://www.edwardtufte.com/tufte/books_ei",
+    "href": "https://www.edwardtufte.com/book/envisioning-information/",
+    "status": "replaced",
+    "reason": "Old author URL inaccessible; found and opened current dedicated book page through author catalog.",
+    "verification": {
+      "url": "https://www.edwardtufte.com/book/envisioning-information/",
+      "pageTitle": "Envisioning Information | Edward Tufte",
+      "evidence": "Dedicated author-store book page gives Envisioning Information and Edward R. Tufte, 1990, 126 pages.",
+      "source": "turn74view0",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 11,
+    "title": "The Visual Display of Quantitative Information · Edward Tufte",
+    "oldHref": "https://www.edwardtufte.com/tufte/books_vdqi",
+    "href": "https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/",
+    "status": "replaced",
+    "reason": "Old URL redirects to generic books catalog; replaced with current dedicated book page found through that catalog.",
+    "verification": {
+      "url": "https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/",
+      "pageTitle": "The Visual Display of Quantitative Information | Edward Tufte",
+      "evidence": "Dedicated author-store page names The Visual Display of Quantitative Information and Edward R. Tufte, with original and second-edition dates.",
+      "source": "turn74view1; turn80view0",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 12,
+    "title": "History of Beauty · Umberto Eco",
+    "oldHref": "https://www.goodreads.com/book/show/4372.On_Beauty",
+    "href": "https://books.google.com/books/about/History_of_Beauty.html?id=floUAQAAIAAJ",
+    "status": "replaced",
+    "reason": "Old Goodreads numeric destination could not be opened and verified. No accessible publisher page found; exact Google Books edition record is the fallback.",
+    "verification": {
+      "url": "https://books.google.com/books/about/History_of_Beauty.html?id=floUAQAAIAAJ",
+      "pageTitle": "History of Beauty - Google Books",
+      "evidence": "Opened edition record explicitly titles History of Beauty, credits editor Umberto Eco, publisher Rizzoli, 2004, 438 pages.",
+      "source": "turn110view1",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 13,
+    "title": "The Structure of Scientific Revolutions · Thomas S. Kuhn",
+    "oldHref": "https://www.goodreads.com/book/show/61539.The_Structure_of_Scientific_Revolutions",
+    "href": "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html",
+    "status": "replaced",
+    "reason": "Old Goodreads destination returned a JavaScript robot check; replaced with verified publisher page.",
+    "verification": {
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html",
+      "pageTitle": "The Structure of Scientific Revolutions: 50th Anniversary Edition, Kuhn, Hacking",
+      "evidence": "University of Chicago Press book page explicitly titles The Structure of Scientific Revolutions and credits Thomas S. Kuhn; Ian Hacking provides introductory essay.",
+      "source": "turn101view0",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs2",
+    "index": 14,
+    "title": "Biochemistry · Albert Lehninger",
+    "oldHref": "https://www.goodreads.com/book/show/280989.Lehninger_Principles_of_Biochemistry",
+    "href": "https://books.google.com/books/about/Biochemistry.html?hl=&id=xQAaAQAAMAAJ",
+    "status": "replaced",
+    "reason": "Old Goodreads destination is inaccessible and names Principles of Biochemistry in its slug, which does not establish the identity of the original Biochemistry book. Replaced with the exact opened 1975 edition record; no surviving publisher page found.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Biochemistry.html?hl=&id=xQAaAQAAMAAJ",
+      "pageTitle": "Biochemistry: The Molecular Basis of Cell Structure and Function - Albert L. Lehninger - Google Books",
+      "evidence": "Opened edition record gives Biochemistry: The Molecular Basis of Cell Structure and Function, Albert L. Lehninger, Worth Publishers, 1975, 1104 pages. This is the original Biochemistry work rather than the later Principles of Biochemistry.",
+      "source": "turn117view2",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 0,
+    "title": "Groups and Symmetry · M.A. Armstrong",
+    "oldHref": "https://link.springer.com/book/10.1007/978-1-4757-4034-9",
+    "href": "https://link.springer.com/book/10.1007/978-1-4757-4034-9",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-1-4757-4034-9",
+      "pageTitle": "Groups and Symmetry | Springer Nature Link",
+      "evidence": "Springer book title is Groups and Symmetry and its author field names M. A. Armstrong.",
+      "source": "turn67view0",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 1,
+    "title": "Logic and Structure · Dirk van Dalen",
+    "oldHref": "https://link.springer.com/book/10.1007/978-1-4471-4558-5",
+    "href": "https://link.springer.com/book/10.1007/978-1-4471-4558-5",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-1-4471-4558-5",
+      "pageTitle": "Logic and Structure | Springer Nature Link",
+      "evidence": "Springer page titles Logic and Structure; description and chapter bylines explicitly name Dirk van Dalen.",
+      "source": "turn67view1",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 2,
+    "title": "Homotopical Topology · Fomenko & Fuchs",
+    "oldHref": "https://link.springer.com/book/10.1007/978-3-319-23488-5",
+    "href": "https://link.springer.com/book/10.1007/978-3-319-23488-5",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://link.springer.com/book/10.1007/978-3-319-23488-5",
+      "pageTitle": "Homotopical Topology | Springer Nature Link",
+      "evidence": "Springer book page explicitly titles Homotopical Topology and names Anatoly Fomenko and Dmitry Fuchs.",
+      "source": "turn67view2",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 3,
+    "title": "On the Origin of Phyla · James W. Valentine",
+    "oldHref": "https://press.uchicago.edu/ucp/books/book/chicago/O/bo3616676.html",
+    "href": "https://press.uchicago.edu/ucp/books/book/chicago/O/bo3616676.html",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/O/bo3616676.html",
+      "pageTitle": "On the Origin of Phyla, Valentine",
+      "evidence": "University of Chicago Press page gives On the Origin of Phyla and James W. Valentine together above the book description.",
+      "source": "turn67view3",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 4,
+    "title": "The Great Outdoor Fight · Chris Onstad",
+    "oldHref": "https://www.darkhorse.com/books/15-492/achewood-volume-1-the-great-outdoor-fight-hc/",
+    "href": "https://www.publishersweekly.com/9781593079970",
+    "status": "replaced",
+    "reason": "Original Dark Horse destination inaccessible; publisher backlist PDF too large for retrieval. Verified trade-publication book review used as fallback.",
+    "verification": {
+      "url": "https://www.publishersweekly.com/9781593079970",
+      "pageTitle": "Achewood: The Great Outdoor Fight by Chris Onstad",
+      "evidence": "Opened review page explicitly titles Achewood: The Great Outdoor Fight and identifies Chris Onstad, Dark Horse, ISBN 9781593079970. Review describes the collected comic storyline.",
+      "source": "turn125view0",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 5,
+    "title": "Gödel's Theorem: An Incomplete Guide · Torkel Franzén",
+    "oldHref": "https://www.goodreads.com/book/show/12830.G_del_s_Theorem",
+    "href": "https://books.google.com/books?id=71pK8Zz9Dd8C",
+    "status": "replaced",
+    "reason": "Old Goodreads destination hits JavaScript robot check; exact Routledge publisher page repeatedly returned 403. Verified Google Books edition metadata used as fallback.",
+    "verification": {
+      "url": "https://books.google.com/books?id=71pK8Zz9Dd8C",
+      "pageTitle": "Gödel’s Theorem: An Incomplete Guide to Its Use and Abuse - Torkel Franzén - Google Books",
+      "evidence": "Opened edition record identifies Gödel’s Theorem: An Incomplete Guide to Its Use and Abuse, author Torkel Franzén, Taylor & Francis, 2005, 182 pages.",
+      "source": "turn130view0",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 6,
+    "title": "Gödel's Proof · Nagel & Newman",
+    "oldHref": "https://nyupress.org/9780814758373/godels-proof/",
+    "href": "https://nyupress.org/9780814758373/godels-proof/",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://nyupress.org/9780814758373/godels-proof/",
+      "pageTitle": "Gödel’s Proof",
+      "evidence": "NYU Press page explicitly titles Gödel’s Proof and credits Ernest Nagel and James R. Newman.",
+      "source": "turn65view1",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 7,
+    "title": "On Formally Undecidable Propositions · Kurt Gödel",
+    "oldHref": "https://www.goodreads.com/book/show/208288.On_Formally_Undecidable_Propositions_of_Principia_Mathematica_and_Related_Systems",
+    "href": "https://books.google.com/books/about/On_Formally_Undecidable_Propositions_of.html?id=0R9oDmaqmNUC",
+    "status": "replaced",
+    "reason": "Old Goodreads destination hits JavaScript robot check. Dover product page rendered title but omitted author metadata; its catalog PDF timed out. Google Books provides a fully verified edition record and preview.",
+    "verification": {
+      "url": "https://books.google.com/books/about/On_Formally_Undecidable_Propositions_of.html?id=0R9oDmaqmNUC",
+      "pageTitle": "On Formally Undecidable Propositions of Principia Mathematica and Related Systems - Kurt Gödel - Google Books",
+      "evidence": "Opened book page identifies the full intended title and Kurt Gödel. Description explicitly identifies Dover edition, translated by B. Meltzer with introduction by R. B. Braithwaite; edition date 1992.",
+      "source": "turn130view2",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 8,
+    "title": "The Book of Legendary Lands · Umberto Eco",
+    "oldHref": "https://archive.org/details/bookoflegendaryl0000ecou",
+    "href": "https://archive.org/details/bookoflegendaryl0000ecou",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://archive.org/details/bookoflegendaryl0000ecou",
+      "pageTitle": "The book of legendary lands : Eco, Umberto, author : Internet Archive",
+      "evidence": "Opened catalog record titles The book of legendary lands and credits Eco, Umberto, author; publisher MacLehose Press and translation date 2013.",
+      "source": "turn65view3",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 9,
+    "title": "Mindstorms · Seymour Papert",
+    "oldHref": "https://mindstorms.media.mit.edu/",
+    "href": "https://mindstorms.media.mit.edu/",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://mindstorms.media.mit.edu/",
+      "pageTitle": "Mindstorms — MIT Media Lab",
+      "evidence": "MIT Media Lab page titles Mindstorms and cites Seymour A. Papert, Mindstorms: Children, computers, and powerful ideas. It offers text posted with family permission.",
+      "source": "turn65view4",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 10,
+    "title": "Tractatus Logico-Philosophicus · Ludwig Wittgenstein",
+    "oldHref": "https://wittgensteinproject.org/w/index.php/Tractatus_Logico-Philosophicus_(English)",
+    "href": "https://wittgensteinproject.org/w/index.php/Tractatus_Logico-Philosophicus_(English)",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://wittgensteinproject.org/w/index.php/Tractatus_Logico-Philosophicus_(English)",
+      "pageTitle": "Tractatus Logico-Philosophicus (English) - The Ludwig Wittgenstein Project",
+      "evidence": "Opened text is headed Tractatus Logico-Philosophicus and Ludwig Wittgenstein; provenance specifies the Ramsey/Ogden English edition.",
+      "source": "turn66view0",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 11,
+    "title": "Data Models · Sheldon A. Borkin",
+    "oldHref": "https://mitpress.mit.edu/9780262021517/data-models/",
+    "href": "https://mitpress.mit.edu/9780262021517/data-models/",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262021517/data-models/",
+      "pageTitle": "Data Models",
+      "evidence": "MIT Press title is Data Models: A Semantic Approach for Database Systems, by Sheldon A. Borkin.",
+      "source": "turn66view1",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 12,
+    "title": "Materials and Design · Ashby & Johnson",
+    "oldHref": "https://shop.elsevier.com/books/materials-and-design/ashby/978-0-08-098205-2",
+    "href": "https://shop.elsevier.com/books/materials-and-design/ashby/978-0-08-098205-2",
+    "status": "verified",
+    "reason": "Actual destination page title and author match the intended book.",
+    "verification": {
+      "url": "https://shop.elsevier.com/books/materials-and-design/ashby/978-0-08-098205-2",
+      "pageTitle": "Materials and Design - 3rd Edition | Elsevier Shop",
+      "evidence": "Elsevier book page titles Materials and Design and explicitly names authors Michael F. Ashby and Kara Johnson.",
+      "source": "turn66view2",
+      "checked": "2026-11-01",
+      "method": "Opened the current destination with the web tool and read actual page title, authorship and descriptive metadata."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 13,
+    "title": "Architecture: Form, Space, and Order · Francis D.K. Ching",
+    "oldHref": "https://www.wiley.com/en-us/Architecture%3A+Form%2C+Space%2C+and+Order%2C+4th+Edition-p-9781119853374",
+    "href": "https://www.wiley-vch.de/en/areas-interest/engineering/architecture-form-space-and-order-978-1-119-85337-4",
+    "status": "replaced",
+    "reason": "Old Wiley URL returned 403 and misleadingly labels its ISBN as fourth edition; selected accessible publisher listing of the work.",
+    "verification": {
+      "url": "https://www.wiley-vch.de/en/areas-interest/engineering/architecture-form-space-and-order-978-1-119-85337-4",
+      "pageTitle": "Wiley-VCH - Architecture: Form, Space, and Order",
+      "evidence": "Publisher page names Architecture: Form, Space, and Order and Ching, Francis D. K.; author bio also confirms F. D. K. Ching.",
+      "source": "turn101view2",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs3",
+    "index": 14,
+    "title": "Information Design Source Book · IIDJ",
+    "oldHref": "https://www.amazon.com/Information-Design-Source-English-Japanese/dp/4766114396",
+    "href": "https://ci.nii.ac.jp/ncid/BA64289266",
+    "status": "replaced",
+    "reason": "Original Amazon destination disabled in retrieval tool. Exact ISBN and editor identity verified in Japanese academic catalog; used as bibliographic fallback.",
+    "verification": {
+      "url": "https://ci.nii.ac.jp/ncid/BA64289266",
+      "pageTitle": "CiNii 図書 - 情報デザインソースブック / Information design source book",
+      "evidence": "Opened Japanese academic catalog titles Information design source book, credits 情報デザインアソシエイツ as editor, and records Graphic-sha, October 2003, ISBN 4766114396. Linked authority record explicitly includes IID.j and IIDj name variants.",
+      "source": "turn113view1; turn125view1; turn130view3; turn110view4",
+      "checked": "2026-11-01",
+      "method": "Opened actual destination with the web tool and read title, authorship and descriptive metadata; no URL-slug inference."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 0,
+    "title": "The Cambridge Encyclopedia of Language · David Crystal",
+    "oldHref": "https://archive.org/details/cambridgeencycl000crys",
+    "href": "https://archive.org/details/cambridgeencycl000crys",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://archive.org/details/cambridgeencycl000crys",
+      "pageTitle": "The Cambridge encyclopedia of language : Crystal, David, 1941-",
+      "evidence": "Archive item heading names The Cambridge encyclopedia of language, by Crystal, David; Cambridge University Press, 1987.",
+      "source": "turn118view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 1,
+    "title": "The Cambridge Encyclopedia of the English Language · David Crystal",
+    "oldHref": "https://www.cambridge.org/highereducation/books/the-cambridge-encyclopedia-of-the-english-language/2B10AC8766B73D09955C899572C1E7EC#contents",
+    "href": "https://www.cambridge.org/highereducation/books/the-cambridge-encyclopedia-of-the-english-language/2B10AC8766B73D09955C899572C1E7EC#contents",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.cambridge.org/highereducation/books/the-cambridge-encyclopedia-of-the-english-language/2B10AC8766B73D09955C899572C1E7EC#contents",
+      "pageTitle": "The Cambridge Encyclopedia of the English Language | Cambridge Aspire",
+      "evidence": "Publisher title and Authors section identify David Crystal; third edition published 2018.",
+      "source": "turn118view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 2,
+    "title": "Visual Complexity · Manuel Lima",
+    "oldHref": "https://standardsmanual.com/products/visual-complexity-mapping-patterns-of-information",
+    "href": "https://standardsmanual.com/products/visual-complexity-mapping-patterns-of-information",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://standardsmanual.com/products/visual-complexity-mapping-patterns-of-information",
+      "pageTitle": "Visual Complexity: Mapping Patterns of Information – Standards Manual",
+      "evidence": "Product title is Visual Complexity; Author field explicitly names Manuel Lima and publisher Princeton Architectural Press.",
+      "source": "turn79view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 3,
+    "title": "McSweeney's Quarterly Concern #13 · Chris Ware, ed.",
+    "oldHref": "https://www.denverartmuseum.org/en/object/2009.283.1-4",
+    "href": "https://www.denverartmuseum.org/en/object/2009.283.1-4",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.denverartmuseum.org/en/object/2009.283.1-4",
+      "pageTitle": "McSweeney’s No. 13 | Denver Art Museum",
+      "evidence": "Museum object record names McSweeney’s No. 13, McSweeney’s Publishing and Chris Ware; describes issue designed and edited by Ware.",
+      "source": "turn79view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 4,
+    "title": "Theory of Games and Economic Behavior · von Neumann & Morgenstern",
+    "oldHref": "https://press.princeton.edu/books/paperback/9780691130613/theory-of-games-and-economic-behavior",
+    "href": "https://www.degruyterbrill.com/document/doi/10.1515/9781400829460/html",
+    "status": "replaced",
+    "reason": "Princeton direct URL blocked by robots; replaced with opened publisher partner book landing page. Also inspected its title-page PDF.",
+    "verification": {
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9781400829460/html",
+      "pageTitle": "Theory of Games and Economic Behavior",
+      "evidence": "Princeton partner-platform book page names exact title, John von Neumann and Oskar Morgenstern, 60th Anniversary Commemorative Edition; publisher Princeton University Press.",
+      "source": "turn158view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 5,
+    "title": "The Mathematical Theory of Communication · Shannon & Weaver",
+    "oldHref": "https://www.press.uillinois.edu/books/?id=p725487",
+    "href": "https://www.press.uillinois.edu/books/?id=p725487",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.press.uillinois.edu/books/?id=p725487",
+      "pageTitle": "UI Press | The Mathematical Theory of Communication",
+      "evidence": "Publisher gives exact title and biographies of Claude E. Shannon and Warren Weaver; paperback ISBN 9780252725487.",
+      "source": "turn79view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 6,
+    "title": "Hallucinogenic and Poisonous Mushroom Field Guide · Gary P. Menser",
+    "oldHref": "https://www.paracay.com/hallucinogenic-and-poisonous-mushroom-field-guide-3rd-edition-clone",
+    "href": "https://upload.erowid.org/library/books/hallucinogenic_and.shtml",
+    "status": "replaced",
+    "reason": "Old bookseller URL returned HTTP 406; replaced with verified book-specific library record.",
+    "verification": {
+      "url": "https://upload.erowid.org/library/books/hallucinogenic_and.shtml",
+      "pageTitle": "Erowid Library/Bookstore: Hallucinogenic and Poisonous Mushroom Field Guide",
+      "evidence": "Erowid physical-library record names exact title, Gary P. Menser, Ronin Publishing, ISBN 0914171895, and owned editions.",
+      "source": "turn150view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 7,
+    "title": "The Origin of Consciousness in the Breakdown of the Bicameral Mind · Julian Jaynes",
+    "oldHref": "https://www.julianjaynes.org/resources/books/ooc/",
+    "href": "https://www.julianjaynes.org/book/ooc/",
+    "status": "replaced",
+    "reason": "Old URL redirects to verified dedicated book page; canonicalized URL.",
+    "verification": {
+      "url": "https://www.julianjaynes.org/book/ooc/",
+      "pageTitle": "Julian Jaynes’s The Origin of Consciousness in the Breakdown of the Bicameral Mind",
+      "evidence": "Society page gives full book title, names Julian Jaynes, and discusses the book.",
+      "source": "turn122view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 8,
+    "title": "The Stroke: Theory of Writing · Gerrit Noordzij",
+    "oldHref": "https://www.hyphenpress.co.uk/books/978-0-907259-30-5",
+    "href": "https://hyphenpress.co.uk/products/books/978-0-907259-30-5/",
+    "status": "replaced",
+    "reason": "Old URL inaccessible; replaced with opened current publisher page.",
+    "verification": {
+      "url": "https://hyphenpress.co.uk/products/books/978-0-907259-30-5/",
+      "pageTitle": "The stroke: theory of writing – Hyphen Press",
+      "evidence": "Publisher page has exact title and Gerrit Noordzij immediately under it; ISBN 9780907259305.",
+      "source": "turn133view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 9,
+    "title": "The First Six Books of the Elements of Euclid · Oliver Byrne (Taschen)",
+    "oldHref": "https://www.c82.net/euclid/",
+    "href": "https://www.c82.net/euclid/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.c82.net/euclid/",
+      "pageTitle": "Byrne’s Euclid",
+      "evidence": "Dedicated interactive edition names The First Six Books of The Elements of Euclid and explicitly calls it a reproduction of Oliver Byrne’s 1847 work.",
+      "source": "turn118view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs4",
+    "index": 10,
+    "title": "Type-One: Discipline and Progress in Typography · Gestalten",
+    "oldHref": "https://designreviewed.com/artefacts/type-one-discipline-and-progress-in-typography-gestalten-2004/",
+    "href": "https://designreviewed.com/artefacts/type-one-discipline-and-progress-in-typography-gestalten-2004/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://designreviewed.com/artefacts/type-one-discipline-and-progress-in-typography-gestalten-2004/",
+      "pageTitle": "Type One: Discipline and Progress in Typography, Gestalten, 2004 - Design Reviewed",
+      "evidence": "Archive record heading exactly matches title; details name publisher Gestalten and publication year 2004.",
+      "source": "turn122view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 0,
+    "title": "Jane Fonda's Workout Book · Jane Fonda",
+    "oldHref": "https://www.goodreads.com/book/show/332962.Jane_Fonda_s_Workout_Book",
+    "href": "https://janefonda.com/jane-fondas-workout-book/",
+    "status": "replaced",
+    "reason": "Goodreads presented robot verification only; replaced with verified author book page.",
+    "verification": {
+      "url": "https://janefonda.com/jane-fondas-workout-book/",
+      "pageTitle": "Jane Fonda’s Workout Book - Jane Fonda",
+      "evidence": "Author’s dedicated book page gives exact title, Text by Jane Fonda, and Simon & Schuster publication information.",
+      "source": "turn133view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 1,
+    "title": "The Physiology Coloring Book · Wynn Kapit",
+    "oldHref": "https://www.goodreads.com/book/show/663160.The_Physiology_Coloring_Book",
+    "href": "https://www.pearson.com/en-au/subject-catalog/p/physiology-coloring-book-the/P200000010612",
+    "status": "replaced",
+    "reason": "Goodreads botwall; replaced with opened publisher page.",
+    "verification": {
+      "url": "https://www.pearson.com/en-au/subject-catalog/p/physiology-coloring-book-the/P200000010612",
+      "pageTitle": "Physiology Coloring Book, The",
+      "evidence": "Publisher explicitly names Wynn Kapit, Robert I. Macey, and Esmail Meisami beneath exact title, 2nd edition.",
+      "source": "turn138view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 2,
+    "title": "Tank Girl: The Gifting · Alan Martin",
+    "oldHref": "https://www.goodreads.com/book/show/489683.Tank_Girl",
+    "href": "https://titanbooks.com/2900-tank-girl-the-gifting/",
+    "status": "replaced",
+    "reason": "Goodreads botwall; replaced with opened publisher page.",
+    "verification": {
+      "url": "https://titanbooks.com/2900-tank-girl-the-gifting/",
+      "pageTitle": "Tank Girl - The Gifting @ Titan Books",
+      "evidence": "Publisher title is Tank Girl The Gifting, by Alan C. Martin, Ashley Wood and Rufus Dayglo; description confirms written by Alan Martin.",
+      "source": "turn142view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 3,
+    "title": "Fanged Noumena: Collected Writings 1987–2007 · Nick Land",
+    "oldHref": "https://www.goodreads.com/book/show/10838202-fanged-noumena",
+    "href": "https://www.urbanomic.com/book/fanged-noumena/",
+    "status": "replaced",
+    "reason": "Goodreads botwall; replaced with opened publisher page.",
+    "verification": {
+      "url": "https://www.urbanomic.com/book/fanged-noumena/",
+      "pageTitle": "Urbanomic Fanged Noumena",
+      "evidence": "Publisher lists Fanged Noumena, Collected Writings 1987–2007, Nick Land, and editors Robin Mackay and Ray Brassier.",
+      "source": "turn138view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 4,
+    "title": "Shape as Memory · Michael Leyton",
+    "oldHref": "https://www.goodreads.com/book/show/341022.Shape_as_Memory",
+    "href": "https://birkhauser.com/en/book/9783764378127",
+    "status": "replaced",
+    "reason": "Goodreads 403; replaced with verified publisher page.",
+    "verification": {
+      "url": "https://birkhauser.com/en/book/9783764378127",
+      "pageTitle": "Shape as Memory",
+      "evidence": "Publisher identifies Shape as Memory: A Geometric Theory of Architecture by Michael Leyton.",
+      "source": "turn138view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 5,
+    "title": "On Dialogue · David Bohm",
+    "oldHref": "https://www.goodreads.com/book/show/204526.On_Dialogue",
+    "href": "https://books.google.com/books/about/On_Dialogue.html?id=MGGF_oF_aY0C",
+    "status": "replaced",
+    "reason": "Goodreads botwall and publisher 403; replaced with opened book preview/catalogue. Society On Dialogue article rejected because it was not explicitly the book.",
+    "verification": {
+      "url": "https://books.google.com/books/about/On_Dialogue.html?id=MGGF_oF_aY0C",
+      "pageTitle": "On Dialogue - David Bohm - Google Books",
+      "evidence": "Book title, author David Bohm, editor Lee Nichol, 2004 revised edition and ISBN 9780415336413 explicitly listed; contents shown.",
+      "source": "turn159view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 6,
+    "title": "Wholeness and the Implicate Order · David Bohm",
+    "oldHref": "https://www.goodreads.com/book/show/204523.Wholeness_and_the_Implicate_Order",
+    "href": "https://books.google.com/books/about/Wholeness_and_the_Implicate_Order.html?id=qIApAQAAMAAJ",
+    "status": "replaced",
+    "reason": "Goodreads robot verification and publisher 403; replaced with verified edition catalogue.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Wholeness_and_the_Implicate_Order.html?id=qIApAQAAMAAJ",
+      "pageTitle": "Wholeness and the Implicate Order - David Bohm - Google Books",
+      "evidence": "Opened book record identifies exact title, David Bohm, Routledge & Kegan Paul, 1980, 224 pages, with matching synopsis.",
+      "source": "turn152view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 7,
+    "title": "The Universal History of Numbers · Georges Ifrah",
+    "oldHref": "https://www.goodreads.com/book/show/1148778.The_Universal_History_of_Numbers",
+    "href": "https://books.google.com/books/about/The_Universal_History_of_Numbers.html?id=amTweIg_GGwC",
+    "status": "replaced",
+    "reason": "Goodreads botwall; replaced with opened edition catalogue. Google Books may localize host/UI by region.",
+    "verification": {
+      "url": "https://books.google.com/books/about/The_Universal_History_of_Numbers.html?id=amTweIg_GGwC",
+      "pageTitle": "The Universal History of Numbers: From Prehistory to the Invention of the Computer - Georges Ifrah",
+      "evidence": "Opened Google Books edition gives full title, Georges Ifrah, Wiley, 2000, 656 pages and matching synopsis.",
+      "source": "turn152view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 8,
+    "title": "Total Interaction · Gerhard M. Buurman (Ed.)",
+    "oldHref": "https://birkhauser.com/en/book/9783764376772",
+    "href": "https://birkhauser.com/en/book/9783764376772",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://birkhauser.com/en/book/9783764376772",
+      "pageTitle": "Total Interaction",
+      "evidence": "Publisher identifies Total Interaction: Theory and Practice of a New Paradigm for the Design Disciplines, Gerhard M. Buurmann (ed.); description also spells Buurman.",
+      "source": "turn133view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 9,
+    "title": "Code as Creative Medium · Golan Levin & Tega Brain",
+    "oldHref": "https://mitpress.mit.edu/9780262542043/code-as-creative-medium/",
+    "href": "https://mitpress.mit.edu/9780262542043/code-as-creative-medium/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262542043/code-as-creative-medium/",
+      "pageTitle": "Code as Creative Medium",
+      "evidence": "MIT Press title and byline identify Golan Levin and Tega Brain; subtitle A Handbook for Computational Art and Design.",
+      "source": "turn133view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs5",
+    "index": 10,
+    "title": "The Feynman Lectures on Physics · Feynman, Leighton & Sands",
+    "oldHref": "https://www.feynmanlectures.caltech.edu/",
+    "href": "https://www.feynmanlectures.caltech.edu/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.feynmanlectures.caltech.edu/",
+      "pageTitle": "The Feynman Lectures on Physics",
+      "evidence": "Caltech presents online edition, explicitly credits Feynman, Leighton, Sands and lists the three volumes.",
+      "source": "turn133view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 0,
+    "title": "Scott Pilgrim Vol. 1 · Bryan Lee O'Malley",
+    "oldHref": "https://www.goodreads.com/book/show/29801.Scott_Pilgrim_vs_The_World",
+    "href": "https://onipress.shop/products/scott-pilgrim-vol-1-b-w-scotts-precious-little-life",
+    "status": "replaced",
+    "reason": "Old Goodreads URL displayed botwall; its slug also named the wrong volume. New publisher page independently confirms volume 1, title and author.",
+    "verification": {
+      "url": "https://onipress.shop/products/scott-pilgrim-vol-1-b-w-scotts-precious-little-life",
+      "pageTitle": "Scott Pilgrim Vol. 1 B/W: Scott’s Precious Little Life – Oni Press",
+      "evidence": "Publisher explicitly labels Volume 1, Scott’s Precious Little Life, writer and artist Bryan Lee O’Malley, ISBN 9781932664089.",
+      "source": "turn149view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 1,
+    "title": "Scott Pilgrim Vol. 2 · Bryan Lee O'Malley",
+    "oldHref": "https://www.goodreads.com/book/show/29800.Scott_Pilgrim_s_Precious_Little_Life",
+    "href": "https://www.simonandschuster.com/books/Scott-Pilgrim-Vol-2-Scott-Pilgrim-vs-the-World/Bryan-Lee-OMalley/Scott-Pilgrim/9781637151846",
+    "status": "replaced",
+    "reason": "Old Goodreads URL displayed botwall and slug named volume 1. Replacement opened and verified as volume 2; links ebook edition of same volume.",
+    "verification": {
+      "url": "https://www.simonandschuster.com/books/Scott-Pilgrim-Vol-2-Scott-Pilgrim-vs-the-World/Bryan-Lee-OMalley/Scott-Pilgrim/9781637151846",
+      "pageTitle": "Scott Pilgrim Vol. 2: Scott Pilgrim vs. the World | Simon & Schuster",
+      "evidence": "Publisher/distributor page explicitly labels Book #2 of Scott Pilgrim, by Bryan Lee O’Malley, published by Oni Press, ISBN 9781637151846.",
+      "source": "turn152view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 2,
+    "title": "Corporate Fields · AA Publications",
+    "oldHref": "https://bookshop.aaschool.ac.uk/?product=corporate-fields",
+    "href": "https://bookshop.aaschool.ac.uk/?product=corporate-fields",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://bookshop.aaschool.ac.uk/?product=corporate-fields",
+      "pageTitle": "Corporate Fields – AA Bookshop",
+      "evidence": "AA Publications book page names Corporate Fields, edited by Brett Steele, Office Projects by the AA Design Research Lab.",
+      "source": "turn135view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 3,
+    "title": "The Extended Organism · J. Scott Turner",
+    "oldHref": "https://www.hup.harvard.edu/catalog.php?isbn=9780674009851",
+    "href": "https://books.google.com/books/about/The_Extended_Organism.html?id=nnFvtQAACAAJ",
+    "status": "replaced",
+    "reason": "Old Harvard URL inaccessible and author-site book link timed out; replaced with verified edition catalogue.",
+    "verification": {
+      "url": "https://books.google.com/books/about/The_Extended_Organism.html?id=nnFvtQAACAAJ",
+      "pageTitle": "The Extended Organism: The Physiology of Animal-Built Structures - J. Scott Turner",
+      "evidence": "Google Books page explicitly names full title, J. Scott Turner, Harvard University Press, 2002, 256 pages; synopsis matches animal-built structures.",
+      "source": "turn152view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 4,
+    "title": "Structure and Architecture · Angus J. Macdonald",
+    "oldHref": "https://www.routledge.com/Structure-and-Architecture/MacDonald/p/book/9781138629240",
+    "href": "https://angusjmacdonaldstructure.uk/publications/",
+    "status": "replaced",
+    "reason": "Routledge original and current third-edition URLs both 403; verified author bibliography provides title and edition context.",
+    "verification": {
+      "url": "https://angusjmacdonaldstructure.uk/publications/",
+      "pageTitle": "Publications - Angus J Macdonald",
+      "evidence": "Author’s publication page explicitly lists Structure and Architecture, Third Edition, Routledge, 2019, plus first and translated editions.",
+      "source": "turn156view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 5,
+    "title": "Disappearing Architecture · Flachbart & Weibel",
+    "oldHref": "https://birkhauser.de/books/9783764376741",
+    "href": "https://birkhauser.com/de/book/9783764376741",
+    "status": "replaced",
+    "reason": "Old publisher domain/path inaccessible; replaced with opened current publisher URL.",
+    "verification": {
+      "url": "https://birkhauser.com/de/book/9783764376741",
+      "pageTitle": "Disappearing Architecture",
+      "evidence": "Publisher identifies Disappearing Architecture: From Real to Virtual to Quantum, Georg Flachbart / Peter Weibel (eds.), 2005.",
+      "source": "turn146view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 6,
+    "title": "A New Program for Graphic Design · David Reinfurt",
+    "oldHref": "https://www.goodreads.com/book/show/51572616-a-new-program-for-graphic-design",
+    "href": "https://a-new-program-for-graphic-design.org/",
+    "status": "replaced",
+    "reason": "Goodreads robot verification; replaced with verified dedicated book website.",
+    "verification": {
+      "url": "https://a-new-program-for-graphic-design.org/",
+      "pageTitle": "A *New* Program for Graphic Design",
+      "evidence": "Dedicated book website names A New Program for Graphic Design by David Reinfurt, Inventory Press / Distributed Art Publishers, and links teaching guide and editions.",
+      "source": "turn148view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 7,
+    "title": "Genetic Architectures · Estévez, Dollens et al.",
+    "oldHref": "https://www.amazon.com/Genetic-Architectures-Arquitecturas-gen%C3%A9ticas-Spanish/dp/0930829514",
+    "href": "https://www.casadellibro.com/libro-genetic-architectures-arquitecturas-geneticas/9780930829513/961298",
+    "status": "replaced",
+    "reason": "Amazon inaccessible; replaced with opened, detailed catalogue for same ISBN. Publisher out-of-print status stated on page.",
+    "verification": {
+      "url": "https://www.casadellibro.com/libro-genetic-architectures-arquitecturas-geneticas/9780930829513/961298",
+      "pageTitle": "GENETIC ARCHITECTURES: ARQUITECTURAS GENETICAS | Alberto T. Estévez",
+      "evidence": "Opened bookseller catalogue names title, Alberto T. Estévez and contributors including Dennis Dollens; Sites Books, 2003, ISBN 9780930829513 matches original Amazon ISBN.",
+      "source": "turn156view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 8,
+    "title": "SITELESS · François Blanciak",
+    "oldHref": "https://mitpress.mit.edu/9780262026307/",
+    "href": "https://mitpress.mit.edu/9780262026307/siteless/",
+    "status": "replaced",
+    "reason": "Old ISBN-only URL inaccessible; replaced with opened full publisher URL.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262026307/siteless/",
+      "pageTitle": "SITELESS",
+      "evidence": "MIT Press page names SITELESS: 1001 Building Forms, by François Blanciak, ISBN 9780262026307.",
+      "source": "turn146view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 9,
+    "title": "How to Lie with Maps · Mark Monmonier",
+    "oldHref": "https://press.uchicago.edu/ucp/books/book/chicago/H/bo27400568.html",
+    "href": "https://press.uchicago.edu/ucp/books/book/chicago/H/bo27400568.html",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/H/bo27400568.html",
+      "pageTitle": "How to Lie with Maps, Third Edition, Monmonier",
+      "evidence": "Publisher heading names How to Lie with Maps, Third Edition and Mark Monmonier; synopsis explicitly describes original 1991 book.",
+      "source": "turn135view7",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 10,
+    "title": "Regular Expression Pocket Reference · Tony Stubblebine",
+    "oldHref": "https://www.oreilly.com/library/view/regular-expression-pocket/9780596514273/",
+    "href": "https://www.oreilly.com/library/view/regular-expression-pocket/9780596514273/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.oreilly.com/library/view/regular-expression-pocket/9780596514273/",
+      "pageTitle": "Regular Expression Pocket Reference, 2nd Edition [Book]",
+      "evidence": "O’Reilly page names Regular Expression Pocket Reference, 2nd Edition, by Tony Stubblebine, July 2007.",
+      "source": "turn142view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 11,
+    "title": "UML Pocket Reference · Dan Pilone",
+    "oldHref": "https://www.oreilly.com/library/view/uml-pocket-reference/9781491947845/",
+    "href": "https://www.computinghistory.org.uk/det/52781/UML-Pocket-Reference/",
+    "status": "replaced",
+    "reason": "Original O’Reilly destination could not be opened. Verified museum collection record used as bibliographic fallback for the exact original book.",
+    "verification": {
+      "url": "https://www.computinghistory.org.uk/det/52781/UML-Pocket-Reference/",
+      "pageTitle": "UML Pocket Reference - Book - Computing History",
+      "evidence": "Actual museum catalog page titles UML Pocket Reference, credits Dan Pilone, identifies O’Reilly Media, and gives ISBN 0-596-00497-4 and 81 pages. This identifies the original pocket reference rather than substituting the later UML 2.0 book.",
+      "source": "turn162view2",
+      "checked": "2026-11-01",
+      "method": "Opened original destination and selected replacement with web tool; inspected actual title, author/editor and publication metadata, not URL slugs or search snippets."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 12,
+    "title": "The Culture of the Copy · Hillel Schwartz",
+    "oldHref": "https://www.zonebooks.org/books/33-the-culture-of-the-copy-striking-likenesses-unreasonable-facsimiles",
+    "href": "https://www.zonebooks.org/books/33-the-culture-of-the-copy-striking-likenesses-unreasonable-facsimiles",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.zonebooks.org/books/33-the-culture-of-the-copy-striking-likenesses-unreasonable-facsimiles",
+      "pageTitle": "The Culture of the Copy: Striking Likenesses, Unreasonable Facsimiles - Zone Books",
+      "evidence": "Publisher description identifies The Culture of the Copy and Hillel Schwartz; ISBN 9781935408451.",
+      "source": "turn136view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 13,
+    "title": "The Society of the Spectacle · Guy Debord",
+    "oldHref": "https://www.zonebooks.org/books/3-the-society-of-the-spectacle",
+    "href": "https://www.zonebooks.org/books/3-the-society-of-the-spectacle",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.zonebooks.org/books/3-the-society-of-the-spectacle",
+      "pageTitle": "The Society of the Spectacle - Zone Books",
+      "evidence": "Publisher describes Guy Debord’s Society of the Spectacle, translated by Donald Nicholson-Smith; ISBN 9780942299793.",
+      "source": "turn136view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 14,
+    "title": "Drosscape · Alan Berger",
+    "oldHref": "https://www.goodreads.com/book/show/578229.Drosscape",
+    "href": "https://www.alanmberger.com/drosscape",
+    "status": "replaced",
+    "reason": "Goodreads robot verification; replaced with opened author book page.",
+    "verification": {
+      "url": "https://www.alanmberger.com/drosscape",
+      "pageTitle": "Drosscape: Wasting Land in Urban America - Alan M. Berger P-REX lab",
+      "evidence": "Author’s dedicated book page names Drosscape: Wasting Land in Urban America, Alan M. Berger, Princeton Architectural Press, 2006, with reviews and book information.",
+      "source": "turn149view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 15,
+    "title": "You Are Here: Personal Geographies · Katharine Harmon",
+    "oldHref": "https://www.goodreads.com/book/show/361295.You_Are_Here",
+    "href": "https://www.tributarybooks.com/you-are-here.html",
+    "status": "replaced",
+    "reason": "Original Goodreads destination returns a JavaScript robot check. Replaced with opened dedicated book page at Tributary Books.",
+    "verification": {
+      "url": "https://www.tributarybooks.com/you-are-here.html",
+      "pageTitle": "You Are Here: Personal Geographies and Other Maps of the Imagination",
+      "evidence": "Dedicated book page explicitly names You Are Here: Personal Geographies and Other Maps of the Imagination, Katharine Harmon, Princeton Architectural Press, 2003; it includes a book description and images.",
+      "source": "turn162view0",
+      "checked": "2026-11-01",
+      "method": "Opened original destination and selected replacement with web tool; inspected actual title, author/editor and publication metadata, not URL slugs or search snippets."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 16,
+    "title": "Else/Where: Mapping · Janet Abrams & Peter Hall",
+    "oldHref": "https://www.upress.umn.edu/9780972969628/elsewhere-mapping/",
+    "href": "https://www.upress.umn.edu/9780972969628/elsewhere-mapping/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.upress.umn.edu/9780972969628/elsewhere-mapping/",
+      "pageTitle": "ELSE/WHERE: MAPPING",
+      "evidence": "Publisher page names title and subtitle New Cartographies of Networks and Territories; Janet Abrams, contributions by Peter Hall.",
+      "source": "turn136view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 17,
+    "title": "Mapping: An Illustrated Guide · Roger Fawcett-Tang",
+    "oldHref": "https://www.goodreads.com/book/show/1993892.Mapping",
+    "href": "https://www.allbookstores.com/Mapping-Illustrated-Guide-Graphic-Navigational/9782880468248",
+    "status": "replaced",
+    "reason": "Original Goodreads destination returns a JavaScript robot check; linked designer page and library record could not be retrieved. Verified book-specific catalog/store listing used as fallback.",
+    "verification": {
+      "url": "https://www.allbookstores.com/Mapping-Illustrated-Guide-Graphic-Navigational/9782880468248",
+      "pageTitle": "Mapping: An Illustrated Guide to Graphic Navigational Systems by Roger Fawcett-Tang, William Owen",
+      "evidence": "Actual book page gives full title, Roger Fawcett-Tang and William Owen, RotoVision, 2005, 208 pages, ISBN 9782880468248. An independently opened Eye Magazine contemporary review also confirms the title, editor Roger Fawcett-Tang, essays by William Owen and RotoVision.",
+      "source": "turn163view0; turn163view1",
+      "checked": "2026-11-01",
+      "method": "Opened original destination and selected replacement with web tool; inspected actual title, author/editor and publication metadata, not URL slugs or search snippets."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 18,
+    "title": "Visual Explanations · Edward Tufte",
+    "oldHref": "https://www.edwardtufte.com/book/visual-explanations-images-and-quantities-evidence-and-narrative/",
+    "href": "https://www.edwardtufte.com/book/visual-explanations-images-and-quantities-evidence-and-narrative/",
+    "status": "verified",
+    "reason": "Opened destination and confirmed matching title and author in page content.",
+    "verification": {
+      "url": "https://www.edwardtufte.com/book/visual-explanations-images-and-quantities-evidence-and-narrative/",
+      "pageTitle": "Visual Explanations: Images and Quantities, Evidence and Narrative | Edward Tufte",
+      "evidence": "Author’s book page gives exact title, Edward R. Tufte, 1996, and book synopsis.",
+      "source": "turn136view8",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected page text; replacements independently opened."
+    }
+  },
+  {
+    "crate": "bs6",
+    "index": 19,
+    "title": "Handbook of Pictorial Symbols · Rudolf Modley",
+    "oldHref": "https://store.doverpublications.com/products/9780486233574",
+    "href": "https://books.google.com/books/about/Handbook_of_Pictorial_Symbols.html?id=U-dOAAAAMAAJ",
+    "status": "replaced",
+    "reason": "Old Dover product URL returned HTTP 404 (user observed homepage redirect). Replaced with the opened scanned-edition record matching title, authors and ISBN.",
+    "verification": {
+      "url": "https://books.google.com/books/about/Handbook_of_Pictorial_Symbols.html?id=U-dOAAAAMAAJ",
+      "pageTitle": "Handbook of Pictorial Symbols",
+      "evidence": "Google Books scanned edition record names Rudolf Modley and William R. Myers, Dover Publications 1976, 143 pages, and ISBN 9780486233574.",
+      "source": "turn98view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 0,
+    "title": "Emergence: Morphogenetic Design Strategies · Hensel, Menges & Weinstock",
+    "oldHref": "https://www.icd.uni-stuttgart.de/publications/books-journals/emergence-morphogenetic-design-strategies-2/",
+    "href": "https://www.icd.uni-stuttgart.de/publications/books-journals/emergence-morphogenetic-design-strategies-2/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.icd.uni-stuttgart.de/publications/books-journals/emergence-morphogenetic-design-strategies-2/",
+      "pageTitle": "Emergence: Morphogenetic Design Strategies | University of Stuttgart",
+      "evidence": "Institutional publication record names Hensel, Menges and Weinstock and the 2004 Architectural Design volume.",
+      "source": "turn129view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 1,
+    "title": "B.P.R.D., Vol. 5: The Black Flame · Mignola, Arcudi & Davis",
+    "oldHref": "https://www.goodreads.com/book/show/356347.B_P_R_D_Vol_5",
+    "href": "https://www.goodreads.com/book/show/356347.B_P_R_D_Vol_5",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.goodreads.com/book/show/356347.B_P_R_D_Vol_5",
+      "pageTitle": "B.P.R.D., Vol. 5: The Black Flame",
+      "evidence": "Goodreads actually displays The Black Flame, volume 5, and credits Mike Mignola, John Arcudi and artist Guy Davis.",
+      "source": "turn81view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 2,
+    "title": "Hellboy, Vol. 5: Conqueror Worm · Mike Mignola",
+    "oldHref": "https://www.goodreads.com/book/show/102462.Hellboy_Vol_5",
+    "href": "https://www.penguinrandomhouse.com/books/242291/hellboy-volume-5-conqueror-worm-2nd-edition-by-mike-mignola-various-artists/",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://www.penguinrandomhouse.com/books/242291/hellboy-volume-5-conqueror-worm-2nd-edition-by-mike-mignola-various-artists/",
+      "pageTitle": "Hellboy Volume 5: Conqueror Worm (2nd edition)",
+      "evidence": "Publisher/distributor page names volume 5 Conqueror Worm, Mike Mignola and Dark Horse Books.",
+      "source": "turn137view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 3,
+    "title": "Snotgirl, Vol. 1: Green Hair Don't Care · O'Malley & Hung",
+    "oldHref": "https://www.goodreads.com/book/show/31387205-snotgirl-vol-1",
+    "href": "https://www.simonandschuster.com/books/Snotgirl-Volume-1-Green-Hair-Dont-Care/Leslie-Hung/Snotgirl/9781534300361",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://www.simonandschuster.com/books/Snotgirl-Volume-1-Green-Hair-Dont-Care/Leslie-Hung/Snotgirl/9781534300361",
+      "pageTitle": "Snotgirl Volume 1: Green Hair Don't Care",
+      "evidence": "Official distributor page names volume 1, Bryan Lee O'Malley, Leslie Hung and publisher Image Comics.",
+      "source": "turn145view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 4,
+    "title": "Schott's Food & Drink Miscellany · Ben Schott",
+    "oldHref": "https://www.goodreads.com/book/show/40701.Schott_s_Food_and_Drink_Miscellany",
+    "href": "https://openlibrary.org/works/OL5770983W/Schott's_Food_Drink_Miscellany",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://openlibrary.org/works/OL5770983W/Schott's_Food_Drink_Miscellany",
+      "pageTitle": "Schott's food & drink miscellany",
+      "evidence": "Opened catalog record explicitly names Ben Schott, the full title, Bloomsbury and the 2003/2004 English editions. Catalog fallback after no dedicated publisher result was found.",
+      "source": "turn145view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 5,
+    "title": "A Pattern Language · Christopher Alexander",
+    "oldHref": "https://www.patternlanguage.com/bookstore/pattern-language.html",
+    "href": "https://www.patternlanguage.com/bookstore/pattern-language.html",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.patternlanguage.com/bookstore/pattern-language.html",
+      "pageTitle": "Bookstore: A Pattern Language",
+      "evidence": "Dedicated book page names A Pattern Language and Christopher Alexander, Sara Ishikawa and Murray Silverstein.",
+      "source": "turn81view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 6,
+    "title": "Schott's Original Miscellany · Ben Schott",
+    "oldHref": "https://www.goodreads.com/book/show/40700.Schott_s_Original_Miscellany",
+    "href": "https://www.bloomsbury.com/us/schotts-original-miscellany-9781582343495/",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://www.bloomsbury.com/us/schotts-original-miscellany-9781582343495/",
+      "pageTitle": "Schott's Original Miscellany",
+      "evidence": "Bloomsbury publisher page names Schott's Original Miscellany, Ben Schott and ISBN 9781582343495.",
+      "source": "turn137view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 7,
+    "title": "Merriam-Webster's Visual Dictionary · Second Edition",
+    "oldHref": "https://www.goodreads.com/book/show/15094561-merriam-webster-s-visual-dictionary",
+    "href": "https://cup.cuhk.edu.hk/index.php?product_id=2742&route=product/product",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://cup.cuhk.edu.hk/index.php?product_id=2742&route=product/product",
+      "pageTitle": "Merriam-Webster’s Visual Dictionary, Second Edition",
+      "evidence": "CUHK Press distribution page explicitly identifies second edition, Merriam-Webster Inc., 1152 pages and ISBN 9780877791515.",
+      "source": "turn141view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs7",
+    "index": 8,
+    "title": "Deep Learning · Goodfellow, Bengio & Courville",
+    "oldHref": "https://www.deeplearningbook.org/",
+    "href": "https://www.deeplearningbook.org/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.deeplearningbook.org/",
+      "pageTitle": "Deep Learning",
+      "evidence": "Dedicated book homepage names Ian Goodfellow, Yoshua Bengio, Aaron Courville and MIT Press.",
+      "source": "turn81view8",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 0,
+    "title": "The Dream Machine · M. Mitchell Waldrop",
+    "oldHref": "https://press.stripe.com/the-dream-machine",
+    "href": "https://press.stripe.com/the-dream-machine",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://press.stripe.com/the-dream-machine",
+      "pageTitle": "The Dream Machine",
+      "evidence": "Stripe Press page explicitly identifies The Dream Machine by M. Mitchell Waldrop.",
+      "source": "turn81view9",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 1,
+    "title": "Bootstrapping Computing · Alexander Obenauer",
+    "oldHref": "https://buddybindery.com/bootstrapping-computing",
+    "href": "https://buddybindery.com/products/bootstrapping-computing",
+    "status": "replaced",
+    "reason": "Current URL redirects to this canonical dedicated book page.",
+    "verification": {
+      "url": "https://buddybindery.com/products/bootstrapping-computing",
+      "pageTitle": "Bootstrapping Computing",
+      "evidence": "Buddy Bindery product page identifies Bootstrapping Computing by Alexander D. Obenauer, 2025.",
+      "source": "turn81view10",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 2,
+    "title": "The Self-Made Tapestry · Philip Ball",
+    "oldHref": "https://philipball.co.uk/the-self-made-tapestry-pattern-formation-in-nature/",
+    "href": "https://philipball.co.uk/the-self-made-tapestry-pattern-formation-in-nature/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://philipball.co.uk/the-self-made-tapestry-pattern-formation-in-nature/",
+      "pageTitle": "The Self-Made Tapestry: Pattern Formation in Nature",
+      "evidence": "Philip Ball's dedicated book page names the title and author and the 1998 Oxford publication.",
+      "source": "turn129view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 3,
+    "title": "Category Theory for Programmers · Bartosz Milewski",
+    "oldHref": "https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/",
+    "href": "https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/",
+      "pageTitle": "Category Theory for Programmers: The Preface",
+      "evidence": "Bartosz Milewski's own book preface names the work and author and links its chapters, PDF and print edition.",
+      "source": "turn81view12",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 4,
+    "title": "The Machinery of Life · David S. Goodsell",
+    "oldHref": "https://ccsb.scripps.edu/goodsell/machinery-of-life/",
+    "href": "https://ccsb.scripps.edu/goodsell/machinery-of-life/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://ccsb.scripps.edu/goodsell/machinery-of-life/",
+      "pageTitle": "The Machinery of Life",
+      "evidence": "David Goodsell's Scripps institutional book page identifies The Machinery of Life and discusses its second edition.",
+      "source": "turn86view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 5,
+    "title": "The Origins of Order · Stuart Kauffman",
+    "oldHref": "https://www.goodreads.com/book/show/783559.The_Origins_of_Order",
+    "href": "https://academic.oup.com/book/53153/",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://academic.oup.com/book/53153/",
+      "pageTitle": "The Origins of Order: Self-Organization and Selection in Evolution",
+      "evidence": "Oxford Academic publisher page names Stuart A. Kauffman, full title, 1993 publication and ISBN 9780195079517.",
+      "source": "turn141view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 6,
+    "title": "Investigations · Stuart Kauffman",
+    "oldHref": "https://global.oup.com/academic/product/investigations-9780195121056",
+    "href": "https://academic.oup.com/book/51166",
+    "status": "replaced",
+    "reason": "Previous OUP retail URL returned a bot wall. Oxford Academic supplies an opened, verified publisher destination.",
+    "verification": {
+      "url": "https://academic.oup.com/book/51166",
+      "pageTitle": "Investigations | Oxford Academic",
+      "evidence": "Oxford's dedicated book page names Investigations, Stuart A. Kauffman, 26 October 2000 and print ISBN 9780195121049.",
+      "source": "turn153view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 7,
+    "title": "At Home in the Universe · Stuart Kauffman",
+    "oldHref": "https://www.goodreads.com/book/show/319006.At_Home_in_the_Universe",
+    "href": "https://books.google.com/books/about/At_Home_in_the_Universe_The_Search_for_t.html?id=K9DEdjlwTpIC",
+    "status": "replaced",
+    "reason": "Goodreads returned a bot wall. Verified book-preview fallback; no readable dedicated publisher page found.",
+    "verification": {
+      "url": "https://books.google.com/books/about/At_Home_in_the_Universe_The_Search_for_t.html?id=K9DEdjlwTpIC",
+      "pageTitle": "At Home in the Universe: The Search for the Laws of Self-Organization and Complexity",
+      "evidence": "Google Books provides the Oxford University Press book preview, title page/table-of-contents links, Stuart Kauffman's name and 1996 publication metadata.",
+      "source": "turn155view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 8,
+    "title": "Quantum Computing Since Democritus · Scott Aaronson",
+    "oldHref": "https://www.scottaaronson.com/democritus/",
+    "href": "https://www.scottaaronson.com/democritus/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.scottaaronson.com/democritus/",
+      "pageTitle": "Quantum Computing Since Democritus",
+      "evidence": "Scott Aaronson's course/book page identifies the title and instructor/author and links the resulting book.",
+      "source": "turn86view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 9,
+    "title": "On the Genealogy of Morality · Friedrich Nietzsche",
+    "oldHref": "https://www.goodreads.com/book/show/80448.On_the_Genealogy_of_Morals",
+    "href": "https://www.cambridge.org/highereducation/books/nietzsche-ion-the-genealogy-of-morality-i-and-other-writings/58F7463D69D77580CA8CB1BBBD1D6309",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be fetched. Opened publisher page matches title and author.",
+    "verification": {
+      "url": "https://www.cambridge.org/highereducation/books/nietzsche-ion-the-genealogy-of-morality-i-and-other-writings/58F7463D69D77580CA8CB1BBBD1D6309",
+      "pageTitle": "Nietzsche: On the Genealogy of Morality and Other Writings",
+      "evidence": "Cambridge publisher page identifies Friedrich Nietzsche, editor Keith Ansell-Pearson, translator Carol Diethe and the Cambridge Texts in the History of Political Thought edition.",
+      "source": "turn153view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 10,
+    "title": "Hacker's Delight · Henry S. Warren Jr.",
+    "oldHref": "https://www.goodreads.com/book/show/276079.Hacker_s_Delight",
+    "href": "https://www.informit.com/store/hackers-delight-9780321842688",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://www.informit.com/store/hackers-delight-9780321842688",
+      "pageTitle": "Hacker's Delight, 2nd Edition",
+      "evidence": "Addison-Wesley/InformIT page names Hacker's Delight and Henry S. Warren.",
+      "source": "turn143view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 11,
+    "title": "PiHKAL: A Chemical Love Story · Ann & Alexander Shulgin",
+    "oldHref": "https://archive.org/details/pihkalchemicallo0000shul",
+    "href": "https://archive.org/details/pihkalchemicallo0000shul",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://archive.org/details/pihkalchemicallo0000shul",
+      "pageTitle": "Pihkal: a chemical love story",
+      "evidence": "Archive book record identifies the title, Alexander T. Shulgin, associated author Ann Shulgin, Transform Press and 1991.",
+      "source": "turn129view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs8",
+    "index": 12,
+    "title": "The Age of Em · Robin Hanson",
+    "oldHref": "https://ageofem.com/",
+    "href": "https://ageofem.com/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://ageofem.com/",
+      "pageTitle": "The Age of Em",
+      "evidence": "Dedicated book page identifies The Age of Em and Robin Hanson.",
+      "source": "turn86view8",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 0,
+    "title": "Anatomy of Lisp · John Allen",
+    "oldHref": "https://www.goodreads.com/book/show/1905938.Anatomy_of_Lisp",
+    "href": "https://openlibrary.org/books/OL4720218M/Anatomy_of_LISP",
+    "status": "replaced",
+    "reason": "User reported that the Goodreads numeric ID opens another book or a missing page; automated original-page retrieval was blocked. Replaced with an opened, matching book record.",
+    "verification": {
+      "url": "https://openlibrary.org/books/OL4720218M/Anatomy_of_LISP",
+      "pageTitle": "Anatomy of LISP by Allen, John",
+      "evidence": "Opened edition record names Anatomy of LISP and John Allen; publication details identify McGraw-Hill, 1978, 446 pages and ISBN 007001115X.",
+      "source": "turn98view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 1,
+    "title": "Understanding Comics · Scott McCloud",
+    "oldHref": "https://scottmccloud.com/2-print/1-uc/",
+    "href": "https://scottmccloud.com/2-print/1-uc/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://scottmccloud.com/2-print/1-uc/",
+      "pageTitle": "Understanding Comics",
+      "evidence": "Scott McCloud's dedicated page identifies Understanding Comics, the 224-page 1993 book.",
+      "source": "turn86view9",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 2,
+    "title": "The Mythical Man-Month · Frederick Brooks",
+    "oldHref": "https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month",
+    "href": "https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-anniversary-9780321770561",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-anniversary-9780321770561",
+      "pageTitle": "The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition, 2nd Edition",
+      "evidence": "Publisher page names the book, Frederick P. Brooks and Addison-Wesley Professional.",
+      "source": "turn143view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 3,
+    "title": "Metaphors We Live By · Lakoff & Johnson",
+    "oldHref": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3637992.html",
+    "href": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3637992.html",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3637992.html",
+      "pageTitle": "Metaphors We Live By",
+      "evidence": "University of Chicago Press book page identifies Metaphors We Live By by George Lakoff and Mark Johnson.",
+      "source": "turn86view11",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 4,
+    "title": "The Social Construction of What? · Ian Hacking",
+    "oldHref": "https://www.hup.harvard.edu/books/9780674004122",
+    "href": "https://books.google.com/books/about/The_Social_Construction_of_What.html?id=zljMngEACAAJ",
+    "status": "replaced",
+    "reason": "Harvard retail destination returned a bot wall; JSTOR alternative could not be fetched. Opened book-preview fallback exactly matches.",
+    "verification": {
+      "url": "https://books.google.com/books/about/The_Social_Construction_of_What.html?id=zljMngEACAAJ",
+      "pageTitle": "The Social Construction of What?",
+      "evidence": "Google Books record and preview identify Ian Hacking, Harvard University Press, 1999 and ISBN 9780674004122.",
+      "source": "turn153view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 5,
+    "title": "God & Golem, Inc. · Norbert Wiener",
+    "oldHref": "https://www.goodreads.com/book/show/589647.God_Golem_Inc_",
+    "href": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+    "status": "replaced",
+    "reason": "User reported that the Goodreads numeric ID opens another book or a missing page; automated original-page retrieval was blocked. Replaced with an opened, matching book record.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262730112/god-and-golem-inc/",
+      "pageTitle": "God & Golem, Inc.",
+      "evidence": "MIT Press page names Norbert Wiener, the full title and subtitle, ISBN 9780262730112, and the paperback and hardcover editions.",
+      "source": "turn83view6",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 6,
+    "title": "Cybernetics · Norbert Wiener",
+    "oldHref": "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/",
+    "href": "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/",
+      "pageTitle": "Cybernetics or Control and Communication in the Animal and the Machine",
+      "evidence": "MIT Press book page identifies Cybernetics, Norbert Wiener and the reissue of the 1961 second edition.",
+      "source": "turn95view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 7,
+    "title": "CCRU: Writings 1997-2003",
+    "oldHref": "https://www.goodreads.com/book/show/34964054-ccru",
+    "href": "https://www.urbanomic.com/book/ccru-writings-1997-2003/",
+    "status": "replaced",
+    "reason": "User reported that the Goodreads numeric ID opens another book or a missing page; automated original-page retrieval was blocked. Replaced with an opened, matching book record.",
+    "verification": {
+      "url": "https://www.urbanomic.com/book/ccru-writings-1997-2003/",
+      "pageTitle": "Writings 1997–2003",
+      "evidence": "Urbanomic publisher page identifies Writings 1997–2003 by CCRU, ISBN 9780995455061, 384 pages, and links the original and later editions.",
+      "source": "turn98view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 8,
+    "title": "Evolution in Four Dimensions · Jablonka & Lamb",
+    "oldHref": "https://mitpress.mit.edu/9780262600699/evolution-in-four-dimensions/",
+    "href": "https://mitpress.mit.edu/9780262600699/evolution-in-four-dimensions/",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://mitpress.mit.edu/9780262600699/evolution-in-four-dimensions/",
+      "pageTitle": "Evolution in Four Dimensions",
+      "evidence": "MIT Press book page identifies the title and authors Eva Jablonka and Marion J. Lamb.",
+      "source": "turn95view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 9,
+    "title": "What is Life? · Erwin Schrödinger",
+    "oldHref": "https://www.cambridge.org/core/books/what-is-life/A876185F2DB06FF5C2CC67C9A60DAD7F",
+    "href": "https://www.cambridge.org/core/books/what-is-life/A876185F2DB06FF5C2CC67C9A60DAD7F",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.cambridge.org/core/books/what-is-life/A876185F2DB06FF5C2CC67C9A60DAD7F",
+      "pageTitle": "What is Life?",
+      "evidence": "Cambridge University Press page identifies What is Life? by Erwin Schrödinger, with foreword by Roger Penrose.",
+      "source": "turn129view3",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 10,
+    "title": "Ways of Seeing · John Berger",
+    "oldHref": "https://www.penguin.co.uk/books/56465/ways-of-seeing-by-berger-john/9780141035796",
+    "href": "https://www.penguin.co.uk/books/56465/ways-of-seeing-by-berger-john/9780141035796",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.penguin.co.uk/books/56465/ways-of-seeing-by-berger-john/9780141035796",
+      "pageTitle": "Ways of Seeing",
+      "evidence": "Penguin book page explicitly names Ways of Seeing and John Berger.",
+      "source": "turn95view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 11,
+    "title": "Technics and Civilization · Lewis Mumford",
+    "oldHref": "https://press.uchicago.edu/ucp/books/book/chicago/T/bo10388066.html",
+    "href": "https://press.uchicago.edu/ucp/books/book/chicago/T/bo10388066.html",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/T/bo10388066.html",
+      "pageTitle": "Technics and Civilization",
+      "evidence": "University of Chicago Press book page explicitly names Technics and Civilization and Lewis Mumford.",
+      "source": "turn95view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 12,
+    "title": "The History of Magic · Éliphas Lévi",
+    "oldHref": "https://www.gutenberg.org/ebooks/70033",
+    "href": "https://www.gutenberg.org/ebooks/70033",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.gutenberg.org/ebooks/70033",
+      "pageTitle": "The history of magic",
+      "evidence": "Project Gutenberg bibliographic metadata identifies Éliphas Lévi, translator A. E. Waite and the full title.",
+      "source": "turn129view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 13,
+    "title": "The Humane Interface · Jef Raskin",
+    "oldHref": "https://www.goodreads.com/book/show/344726.The_Humane_Interface",
+    "href": "https://www.informit.com/store/humane-interface-new-directions-for-designing-interactive-9780201379372",
+    "status": "replaced",
+    "reason": "Previous Goodreads destination could not be verified because it returned a bot wall or fetch error. This opened page explicitly identifies the book.",
+    "verification": {
+      "url": "https://www.informit.com/store/humane-interface-new-directions-for-designing-interactive-9780201379372",
+      "pageTitle": "The Humane Interface: New Directions for Designing Interactive Systems",
+      "evidence": "Publisher page names The Humane Interface, Jef Raskin and Addison-Wesley Professional.",
+      "source": "turn145view4",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 14,
+    "title": "A Thousand Years of Nonlinear History · Manuel De Landa",
+    "oldHref": "https://www.zonebooks.org/books/109-a-thousand-years-of-nonlinear-history",
+    "href": "https://www.zonebooks.org/books/109-a-thousand-years-of-nonlinear-history",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://www.zonebooks.org/books/109-a-thousand-years-of-nonlinear-history",
+      "pageTitle": "A Thousand Years of Nonlinear History",
+      "evidence": "Zone Books publisher page names the title and Manuel De Landa, ISBN 9780942299328.",
+      "source": "turn95view8",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 15,
+    "title": "Visual Grammar · Christian Leborg",
+    "oldHref": "https://papress.com/products/visual-grammar",
+    "href": "https://papress.com/products/visual-grammar",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://papress.com/products/visual-grammar",
+      "pageTitle": "Visual Grammar",
+      "evidence": "Princeton Architectural Press product page names Visual Grammar and Christian Leborg.",
+      "source": "turn95view9",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 16,
+    "title": "Machine Code for Beginners",
+    "oldHref": "https://archive.org/details/machine-code-for-beginners",
+    "href": "https://archive.org/details/machine-code-for-beginners",
+    "status": "verified",
+    "reason": "Opened destination; actual book title and author/publisher match.",
+    "verification": {
+      "url": "https://archive.org/details/machine-code-for-beginners",
+      "pageTitle": "Machine code for beginners",
+      "evidence": "Internet Archive hosts the 1983 Usborne book, with description 'Usborne introduction to Machine code for beginners. For the Z80 and 6502.'",
+      "source": "turn129view5",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 17,
+    "title": "How Things Work in Your Home · Time-Life Books",
+    "oldHref": "https://www.goodreads.com/book/show/2890704-how-things-work-in-your-home-and-what-to-do-when-they-don-t",
+    "href": "https://books.google.com/books/about/How_Things_Work_in_Your_Home.html?id=JoIM0QEACAAJ",
+    "status": "replaced",
+    "reason": "User reported that the Goodreads numeric ID opens another book or a missing page; automated original-page retrieval was blocked. Replaced with an opened, matching book record.",
+    "verification": {
+      "url": "https://books.google.com/books/about/How_Things_Work_in_Your_Home.html?id=JoIM0QEACAAJ",
+      "pageTitle": "How Things Work in Your Home, and what to Do when They Don't",
+      "evidence": "Google Books edition page explicitly identifies the complete title, author Time-Life Books, publisher Time-Life Books, 1975, 368 pages and ISBN 9780809416400.",
+      "source": "turn108view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 18,
+    "title": "The Annotated Arch · Carol Strickland",
+    "oldHref": "https://www.carolcstrickland.com/_i_the_annotated_arch__a_crash_course_in_the_history_of_architecture__i__66950.htm",
+    "href": "https://books.google.com/books/about/The_Annotated_Arch.html?id=rdiFhC6XOWwC",
+    "status": "replaced",
+    "reason": "Original author book page and works index timed out. Opened book-preview fallback matches title and author.",
+    "verification": {
+      "url": "https://books.google.com/books/about/The_Annotated_Arch.html?id=rdiFhC6XOWwC",
+      "pageTitle": "The Annotated Arch: A Crash Course in the History of Architecture",
+      "evidence": "Google Books preview identifies Carol Strickland, Amy Handy, Andrews McMeel Publishing, 2001 and the full book title.",
+      "source": "turn151view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination with web tool and inspected title/author text"
+    }
+  },
+  {
+    "crate": "bs9",
+    "index": 19,
+    "title": "The Way Life Works · Hoagland & Dodson",
+    "oldHref": "https://www.goodreads.com/book/show/323290.The_Way_Life_Works",
+    "href": "https://books.google.com/books/about/The_Way_Life_Works.html?id=W_OBNgAACAAJ",
+    "status": "replaced",
+    "reason": "User reported that the Goodreads numeric ID opens another book or a missing page; automated original-page retrieval was blocked. Replaced with an opened, matching book record.",
+    "verification": {
+      "url": "https://books.google.com/books/about/The_Way_Life_Works.html?id=W_OBNgAACAAJ",
+      "pageTitle": "The Way Life Works",
+      "evidence": "Google Books page names Mahlon B. Hoagland and Bert Dodson, identifies the full title, Three Rivers Press 1998 illustrated reprint, 233 pages and ISBN 9780812928884.",
+      "source": "turn108view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination and read actual title, author and publication metadata"
+    }
+  }
+]

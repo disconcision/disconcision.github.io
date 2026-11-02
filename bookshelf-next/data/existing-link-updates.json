@@ -1,0 +1,62 @@
+[
+  {
+    "title": "The Algorithmic Beauty of Plants · Prusinkiewicz & Lindenmayer",
+    "href": "https://www.algorithmicbotany.org/papers/",
+    "verification": {
+      "url": "https://www.algorithmicbotany.org/papers/",
+      "pageTitle": "Algorithmic Botany: Publications",
+      "evidence": "Prusinkiewicz's research-group publications page includes a named section for The Algorithmic Beauty of Plants and its electronic edition, with full-book and chapter downloads.",
+      "source": "turn34view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination page with web tool and inspected returned page text"
+    }
+  },
+  {
+    "title": "Deep Learning · Goodfellow, Bengio & Courville",
+    "href": "https://www.deeplearningbook.org/",
+    "verification": {
+      "url": "https://www.deeplearningbook.org/",
+      "pageTitle": "Deep Learning",
+      "evidence": "The dedicated book homepage explicitly names Ian Goodfellow, Yoshua Bengio and Aaron Courville, identifies MIT Press, and provides the complete chapter table of contents.",
+      "source": "turn33view0",
+      "checked": "2026-11-01",
+      "method": "Opened destination page with web tool and inspected returned page text"
+    }
+  },
+  {
+    "title": "The Feynman Lectures on Physics · Feynman, Leighton & Sands",
+    "href": "https://www.feynmanlectures.caltech.edu/",
+    "verification": {
+      "url": "https://www.feynmanlectures.caltech.edu/",
+      "pageTitle": "The Feynman Lectures on Physics",
+      "evidence": "Caltech presents the online edition and explicitly credits Feynman, Leighton and Sands; it lists all three physics volumes and supplementary materials.",
+      "source": "turn33view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination page with web tool and inspected returned page text"
+    }
+  },
+  {
+    "title": "A Pattern Language · Christopher Alexander",
+    "href": "https://www.patternlanguage.com/bookstore/pattern-language.html",
+    "verification": {
+      "url": "https://www.patternlanguage.com/bookstore/pattern-language.html",
+      "pageTitle": "Bookstore: A Pattern Language",
+      "evidence": "The dedicated page names A Pattern Language: Towns, Buildings, Construction, Christopher Alexander, Sara Ishikawa and Murray Silverstein, plus the 1977 Oxford publication and description.",
+      "source": "turn34view2",
+      "checked": "2026-11-01",
+      "method": "Opened destination page with web tool and inspected returned page text"
+    }
+  },
+  {
+    "title": "The Making of Prince of Persia · Jordan Mechner",
+    "href": "https://www.jordanmechner.com/en/books/journals/",
+    "verification": {
+      "url": "https://www.jordanmechner.com/en/books/journals/",
+      "pageTitle": "Jordan Mechner - The Making of Prince of Persia",
+      "evidence": "The author's page has the exact book heading, describes Mechner's journals documenting development of Prince of Persia, and provides original paperback and illustrated hardcover editions and previews.",
+      "source": "turn34view1",
+      "checked": "2026-11-01",
+      "method": "Opened destination page with web tool and inspected returned page text"
+    }
+  }
+]

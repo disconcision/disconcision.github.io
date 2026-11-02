@@ -1,0 +1,10 @@
+# Local review pages and image-editing intermediates are reproducible artifacts.
+/*.html
+/page.js
+/work/
+/__pycache__/
+/assets/*.png
+/assets/IMG_5022.webp
+/assets/small/IMG_5022.webp
+/data/catalog.json
+/data/IMG_5029-links.json
