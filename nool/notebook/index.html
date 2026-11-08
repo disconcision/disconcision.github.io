@@ -352,6 +352,55 @@
     /* framed things: small corners but one, the bottom right, rounded wide */
     figure img, .card img { border-bottom-right-radius: 28px; }
 
+    /* the grow sketches: a grid of small framed squares, each tipping when
+       hovered and opening larger (in the lightbox) when clicked; the
+       second set in one row of equal heights, each at its own aspect */
+    .sketches {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+    .sketches a {
+      display: block;
+      min-width: 0;
+      text-decoration: none;
+      transform-origin: top left;
+      transition: rotate 0.15s ease-out;
+    }
+    .sketches a:hover { background: none; animation: none; rotate: 1.5deg; }
+    .sketches img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      border-radius: 6px 6px 18px 6px;
+      background: #f3f1ec;
+    }
+    .sketches.more { display: flex; }
+    .sketches.more a { flex: var(--ar) 1 0; }
+    .sketches.more img { aspect-ratio: var(--ar); }
+    .sketch-set + .sketch-set { margin-top: -0.4rem; }
+
+    dialog.lightbox {
+      padding: 0;
+      border: 0;
+      background: none;
+      max-width: 94vw;
+      max-height: 94vh;
+      overflow: visible;
+    }
+    dialog.lightbox::backdrop { background: rgba(29, 29, 31, 0.78); }
+    dialog.lightbox img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: min(94vw, 1100px);
+      max-height: 90vh;
+      border-radius: 8px 8px 28px 8px;
+    }
+
     .note { font-size: 0.85rem; color: var(--muted); }
     .note.scaffold { color: var(--scaffold); }
 
@@ -382,6 +431,9 @@
       .links a { padding: 0.25rem 0.7rem; }
       .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .cards.ways { grid-template-columns: 1fr; gap: 1.3rem; }
+      .sketches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sketches.more { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sketches.more img { aspect-ratio: 1; }
     }
     @media (prefers-reduced-motion: reduce) {
       .logo:hover, .logo.flaring { animation: none; }
@@ -450,6 +502,42 @@
     </div>
 
     <h2>Where it came from</h2>
+    <figure class="sketch-set">
+      <div class="sketches">
+        <a href="sketches/01-words.webp"><img src="sketches/thumb/01-words.webp" alt="The expression written out in words: m squared minus m, all over 5 m minus 5." loading="lazy"></a>
+        <a href="sketches/02-fraction.webp"><img src="sketches/thumb/02-fraction.webp" alt="As a fraction, (m² − m) over (5m − 5), each part bracketed in red." loading="lazy"></a>
+        <a href="sketches/03-faces.webp"><img src="sketches/thumb/03-faces.webp" alt="As faces: smiling orange circles for m and clusters of dots for numbers, above and below a fraction bar." loading="lazy"></a>
+        <a href="sketches/04-boxes.webp"><img src="sketches/thumb/04-boxes.webp" alt="As nested boxes in green, yellow and grey: m, 2 and m above; 5, m and 5 below." loading="lazy"></a>
+        <a href="sketches/05-stars.webp"><img src="sketches/thumb/05-stars.webp" alt="As a branching tree on its side, its leaves blue stars and dots." loading="lazy"></a>
+        <a href="sketches/06-fruit.webp"><img src="sketches/thumb/06-fruit.webp" alt="As two fruit trees, one hanging above a blue ground line and one growing below it, bearing pink apples and berries." loading="lazy"></a>
+        <a href="sketches/07-prefix.webp"><img src="sketches/thumb/07-prefix.webp" alt="In prefix notation, ÷(−(∧(m 2) m) −(·(5 m) 5)), the parentheses in red." loading="lazy"></a>
+        <a href="sketches/08-boxes-side.webp"><img src="sketches/thumb/08-boxes-side.webp" alt="As boxes stacked on their side, in blue and yellow." loading="lazy"></a>
+        <a href="sketches/09-question-tree.webp"><img src="sketches/thumb/09-question-tree.webp" alt="As a bare tree on the ground, its fruit question marks and dots, coloured tan and teal." loading="lazy"></a>
+        <a href="sketches/10-flames.webp"><img src="sketches/thumb/10-flames.webp" alt="As a candelabra above a blue ground line, its leaves orange flames." loading="lazy"></a>
+        <a href="sketches/11-circles.webp"><img src="sketches/thumb/11-circles.webp" alt="In infix, ((m∧2)−m)÷((5·m)−5), each operator circled, with a row of red circles above sized by depth." loading="lazy"></a>
+        <a href="sketches/12-creature.webp"><img src="sketches/thumb/12-creature.webp" alt="As a symmetric creature in orange and yellow, with blue flowers and pink dots around it." loading="lazy"></a>
+        <a href="sketches/13-crystal.webp"><img src="sketches/thumb/13-crystal.webp" alt="As a crystal or molecule: red and green bonds, blue gems for leaves." loading="lazy"></a>
+        <a href="sketches/14-totem.webp"><img src="sketches/thumb/14-totem.webp" alt="As a vertical totem of operator circles, glowing purple." loading="lazy"></a>
+        <a href="sketches/15-ovals.webp"><img src="sketches/thumb/15-ovals.webp" alt="As nested ovals in pastel pink, yellow and green: m², minus, m above; 5, m, minus, 5 below." loading="lazy"></a>
+      </div>
+      <figcaption>
+        grow sketches, April 2017.<span class="scaffold"> One expression, (m² − m) ÷ (5m − 5), drawn
+        fifteen ways. (grow: the concept, before it was nool.)</span>
+      </figcaption>
+    </figure>
+    <figure class="sketch-set">
+      <div class="sketches more">
+        <a href="sketches/boxtree-interface.webp" style="--ar: 1.217"><img src="sketches/thumb/boxtree-interface.webp" alt="A sheet titled GROW boxtree interface: grids of nested boxes coloured purple, pink and green." loading="lazy"></a>
+        <a href="sketches/tangled-trees.webp" style="--ar: 1"><img src="sketches/thumb/tangled-trees.webp" alt="Circles of operators and numbers joined by cyan lines, captioned TANGLED TREES BAR YOUR WAY." loading="lazy"></a>
+        <a href="sketches/grow-logo.webp" style="--ar: 1.509"><img src="sketches/thumb/grow-logo.webp" alt="The word grow in black brush lettering, glowing cyan, with 1/0 and ONE OVER ZERO beneath it." loading="lazy"></a>
+        <a href="sketches/organic-tree.webp" style="--ar: 1.333"><img src="sketches/thumb/organic-tree.webp" alt="An organic branching tree drawn in coloured pencil, its nodes recoloured magenta and green." loading="lazy"></a>
+      </div>
+      <figcaption class="scaffold">
+        More grow: the boxtree interface sheet, tangled trees, the grow 1/0 logo, and an organic tree.
+        Some of these were first drawn in 2012–13 and coloured later.
+      </figcaption>
+    </figure>
+    <dialog class="lightbox" aria-label="Sketch, enlarged"><img alt=""></dialog>
     <blockquote>
       Back in 2022, I had a prototype of a game aimed at making math more tangible, a long-running obsession of
       mine. It had a lot going for it, but the fundamental mechanic, based on selecting transformations from a menu,
@@ -537,6 +625,22 @@
         logo.classList.add("flaring");
       });
       logo.addEventListener("animationend", () => logo.classList.remove("flaring"));
+    }
+    // a sketch, clicked, opens larger over the page; a click anywhere (or
+    // Escape) closes it. Without this, the links open the images themselves.
+    {
+      const box = document.querySelector("dialog.lightbox");
+      const big = box.querySelector("img");
+      for (const a of document.querySelectorAll(".sketches a")) {
+        a.addEventListener("click", (e) => {
+          if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+          e.preventDefault();
+          big.src = a.getAttribute("href");
+          big.alt = a.querySelector("img").alt;
+          box.showModal();
+        });
+      }
+      box.addEventListener("click", () => box.close());
     }
   </script>
 </body>
