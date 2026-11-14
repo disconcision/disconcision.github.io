@@ -424,6 +424,17 @@
 
     .since figcaption { font-size: 0.95rem; color: var(--ink); line-height: 1.5; margin-top: 0.6rem; }
 
+    /* in the wild: short labelled lists of what others have made */
+    .wild h3 {
+      font-weight: normal;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 1.6rem 0 0.4rem;
+    }
+    .wild ul { margin: 0; padding-left: 1.1rem; }
+    .wild li { margin: 0.3rem 0; line-height: 1.5; }
+    .wild li::marker { color: var(--accent); }
+
     /* the permutation lab, live (js/perm.js): the talk's 960×540 canvas scaled to the column,
        played by a ghost hand until you click to take over */
     .perm-live {
@@ -841,6 +852,56 @@
           </figcaption>
         </figure>
       </div>
+    </div>
+
+    <h2>In the wild</h2>
+    <p>
+      Within days of the paper, people started building with Dragology. Here's what they're saying and doing.
+    </p>
+    <div class="wild">
+      <blockquote>
+        One of my favorite papers ever
+        <cite>— <a href="https://x.com/geoffreylitt/status/2117723421052485791">Geoffrey Litt</a></cite>
+      </blockquote>
+      <blockquote>
+        Really lovely work here! I think many interfaces are indirect/discrete instead of direct/continuous because
+        it's very hard to implement novel direct manipulation. So it's also hard to prototype/invent.
+        <cite>— <a href="https://x.com/andy_matuschak/status/2118432269283344517">Andy Matuschak</a></cite>
+      </blockquote>
+      <h3 class="mono">Reception</h3>
+      <ul>
+        <li>On the <a href="https://news.ycombinator.com/item?id=50368481">Hacker News front page</a>, with 756 points and 97 comments</li>
+        <li>About 670 stars on <a href="https://github.com/declarative-dragging/dragology">GitHub</a> and over a thousand <a href="https://www.npmjs.com/package/dragology">npm</a> downloads a month, as of mid-November 2026</li>
+        <li>Red Blob Games' <a href="https://www.redblobgames.com/making-of/draggable/">Implementing draggable objects</a> now points to Dragology for drag-and-drop</li>
+        <li><a href="https://observablehq.com/@tophtucker/hello-dragology">Hello, Dragology</a> and <a href="https://observablehq.com/@tophtucker/dragology-state-diagram">Dragology state diagram</a>: Observable notebooks by Toph Tucker, shared by Observable</li>
+        <li><a href="https://observablehq.com/@jwolondon/draggable-plot">Draggable Plot</a>, by Jo Wood: declarative dragging for Observable Plot charts (<a href="https://talk.observablehq.com/t/draggable-plot/10966">announcement</a>)</li>
+      </ul>
+      <h3 class="mono">Ports</h3>
+      <ul>
+        <li><a href="https://github.com/jeslyvarghese/dragology-swift">dragology-swift</a> (Swift and SwiftUI), by Jesly Varghese, with <a href="https://dragology.quadratic.xyz/">demos</a> for iOS</li>
+        <li><a href="https://github.com/pietroppeter/zogyn">zogyn</a> (Nim), by Pietro Peterlongo</li>
+        <li><a href="https://github.com/Andrewp2/rust-dragology">rust-dragology</a> (Rust), by Andrew Peterson: renderer-independent, with all 119 demos running in GPUI</li>
+        <li><a href="https://github.com/xenacool/bevy_composable_dragging">bevy_composable_dragging</a> (Bevy), by xenacool: a Rust crate for the Bevy game engine, <a href="https://docs.rs/bevy_composable_dragging/latest/bevy_composable_dragging/">on docs.rs</a></li>
+      </ul>
+      <h3 class="mono">Built with Dragology</h3>
+      <ul>
+        <li>Experiments by Francois Laberge: <a href="https://x.com/seflless/status/2118470443740934253">sound effects on drop targets</a> and <a href="https://x.com/seflless/status/2118471666229445092">indoor climbing</a></li>
+        <li><a href="https://x.com/Gsimone/status/2118430603733504156">Dragology + three.js</a>, by Gianmarco Simone</li>
+        <li><a href="https://anucybernetics.github.io/draggle/">Draggle</a>, from the ANU School of Cybernetics: daily draggable puzzles (<a href="https://github.com/ANUcybernetics/draggle">source</a>)</li>
+        <li><a href="https://chuanqisun.github.io/zen-tile/">zen-tile</a>, by Chuanqi Sun (<a href="https://github.com/chuanqisun/zen-tile">source</a>)</li>
+        <li><a href="https://x.com/osoleve/status/2120025663050514541">A phonetics tool</a> built around the “Sammy” vocal-tract diagram</li>
+        <li><a href="https://x.com/gcduncombe/status/2119926297967116662">A logo-lockup explorer</a>, by Gabi C. Duncombe</li>
+        <li><a href="https://x.com/__itsaras/status/2118166540956950999">Eight small lessons</a>: concepts for Dragology in education</li>
+        <li><a href="https://dev-site-five-kappa.vercel.app/projects.html">A draggable stack map</a> on Ron Bronson's site: drag a marker along the techniques and his projects re-sort (<a href="https://github.com/quarterback/dev-site/pull/111">source</a>)</li>
+        <li><a href="https://akeboshiwind.github.io/dragology-todo/">A Dragology to-do list</a> (<a href="https://github.com/Akeboshiwind/akeboshiwind.github.io/tree/master/src/pages/dragology-todo">source</a>)</li>
+        <li><a href="https://x.com/_ScottCondron/status/2118027606008230222">A Rube Goldberg machine maker</a>, by Scott Condron</li>
+        <li><a href="https://github.com/kiwisontoast/entrypad">entrypad</a>: draggable live accounting visuals for presentations</li>
+        <li><a href="https://github.com/JazzTap/dictionary-blocks">dictionary-blocks</a>: Dialog DB with Dragology</li>
+        <!-- foreman (https://github.com/DanielFGray/foreman), a coding-agent task board, lists
+             dragology 0.2.0 in packages/foreman-ui/package.json, and its docs/web-ui.md plans the
+             task boards and pipeline editor on it, but as of 2026-11-14 nothing in its source imports
+             dragology. Recheck before listing it. -->
+      </ul>
     </div>
 
     <h2>Cite</h2>
