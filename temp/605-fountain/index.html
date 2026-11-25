@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>605 Fountain Rooms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a listing sheet on top (what renters see), a pasteboard below (what Thomas copies), then photos, open questions and the sizing notes. */
+:root {
+  --paper: #f4f6f3;
+  --card: #ffffff;
+  --ink: #1b231f;
+  --muted: #5a6560;
+  --line: #d8ddd7;
+  --accent: #1d6c55;      /* yard green: back bedroom, actions */
+  --accent-soft: #e2efe9;
+  --blue: #2c5ea6;        /* middle bedroom, matches the plan tint */
+  --blue-soft: #e4ebf6;
+  --wood: #a8672c;        /* maple floors: small highlights */
+  --wood-soft: #f5ebe0;
+  --code: #eef1ed;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111614; --card: #1a201d; --ink: #e5ebe7; --muted: #9ba7a1; --line: #2b3430;
+    --accent: #62c3a0; --accent-soft: #1b3129; --blue: #86aef0; --blue-soft: #1b2638;
+    --wood: #dca067; --wood-soft: #2e2419; --code: #161c19; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111614; --card: #1a201d; --ink: #e5ebe7; --muted: #9ba7a1; --line: #2b3430;
+  --accent: #62c3a0; --accent-soft: #1b3129; --blue: #86aef0; --blue-soft: #1b2638;
+  --wood: #dca067; --wood-soft: #2e2419; --code: #161c19; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font: 15px/1.6 var(--f-body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+a { color: var(--accent); }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h2 { font-size: 1.75rem; font-weight: 750; font-stretch: 88%; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; padding-block: 10px; }
+.bar .mark { font-family: var(--f-display); font-weight: 800; font-stretch: 80%; letter-spacing: .02em; font-size: 1.05rem; }
+.bar nav { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .88rem; }
+.bar nav a { color: var(--muted); text-decoration: none; }
+.bar nav a:hover, .bar nav a:focus-visible { color: var(--ink); text-decoration: underline; }
+
+.intro { padding-block: 28px 8px; display: grid; gap: 8px; max-width: 70ch; }
+.intro .eyebrow { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.intro p { color: var(--muted); }
+
+section.block { padding-block: 40px 8px; display: grid; gap: 18px; scroll-margin-top: 64px; }
+.block > header { display: grid; gap: 6px; max-width: 70ch; }
+.block > header p { color: var(--muted); }
+
+/* ---------- The ad mock-up ---------- */
+.listing { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; aspect-ratio: 16 / 7.5; max-width: 100%; }
+.gallery button { border: 0; padding: 0; margin: 0; background: var(--code); cursor: zoom-in; overflow: hidden; position: relative; }
+.gallery button:first-child { grid-row: span 2; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery .more { position: absolute; right: 10px; bottom: 10px; background: rgba(0,0,0,.66); color: #fff; font-size: .8rem; padding: 4px 10px; border-radius: 999px; }
+.listing-body { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 32px; padding: 26px clamp(16px, 3vw, 32px) 32px; }
+.listing-main { display: grid; gap: 22px; min-width: 0; }
+.listing h1 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 800; font-stretch: 85%; }
+.addr { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: var(--code); border: 1px solid var(--line); white-space: nowrap; }
+.rooms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.room { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; background: var(--card); }
+.room img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; cursor: zoom-in; }
+.room .rb { padding: 14px 16px 16px; display: grid; gap: 6px; align-content: start; }
+.room .tag { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; }
+.room.back { border-top: 4px solid var(--accent); } .room.back .tag { color: var(--accent); }
+.room.mid { border-top: 4px solid var(--blue); } .room.mid .tag { color: var(--blue); }
+.room .size { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+.room p { color: var(--muted); font-size: .92rem; }
+.facts { display: grid; gap: 18px; }
+.facts h3 { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.facts ul { margin: 0; padding-left: 1.1em; display: grid; gap: 3px; }
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.plans figure { margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+.plans img { width: 100%; display: block; cursor: zoom-in; }
+.plans figcaption { font-size: .8rem; color: #555; padding: 6px 10px; border-top: 1px solid #ddd; }
+aside.price { position: sticky; top: 72px; align-self: start; border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 12px; background: var(--paper); }
+.price .big { font-family: var(--f-display); font-weight: 800; font-stretch: 80%; font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.price .big small { font-size: 1rem; font-weight: 600; color: var(--muted); }
+.price dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: .88rem; }
+.price dt { color: var(--muted); }
+.price dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.price .note { font-size: .82rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
+
+/* ---------- Copy blocks ---------- */
+.paste { display: grid; gap: 14px; }
+.pcard { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.pcard .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.pcard .where { font-size: .85rem; color: var(--muted); }
+.pcard .use { font-size: .88rem; color: var(--muted); max-width: 75ch; }
+.copywrap { position: relative; }
+pre.copy { margin: 0; background: var(--code); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; font: 13.5px/1.6 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; max-height: 420px; overflow: auto; }
+pre.copy.short { max-height: none; }
+.cbtn { font: 600 .82rem var(--f-body); border: 1px solid var(--accent); background: var(--accent); color: var(--card); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.cbtn:hover { filter: brightness(1.08); }
+.cbtn:focus-visible, .gallery button:focus-visible, .tabs button:focus-visible, .check input:focus-visible { outline: 3px solid var(--wood); outline-offset: 2px; }
+.cbtn.done { background: var(--card); color: var(--accent); }
+.fields { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.fields th, .fields td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.fields th { color: var(--muted); font-weight: 500; width: 38%; }
+.fields td.ask { color: var(--wood); }
+.tablewrap { overflow-x: auto; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button { font: 500 .85rem var(--f-body); border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+
+/* ---------- Photos ---------- */
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.photo { display: grid; gap: 6px; font-size: .8rem; }
+.photo button { border: 1px solid var(--line); padding: 0; background: var(--code); border-radius: 8px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 3; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo code { font: 500 .75rem var(--f-mono); color: var(--ink); overflow-wrap: anywhere; }
+.photo span { color: var(--muted); }
+.flag { display: inline-block; font-size: .68rem; font-weight: 600; letter-spacing: .04em; padding: 1px 7px; border-radius: 999px; background: var(--wood-soft); color: var(--wood); margin-right: 4px; }
+.flag.top { background: var(--accent-soft); color: var(--accent); }
+.where-files { background: var(--card); border: 1px dashed var(--line); border-radius: 10px; padding: 12px 14px; font-size: .9rem; }
+.photo a.save { font-size: .78rem; font-weight: 600; color: var(--accent); justify-self: start; }
+.where-files code { font: 500 .85rem var(--f-mono); overflow-wrap: anywhere; }
+
+/* ---------- Checklist ---------- */
+.checks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.cgroup { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.cgroup h3 { font-size: 1rem; }
+.check { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; font-size: .9rem; }
+.check input { margin-top: 4px; width: 16px; height: 16px; accent-color: var(--accent); }
+.check small { display: block; color: var(--muted); font-size: .82rem; margin-top: 2px; }
+.check input:checked + div { text-decoration: line-through; color: var(--muted); }
+.progress { font-size: .85rem; color: var(--muted); }
+.settled ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; font-size: .9rem; }
+.settled li small { display: block; color: var(--muted); font-size: .82rem; margin-top: 1px; }
+
+/* ---------- Sizes ---------- */
+.sizes { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.sizes .prose { display: grid; gap: 12px; max-width: 65ch; }
+.sizes table { width: 100%; border-collapse: collapse; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.sizes th, .sizes td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.sizes th { font-weight: 600; color: var(--muted); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+.sizes td:last-child { font-weight: 600; white-space: nowrap; }
+.sizes figure { margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+.sizes figure img { display: block; width: 100%; cursor: zoom-in; }
+
+footer.end { padding-block: 40px 48px; color: var(--muted); font-size: .82rem; }
+
+/* Lightbox */
+dialog#lb { border: 0; padding: 0; background: transparent; max-width: min(96vw, 1200px); width: 100%; }
+dialog#lb::backdrop { background: rgba(10, 14, 12, .86); }
+.lb-inner { display: grid; gap: 10px; justify-items: center; }
+#lb-img { max-height: 80vh; max-width: 100%; border-radius: 6px; background: #000; }
+.lb-row { display: flex; gap: 10px; align-items: center; color: #eee; font-size: .9rem; flex-wrap: wrap; justify-content: center; }
+.lb-row button { font: 600 .9rem var(--f-body); background: #fff; color: #111; border: 0; border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+
+@media (max-width: 860px) {
+  .listing-body { grid-template-columns: minmax(0, 1fr); }
+  aside.price { position: static; order: -1; }
+  .checks { grid-template-columns: minmax(0, 1fr); }
+  .sizes { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; aspect-ratio: auto; }
+  .gallery button { aspect-ratio: 4 / 3; }
+  .gallery button:first-child { grid-row: auto; grid-column: span 2; aspect-ratio: 4 / 3; }
+  .gallery button:nth-child(n+4) { display: none; }
+  .rooms, .plans, .two { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="wrap">
+    <span class="mark">605 FOUNTAIN</span>
+    <nav aria-label="Sections">
+      <a href="#ad">The ad</a>
+      <a href="#paste">Copy text</a>
+      <a href="#photos">Photos</a>
+      <a href="#settle">Terms &amp; to-dos</a>
+      <a href="#sizes">Room sizes</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="intro">
+    <span class="eyebrow">Listing kit · two rooms · January 1 or sooner</span>
+    <p>Everything needed to list the back and middle bedrooms. The first section is a mock-up of the ad. Below it is text ready to paste into each site, the photos in posting order, the settled terms, and what still needs doing. Text in [brackets] still needs filling in.</p>
+  </div>
+
+  <!-- ================= THE AD ================= -->
+  <section class="block" id="ad">
+    <header>
+      <h2>The ad</h2>
+      <p>How the listing should read on any site. Click a photo to enlarge it.</p>
+    </header>
+
+    <article class="listing">
+      <div class="gallery" id="gallery">
+        <button data-i="0"><img src="photos/01-exterior.jpg" alt="Front of the house: salmon shingle siding, red stucco porch with columns, front lawn"></button>
+        <button data-i="4"><img src="photos/05-back-bedroom.jpg" alt="Back bedroom with queen bed, window over the yard, ceiling fan"></button>
+        <button data-i="1"><img src="photos/02-living-room.jpg" alt="Living room with hardwood floors, sofa and arches into the kitchen"></button>
+        <button data-i="7"><img src="photos/08-middle-bedroom.jpg" alt="Middle bedroom with hardwood floor, desk and slanted ceiling"></button>
+        <button data-i="2"><img src="photos/03-kitchen.jpg" alt="Kitchen with white cabinets, subway tile and stainless range"><span class="more">All 16 photos</span></button>
+      </div>
+
+      <div class="listing-body">
+        <div class="listing-main">
+          <div style="display:grid; gap:8px">
+            <h1>2 rooms for rent in a 3-bedroom house, available January 1 or sooner</h1>
+            <p class="addr">605 Fountain St, Ann Arbor, MI 48103 · Water Hill, off Miller Ave</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Private bedroom</span>
+            <span class="chip">1 housemate</span>
+            <span class="chip">1.5 shared baths</span>
+            <span class="chip">Central air</span>
+            <span class="chip">Dishwasher</span>
+            <span class="chip">Free washer/dryer</span>
+            <span class="chip">Big yard + fire pit</span>
+            <span class="chip">Street parking</span>
+            <span class="chip">No pets · no smoking</span>
+          </div>
+          <p>Two private bedrooms in a 3-bedroom house at 605 Fountain St, in Water Hill just off Miller Ave. You'd share the house with one housemate, a U-M grad student. We're looking for grad students, postdocs or young professionals. Rent one room or both.</p>
+
+          <div class="rooms">
+            <div class="room back">
+              <img src="photos/05-back-bedroom.jpg" alt="Back bedroom" data-i="4">
+              <div class="rb">
+                <span class="tag">Back bedroom · furniture optional</span>
+                <span class="size">≈ 7½ × 12 ft + closet alcove</span>
+                <p>Window over the back yard, ceiling fan, and a 5 ft wide closet alcove with shelving. Can come furnished with a queen IKEA Malm bed frame, a dresser and a nightstand (the mattress too, if you want it), or empty.</p>
+              </div>
+            </div>
+            <div class="room mid">
+              <img src="photos/08-middle-bedroom.jpg" alt="Middle bedroom" data-i="7">
+              <div class="rb">
+                <span class="tag">Middle bedroom · unfurnished</span>
+                <span class="size">≈ 9½ × 10 ft + closet</span>
+                <p>Hardwood floor and a slanted ceiling along one side. Unfurnished.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="facts">
+            <div>
+              <h3>The house</h3>
+              <ul>
+                <li>Updated kitchen with a dishwasher, plus a living room and dining room, with hardwood floors throughout</li>
+                <li>1.5 baths: a half bath downstairs and a full bath with tub and shower upstairs</li>
+                <li>Central air and heating (gas furnace)</li>
+                <li>Free washer and dryer in the basement</li>
+                <li>Big back yard with a fire pit, a shed for bikes, a front porch and a covered back porch</li>
+                <li>Easy street parking, usually right out front. The driveway is shared with the other half of the duplex, so there's no reserved spot.</li>
+                <li>Both bedrooms are upstairs, on the top floor of a 1901 house, so expect some slanted ceiling.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <ul>
+                <li>A few blocks from West Park</li>
+                <li>About a 12–15 minute walk to Kerrytown, the Farmers Market and Main St</li>
+                <li>About a 25 minute walk or 8 minute bike ride to Central Campus; North Campus is about 2.5 miles by bike or bus</li>
+              </ul>
+            </div>
+            <div>
+              <h3>To apply</h3>
+              <p>Email [shared address] with a bit about yourself, what you do, and when you'd like to move in. Video tours are available if you're not in Ann Arbor yet. We'll never ask for money before you've seen the place, in person or on a live video call.</p>
+            </div>
+          </div>
+
+          <div class="plans">
+            <figure><img src="photos/16-floor-plan-upstairs.jpg" alt="Upstairs floor plan with the two rooms for rent marked" data-i="15"><figcaption>Upstairs. The two rooms for rent are shaded.</figcaption></figure>
+            <figure><img src="photos/15-floor-plan-main.jpg" alt="Main floor plan: living room, dining area, kitchen, half bath, covered back porch" data-i="14"><figcaption>Main floor: living room, dining area, kitchen and half bath.</figcaption></figure>
+          </div>
+        </div>
+
+        <aside class="price">
+          <div class="big">$915 <small>/ month per room</small></div>
+          <dl>
+            <dt>Utilities + internet</dt><dd>≈ $375 / mo for the house, split evenly</dd>
+            <dt>Deposit</dt><dd>1 month ($915)</dd>
+            <dt>Available</dt><dd>January 1, 2027, or sooner</dd>
+            <dt>Lease runs to</dt><dd>July 31, 2027</dd>
+            <dt>House</dt><dd>3 bed · 1.5 bath</dd>
+            <dt>Size</dt><dd>≈ 1,100 sq ft + basement</dd>
+          </dl>
+          <p class="note">Utilities are mostly heat and internet, which cost about the same however many people live here, so the house total is split evenly: about $125 each with three people. We expect to renew the lease, so staying on past July should be possible.</p>
+        </aside>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= COPY TEXT ================= -->
+  <section class="block" id="paste">
+    <header>
+      <h2>Copy text</h2>
+      <p>One block per site. Each Copy button copies the whole block as plain text. Fill in [shared address] once you have it.</p>
+    </header>
+
+    <div class="paste">
+
+      <!-- Facebook groups -->
+      <div class="pcard">
+        <div class="top"><h3>Facebook groups</h3><span class="where">“UMICH Housing, Rooms, Apartments, Sublets” and other free Ann Arbor housing groups</span></div>
+        <p class="use">Short version for group feeds. Attach photos 01–16. If Thomas posts it, replies come to his Messenger.</p>
+        <div class="copywrap"><pre class="copy short" id="c-fbgroup">2 rooms for rent in Water Hill, available Jan 1 or sooner: $915/mo each
+
+Two private bedrooms in a 3-bedroom house at 605 Fountain St, off Miller Ave. You'd share with one housemate, a U-M grad student. Looking for grad students, postdocs or young professionals.
+
+• $915/month per room, plus an even share of utilities and internet (about $375/month for the house, so about $125 each with three people)
+• Back bedroom: about 7½ × 12 ft + closet alcove. Can come furnished (queen bed, dresser, nightstand)
+• Middle bedroom: about 9½ × 10 ft + closet. Unfurnished
+• 1.5 baths, central air, dishwasher, free washer/dryer in the basement
+• Big back yard with a fire pit, a shed for bikes, front porch
+• Easy street parking. No pets, no smoking
+• 25 min walk or 8 min bike to Central Campus; 12–15 min walk to Kerrytown and Main St
+• Available January 1, or sooner if you want to move in earlier. The lease runs through July 31, 2027, and we expect to renew
+
+Message me or email [shared address] with a bit about yourself and when you'd like to move in. Video tours available.</pre></div>
+        <div><button class="cbtn" data-copy="c-fbgroup">Copy</button></div>
+      </div>
+
+      <!-- Marketplace -->
+      <div class="pcard">
+        <div class="top"><h3>Facebook Marketplace</h3><span class="where">Marketplace › Create new listing › Property for rent</span></div>
+        <p class="use">Post each room as its own listing, so each shows up at $915 with its own photos first. Marketplace has fixed fields; the values are below. Field names may differ slightly from these.</p>
+        <div class="tabs" role="tablist" aria-label="Which room">
+          <button role="tab" aria-selected="true" aria-controls="mp-back" id="tab-back">Back bedroom</button>
+          <button role="tab" aria-selected="false" aria-controls="mp-mid" id="tab-mid">Middle bedroom</button>
+        </div>
+
+        <div id="mp-back" role="tabpanel" aria-labelledby="tab-back" class="two">
+          <div class="tablewrap"><table class="fields">
+            <tr><th>Rental type</th><td>Room only (or House, if there's no room option)</td></tr>
+            <tr><th>Bedrooms / bathrooms</th><td>1 / 1.5 shared (whole house: 3 / 1.5)</td></tr>
+            <tr><th>Price per month</th><td>915</td></tr>
+            <tr><th>Address</th><td>605 Fountain St, Ann Arbor, MI 48103</td></tr>
+            <tr><th>Square feet</th><td>95 (the room), or 1,100 if it means the house</td></tr>
+            <tr><th>Date available</th><td>January 1, 2027 (the description says sooner is fine)</td></tr>
+            <tr><th>Laundry</th><td>In-unit laundry</td></tr>
+            <tr><th>Parking</th><td>Street parking</td></tr>
+            <tr><th>Air conditioning</th><td>Central AC</td></tr>
+            <tr><th>Heating</th><td>Central heating (gas furnace)</td></tr>
+            <tr><th>Cats / dogs</th><td>No / No</td></tr>
+            <tr><th>Photos, in order</th><td>05, 06, 07, 02, 03, 04, 11, 13, 16, 01</td></tr>
+          </table></div>
+          <div class="copywrap"><pre class="copy" id="c-mp-back">Furnished or unfurnished room in a 3-bedroom house in Water Hill, available January 1 or sooner.
+
+The room is upstairs at the back of the house: about 7½ × 12 ft, plus a 5 ft wide closet alcove with shelving, a window over the back yard and a ceiling fan. It can come furnished with a queen IKEA Malm bed frame, dresser and nightstand (the mattress too, if you want it), or empty if you'd rather bring your own.
+
+You'd share the house with one housemate, a U-M grad student. The other spare room is listed too. The house has an updated kitchen with a dishwasher, living and dining rooms, hardwood floors, 1.5 baths, central air, a free washer and dryer in the basement, a big back yard with a fire pit and a shed for bikes, and a front porch. Easy street parking.
+
+$915/month, plus an even share of utilities and internet: about $375/month for the whole house, so about $125 each with three people. One month's deposit. Available January 1, or sooner if you want to move in earlier. The lease runs through July 31, 2027, and we expect to renew. No pets, no smoking.
+
+About a 25 minute walk or 8 minute bike ride to Central Campus, and 12–15 minutes on foot to Kerrytown and Main St.
+
+Send a message with a bit about yourself, what you do and when you'd like to move in. Video tours available.</pre>
+          <div style="margin-top:10px"><button class="cbtn" data-copy="c-mp-back">Copy description</button></div></div>
+        </div>
+
+        <div id="mp-mid" role="tabpanel" aria-labelledby="tab-mid" class="two" hidden>
+          <div class="tablewrap"><table class="fields">
+            <tr><th>Rental type</th><td>Room only (or House, if there's no room option)</td></tr>
+            <tr><th>Bedrooms / bathrooms</th><td>1 / 1.5 shared (whole house: 3 / 1.5)</td></tr>
+            <tr><th>Price per month</th><td>915</td></tr>
+            <tr><th>Address</th><td>605 Fountain St, Ann Arbor, MI 48103</td></tr>
+            <tr><th>Square feet</th><td>100 (the room), or 1,100 if it means the house</td></tr>
+            <tr><th>Date available</th><td>January 1, 2027 (the description says sooner is fine)</td></tr>
+            <tr><th>Laundry</th><td>In-unit laundry</td></tr>
+            <tr><th>Parking</th><td>Street parking</td></tr>
+            <tr><th>Air conditioning</th><td>Central AC</td></tr>
+            <tr><th>Heating</th><td>Central heating (gas furnace)</td></tr>
+            <tr><th>Cats / dogs</th><td>No / No</td></tr>
+            <tr><th>Photos, in order</th><td>08, 09, 10, 02, 03, 04, 11, 13, 16, 01</td></tr>
+          </table></div>
+          <div class="copywrap"><pre class="copy" id="c-mp-mid">Room in a 3-bedroom house in Water Hill, available January 1 or sooner.
+
+The room is upstairs in the middle of the house: about 9½ × 10 ft plus a closet, with a hardwood floor and a slanted ceiling along one side. It's unfurnished.
+
+You'd share the house with one housemate, a U-M grad student. The other spare room is listed too. The house has an updated kitchen with a dishwasher, living and dining rooms, hardwood floors, 1.5 baths, central air, a free washer and dryer in the basement, a big back yard with a fire pit and a shed for bikes, and a front porch. Easy street parking.
+
+$915/month, plus an even share of utilities and internet: about $375/month for the whole house, so about $125 each with three people. One month's deposit. Available January 1, or sooner if you want to move in earlier. The lease runs through July 31, 2027, and we expect to renew. No pets, no smoking.
+
+About a 25 minute walk or 8 minute bike ride to Central Campus, and 12–15 minutes on foot to Kerrytown and Main St.
+
+Send a message with a bit about yourself, what you do and when you'd like to move in. Video tours available.</pre>
+          <div style="margin-top:10px"><button class="cbtn" data-copy="c-mp-mid">Copy description</button></div></div>
+        </div>
+      </div>
+
+      <!-- Craigslist -->
+      <div class="pcard">
+        <div class="top"><h3>Craigslist</h3><span class="where">annarbor.craigslist.org › housing › rooms &amp; shares</span></div>
+        <p class="use">One post for both rooms; Craigslist removes near-duplicate posts. It allows up to 24 photos, so attach 01–16. Sign up with the shared Gmail so replies go there through Craigslist's relay.</p>
+        <div class="two">
+          <div class="tablewrap"><table class="fields">
+            <tr><th>Posting title</th><td>2 rooms in 3BR house near downtown &amp; campus, avail. Jan 1 or sooner</td></tr>
+            <tr><th>Price</th><td>915 (rent period: monthly)</td></tr>
+            <tr><th>City or neighborhood</th><td>Water Hill</td></tr>
+            <tr><th>Postal code</th><td>48103</td></tr>
+            <tr><th>Street / cross street</th><td>Fountain St at Miller Ave</td></tr>
+            <tr><th>ft²</th><td>100</td></tr>
+            <tr><th>Housing type</th><td>house</td></tr>
+            <tr><th>Laundry</th><td>w/d in unit</td></tr>
+            <tr><th>Parking</th><td>street parking</td></tr>
+            <tr><th>Checkboxes</th><td>private room ✓ · no smoking ✓ · air conditioning ✓ · private bath ✗ · cats ✗ · dogs ✗ · furnished ✗ (it's optional; the text says so)</td></tr>
+            <tr><th>Available on</th><td>January 1, 2027</td></tr>
+          </table></div>
+          <div class="copywrap"><pre class="copy" id="c-cl">Two private bedrooms in a 3-bedroom house at 605 Fountain St, in Water Hill just off Miller Ave. You'd share the house with one housemate, a U-M grad student. We're looking for grad students, postdocs or young professionals. Rent one room or both.
+
+THE ROOMS (both upstairs)
+• Back bedroom: about 7½ × 12 ft, plus a 5 ft wide closet alcove with shelving. Window over the back yard, ceiling fan. It can come furnished (queen IKEA Malm bed frame, dresser, nightstand, and the mattress if you want it) or empty.
+• Middle bedroom: about 9½ × 10 ft, plus a closet. Unfurnished.
+Both rooms have hardwood floors and some slanted ceiling. It's the top floor of a 1901 house.
+
+THE HOUSE
+• Updated kitchen with a dishwasher, plus a living room and dining room, with hardwood floors throughout
+• 1.5 baths: a half bath downstairs and a full bath with tub and shower upstairs
+• Central air and heating (gas furnace)
+• Free washer and dryer in the basement
+• Big back yard with a fire pit, a shed for bikes, a front porch and a covered back porch
+• Easy street parking, usually right out front. The driveway is shared with the other half of the duplex, so there's no reserved spot.
+• No pets, no smoking
+
+LOCATION
+• A few blocks from West Park
+• About a 12–15 minute walk to Kerrytown, the Farmers Market and Main St
+• About a 25 minute walk or 8 minute bike ride to Central Campus. North Campus is about 2.5 miles by bike or bus.
+
+COST AND TERM
+• Rent: $915/month per room
+• Utilities and internet: about $375/month for the whole house, split evenly among everyone living here (about $125 each with three people). Most of it is heat and internet, which don't change much with the number of people.
+• Deposit: one month's rent ($915)
+• Available January 1, or sooner if you want to move in earlier. The current lease runs through July 31, 2027. We expect to renew, so staying on past July should be possible.
+
+TO APPLY
+Email [shared address] with a bit about yourself, what you do, and when you'd like to move in. Video tours are available if you're not in Ann Arbor yet. We'll never ask for money before you've seen the place, in person or on a live video call.</pre>
+          <div style="margin-top:10px"><button class="cbtn" data-copy="c-cl">Copy description</button></div></div>
+        </div>
+      </div>
+
+      <!-- U-M -->
+      <div class="pcard">
+        <div class="top"><h3>U-M Off-Campus Housing</h3><span class="where">offcampushousing.umich.edu · sublet / roommate listing</span></div>
+        <p class="use">Post this one first; it reaches students and visiting scholars arriving for winter term. Use the same text as Craigslist. Amenities to tick: air conditioning, dishwasher, laundry in unit, street parking, near bus line. Leave pets, smoking and “utilities included” unticked. List furnished as optional.</p>
+        <div class="copywrap"><pre class="copy short" id="c-um">2 private rooms in a 3BR house in Water Hill, available Jan 1 or sooner ($915/mo each)</pre></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap"><button class="cbtn" data-copy="c-um">Copy title</button><button class="cbtn" data-copy="c-cl">Copy description (same as Craigslist)</button></div>
+      </div>
+
+      <div class="two">
+        <!-- Word of mouth -->
+        <div class="pcard">
+          <div class="top"><h3>Email or Slack</h3><span class="where">CSE grad lists, Slack, Thomas's department</span></div>
+          <p class="use">Probably the best channel. Thomas can reword it in his own voice.</p>
+          <div class="copywrap"><pre class="copy short" id="c-wom">Hi all, I'm moving out of my house in Ann Arbor, and my housemate Thomas and I are looking for people to take two rooms there. They're available January 1, or sooner if someone wants to move in earlier.
+
+It's a 3-bedroom house at 605 Fountain St in Water Hill, about a 25 minute walk or 8 minute bike ride from Central Campus. The rooms are $915/month each, plus an even share of utilities and internet (about $125 each with three people). The lease runs through July 31 and we expect to renew. One room can come furnished.
+
+Photos and details: [link to listing]
+If you know a grad student, postdoc or visiting scholar who's looking, please send them to [shared address].</pre></div>
+          <div><button class="cbtn" data-copy="c-wom">Copy</button></div>
+        </div>
+
+        <!-- Canned reply -->
+        <div class="pcard">
+          <div class="top"><h3>Reply to inquiries</h3><span class="where">Saved reply in Gmail or Messenger</span></div>
+          <p class="use">Sends the basics and asks the screening questions, which filters out a lot of people.</p>
+          <div class="copywrap"><pre class="copy short" id="c-reply">Thanks for getting in touch! The basics: each room is $915/month. Utilities and internet are about $375/month for the whole house, split evenly, so about $125 each with three people. The deposit is one month's rent. The rooms are available January 1, or sooner if you want to move in earlier. The current lease runs through July 31, 2027, and we expect to renew.
+
+If you're interested, could you send a few details so we can set up a tour (in person or on video)?
+1. When you'd like to move in, and how long you'd like to stay
+2. What you do (program or job)
+3. A little about yourself and your routine (schedule, cooking, guests)
+4. Which room you're interested in, and whether you'd want the back room furnished
+
+Thanks,
+Thomas</pre></div>
+          <div><button class="cbtn" data-copy="c-reply">Copy</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PHOTOS ================= -->
+  <section class="block" id="photos">
+    <header>
+      <h2>Photos</h2>
+      <p>Numbered in posting order. 01–16 go in every listing; 17–20 are extras. On each Marketplace room listing, move that room's photos to the front.</p>
+    </header>
+    <div class="where-files">Each photo has a <strong>Save</strong> link for downloading it to post. They're already resized, with location data removed. The same files are in Dropbox at <code>downloads/605 fountain/ad-photos/</code>.</div>
+    <div class="photos" id="photogrid"></div>
+  </section>
+
+  <!-- ================= STILL TO SETTLE ================= -->
+  <section class="block" id="settle">
+    <header>
+      <h2>Terms and to-dos</h2>
+      <p>What's decided, and what the ad still needs. Ticks are saved in your browser only. <span class="progress" id="progress"></span></p>
+    </header>
+    <div class="checks" id="checks">
+      <div class="cgroup settled">
+        <h3>Settled on Nov 25</h3>
+        <ul>
+          <li>Rent: $915 for either room</li>
+          <li>Deposit: one month's rent ($915)<small>It buys out the outgoing share of the deposit the landlord holds.</small></li>
+          <li>Available January 1, or sooner if a renter wants<small>The ads lead with January, since they probably won't go up for another week.</small></li>
+          <li>Thomas collects rent and handles the house</li>
+          <li>Rooms: the Malm room is the back bedroom, the desk room is the middle bedroom, and Thomas keeps the front room</li>
+          <li>The landlord is fine with subletting</li>
+          <li>Utilities: about $375/month for the house, split evenly<small>Mostly heat and internet, which don't scale with the number of people. About $125 each with three people.</small></li>
+          <li>Central air, gas furnace, dishwasher, free washer and dryer, bikes in the shed</li>
+          <li>Back bedroom: the Malm mattress is available if a renter wants it</li>
+          <li>Middle bedroom: the desk is for sale, so the ad lists the room as unfurnished<small>If it doesn't sell, tell renters before they visit.</small></li>
+        </ul>
+      </div>
+      <div class="cgroup">
+        <h3>Still open</h3>
+        <label class="check"><input type="checkbox" id="k-email"><div>Shared address, and who posts where<small>Replace [shared address] everywhere. Facebook replies go to the Messenger of whoever posts.</small></div></label>
+        <label class="check"><input type="checkbox" id="k-vibe"><div>Thomas: check the description<small>It describes the household as one U-M grad student. Add a line about how the house runs if he wants one.</small></div></label>
+      </div>
+      <div class="cgroup">
+        <h3>Photos</h3>
+        <label class="check"><input type="checkbox" id="k-zillow"><div>Retake the exterior and both bathrooms (planned for Nov 26)<small>Those three are from an old Zillow listing. Renters who reverse-image-search for scams will find them there, which can make a real ad look fake, and they're someone else's photos. A phone photo in daylight is enough.</small></div></label>
+        <label class="check"><input type="checkbox" id="k-empty"><div>Reshoot both bedrooms once they're cleared<small>In daylight, from the doorway and from the far corner. Empty rooms show the space better than the current setups.</small></div></label>
+        <label class="check"><input type="checkbox" id="k-living"><div>Optional: living room in daylight<small>Both living room shots are at night.</small></div></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ROOM SIZES ================= -->
+  <section class="block" id="sizes">
+    <header>
+      <h2>Room sizes</h2>
+      <p>How the numbers in the ad were worked out.</p>
+    </header>
+    <div class="sizes">
+      <div class="prose">
+        <p>The floor plans have no dimensions, so the sizes come from the photos, using things of known size as rulers. Each method was cross-checked against another.</p>
+        <p><strong>Back bedroom, width.</strong> The queen IKEA Malm frame is 66 in wide and 83 in long. In the photo from the closet end, the bed sits against the window wall with a walkway beside it. Correcting for perspective with the floorboard lines puts the walkway at about 23 in, so the room is about 89 in (7.4 ft) wide.</p>
+        <p><strong>Back bedroom, length.</strong> The maple floor is standard 2¼ in strip. That's confirmed against the Malm nightstand, which is 15⅜ in deep and covers about seven boards. About 25 boards run from the foot of the bed to the closet opening (about 4¾ ft). Add the bed's 83 in and the room is about 11¾ ft long. The alcove is about 5 ft wide and 1½ ft deep inside.</p>
+        <p><strong>Middle bedroom.</strong> The desk (about 70 in wide) stood against the east wall in a 2023 photo. Measured against it, that wall is about 113 in (9.4 ft) long. The other direction is read from the plan at its overall scale: about 10 ft.</p>
+        <p><strong>Check against the plan.</strong> Across the house, the back bedroom, the wall and the middle bedroom add up to about 17¼ ft, which is what the plan gives at the scale set by the bathtub and the county's square footage. The plan draws the wall between the two rooms about 7 in too far toward the back, which is why it made the back room look narrower.</p>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Room</th><th>Main area</th><th>Closet</th><th>In all</th></tr></thead>
+          <tbody>
+            <tr><td>Back bedroom</td><td>7.4 × 11.8 ft</td><td>alcove, ≈ 5 × 1½ ft</td><td>≈ 95 sq ft</td></tr>
+            <tr><td>Middle bedroom</td><td>9.4 × ≈10 ft</td><td>≈ 3.3 × 2.3 ft, plus a small entry nook</td><td>≈ 100–105 sq ft</td></tr>
+            <tr><td>Front bedroom (Thomas)</td><td>16 × 7.75 ft, L-shaped (plan only)</td><td>two closets</td><td>≈ 125–130 sq ft</td></tr>
+            <tr><td>Whole unit</td><td>23 × 26.5 ft footprint, two floors</td><td>plus basement</td><td>≈ 1,100 sq ft</td></tr>
+          </tbody>
+        </table></div>
+        <p>Expect these to be within about 6 in. The middle room's 10 ft is the least certain, since it rests on the plan.</p>
+        <p>These are floor areas. Both rented rooms have slanted ceilings along an outside wall, so less of that floor has full headroom.</p>
+        <p style="font-size:.85rem; color:var(--muted)">Sources: <a href="https://www.redfin.com/MI/Ann-Arbor/605-Fountain-St-48103/home/60658851" target="_blank" rel="noopener">Redfin public record for 605 Fountain</a> (1901, two units, 2,260 sq ft, 6 bed / 2.5 bath across both) and the <a href="https://www.apartments.com/607-fountain-st-ann-arbor-mi/dxgb70k/" target="_blank" rel="noopener">Apartments.com listing for 607 Fountain</a> (3 bed / 1.5 bath, 1,200 sq ft). Zillow blocks automated reading, so nothing here comes from it except the photos and plans you saved.</p>
+      </div>
+      <figure><img src="photos/16-floor-plan-upstairs.jpg" alt="Upstairs plan with the back and middle bedrooms shaded" data-i="15"></figure>
+    </div>
+  </section>
+
+  <footer class="end">Prepared November 24, 2026, and updated November 25 with the settled terms. Rent is the house's $2,750 ÷ 3; utilities run about $375/month for the house.</footer>
+</div>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <div class="lb-inner">
+    <img id="lb-img" alt="">
+    <div class="lb-row">
+      <button id="lb-prev" aria-label="Previous photo">←</button>
+      <span id="lb-cap"></span>
+      <button id="lb-next" aria-label="Next photo">→</button>
+      <button id="lb-close">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const PHOTOS = [
+  ["01-exterior.jpg", "Front of the house", ["Zillow: retake"]],
+  ["02-living-room.jpg", "Living room toward the kitchen", []],
+  ["03-kitchen.jpg", "Kitchen", []],
+  ["04-dining-room.jpg", "Dining room", []],
+  ["05-back-bedroom.jpg", "Back bedroom", []],
+  ["06-back-bedroom-2.jpg", "Back bedroom, toward the door", []],
+  ["07-back-bedroom-closet.jpg", "Back bedroom closet alcove, dresser and nightstand", []],
+  ["08-middle-bedroom.jpg", "Middle bedroom", []],
+  ["09-middle-bedroom-2.jpg", "Middle bedroom, furnished (2025)", []],
+  ["10-middle-bedroom-3.jpg", "Middle bedroom, furnished (2023)", []],
+  ["11-backyard-firepit.jpg", "Back yard fire pit", []],
+  ["12-backyard-evening.jpg", "Back yard in the evening", []],
+  ["13-full-bath.jpg", "Full bath, upstairs", ["Zillow: retake"]],
+  ["14-half-bath.jpg", "Half bath, main floor", ["Zillow: retake"]],
+  ["15-floor-plan-main.jpg", "Main floor plan", []],
+  ["16-floor-plan-upstairs.jpg", "Upstairs plan, rooms marked", []],
+  ["17-living-room-2.jpg", "Living room, night", ["extra"]],
+  ["18-middle-bedroom-night.jpg", "Middle bedroom, night, mid-packing", ["extra"]],
+  ["19-shed.jpg", "Shed", ["extra"]],
+  ["20-exterior-night.jpg", "Front of the house at night", ["extra"]],
+];
+const TOP10 = new Set([0, 1, 2, 3, 4, 7, 10, 12, 15, 5]);
+
+// Photo grid
+const grid = document.getElementById("photogrid");
+PHOTOS.forEach(([file, cap, flags], i) => {
+  const d = document.createElement("div");
+  d.className = "photo";
+  const b = document.createElement("button");
+  b.dataset.i = i;
+  b.setAttribute("aria-label", "Enlarge: " + cap);
+  const img = document.createElement("img");
+  img.src = "photos/" + file; img.alt = cap; img.loading = "lazy";
+  b.appendChild(img);
+  const c = document.createElement("code"); c.textContent = file;
+  const s = document.createElement("span");
+  s.innerHTML = (TOP10.has(i) ? '<span class="flag top">top 10</span>' : "") +
+    flags.map(f => '<span class="flag">' + f + "</span>").join("") + cap;
+  const a = document.createElement("a");
+  a.href = "photos/" + file; a.download = file; a.className = "save"; a.textContent = "Save";
+  d.append(b, c, s, a);
+  grid.appendChild(d);
+});
+
+// Lightbox (main listing shows 01–16)
+const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbCap = document.getElementById("lb-cap");
+let cur = 0;
+function show(i) {
+  cur = (i + PHOTOS.length) % PHOTOS.length;
+  lbImg.src = "photos/" + PHOTOS[cur][0];
+  lbImg.alt = PHOTOS[cur][1];
+  lbCap.textContent = (cur + 1) + " / " + PHOTOS.length + " · " + PHOTOS[cur][1];
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-i]");
+  if (!t) return;
+  show(+t.dataset.i);
+  if (typeof lb.showModal === "function") lb.showModal(); else lb.setAttribute("open", "");
+});
+document.getElementById("lb-prev").onclick = () => show(cur - 1);
+document.getElementById("lb-next").onclick = () => show(cur + 1);
+document.getElementById("lb-close").onclick = () => lb.close();
+lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
+lb.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") show(cur - 1);
+  if (e.key === "ArrowRight") show(cur + 1);
+});
+
+// Copy buttons
+function selectText(el) {
+  const r = document.createRange(); r.selectNodeContents(el);
+  const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-copy]");
+  if (!b) return;
+  const el = document.getElementById(b.dataset.copy);
+  const text = el.textContent.trim();
+  const label = b.textContent;
+  const flash = msg => { b.textContent = msg; b.classList.add("done"); setTimeout(() => { b.textContent = label; b.classList.remove("done"); }, 1800); };
+  try {
+    navigator.clipboard.writeText(text).then(() => flash("Copied"), () => { selectText(el); flash("Selected, press ⌘C"); });
+  } catch (err) { selectText(el); flash("Selected, press ⌘C"); }
+});
+
+// Marketplace tabs
+const tabs = [["tab-back", "mp-back"], ["tab-mid", "mp-mid"]];
+tabs.forEach(([tid]) => document.getElementById(tid).addEventListener("click", () => {
+  tabs.forEach(([t, p]) => {
+    const on = t === tid;
+    document.getElementById(t).setAttribute("aria-selected", on);
+    document.getElementById(p).hidden = !on;
+  });
+}));
+
+// Checklist, saved per viewer
+const KEY = "605-fountain-checks";
+let saved = {};
+try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+const boxes = [...document.querySelectorAll("#checks input[type=checkbox]")];
+function progress() {
+  const n = boxes.filter(b => b.checked).length;
+  document.getElementById("progress").textContent = n + " of " + boxes.length + " done.";
+}
+boxes.forEach(b => {
+  b.checked = !!saved[b.id];
+  b.addEventListener("change", () => {
+    saved[b.id] = b.checked;
+    try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+    progress();
+  });
+});
+progress();
+</script>
+</body>
+</html>
