@@ -350,12 +350,14 @@ dialog.lb .next { right: 14px; top: calc(50% - 23px); }
         </dl>
         <div class="field"><span class="lbl">Description</span><pre class="val">${esc(description(it))}</pre>${copyBtn(description(it))}</div>
         ${copyBtn(everything(it), "Copy title + price + description (Craigslist)", "big")}
-        ${photos.length ? `<h4>Photos to upload</h4><div class="files">
-          <div class="field"><code class="val">listing-photos/${esc(folderOf(it))}</code>${folderPath(it) ? copyBtn(folderPath(it), "Copy folder path") : ""}</div>
+        ${photos.length ? `<h4>Photos to upload</h4><div class="files">${hosted
+          ? `<p class="hint" style="margin-top:0">Download: ${photos.map((p, k) => `<a href="${full(p)}" download="${esc(it.id)}-${k + 1}.jpg">photo ${k + 1}</a>`).join(" · ")}
+              (resized, location data removed), then add them in Marketplace's photo picker.</p>`
+          : `<div class="field"><code class="val">listing-photos/${esc(folderOf(it))}</code>${folderPath(it) ? copyBtn(folderPath(it), "Copy folder path") : ""}</div>
           <p class="hint">${folderPath(it)
             ? `In Marketplace's photo picker: <kbd>⌘⇧G</kbd>, paste, <kbd>Return</kbd>, then <kbd>⌘A</kbd> and <kbd>Return</kbd>.`
             : `In the Stuff to Sell folder (run <code>node make-listing-folders.js</code> if it's missing).`}
-            ${photos.length} photo${photos.length > 1 ? "s" : ""}, resized with location data removed.</p>
+            ${photos.length} photo${photos.length > 1 ? "s" : ""}, resized with location data removed.</p>`}
         </div>` : ""}
         <label class="posted-box"><input type="checkbox" data-posted="${esc(it.id)}"${posted.has(it.id) ? " checked" : ""}> Posted on Marketplace</label>
         ${(r.notes || r.comps?.length) ? `<h4>Pricing notes</h4><div class="research">
