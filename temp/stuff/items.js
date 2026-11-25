@@ -171,21 +171,21 @@ const ITEMS = [
   {
     id: "capisco", section: "furniture", short: "Capisco",
     name: "HÅG Capisco 8106 saddle chair (blue)",
-    price: 350, retail: "About $1,300 new",
+    price: 450, retail: "About $1,300 new",
     photos: ["IMG_5151"],
     blurb: "Saddle-seat office chair designed by Peter Opsvik, suited to standing-height or high desks. You can sit facing forward, sideways or backward.",
     specs: ["Seat height about 18.5–25.5\" (standard lift)", "Adjustable seat depth, back height and tilt tension; tilt lock", "Aluminum 5-star base with built-in foot plates", "Blue fabric"],
-    included: [],
+    included: ["Spare gas cylinder (shorter, for a lower seat height)"],
     condition: "Everything works and it's in great shape, except some soiling on the front edge of the seat and the backrest, which I'll spot-clean.",
     links: [
       { label: "Flokk (HÅG) product page", url: "https://store.flokk.com/us/en-gb/products/hag-capisco" },
     ],
-    fb: { title: "HÅG Capisco 8106 Ergonomic Saddle Chair – Blue", category: "Furniture", condition: "Used - Good", brand: "HÅG" },
+    fb: { title: "HÅG Capisco 8106 Saddle Chair – Blue, with Spare Gas Cylinder", category: "Furniture", condition: "Used - Good", brand: "HÅG" },
     flags: [
-      "The photo shows darker soiling on the seat's front edge and the backrest wings, plus lint on top. A spot-clean and lint-roll before photos would help; then tell me what's left so I can describe it accurately.",
+      "The soiling on the seat's front edge and the backrest: once you've cleaned it, tell me how it came out. If it's gone, I'll raise the price to $500 and update the condition.",
     ],
     research: {
-      notes: "Flokk doesn't publish a price; US dealers list it around $1,300. Facebook asks elsewhere in the US: $350 (cut from $600), $500 (8106, stained), $650 (with footring). $350 allows for the soiling; ask $400 if it cleans up well.",
+      notes: "Flokk doesn't publish a price; US dealers list it around $1,300. Facebook asks elsewhere in the US: $350 (cut from $600), $500 (8106, stained), $650 (with footring). With the spare cylinder, $450 is fair even with the soiling; raise it to $500 if the soiling comes out, and $400 is a reasonable floor.",
       comps: [
         { label: "FB $500 (8106)", url: "https://www.facebook.com/marketplace/item/2497936033992252/" },
         { label: "FB $350", url: "https://www.facebook.com/marketplace/item/1671154337325134/" },
