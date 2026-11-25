@@ -195,7 +195,7 @@ const ITEMS = [
   {
     id: "lovesac", section: "furniture", short: "Lovesac",
     name: "Lovesac CitySac in Chinchilla Dense Phur (grey faux fur)",
-    price: 175, retail: "About $650 new (insert + cover)",
+    price: 220, retail: "About $650 new (insert + cover)",
     photos: ["IMG_5137", "IMG_5139"],
     blurb: "Lovesac's mid-size shredded-foam beanbag, about 3 ft across and 35 lb, with a removable, machine-washable Chinchilla Dense Phur faux-fur cover.",
     specs: ["About 3 ft wide × 3 ft 3 in tall, 35 lb", "Durafoam shredded-foam fill (not beads)", "Removable cover: machine-wash cold, line dry"],
@@ -208,7 +208,7 @@ const ITEMS = [
     fb: { title: "Lovesac CitySac – Chinchilla Dense Phur Faux Fur (grey)", category: "Furniture", condition: "Used - Like New", brand: "Lovesac" },
     flags: [],
     research: {
-      notes: "The CitySac insert lists at $400 (often $280 on sale) and covers run about $250–300, so roughly $650 new. Used CitySacs are rarely listed; a used CitySac cover alone asks about $210. $175 for the insert and a clean cover is reasonable; you could start at $200.",
+      notes: "The CitySac insert lists at $400 (often $280 on sale) and covers run about $250–300, so roughly $650 new. Used CitySacs are rarely listed; a used CitySac cover alone asks about $210. $220 for the insert and a clean cover in great condition is a fair start; $175 is a reasonable floor.",
       comps: [
         { label: "eBay sold listings", url: "https://www.ebay.com/sch/i.html?_nkw=lovesac+citysac&LH_Sold=1&LH_Complete=1" },
       ],
