@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Stuff for Sale</title>
+<style>
+:root {
+  --bg: #f4f1eb; --card: #fffdf9; --ink: #1f1c18; --muted: #6b645a; --line: #e2dbcf;
+  --accent: #2c5a4c; --accent-ink: #ffffff; --photo: #ebe6dc; --chip: #e9e3d8;
+  --flag-bg: #fff3cf; --flag-ink: #574000; --flag-line: #e9c96a;
+  --kit-bg: #edf2ef; --kit-line: #cbd9d1; --field: #ffffff;
+  --sold: #a33a2c; --pending: #9a6400;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151412; --card: #1f1d1a; --ink: #ede8df; --muted: #a59d90; --line: #35312b;
+    --accent: #8fc5b1; --accent-ink: #10201a; --photo: #2a2723; --chip: #2b2823;
+    --flag-bg: #3a2f14; --flag-ink: #f3d68e; --flag-line: #6b5520;
+    --kit-bg: #1a2420; --kit-line: #2f423a; --field: #141a17;
+    --sold: #e08a7c; --pending: #e0b35c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151412; --card: #1f1d1a; --ink: #ede8df; --muted: #a59d90; --line: #35312b;
+  --accent: #8fc5b1; --accent-ink: #10201a; --photo: #2a2723; --chip: #2b2823;
+  --flag-bg: #3a2f14; --flag-ink: #f3d68e; --flag-line: #6b5520;
+  --kit-bg: #1a2420; --kit-line: #2f423a; --field: #141a17;
+  --sold: #e08a7c; --pending: #e0b35c;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+
+header.site { padding: 40px 0 8px; }
+header.site h1 {
+  font: 700 clamp(2rem, 5vw, 2.8rem)/1.1 ui-serif, Georgia, "Times New Roman", serif;
+  margin: 0 0 10px; letter-spacing: -0.01em;
+}
+header.site .intro { max-width: 60ch; margin: 0 0 12px; font-size: 1.05rem; }
+header.site .meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
+[hidden] { display: none !important; }
+.cta {
+  display: inline-block; margin-top: 14px; padding: 10px 16px; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600;
+}
+
+nav.sections {
+  position: sticky; top: 0; z-index: 5; background: var(--bg);
+  border-bottom: 1px solid var(--line); margin-top: 20px;
+}
+nav.sections .row { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
+nav.sections a {
+  flex: none; padding: 6px 12px; border-radius: 999px; background: var(--chip);
+  color: var(--ink); text-decoration: none; font-size: 0.9rem; white-space: nowrap;
+}
+nav.sections a .n { color: var(--muted); margin-left: 4px; }
+
+section.group { padding: 28px 0 8px; scroll-margin-top: 56px; }
+section.group > h2 {
+  font: 700 1.5rem/1.2 ui-serif, Georgia, serif; margin: 0 0 4px;
+}
+section.group > .note { color: var(--muted); margin: 0 0 16px; max-width: 70ch; }
+.grid {
+  display: grid; gap: 18px; align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+}
+
+article.item {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  overflow: hidden; scroll-margin-top: 64px; position: relative;
+}
+article.item:target { outline: 3px solid var(--accent); outline-offset: 2px; }
+article.item.sold .gallery, article.item.sold .body > :not(.head):not(.kit) { opacity: 0.45; }
+.gallery { background: var(--photo); }
+.gallery .main {
+  display: block; width: 100%; aspect-ratio: 1 / 1; border: 0; padding: 0; margin: 0;
+  background: var(--photo); cursor: zoom-in;
+}
+.gallery .main img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.thumbs { display: flex; gap: 6px; padding: 6px; overflow-x: auto; }
+.thumbs button {
+  flex: none; width: 52px; height: 52px; padding: 0; border: 2px solid transparent;
+  border-radius: 6px; overflow: hidden; background: none; cursor: pointer;
+}
+.thumbs button[aria-current="true"] { border-color: var(--accent); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge {
+  position: absolute; top: 10px; left: 10px; padding: 3px 10px; border-radius: 999px;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; color: #fff;
+}
+.badge.sold { background: var(--sold); }
+.badge.pending { background: var(--pending); }
+.badge.free { background: var(--accent); color: var(--accent-ink); }
+
+.body { padding: 14px 16px 16px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.head h3 { margin: 0; font-size: 1.08rem; line-height: 1.3; }
+.price { font-weight: 750; font-size: 1.2rem; white-space: nowrap; }
+.price.free { color: var(--accent); }
+.price.tbd { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+.retail { color: var(--muted); font-size: 0.85rem; margin: 2px 0 0; }
+.blurb { margin: 10px 0 8px; }
+ul.specs { margin: 0 0 10px; padding-left: 18px; color: var(--muted); font-size: 0.92rem; }
+ul.specs li { margin: 2px 0; }
+.cond { font-size: 0.92rem; margin: 8px 0; }
+.cond b { font-weight: 650; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.9rem; margin-top: 8px; }
+.links a { text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+.share { font-size: 0.85rem; color: var(--muted); margin-left: auto; }
+
+/* ---------- seller view ---------- */
+.seller-only { display: none; }
+body.seller .seller-only { display: block; }
+.seller-bar {
+  background: var(--kit-bg); border: 1px solid var(--kit-line); border-radius: 12px;
+  padding: 14px 16px; margin: 18px 0 0;
+}
+.seller-bar h2 { margin: 0 0 6px; font-size: 1.05rem; }
+.seller-bar p { margin: 4px 0; font-size: 0.92rem; }
+.seller-bar ul { margin: 6px 0 0; padding-left: 18px; font-size: 0.92rem; }
+.seller-bar li { margin: 3px 0; }
+.kit {
+  margin: 14px -16px -16px; padding: 12px 16px 16px; background: var(--kit-bg);
+  border-top: 1px solid var(--kit-line); font-size: 0.9rem;
+}
+.kit h4 { margin: 12px 0 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.kit h4:first-child { margin-top: 0; }
+.flags { background: var(--flag-bg); color: var(--flag-ink); border: 1px solid var(--flag-line);
+  border-radius: 8px; padding: 8px 10px 8px 34px; margin: 0 0 10px; }
+.flags li { margin: 3px 0; }
+.flags li::marker { font-weight: 700; }
+.qs { margin-top: 10px; }
+.qs summary { cursor: pointer; margin-bottom: 8px; }
+.qs button.copy { margin: 0 0 6px; }
+.qs h3 { font-size: 0.92rem; margin: 12px 0 4px; }
+.qs h3 a { color: inherit; }
+.field { display: grid; grid-template-columns: 1fr auto; gap: 6px; align-items: start; margin: 0 0 6px; }
+.field .val {
+  background: var(--field); border: 1px solid var(--kit-line); border-radius: 6px;
+  padding: 6px 8px; min-width: 0; overflow-wrap: anywhere;
+}
+.field .lbl { grid-column: 1 / -1; font-size: 0.78rem; color: var(--muted); margin-bottom: -2px; }
+.field pre.val { margin: 0; white-space: pre-wrap; font: inherit; max-height: 240px; overflow: auto; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 0 0 6px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+button.copy {
+  font: inherit; font-size: 0.82rem; font-weight: 600; padding: 6px 10px; border-radius: 6px;
+  border: 1px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer;
+  white-space: nowrap;
+}
+button.copy:hover { background: var(--accent); color: var(--accent-ink); }
+button.copy.done { background: var(--accent); color: var(--accent-ink); }
+button.copy.big { width: 100%; padding: 9px; margin-top: 6px; background: var(--accent); color: var(--accent-ink); }
+.research { color: var(--muted); }
+.research a { word-break: break-word; }
+.files code { font-size: 0.85rem; }
+.files .field { align-items: center; }
+.hint { color: var(--muted); font-size: 0.82rem; margin: 2px 0 0; }
+kbd { font: inherit; font-size: 0.78rem; border: 1px solid var(--kit-line); border-radius: 4px; padding: 0 4px; background: var(--field); }
+.posted-box { display: flex; gap: 8px; align-items: center; margin-top: 12px; font-weight: 600; cursor: pointer; }
+.posted-box input { width: 18px; height: 18px; accent-color: var(--accent); }
+body.seller article.item.is-posted { outline: 2px solid var(--accent); }
+
+footer.site { color: var(--muted); font-size: 0.85rem; padding: 32px 0 48px; }
+
+/* ---------- lightbox ---------- */
+dialog.lb {
+  border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh;
+  width: 100vw; height: 100vh; margin: 0;
+}
+dialog.lb::backdrop { background: rgba(10, 9, 8, 0.92); }
+dialog.lb .stage { width: 100%; height: 100%; display: grid; place-items: center; position: relative; }
+dialog.lb img { max-width: 94vw; max-height: 86vh; object-fit: contain; display: block; }
+dialog.lb .cap { position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; color: #ddd; font-size: 0.9rem; }
+dialog.lb button {
+  position: absolute; background: rgba(255,255,255,0.12); color: #fff; border: 0; border-radius: 999px;
+  width: 46px; height: 46px; font-size: 1.4rem; cursor: pointer;
+}
+dialog.lb button:hover { background: rgba(255,255,255,0.25); }
+dialog.lb .close { top: 14px; right: 14px; }
+dialog.lb .prev { left: 14px; top: calc(50% - 23px); }
+dialog.lb .next { right: 14px; top: calc(50% - 23px); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <h1 id="site-title">Stuff for sale</h1>
+    <p class="intro" id="site-intro"></p>
+    <p class="meta" id="site-meta"></p>
+    <a class="cta" id="site-cta" hidden></a>
+    <div class="seller-only seller-bar" id="seller-bar"></div>
+  </header>
+</div>
+<nav class="sections" aria-label="Sections"><div class="wrap"><div class="row" id="nav"></div></div></nav>
+<main class="wrap" id="main"></main>
+<div class="wrap"><footer class="site" id="site-footer"></footer></div>
+
+<dialog class="lb" id="lb">
+  <div class="stage">
+    <img id="lb-img" alt="">
+    <div class="cap" id="lb-cap"></div>
+    <button class="close" type="button" aria-label="Close">×</button>
+    <button class="prev" type="button" aria-label="Previous photo">‹</button>
+    <button class="next" type="button" aria-label="Next photo">›</button>
+  </div>
+</dialog>
+
+<script>
+  // Load the item data without caching, so edits to items.js show up on a plain reload.
+  document.write('<script src="items.js?t=' + Date.now() + '"><\/script>');
+</script>
+<script>if (typeof ITEMS === "undefined") document.write('<script src="items.js"><\/script>');</script>
+<script>
+(() => {
+  // Opened from your own computer (the Dropbox file or a localhost preview), the page shows the seller view.
+  // ?public shows what visitors see; ?seller forces the seller view on the uploaded copy.
+  const q = new URLSearchParams(location.search);
+  const local = location.protocol === "file:" || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  const seller = q.has("seller") || (local && !q.has("public"));
+  if (seller) document.body.classList.add("seller");
+  const hosted = /^https?:$/.test(location.protocol) && !local;
+  // Prices are in SITE.currency; it's only spelled out on the page when it isn't USD.
+  const cur = SITE.currency && SITE.currency !== "USD" ? SITE.currency : "";
+  const priceOf = it => it.price;
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const money = n => "$" + Number(n).toLocaleString("en-US");
+  const priceText = it => priceOf(it) == null ? "Price TBD" : priceOf(it) === 0 ? "Free" : money(priceOf(it));
+  const thumb = p => `photos/thumb/${p}.jpg`;
+  const full = p => `photos/${p}.jpg`;
+  // Listings link back to the uploaded page: SITE.url once it's set, otherwise wherever this copy is hosted.
+  const pageUrl = SITE.url || (hosted ? location.origin + location.pathname : "");
+  const itemUrl = it => pageUrl + "#" + it.id;
+  // Per-item photo folders made by make-listing-folders.js (same naming: 01-lgc1, 02-u4021qw, ...).
+  const folderOf = it => String(ITEMS.indexOf(it) + 1).padStart(2, "0") + "-" + it.id;
+  const stuffDir = location.protocol === "file:" ? decodeURIComponent(location.pathname).replace(/\/sale-page\/[^/]*$/, "") : "";
+  const folderPath = it => stuffDir ? `${stuffDir}/listing-photos/${folderOf(it)}` : "";
+  // Which items you've posted; remembered in this browser only.
+  const posted = new Set();
+  try { JSON.parse(localStorage.getItem("posted") || "[]").forEach(id => posted.add(id)); } catch (e) {}
+  const savePosted = () => { try { localStorage.setItem("posted", JSON.stringify([...posted])); } catch (e) {} };
+
+  // Questions are numbered once (general ones first, then by item) so the list at the top and each card agree.
+  const qStart = {};
+  let qCount = SITE.flags?.length || 0;
+  ITEMS.forEach(i => { if (i.flags?.length) { qStart[i.id] = qCount + 1; qCount += i.flags.length; } });
+
+  // ---------- header ----------
+  document.getElementById("site-title").textContent = SITE.title;
+  document.title = SITE.title;
+  document.getElementById("site-intro").textContent = SITE.intro;
+  const meta = [];
+  if (SITE.updated) meta.push("Updated " + new Date(SITE.updated + "T12:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }));
+  if (cur) meta.push("Prices in " + cur);
+  if (SITE.pickup) meta.push(SITE.pickup);
+  document.getElementById("site-meta").textContent = meta.join(" · ");
+  if (SITE.contact && SITE.contact.href) {
+    const a = document.getElementById("site-cta");
+    a.href = SITE.contact.href; a.textContent = SITE.contact.label || "Get in touch"; a.hidden = false;
+  }
+
+  // ---------- listing text ----------
+  function description(it) {
+    const parts = [];
+    parts.push(it.fb?.description || it.blurb);
+    if (it.specs?.length) parts.push(it.specs.map(s => "• " + s).join("\n"));
+    if (it.included?.length) parts.push("Includes: " + it.included.join(", ") + ".");
+    if (it.condition) parts.push("Condition: " + it.condition);
+    const info = it.links?.find(l => l.listing !== false);
+    if (info) parts.push("Product info: " + info.url);
+    if (pageUrl) parts.push("More photos: " + itemUrl(it));
+    if (SITE.listingFooter) parts.push(SITE.listingFooter);
+    return parts.join("\n\n");
+  }
+  const listingTitle = it => it.fb?.title || it.name;
+  const listingPrice = it => priceOf(it) == null ? "" : String(priceOf(it));
+  const everything = it => [listingTitle(it), priceOf(it) == null ? "" : "Price: " + (priceOf(it) === 0 ? "Free" : money(priceOf(it)) + (cur ? " " + cur : "")), description(it)].filter(Boolean).join("\n\n");
+
+  // ---------- copy ----------
+  const copyStore = new Map();
+  let copyId = 0;
+  const copyBtn = (text, label = "Copy", cls = "") => {
+    const id = "c" + (copyId++); copyStore.set(id, text);
+    return `<button type="button" class="copy ${cls}" data-copy="${id}">${esc(label)}</button>`;
+  };
+  async function writeClipboard(text) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove(); return ok;
+  }
+  document.addEventListener("click", async e => {
+    const b = e.target.closest("button.copy"); if (!b) return;
+    const ok = await writeClipboard(copyStore.get(b.dataset.copy));
+    const old = b.dataset.label || b.textContent; b.dataset.label = old;
+    b.textContent = ok ? "Copied ✓" : "Copy failed"; b.classList.add("done");
+    clearTimeout(b._t); b._t = setTimeout(() => { b.textContent = old; b.classList.remove("done"); }, 1300);
+  });
+
+  // ---------- render ----------
+  const bySection = SECTIONS.map(s => ({ ...s, items: ITEMS.filter(i => i.section === s.id && !(i.hidden && !seller)) })).filter(s => s.items.length);
+  document.getElementById("nav").innerHTML = bySection.map(s =>
+    `<a href="#${s.id}">${esc(s.name)}<span class="n">${s.items.filter(i => i.status !== "sold").length}</span></a>`).join("");
+
+  function card(it) {
+    const photos = it.photos || [];
+    const status = it.status || "available";
+    const badge = status === "sold" ? `<span class="badge sold">Sold</span>`
+      : status === "pending" ? `<span class="badge pending">Pending</span>`
+      : priceOf(it) === 0 ? `<span class="badge free">Free</span>` : "";
+    const gallery = photos.length ? `
+      <div class="gallery">
+        <button class="main" type="button" data-lb="${esc(it.id)}" data-i="0" aria-label="View photos of ${esc(it.name)}">
+          <img src="${thumb(photos[0])}" alt="${esc(it.name)}" loading="lazy">
+        </button>
+        ${photos.length > 1 ? `<div class="thumbs">${photos.map((p, i) =>
+          `<button type="button" data-thumb="${i}" aria-current="${i === 0}" aria-label="Photo ${i + 1}"><img src="${thumb(p)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
+      </div>` : "";
+    const priceCls = priceOf(it) == null ? "tbd" : priceOf(it) === 0 ? "free" : "";
+    const links = (it.links || []).map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("");
+
+    let kit = "";
+    if (seller) {
+      const flags = (it.flags || []);
+      const r = it.research || {};
+      kit = `<div class="kit">
+        ${flags.length ? `<h4>Questions for you</h4><ol class="flags" start="${qStart[it.id]}">${flags.map(f => `<li>${esc(f)}</li>`).join("")}</ol>` : ""}
+        <h4>Marketplace listing</h4>
+        <div class="field"><span class="lbl">Title</span><div class="val">${esc(listingTitle(it))}</div>${copyBtn(listingTitle(it))}</div>
+        <div class="field"><span class="lbl">Price${cur ? ` (${esc(cur)})` : ""}</span><div class="val">${esc(listingPrice(it) || "—")}</div>${copyBtn(listingPrice(it))}</div>
+        <dl class="kv">
+          <dt>Category</dt><dd>${esc(it.fb?.category || "—")}</dd>
+          <dt>Condition</dt><dd>${esc(it.fb?.condition || "—")}</dd>
+          ${it.fb?.brand ? `<dt>Brand</dt><dd>${esc(it.fb.brand)}</dd>` : ""}
+        </dl>
+        <div class="field"><span class="lbl">Description</span><pre class="val">${esc(description(it))}</pre>${copyBtn(description(it))}</div>
+        ${copyBtn(everything(it), "Copy title + price + description (Craigslist)", "big")}
+        ${photos.length ? `<h4>Photos to upload</h4><div class="files">
+          <div class="field"><code class="val">listing-photos/${esc(folderOf(it))}</code>${folderPath(it) ? copyBtn(folderPath(it), "Copy folder path") : ""}</div>
+          <p class="hint">${folderPath(it)
+            ? `In Marketplace's photo picker: <kbd>⌘⇧G</kbd>, paste, <kbd>Return</kbd>, then <kbd>⌘A</kbd> and <kbd>Return</kbd>.`
+            : `In the Stuff to Sell folder (run <code>node make-listing-folders.js</code> if it's missing).`}
+            ${photos.length} photo${photos.length > 1 ? "s" : ""}, resized with location data removed.</p>
+        </div>` : ""}
+        <label class="posted-box"><input type="checkbox" data-posted="${esc(it.id)}"${posted.has(it.id) ? " checked" : ""}> Posted on Marketplace</label>
+        ${(r.notes || r.comps?.length) ? `<h4>Pricing notes</h4><div class="research">
+          ${r.notes ? `<p style="margin:0 0 6px">${esc(r.notes)}</p>` : ""}
+          ${r.comps?.length ? `<div>${r.comps.map(c => `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.label)}</a>`).join(" · ")}</div>` : ""}
+        </div>` : ""}
+      </div>`;
+    }
+
+    return `<article class="item ${status}${seller && posted.has(it.id) ? " is-posted" : ""}" id="${esc(it.id)}">
+      ${badge}
+      ${gallery}
+      <div class="body">
+        <div class="head"><h3>${esc(it.name)}</h3><div class="price ${priceCls}">${esc(priceText(it))}</div></div>
+        ${it.retail ? `<p class="retail">${esc(it.retail)}</p>` : ""}
+        <p class="blurb">${esc(it.blurb)}</p>
+        ${it.specs?.length ? `<ul class="specs">${it.specs.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+        ${it.included?.length ? `<p class="cond"><b>Includes:</b> ${esc(it.included.join(", "))}</p>` : ""}
+        ${it.condition ? `<p class="cond"><b>Condition:</b> ${esc(it.condition)}</p>` : ""}
+        <div class="links">${links}<a class="share" href="#${esc(it.id)}">Link to this</a></div>
+        ${kit}
+      </div>
+    </article>`;
+  }
+
+  document.getElementById("main").innerHTML = bySection.map(s => `
+    <section class="group" id="${s.id}">
+      <h2>${esc(s.name)}</h2>
+      ${s.note ? `<p class="note">${esc(s.note)}</p>` : ""}
+      <div class="grid">${s.items.map(card).join("")}</div>
+    </section>`).join("");
+
+  document.getElementById("site-footer").textContent = SITE.footer || "";
+
+  // ---------- seller summary ----------
+  if (seller) {
+    const open = ITEMS.filter(i => i.flags?.length);
+    const forSale = ITEMS.filter(i => i.status !== "sold" && priceOf(i) > 0 && !i.bundle);
+    const total = forSale.reduce((a, i) => a + priceOf(i), 0);
+    // Every open question in one numbered list, so they can be answered in one go ("7: yes, it's included").
+    const groups = [];
+    if (SITE.flags?.length) groups.push({ name: "General", start: 1, flags: SITE.flags });
+    open.forEach(i => groups.push({ id: i.id, name: i.name, start: qStart[i.id], flags: i.flags }));
+    const n = qCount;
+    const numbered = groups.map(g => ({ ...g, flags: g.flags.map((f, k) => ({ n: g.start + k, f })) }));
+    const asText = numbered.map(g => g.name + "\n" + g.flags.map(x => `${x.n}. ${x.f}`).join("\n")).join("\n\n");
+    const howTo = location.protocol === "file:" || !local ? "" : " Add <code>?public</code> to the address to see what visitors see.";
+    document.getElementById("seller-bar").innerHTML = `
+      <h2>Seller view</h2>
+      <p>${hosted
+        ? `This view (with <code>?seller</code> in the address) shows your listing kits and notes. Visitors who just open the link don't see it.`
+        : `You're seeing the seller view because you opened the page from your own computer. Once it's uploaded, visitors see it without this panel, the questions or the listing kits.`}
+      ${ITEMS.length} items, ${forSale.length} priced for sale (${money(total)}${cur ? " " + esc(cur) : ""} total asking).
+      <a href="${location.pathname}?public">See the public view</a>.${howTo}</p>
+      <p>Posted on Marketplace: <b id="posted-count">${ITEMS.filter(i => posted.has(i.id)).length}</b> of ${ITEMS.filter(i => i.status !== "sold").length}
+        (tick the box at the bottom of each item's listing kit; this browser remembers it).</p>
+      <details class="qs">
+        <summary><b>How to post an item</b> (about two minutes each)</summary>
+        <ol>
+          <li>Open <a href="https://www.facebook.com/marketplace/create/item" target="_blank" rel="noopener">Marketplace → Create listing → Item for sale</a> on your computer.</li>
+          <li>Photos: in the item's kit, <i>Copy folder path</i>. Click Add photos, press <kbd>⌘⇧G</kbd>, paste, <kbd>Return</kbd>, <kbd>⌘A</kbd>, <kbd>Return</kbd>.</li>
+          <li>Copy and paste the Title and Price.</li>
+          <li>Pick the Category and Condition the kit shows (and Brand if Facebook asks).</li>
+          <li>Copy and paste the Description. Set the location to Ann Arbor and choose pickup.</li>
+          <li>Publish, then tick <i>Posted on Marketplace</i> in the kit.</li>
+        </ol>
+        <p>For Craigslist, the big button copies title, price and description in one go. When something sells, mark it sold on Facebook and tell me (or set <code>status: "sold"</code> in items.js) so the page shows it.</p>
+      </details>
+      ${n ? `<details class="qs" open>
+        <summary><b>${n} questions for you</b> (they're also in each item's card)</summary>
+        ${copyBtn(asText, "Copy all questions")}
+        ${numbered.map(g => `<h3>${g.id ? `<a href="#${esc(g.id)}">${esc(g.name)}</a>` : esc(g.name)}</h3>
+          <ol class="flags" start="${g.flags[0].n}">${g.flags.map(x => `<li>${esc(x.f)}</li>`).join("")}</ol>`).join("")}
+      </details>` : ""}`;
+  }
+
+  document.addEventListener("change", e => {
+    const cb = e.target.closest("input[data-posted]"); if (!cb) return;
+    const id = cb.dataset.posted;
+    cb.checked ? posted.add(id) : posted.delete(id);
+    savePosted();
+    document.getElementById(id)?.classList.toggle("is-posted", cb.checked);
+    const n = document.getElementById("posted-count");
+    if (n) n.textContent = ITEMS.filter(i => posted.has(i.id)).length;
+  });
+
+  // ---------- gallery + lightbox ----------
+  const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbCap = document.getElementById("lb-cap");
+  let lbItem = null, lbIdx = 0;
+  const showLb = () => {
+    const ps = lbItem.photos;
+    lbImg.src = full(ps[lbIdx]); lbImg.alt = lbItem.name;
+    lbCap.textContent = lbItem.name + (ps.length > 1 ? `  ·  ${lbIdx + 1} / ${ps.length}` : "");
+    lb.querySelector(".prev").hidden = lb.querySelector(".next").hidden = ps.length < 2;
+  };
+  const step = d => { const n = lbItem.photos.length; lbIdx = (lbIdx + d + n) % n; showLb(); };
+  document.addEventListener("click", e => {
+    const t = e.target.closest("[data-thumb]");
+    if (t) {
+      const art = t.closest("article"), it = ITEMS.find(i => i.id === art.id), i = +t.dataset.thumb;
+      const main = art.querySelector(".main"); main.dataset.i = i; main.querySelector("img").src = thumb(it.photos[i]);
+      art.querySelectorAll("[data-thumb]").forEach(b => b.setAttribute("aria-current", b === t));
+      return;
+    }
+    const m = e.target.closest("[data-lb]");
+    if (m) { lbItem = ITEMS.find(i => i.id === m.dataset.lb); lbIdx = +m.dataset.i || 0; showLb(); lb.showModal(); }
+  });
+  lb.querySelector(".close").onclick = () => lb.close();
+  lb.querySelector(".prev").onclick = () => step(-1);
+  lb.querySelector(".next").onclick = () => step(1);
+  lb.addEventListener("click", e => { if (e.target === lb || e.target.classList.contains("stage")) lb.close(); });
+  lb.addEventListener("keydown", e => { if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
+
+  if (location.hash) { const el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }
+})();
+</script>
+</body>
+</html>
