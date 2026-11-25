@@ -213,6 +213,24 @@ const ITEMS = [
     },
   },
   {
+    id: "desk2", section: "furniture", short: "Laminate desk",
+    name: "Wood-look desk with drawers and hidden cable compartment",
+    price: 30, retail: null,
+    photos: ["IMG_20200315_233942", "IMG_20190820_222454", "IMG_20200316_105520"],
+    blurb: "Laminate desk in a warm wood tone with black metal legs and three drawers. The black strip along the back is two hinged lids over a compartment for power strips and cables, so the desktop stays clear. It's taken apart and easy to move.",
+    specs: ["About 44\" wide (estimated from the photos)", "Three drawers; hinged cable compartment along the back", "Black metal legs with a cross brace"],
+    included: ["All the parts and bolts (disassembled)"],
+    condition: "The surface is in good condition. One known issue: on one leg, one of its two bolt mounts in the desk is broken, so that leg holds with a single bolt. Once assembled it's been completely stable in daily use, but you'll notice it when you put it together.",
+    links: [],
+    fb: { title: "Wood-Look Desk with 3 Drawers and Hidden Cable Compartment", category: "Furniture", condition: "Used - Fair" },
+    flags: [
+      "If you or Thomas can measure the top (it's in pieces in the basement), I'll replace the estimate.",
+    ],
+    research: {
+      notes: "Laminate desks like this usually sell locally for $20–60 in good shape; the broken leg mount pulls it to the low end. $30 is fair, $20 a reasonable floor. Size: estimated against the 15\" MacBook Pro in the 2020 photo (about 13.9\" wide), so roughly 44\" ± 4\".",
+    },
+  },
+  {
     id: "capisco", section: "furniture", short: "Capisco",
     name: "HÅG Capisco 8106 saddle chair (blue)",
     price: 450, retail: "About $1,300 new",
