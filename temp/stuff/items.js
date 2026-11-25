@@ -6,7 +6,7 @@
 
 const SITE = {
   title: "Stuff for sale",
-  intro: "I'm clearing out some electronics, furniture and a home gym. Everything works, it all comes from a non-smoking home, and it's in good used shape unless noted. Prices are open to reasonable offers, especially if you take a few things. Some of the small stuff is free to friends.",
+  intro: "I'm clearing out some electronics, furniture and a home gym. Everything works, it all comes from a non-smoking home, and it's in good used shape unless noted.",
   currency: "USD",
   pickup: "Pickup in Ann Arbor, MI",
   contact: null,         // e.g. { label: "Text me", href: "sms:+15555555555" }
