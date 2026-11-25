@@ -217,7 +217,7 @@ const ITEMS = [
   {
     id: "snug", section: "furniture", short: "Snugg chair",
     name: "Arhaus Snugg faux-fur chair + ottoman (chocolate brown)",
-    price: 400, retail: "About $1,250 new for the pair (list)",
+    price: 275, retail: "Chair lists at $650 new; the matching ottoman (now discontinued) was $599",
     photos: ["IMG_5155", "IMG_5156"],
     blurb: "Arhaus Snugg lounge chair and matching ottoman in chocolate-brown faux fur, with a deep, low, beanbag-style seat. Sold as a pair.",
     specs: ["Chair roughly 45\" W × 39\" D × 32\" H (from a third-party listing)", "Polyfiber fill (not beads)", "Big Bear Chocolate faux fur, or very close"],
@@ -225,12 +225,11 @@ const ITEMS = [
     condition: "Good, light use. No pets; non-smoking home. Some pile matting on top of the ottoman.",
     links: [
       { label: "Arhaus Snugg chair", url: "https://www.arhaus.com/products/snugg-faux-fur-chair" },
-      { label: "Snugg ottoman (archived)", url: "https://web.archive.org/web/20221212181508/https://www.arhaus.com/products/snugg-faux-fur-ottoman" },
     ],
     fb: { title: "Arhaus Snugg Faux Fur Lounge Chair + Ottoman (Chocolate)", category: "Furniture", condition: "Used - Good", brand: "Arhaus" },
     flags: [],
     research: {
-      notes: "Arhaus lists the chair at $650 (often $399 on sale) and the ottoman was $599 ($299 on sale). Facebook asks for the pair are $375–550; the chair alone $200–350. Arhaus is a Midwest favorite, so $400 for both should draw interest; $350 is a fine floor.",
+      notes: "Arhaus currently has the chair alone on sale for $400 new (list $650). The matching ottoman is discontinued (it was $599, or $299 on sale). With a new chair at $400, buyers will compare against that, so $275 for the used pair (with some matting on the ottoman) is realistic; $225 is a fine floor.",
       comps: [
         { label: "FB chair $250", url: "https://www.facebook.com/marketplace/item/1904998366600548/" },
       ],
