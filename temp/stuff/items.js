@@ -169,6 +169,29 @@ const ITEMS = [
 
   // ---------------------------------------------------------------- furniture
   {
+    id: "desk", section: "furniture", short: "Desk",
+    name: "Large mid-century modern executive desk",
+    price: 350, retail: null,
+    photos: ["IMG_6313", "IMG_6312", "IMG_6315", "IMG_6314"],
+    blurb: "Vintage double-pedestal executive desk in a walnut-tone wood, with recessed black pulls and short square legs. It is big: the monitor in the photos is a 40-inch ultrawide, so the desk is larger than it looks. Very heavy and very solid. Pickup is from a second-floor room, and you will take it apart yourself: pull the drawers, unscrew the supports between them, then the screws holding the pedestals and legs to the top. Allow about an hour the first time, and bring a Phillips screwdriver (a drill/driver is faster) and a strong helper. It is priced with that in mind.",
+    specs: ["About 70\" wide × 34\" deep (estimated from the photos), standard desk height", "Five drawers: two on the left (the lower one a deep file drawer), three on the right", "The pedestals and legs unscrew from the top for moving"],
+    included: [],
+    condition: "Structurally very solid. Cosmetic wear: scuffs and scratches on the top, and worn edges on some drawer fronts and the bottom corners of the pedestals. It would look great refinished.",
+    links: [],
+    fb: { title: "Large Mid-Century Modern Executive Desk – Double Pedestal, 5 Drawers (~70\" wide)", category: "Furniture", condition: "Used - Fair" },
+    flags: [
+      "The small blue labels on the sides of the right-hand drawers may be the maker's mark you remember. Pull a drawer out and photograph one. If it's a known maker (Stow Davis, Jens Risom, Gunlocke, Krug and so on), the price could be quite a bit higher.",
+      "If you or Thomas can measure it (width, depth, height), I'll replace the estimate.",
+      "Leave a Phillips screwdriver (a #2, a few dollars) in a drawer, so a buyer who forgets one isn't stuck.",
+    ],
+    research: {
+      notes: "Size: estimated from the U4021QW (946.6 mm wide) using the camera's field of view: about 69\" ± 3\" wide and about 34\" deep, close to a standard 66×33 or 72×36 executive desk. Price: dealer listings for restored, named-maker walnut executive desks run $1,200 and up (a Jens Risom 72\" at $2,950), which doesn't apply to an unmarked desk that needs refinishing and has to be taken apart by the buyer. Unbranded vintage executive desks usually sell locally for a few hundred dollars. $350 is my suggestion, priced for the buyer doing the disassembly; $250 is a reasonable floor. Check the drawer label before posting.",
+      comps: [
+        { label: "eBay sold listings", url: "https://www.ebay.com/sch/i.html?_nkw=mid+century+double+pedestal+executive+desk&LH_Sold=1&LH_Complete=1" },
+      ],
+    },
+  },
+  {
     id: "capisco", section: "furniture", short: "Capisco",
     name: "HÅG Capisco 8106 saddle chair (blue)",
     price: 450, retail: "About $1,300 new",
@@ -365,7 +388,7 @@ const ITEMS = [
     photos: ["IMG_6305", "IMG_5124"],
     blurb: "First-gen Pixel Watch, LTE version: with a carrier eSIM plan it can take calls and texts away from your phone. Fitbit heart-rate, sleep and activity tracking.",
     specs: ["41 mm stainless-steel case, champagne gold, hazel band", "LTE + Bluetooth + Wi-Fi, water resistant to 50 m", "Fitbit health and sleep tracking", "Android only; Google's software updates ended in Oct 2025"],
-    included: ["Charger", "Band (one size)", "Original box"],
+    included: ["Charger", "Both band sizes", "Original box"],
     condition: "Good, lightly used. Battery was fine when I last used it.",
     links: [
       { label: "Google specs", url: "https://support.google.com/googlepixelwatch/answer/12651869" },
