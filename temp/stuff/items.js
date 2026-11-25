@@ -217,19 +217,19 @@ const ITEMS = [
   {
     id: "snug", section: "furniture", short: "Snugg chair",
     name: "Arhaus Snugg faux-fur chair + ottoman (chocolate brown)",
-    price: 275, retail: "Chair lists at $650 new; the matching ottoman (now discontinued) was $599",
+    price: 300, retail: "Chair lists at $650 new; the matching ottoman (now discontinued) was $599",
     photos: ["IMG_5155", "IMG_5156"],
     blurb: "Arhaus Snugg lounge chair and matching ottoman in chocolate-brown faux fur, with a deep, low, beanbag-style seat. Sold as a pair.",
     specs: ["Chair roughly 45\" W × 39\" D × 32\" H (from a third-party listing)", "Polyfiber fill (not beads)", "Big Bear Chocolate faux fur, or very close"],
     included: ["Chair", "Ottoman"],
-    condition: "Good, light use. No pets; non-smoking home. Some pile matting on top of the ottoman.",
+    condition: "Great condition, light use. No pets; non-smoking home.",
     links: [
       { label: "Arhaus Snugg chair", url: "https://www.arhaus.com/products/snugg-faux-fur-chair" },
     ],
-    fb: { title: "Arhaus Snugg Faux Fur Lounge Chair + Ottoman (Chocolate)", category: "Furniture", condition: "Used - Good", brand: "Arhaus" },
+    fb: { title: "Arhaus Snugg Faux Fur Lounge Chair + Ottoman (Chocolate)", category: "Furniture", condition: "Used - Like New", brand: "Arhaus" },
     flags: [],
     research: {
-      notes: "Arhaus currently has the chair alone on sale for $400 new (list $650). The matching ottoman is discontinued (it was $599, or $299 on sale). With a new chair at $400, buyers will compare against that, so $275 for the used pair (with some matting on the ottoman) is realistic; $225 is a fine floor.",
+      notes: "Arhaus currently has the chair alone on sale for $400 new (list $650). The matching ottoman is discontinued (it was $599, or $299 on sale). $300 for the pair in great condition is fair next to a $400 new chair; $250 is a reasonable floor.",
       comps: [
         { label: "FB chair $250", url: "https://www.facebook.com/marketplace/item/1904998366600548/" },
       ],
